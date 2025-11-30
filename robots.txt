@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yjgsolucionti.com/sitemap.xml
+
+# Bloquear archivos y carpetas que no deben ser indexados
+Disallow: /assets/
+Disallow: /*.json$
+
+# Permitir acceso a páginas principales
+Allow: /index.html
+Allow: /blog.html
+Allow: /politica-privacidad.html
+Allow: /terminos-condiciones.html
+
