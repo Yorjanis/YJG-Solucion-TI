@@ -211,6 +211,80 @@
         margin-right: 0.5rem !important;
       }
     }
+    
+    /* Estilos para el formulario de contacto */
+    .cid-swbzkIVnFH {
+      background-color: #f8f9fa !important;
+      padding: 60px 0 !important;
+    }
+    .cid-swbzkIVnFH .mbr-section-title {
+      color: #2c3e50 !important;
+      font-size: 2.5rem !important;
+      font-weight: bold !important;
+      margin-bottom: 15px !important;
+    }
+    .cid-swbzkIVnFH .form-subtitle {
+      color: #5a6c7d !important;
+      font-size: 1.2rem !important;
+      margin-top: 15px !important;
+      margin-bottom: 30px !important;
+    }
+    .cid-swbzkIVnFH .form-title-line {
+      width: 80px;
+      height: 4px;
+      background-color: #ec0f0f;
+      margin: 0 auto 20px;
+      border-radius: 2px;
+    }
+    .cid-swbzkIVnFH .mbr-form {
+      background-color: #ffffff !important;
+      padding: 40px !important;
+      border-radius: 10px !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+      border: 1px solid #e0e0e0 !important;
+    }
+    .cid-swbzkIVnFH .form-control {
+      background-color: #ffffff !important;
+      border: 1px solid #d0d0d0 !important;
+      color: #2c3e50 !important;
+      padding: 12px 15px !important;
+      border-radius: 5px !important;
+    }
+    .cid-swbzkIVnFH .form-control::placeholder {
+      color: #999999 !important;
+    }
+    .cid-swbzkIVnFH .form-control:focus {
+      background-color: #ffffff !important;
+      border-color: #ec0f0f !important;
+      color: #2c3e50 !important;
+      box-shadow: 0 0 0 0.2rem rgba(236, 15, 15, 0.25) !important;
+    }
+    .cid-swbzkIVnFH .btn-primary {
+      background-color: #ec0f0f !important;
+      border-color: #ec0f0f !important;
+      color: #ffffff !important;
+      padding: 12px 30px !important;
+      border-radius: 5px !important;
+      font-weight: bold !important;
+      transition: all 0.3s ease !important;
+    }
+    .cid-swbzkIVnFH .btn-primary:hover {
+      background-color: #c00d0d !important;
+      border-color: #c00d0d !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 10px rgba(236, 15, 15, 0.4) !important;
+    }
+    @media (max-width: 768px) {
+      .cid-swbzkIVnFH .mbr-form {
+        padding: 30px 20px !important;
+      }
+      .cid-swbzkIVnFH .mbr-section-title {
+        font-size: 2rem !important;
+      }
+      .cid-swbzkIVnFH .form-subtitle {
+        font-size: 1rem !important;
+      }
+    }
   </style>
   
   <!-- Schema.org markup for SEO -->
@@ -230,7 +304,7 @@
       "addressCountry": "CR"
     },
     "telephone": "+50671559055",
-    "email": "yorjanisj@gmail.com",
+    "email": "solucion@yjgsolucionti.com",
     "openingHours": "Mo-Fr 08:00-18:00",
     "priceRange": "$$",
     "areaServed": {
@@ -476,7 +550,7 @@
                         <h6 class="card-title mbr-fonts-style mb-1 display-7">
                             <strong>Email</strong>
                         </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">yorjanisj@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+                        <p class="mbr-text mbr-fonts-style display-7">solucion@yjgsolucionti.com&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
                     </div>
                 </div>
             </div>
@@ -511,29 +585,37 @@
     
     <div class="container">
         <div class="mbr-section-head">
-            <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-7"><strong>Si tienes dudas envíanos&nbsp;un correo</strong></h2>
-            
+            <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-7"><strong>Contacta con Nosotros</strong></h2>
+            <div class="form-title-line"></div>
+            <p class="form-subtitle align-center mbr-fonts-style">Estamos listos para ayudarte a llevar tu negocio al siguiente nivel</p>
         </div>
         <div class="row justify-content-center mt-4">
-            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="LrL/luKj3n3N09AM3ee8WGSP9inRWBoyw3IENn8GqA2rnCccKmyqgepnxfoF6LwQKOYtcodGZXjmiLVTXWTHHRDlMv1/FIIEjCaA3JANOKzN1PwYrIHAUXN7UJ+hrbWX">
+            <div class="col-lg-8 mx-auto mbr-form">
+                <form id="contact-form" method="POST" class="mbr-form form-with-styler">
                     <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Gracias por llenar el formulario en breve te responderemos.</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
-                            problem!</div>
+                        <div id="form-alert-success" class="alert alert-success col-12" style="display: none; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                            <strong>¡Mensaje enviado!</strong> Gracias por contactarnos. Te responderemos en breve.
+                        </div>
+                        <div id="form-alert-danger" class="alert alert-danger col-12" style="display: none; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                            <strong>Error:</strong> <span id="error-message">Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.</span>
+                        </div>
                     </div>
                     <div class="dragArea row">
                         <div class="col-md col-sm-12 form-group" data-for="name">
-                            <input type="text" name="name" placeholder="Nombre" data-form-field="name" class="form-control" value="" id="name-form5-x">
+                            <input type="text" name="name" placeholder="Nombre" data-form-field="name" class="form-control" value="" id="name-form5-x" required>
                         </div>
                         <div class="col-md col-sm-12 form-group" data-for="email">
-                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form5-x">
+                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form5-x" required>
                         </div>
                         
-                        <div class="col-12 form-group" data-for="textarea">
-                            <textarea name="textarea" placeholder="Mensaje" data-form-field="textarea" class="form-control" id="textarea-form5-x"></textarea>
+                        <div class="col-12 form-group" data-for="message">
+                            <textarea name="message" placeholder="Mensaje" data-form-field="message" class="form-control" id="textarea-form5-x" rows="5" required></textarea>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-4"><span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(0, 0, 0);">&nbsp;mensage</span></button></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                            <button type="submit" class="btn btn-primary display-4" id="submit-btn">
+                                <span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;Enviar Mensaje</span>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -611,6 +693,75 @@
         behavior: 'smooth'
       });
     }
+    
+    // Configuración del formulario de contacto
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnnepopw';
+    
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = this;
+      const submitBtn = document.getElementById('submit-btn');
+      const successAlert = document.getElementById('form-alert-success');
+      const errorAlert = document.getElementById('form-alert-danger');
+      const errorMessage = document.getElementById('error-message');
+      
+      // Ocultar alertas anteriores
+      successAlert.style.display = 'none';
+      errorAlert.style.display = 'none';
+      
+      // Deshabilitar botón mientras se envía
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;Enviando...</span>';
+      
+      // Obtener datos del formulario
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+        _replyto: formData.get('email'), // Para que puedas responder directamente
+        _subject: 'Nuevo mensaje de contacto desde yjgsolucionti.com'
+      };
+      
+      try {
+        // Verificar si el endpoint está configurado
+        if (FORMSPREE_ENDPOINT === 'TU_ENDPOINT_DE_FORMSPREE') {
+          throw new Error('Por favor, configura tu endpoint de Formspree en el código.');
+        }
+        
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+        
+        if (response.ok) {
+          // Éxito
+          successAlert.style.display = 'block';
+          form.reset();
+          
+          // Scroll suave hacia el mensaje de éxito
+          successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          // Error del servidor
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Error al enviar el mensaje');
+        }
+      } catch (error) {
+        // Error de red o configuración
+        errorMessage.textContent = error.message || 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.';
+        errorAlert.style.display = 'block';
+        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } finally {
+        // Restaurar botón
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;Enviar Mensaje</span>';
+      }
+    });
   </script>  
   
   
