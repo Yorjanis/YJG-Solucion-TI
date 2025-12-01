@@ -70,23 +70,75 @@
     .cid-s48OLK6784 .nav-link.text-primary:hover span,
     .cid-s48OLK6784 .nav-link.text-primary:hover .mbr-iconfont {
       color: #8c0909 !important;
-      transition: color 0.2s ease-in-out;
+      text-decoration: underline !important;
+      transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
     }
     /* Asegurar que los enlaces con text-primary también tengan el efecto hover */
     .cid-s48OLK6784 .nav-link.link.text-secondary.text-primary:hover,
     .cid-s48OLK6784 .nav-link.link.text-secondary.text-primary:hover span,
     .cid-s48OLK6784 .nav-link.link.text-secondary.text-primary:hover .mbr-iconfont {
       color: #8c0909 !important;
-      transition: color 0.2s ease-in-out;
+      text-decoration: underline !important;
+      transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+    }
+    /* Efecto hover para todos los enlaces del menú (incluyendo los que no tienen text-primary) */
+    .cid-s48OLK6784 .nav-link:hover,
+    .cid-s48OLK6784 .nav-link:hover span {
+      text-decoration: underline !important;
+      transition: text-decoration 0.2s ease-in-out;
+    }
+    /* Efecto active para enlaces seleccionados del menú */
+    .cid-s48OLK6784 .nav-link.active,
+    .cid-s48OLK6784 .nav-link.active span {
+      text-decoration: underline !important;
     }
     
     /* Efecto hover para enlaces del pie de página */
     .footer-column a {
-      transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+      text-decoration: none;
     }
     .footer-column a:hover {
       color: #8c0909 !important;
+      text-decoration: underline !important;
       opacity: 0.8;
+    }
+    
+    /* Efectos hover para iconos del menú */
+    .cid-s48OLK6784 .iconfont-wrapper {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      display: inline-block;
+    }
+    .cid-s48OLK6784 .iconfont-wrapper:hover {
+      transform: scale(1.2);
+      opacity: 0.9;
+    }
+    .cid-s48OLK6784 .iconfont-wrapper:hover .socicon-facebook {
+      color: #0d6efd !important;
+      filter: drop-shadow(0 2px 4px rgba(24, 119, 242, 0.4));
+    }
+    .cid-s48OLK6784 .iconfont-wrapper:hover .socicon-github {
+      color: #ec0f0f !important;
+      filter: drop-shadow(0 2px 4px rgba(236, 15, 15, 0.4));
+    }
+    
+    /* Efectos hover para iconos del pie de página */
+    .footer-icons a {
+      transition: transform 0.3s ease, opacity 0.3s ease !important;
+      text-decoration: none !important;
+    }
+    .footer-icons a:hover {
+      transform: scale(1.2) !important;
+      opacity: 0.9 !important;
+      text-decoration: none !important;
+    }
+    .footer-icons a:hover .socicon-facebook {
+      color: #0d6efd !important;
+      filter: drop-shadow(0 2px 4px rgba(24, 119, 242, 0.4));
+    }
+    .footer-icons a:hover .socicon-github {
+      color: #ec0f0f !important;
+      filter: drop-shadow(0 2px 4px rgba(236, 15, 15, 0.4));
     }
     
     /* Responsive: Pie de página */
@@ -285,6 +337,440 @@
         font-size: 1rem !important;
       }
     }
+    
+    /* Ocultar sección de contacto original */
+    .cid-suimYH5OML {
+      display: none !important;
+    }
+    
+    /* Botón flotante de contacto */
+    .contact-float-btn {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      background-color: #ec0f0f;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 15, 15, 0.4);
+      transition: all 0.3s ease;
+      border: none;
+      font-size: 1.5rem;
+    }
+    
+    .contact-float-btn:hover {
+      background-color: #c00d0d;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(236, 15, 15, 0.6);
+    }
+    
+    .contact-float-btn.active {
+      background-color: #2c3e50;
+    }
+    
+    /* Panel de contacto deslizable */
+    .contact-panel {
+      position: fixed;
+      right: -400px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 380px;
+      max-height: 80vh;
+      background-color: #ffffff;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      transition: right 0.4s ease;
+      border-radius: 10px 0 0 10px;
+      overflow-y: auto;
+    }
+    
+    .contact-panel.open {
+      right: 0;
+    }
+    
+    .contact-panel-header {
+      background-color: #ec0f0f;
+      color: white;
+      padding: 20px;
+      border-radius: 10px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .contact-panel-header h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .contact-panel-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    
+    .contact-panel-close:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .contact-panel-content {
+      padding: 30px 20px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-item-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .contact-item-icon .mbr-iconfont {
+      font-size: 1.5rem;
+      color: #ec0f0f;
+    }
+    
+    .contact-item-content h6 {
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    
+    .contact-item-content p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #5a6c7d;
+    }
+    
+    .contact-item-content a {
+      color: #ec0f0f;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .contact-item-content a:hover {
+      color: #c00d0d;
+      text-decoration: underline;
+    }
+    
+    .contact-phone-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .copy-phone-btn {
+      background-color: #ec0f0f;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .copy-phone-btn:hover {
+      background-color: #c00d0d;
+      transform: translateY(-1px);
+    }
+    
+    .copy-phone-btn:active {
+      transform: translateY(0);
+    }
+    
+    .copy-phone-btn.copied {
+      background-color: #28a745;
+    }
+    
+    .copy-phone-btn .copy-icon {
+      font-size: 0.9rem;
+    }
+    
+    /* Overlay oscuro cuando el panel está abierto */
+    .contact-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .contact-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-float-btn {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        font-size: 1.2rem;
+      }
+      
+      .contact-panel {
+        width: 320px;
+        right: -320px;
+      }
+      
+      .contact-panel-content {
+        padding: 20px 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-panel {
+        width: 100%;
+        right: -100%;
+        border-radius: 0;
+        top: 0;
+        transform: none;
+        max-height: 100vh;
+      }
+      
+      .contact-panel.open {
+        right: 0;
+      }
+    }
+    
+    /* Sección de marcas/clientes */
+    .clients-section {
+      background-color: #ffffff;
+      padding: 40px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .clients-section::before,
+    .clients-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    .clients-section::before {
+      left: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    
+    .clients-section::after {
+      right: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    
+    .clients-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    .clients-slider {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      gap: 60px;
+      align-items: center;
+      width: max-content;
+    }
+    
+    .clients-slider:hover {
+      animation-play-state: paused;
+    }
+    
+    .client-logo {
+      flex-shrink: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      filter: grayscale(100%);
+    }
+    
+    .client-logo:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      filter: grayscale(0%);
+    }
+    
+    .client-logo img {
+      max-height: 80px;
+      max-width: 150px;
+      object-fit: contain;
+    }
+    
+    .client-logo-placeholder {
+      width: 150px;
+      height: 80px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c757d;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Estilos para logos inventados */
+    .client-logo-brand {
+      width: 150px;
+      height: 80px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .client-logo-brand:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Diferentes estilos de logos */
+    .brand-1 {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .brand-2 {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+    }
+    
+    .brand-3 {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: white;
+    }
+    
+    .brand-4 {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      color: white;
+    }
+    
+    .brand-5 {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      color: white;
+    }
+    
+    .brand-6 {
+      background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+      color: white;
+    }
+    
+    .brand-7 {
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      color: #2c3e50;
+    }
+    
+    .brand-8 {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+      color: #2c3e50;
+    }
+    
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-50% - 30px));
+      }
+    }
+    
+    .clients-wrapper {
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    @media (max-width: 768px) {
+      .clients-section {
+        padding: 30px 0;
+      }
+      
+      .clients-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      
+      .client-logo {
+        height: 60px;
+      }
+      
+      .client-logo img {
+        max-height: 60px;
+        max-width: 120px;
+      }
+      
+      .client-logo-placeholder {
+        width: 120px;
+        height: 60px;
+        font-size: 0.75rem;
+      }
+    }
   </style>
   
   <!-- Schema.org markup for SEO -->
@@ -355,7 +841,7 @@
                 <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                     <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="index.html#top"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;Inicio</span></a></li>
                     <li class="nav-item"><a class="nav-link link text-secondary display-4" href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span>Acerca de</a></li>
-                    <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="index.html#contacts2-t"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;Contacto</span></a></li>
+                    <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;Contacto</span></a></li>
                     <li class="nav-item"><a class="nav-link link text-secondary display-4" href="index.html#features2-s"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span>Servicio</a></li>
                     <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="blog.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;Blog</span></a></li>
                 </ul>
@@ -426,7 +912,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="title col-12 col-md-10">
-                <h1 class="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong><em>YJG Solución TI - Soluciones Tecnológicas Integrales en Costa Rica</em></strong></h1>
+                <h1 class="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong><em><span style="color: #ec0f0f;">YJG Solución TI</span> - Soluciones Tecnológicas Integrales en Costa Rica</em></strong></h1>
                 <h2 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Somos especialistas en el desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web corporativas y personales. Ofrecemos servicios completos de desarrollo, mantenimiento y soporte técnico para garantizar que tu negocio tenga la mejor presencia digital. Trabajamos con las últimas tecnologías y metodologías para entregar soluciones de alta calidad que se adapten a las necesidades específicas de cada cliente.</h2>
             </div>
         </div>
@@ -467,7 +953,7 @@
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-star mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
                         <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong>Compromiso con la Calidad</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7">En YJG Solución TI nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo.</p>
+                        <p class="mbr-text mbr-fonts-style display-7">En <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span> nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo.</p>
                     </div>
                 </div>
             </div>
@@ -580,6 +1066,67 @@
     </div>
 </section>
 
+<!-- Sección de marcas/clientes -->
+<section class="clients-section">
+    <div class="container-fluid">
+        <h3 class="clients-title">Empresas y Clientes que Confían en Nosotros</h3>
+        <div class="clients-wrapper">
+            <div class="clients-slider">
+                <!-- Primera serie de logos -->
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-1">TechCorp</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-2">DigitalPlus</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-3">CloudSys</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-4">InnovaTech</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-5">SmartBiz</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-6">DataFlow</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-7">WebStudio</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-8">AppDev</div>
+                </div>
+                <!-- Duplicar para scroll infinito -->
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-1">TechCorp</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-2">DigitalPlus</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-3">CloudSys</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-4">InnovaTech</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-5">SmartBiz</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-6">DataFlow</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-7">WebStudio</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-logo-brand brand-8">AppDev</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="form5 cid-swbzkIVnFH" id="form5-x">
     
     
@@ -636,11 +1183,71 @@
     </div>
 </section>
 
+<!-- Botón flotante de contacto -->
+<button class="contact-float-btn" id="contactFloatBtn" title="Información de contacto">
+    <span class="mobi-mbri mobi-mbri-phone mbr-iconfont"></span>
+</button>
+
+<!-- Overlay oscuro -->
+<div class="contact-overlay" id="contactOverlay"></div>
+
+<!-- Panel de contacto deslizable -->
+<div class="contact-panel" id="contactPanel">
+    <div class="contact-panel-header">
+        <h3>Contacto</h3>
+        <button class="contact-panel-close" id="contactPanelClose" title="Cerrar">×</button>
+    </div>
+    <div class="contact-panel-content">
+        <div class="contact-item">
+            <div class="contact-item-icon">
+                <span class="mobi-mbri mobi-mbri-phone mbr-iconfont"></span>
+            </div>
+            <div class="contact-item-content">
+                <h6>Teléfono</h6>
+                <div class="contact-phone-wrapper">
+                    <p style="margin: 0;"><a href="tel:+50671559055" style="color: #ec0f0f; text-decoration: none;">+506 71559055</a></p>
+                    <button class="copy-phone-btn" id="copyPhoneBtn" title="Copiar número">
+                        <span class="copy-icon">📋</span>
+                        <span class="copy-text">Copiar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item-icon">
+                <span class="mobi-mbri mobi-mbri-letter mbr-iconfont"></span>
+            </div>
+            <div class="contact-item-content">
+                <h6>Email</h6>
+                <p><a href="mailto:solucion@yjgsolucionti.com">solucion@yjgsolucionti.com</a></p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item-icon">
+                <span class="mobi-mbri mobi-mbri-globe mbr-iconfont"></span>
+            </div>
+            <div class="contact-item-content">
+                <h6>Dirección</h6>
+                <p>Costa Rica, Guanacaste, Santa Cruz</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item-icon">
+                <span class="mobi-mbri mobi-mbri-bulleted-list mbr-iconfont"></span>
+            </div>
+            <div class="contact-item-content">
+                <h6>Horario</h6>
+                <p>8:00 am - 18:00 pm</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div style="background-color: #2c3e50; color: #ecf0f1; padding: 40px 0 20px; margin-top: 0;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
             <div class="footer-column" style="flex: 1; min-width: 250px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">YJG Solución TI</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;"><span style="color: #ec0f0f;">YJG Solución TI</span></h3>
                 <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
@@ -678,7 +1285,7 @@
         <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center; position: relative;">
             <button id="scrollToTop" onclick="scrollToTop()" style="position: absolute; left: 50%; transform: translateX(-50%); top: -15px; background-color: #ec0f0f; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: all 0.3s; display: flex; align-items: center; justify-content: center; z-index: 10;" onmouseover="this.style.backgroundColor='#c00d0d'; this.style.transform='translateX(-50%) scale(1.1)';" onmouseout="this.style.backgroundColor='#ec0f0f'; this.style.transform='translateX(-50%) scale(1)';" title="Volver arriba">↑</button>
             <p style="color: #95a5a6; margin: 0; font-size: 0.85rem; padding-top: 20px;">
-                © 2025 YJG Solución TI. Todos los derechos reservados.
+                © 2025 <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span>. Todos los derechos reservados.
             </p>
         </div>
     </div>
@@ -693,6 +1300,98 @@
         behavior: 'smooth'
       });
     }
+    
+    // Panel de contacto flotante
+    const contactFloatBtn = document.getElementById('contactFloatBtn');
+    const contactPanel = document.getElementById('contactPanel');
+    const contactPanelClose = document.getElementById('contactPanelClose');
+    const contactOverlay = document.getElementById('contactOverlay');
+    
+    // Función global para abrir el panel desde el menú
+    window.openContactPanel = function() {
+      if (contactPanel && contactOverlay && contactFloatBtn) {
+        contactPanel.classList.add('open');
+        contactOverlay.classList.add('active');
+        contactFloatBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+    
+    function closeContactPanel() {
+      contactPanel.classList.remove('open');
+      contactOverlay.classList.remove('active');
+      contactFloatBtn.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    if (contactFloatBtn) {
+      contactFloatBtn.addEventListener('click', window.openContactPanel);
+    }
+    if (contactPanelClose) {
+      contactPanelClose.addEventListener('click', closeContactPanel);
+    }
+    if (contactOverlay) {
+      contactOverlay.addEventListener('click', closeContactPanel);
+    }
+    
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && contactPanel && contactPanel.classList.contains('open')) {
+        closeContactPanel();
+      }
+    });
+    
+    // Botón de copiar número de teléfono
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyPhoneBtn = document.getElementById('copyPhoneBtn');
+      const phoneNumber = '+506 71559055';
+      
+      if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener('click', function() {
+          // Copiar al portapapeles
+          navigator.clipboard.writeText(phoneNumber).then(function() {
+            // Cambiar texto del botón temporalmente
+            const copyText = copyPhoneBtn.querySelector('.copy-text');
+            const originalText = copyText.textContent;
+            
+            copyPhoneBtn.classList.add('copied');
+            copyText.textContent = '¡Copiado!';
+            copyPhoneBtn.querySelector('.copy-icon').textContent = '✓';
+            
+            // Restaurar después de 2 segundos
+            setTimeout(function() {
+              copyPhoneBtn.classList.remove('copied');
+              copyText.textContent = originalText;
+              copyPhoneBtn.querySelector('.copy-icon').textContent = '📋';
+            }, 2000);
+          }).catch(function(err) {
+            // Fallback para navegadores que no soportan clipboard API
+            const textArea = document.createElement('textarea');
+            textArea.value = phoneNumber;
+            textArea.style.position = 'fixed';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+              document.execCommand('copy');
+              const copyText = copyPhoneBtn.querySelector('.copy-text');
+              const originalText = copyText.textContent;
+              copyPhoneBtn.classList.add('copied');
+              copyText.textContent = '¡Copiado!';
+              copyPhoneBtn.querySelector('.copy-icon').textContent = '✓';
+              setTimeout(function() {
+                copyPhoneBtn.classList.remove('copied');
+                copyText.textContent = originalText;
+                copyPhoneBtn.querySelector('.copy-icon').textContent = '📋';
+              }, 2000);
+            } catch (err) {
+              alert('No se pudo copiar el número. Por favor, cópialo manualmente: ' + phoneNumber);
+            }
+            document.body.removeChild(textArea);
+          });
+        });
+      }
+    });
     
     // Configuración del formulario de contacto
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnnepopw';
