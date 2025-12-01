@@ -62,7 +62,14 @@
       padding: 0.2em 0.8em !important;
     }
     .cid-s48OLK6784 .navbar-brand .navbar-logo img {
-      height: 1.4rem;
+      height: 1.8rem;
+    }
+    
+    .cid-s48OLK6784 .navbar-brand .company-name {
+      color: #ec0f0f;
+      font-weight: bold;
+      font-size: 1.2rem;
+      white-space: nowrap;
     }
     
     /* Efecto hover uniforme para todos los enlaces del menú */
@@ -158,8 +165,18 @@
     
     @media (max-width: 480px) {
       .cid-s48OLK6784 .navbar-brand .navbar-logo img {
-        height: 1.2rem;
+        height: 1.5rem;
       }
+      .cid-s48OLK6784 .navbar-brand .company-name {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .cid-s48OLK6784 .navbar-brand .company-name {
+        font-size: 1rem;
+      }
+    }
       .footer-container {
         padding: 0 15px !important;
       }
@@ -375,6 +392,56 @@
       background-color: #2c3e50;
     }
     
+    /* Controles de desplazamiento flotantes */
+    .scroll-controls {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 998;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .scroll-btn {
+      background-color: #ec0f0f;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 15px rgba(236, 15, 15, 0.4);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .scroll-btn:hover {
+      background-color: #c00d0d;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(236, 15, 15, 0.6);
+    }
+    
+    .scroll-btn:active {
+      transform: scale(0.95);
+    }
+    
+    @media (max-width: 768px) {
+      .scroll-controls {
+        left: 15px;
+      }
+      
+      .scroll-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+      }
+    }
+    
     /* Panel de contacto deslizable */
     .contact-panel {
       position: fixed;
@@ -584,7 +651,8 @@
     /* Sección de marcas/clientes */
     .clients-section {
       background-color: #ffffff;
-      padding: 40px 0;
+      padding: 0 0 40px 0;
+      margin-top: -60px;
       overflow: hidden;
       position: relative;
     }
@@ -771,6 +839,61 @@
         font-size: 0.75rem;
       }
     }
+    
+    /* Estilos para la sección de estadísticas */
+    .stats-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    
+    .stat-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #ec0f0f;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    
+    @media (max-width: 768px) {
+      .stats-section {
+        padding: 40px 0;
+      }
+      
+      .stat-card {
+        padding: 30px 15px;
+        margin-bottom: 20px;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
   </style>
   
   <!-- Schema.org markup for SEO -->
@@ -817,8 +940,9 @@
             
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="index.html">
-                        <img src="assets/images/mbr-64x64.png" alt="YJG Solución TI" style="height: 2rem;">
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                        <img src="assets/images/mbr-64x64.png" alt="YJG Solución TI" style="height: 2rem; margin-right: 10px;">
+                        <span class="company-name" style="color: #ec0f0f; font-weight: bold; font-size: 1.2rem;">YJG Solución TI</span>
                     </a>
                 </span>
                 
@@ -864,7 +988,7 @@
     <div class="carousel slide carousel-fade" id="syfO5I8LVS" data-ride="carousel" data-interval="3000">
         <ol class="carousel-indicators">
             <li data-slide-to="0" class="active" data-target="#syfO5I8LVS"></li>
-            <li data-slide-to="1" data-target="#syfO5I8LVS"></li><li data-slide-to="2" data-target="#syfO5I8LVS"></li><li data-slide-to="3" data-target="#syfO5I8LVS"></li>
+            <li data-slide-to="1" data-target="#syfO5I8LVS"></li><li data-slide-to="2" data-target="#syfO5I8LVS"></li>
             
         </ol>
         <div class="carousel-inner">
@@ -886,13 +1010,6 @@
                     
                     
                 </div>
-            </div><div class="carousel-item slider-image item">
-                <div class="item-wrapper">
-                    <img class="imagen4 d-block w-100" src="assets/images/mbr-1900x1121.jpg" alt="Mantenimiento y soporte técnico para aplicaciones móviles y web" data-slide-to="5">
-                    
-                    
-                </div>
-            </div>
             
             
         </div>
@@ -958,6 +1075,32 @@
                 </div>
             </div>
         </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Estadísticas -->
+<section class="stats-section" id="stats-section" style="padding: 60px 0; background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Proyectos Completados</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1188,6 +1331,16 @@
     <span class="mobi-mbri mobi-mbri-phone mbr-iconfont"></span>
 </button>
 
+<!-- Botón flotante de desplazamiento -->
+<div class="scroll-controls" id="scrollControls">
+    <button class="scroll-btn scroll-up" id="scrollUp" title="Desplazar hacia arriba">
+        <span>↑</span>
+    </button>
+    <button class="scroll-btn scroll-down" id="scrollDown" title="Desplazar hacia abajo">
+        <span>↓</span>
+    </button>
+</div>
+
 <!-- Overlay oscuro -->
 <div class="contact-overlay" id="contactOverlay"></div>
 
@@ -1282,8 +1435,7 @@
                 </div>
             </div>
         </div>
-        <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center; position: relative;">
-            <button id="scrollToTop" onclick="scrollToTop()" style="position: absolute; left: 50%; transform: translateX(-50%); top: -15px; background-color: #ec0f0f; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: all 0.3s; display: flex; align-items: center; justify-content: center; z-index: 10;" onmouseover="this.style.backgroundColor='#c00d0d'; this.style.transform='translateX(-50%) scale(1.1)';" onmouseout="this.style.backgroundColor='#ec0f0f'; this.style.transform='translateX(-50%) scale(1)';" title="Volver arriba">↑</button>
+        <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center;">
             <p style="color: #95a5a6; margin: 0; font-size: 0.85rem; padding-top: 20px;">
                 © 2025 <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span>. Todos los derechos reservados.
             </p>
@@ -1294,12 +1446,43 @@
 <section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex; height: 0; overflow: hidden;"><a href="https://mobirise.site/j" style="flex: 1 1; height: 0; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/i" style="color:#aaa;"></a></p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/formstyler/jquery.formstyler.js"></script>  <script src="assets/formstyler/jquery.formstyler.min.js"></script>  <script src="assets/datepicker/jquery.datetimepicker.full.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>
   
   <script>
+    // Funciones de desplazamiento
     function scrollToTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
+    
+    function scrollDown() {
+      // Desplazar hasta el final de la página
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+    
+    function scrollUp() {
+      // Desplazar hasta el principio de la página
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Controles de desplazamiento flotantes
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollUpBtn = document.getElementById('scrollUp');
+      const scrollDownBtn = document.getElementById('scrollDown');
+      
+      if (scrollUpBtn) {
+        scrollUpBtn.addEventListener('click', scrollUp);
+      }
+      
+      if (scrollDownBtn) {
+        scrollDownBtn.addEventListener('click', scrollDown);
+      }
+    });
     
     // Panel de contacto flotante
     const contactFloatBtn = document.getElementById('contactFloatBtn');
@@ -1461,7 +1644,52 @@
         submitBtn.innerHTML = '<span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;Enviar Mensaje</span>';
       }
     });
-  </script>  
+  </script>
+  
+  <!-- Script para animación de contadores de estadísticas -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const statsSection = document.getElementById('stats-section');
+      const statNumbers = document.querySelectorAll('.stat-number');
+      let hasAnimated = false;
+      
+      // Función para animar el contador
+      function animateCounter(element, target) {
+        const duration = 2000; // 2 segundos
+        const increment = target / (duration / 16); // 60 FPS
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(current) + '+';
+          }
+        }, 16);
+      }
+      
+      // Intersection Observer para activar la animación cuando la sección sea visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+            statNumbers.forEach(stat => {
+              const target = parseInt(stat.getAttribute('data-target'));
+              animateCounter(stat, target);
+            });
+          }
+        });
+      }, {
+        threshold: 0.3 // Se activa cuando el 30% de la sección es visible
+      });
+      
+      if (statsSection) {
+        observer.observe(statsSection);
+      }
+    });
+  </script>
   
   
 </body>
