@@ -677,13 +677,13 @@ input[type=range] {
 
 @media (max-width: 991px) {
   .imagen1{
-content:url("../../images/mbr-1900x1261.jpg");
+content:url("../../images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg");
 }
 .imagen2{
-content:url("../../images/mbr-1900x1221.jpg");
+content:url("../../images/aplicaciones-moviles-escritorio-desarrollo-web-costa-rica.jpg");
 }
 .imagen3{
-content:url("../../images/mbr-1900x1161.jpg");
+content:url("../../images/desarrollo-aplicaciones-moviles-soluciones-tecnologicas.jpg");
 }
 .imagen4{
 content:url("../../images/mbr-1900x1121.jpg");
@@ -691,13 +691,13 @@ content:url("../../images/mbr-1900x1121.jpg");
 }
 @media (max-width: 767px) {
   .imagen1{
-content:url("../../images/mbr-1900x1262.jpg");
+content:url("../../images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web-tablet.jpg");
 }
 .imagen2{
-content:url("../../images/mbr-1900x1222.jpg");
+content:url("../../images/aplicaciones-moviles-escritorio-desarrollo-web-costa-rica-tablet.jpg");
 }
 .imagen3{
-content:url("../../images/mbr-1900x1162.jpg");
+content:url("../../images/desarrollo-aplicaciones-moviles-soluciones-tecnologicas-tablet.jpg");
 }
 .imagen4{
 content:url("../../images/mbr-1900x1122.jpg");
@@ -707,13 +707,13 @@ content:url("../../images/mbr-1900x1122.jpg");
 
 @media (max-width: 350px) {
 .imagen1{
-content:url("../../images/mbr-1900x1263.jpg");
+content:url("../../images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web-movil.jpg");
 }
 .imagen2{
-content:url("../../images/mbr-1900x1223.jpg ");
+content:url("../../images/aplicaciones-moviles-escritorio-desarrollo-web-costa-rica-movil.jpg");
 }
 .imagen3{
-content:url("../../images/mbr-1900x1163.jpg");
+content:url("../../images/desarrollo-aplicaciones-moviles-soluciones-tecnologicas-movil.jpg");
 }
 .imagen4{
 content:url("../../images/mbr-1900x1123.jpg");
