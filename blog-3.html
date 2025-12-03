@@ -8,29 +8,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" type="image/x-icon">
   
-  <!-- SEO Meta Tags -->
-  <title>Aplicaciones Móviles - YJG Solución TI | Desarrollo de Apps iOS y Android</title>
-  <meta name="description" content="Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad.">
-  <meta name="keywords" content="aplicaciones móviles, desarrollo apps, apps iOS, apps Android, React Native, desarrollo móvil Costa Rica, YJG Solución TI">
-  <meta name="author" content="YJG Solución TI">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Sistema de Gestión Empresarial - YJG Solución TI desarrolla sistemas de gestión multiplataforma para Windows, macOS y Linux en Costa Rica.">
+  <meta name="keywords" content="sistema gestión empresarial, aplicaciones escritorio, desarrollo software Costa Rica, YJG Solución TI">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yjgsolucionti.com/aplicaciones-moviles.html">
-  <meta property="og:title" content="Aplicaciones Móviles - YJG Solución TI">
-  <meta property="og:description" content="Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android.">
-  <meta property="og:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
+  <meta property="og:url" content="https://yjgsolucionti.com/blog-3.html">
+  <meta property="og:title" content="Sistema de Gestión Empresarial - YJG Solución TI">
+  <meta property="og:description" content="Desarrollamos un sistema completo de gestión empresarial multiplataforma para Windows, macOS y Linux.">
+  <meta property="og:image" content="https://yjgsolucionti.com/assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sistema de gestión empresarial - YJG Solución TI">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://yjgsolucionti.com/aplicaciones-moviles.html">
-  <meta property="twitter:title" content="Aplicaciones Móviles - YJG Solución TI">
-  <meta property="twitter:description" content="Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android.">
-  <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
+  <meta property="twitter:url" content="https://yjgsolucionti.com/blog-3.html">
+  <meta property="twitter:title" content="Sistema de Gestión Empresarial - YJG Solución TI">
+  <meta property="twitter:description" content="Desarrollamos un sistema completo de gestión empresarial multiplataforma para Windows, macOS y Linux.">
+  <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg">
   
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://yjgsolucionti.com/aplicaciones-moviles.html">
+  <title>Sistema de Gestión Empresarial - YJG Solución TI</title>
+  
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -174,9 +173,6 @@
     .custom-navbar-social a:hover {
       transform: scale(1.2);
     }
-    .custom-navbar-social a .socicon {
-      display: inline-block;
-    }
     .custom-navbar-toggle {
       display: none;
       background: none;
@@ -230,95 +226,53 @@
       padding-top: 50px;
     }
     
-    /* Efecto hover para enlaces del pie de página */
-    .footer-column a {
-      transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
-      text-decoration: none;
-    }
-    .footer-column a:hover {
-      color: #8c0909 !important;
-      text-decoration: underline !important;
-      opacity: 0.8;
-    }
-    
-    /* Efectos hover para iconos del pie de página */
-    .footer-icons a {
-      transition: transform 0.3s ease, opacity 0.3s ease !important;
-      text-decoration: none !important;
-    }
-    .footer-icons a:hover {
-      transform: scale(1.2) !important;
-      opacity: 0.9 !important;
-      text-decoration: none !important;
-    }
-    .footer-icons a:hover .socicon-facebook {
-      color: #0d6efd !important;
-      filter: drop-shadow(0 2px 4px rgba(24, 119, 242, 0.4));
-    }
-    .footer-icons a:hover .socicon-github {
-      color: #ec0f0f !important;
-      filter: drop-shadow(0 2px 4px rgba(236, 15, 15, 0.4));
-    }
-    
-    /* Responsive: Pie de página */
-    @media (max-width: 768px) {
-      .footer-container {
-        flex-direction: column !important;
-        gap: 20px !important;
-      }
-      .footer-column {
-        min-width: 100% !important;
-        text-align: center;
-      }
-      .footer-icons {
-        justify-content: center !important;
-      }
-      .footer-container {
-        padding: 0 15px !important;
-      }
-    }
-    
-    /* Sección de servicio */
-    .service-header {
-      background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-      padding: 80px 0 60px;
-      margin-top: 40px;
+    .blog-header {
       text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+      margin-bottom: 3rem;
+      margin-top: 40px;
     }
-    .service-header h1 {
-      color: #ec0f0f;
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .service-header p {
-      color: #5a6c7d;
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .service-content {
+    .blog-content {
       padding: 60px 0;
+      line-height: 1.8;
+      color: #333;
     }
-    .service-feature {
-      padding: 2rem;
-      background: #fff;
+    .blog-content img {
+      width: 100%;
+      height: auto;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .blog-meta {
+      color: #666;
+      font-size: 0.9rem;
       margin-bottom: 2rem;
-      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .service-feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    .blog-share {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      flex-wrap: wrap;
     }
-    .service-feature-icon {
-      font-size: 3rem;
-      color: #ec0f0f;
-      margin-bottom: 1rem;
+    .blog-share-label {
+      color: #333;
+      font-weight: 600;
+      margin-right: 0.5rem;
     }
-    
-    
+    .fb-share-button {
+      display: inline-block;
+    }
+    .share-buttons {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
   </style>
   
 </head>
@@ -361,114 +315,61 @@
     </div>
   </nav>
 
-<section class="service-header">
+<section class="blog-header">
     <div class="container">
-        <h1 class="display-2"><strong>Aplicaciones Móviles</strong></h1>
-        <p class="lead">Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad.</p>
+        <h1 style="color: #ec0f0f; margin-bottom: 1rem; font-size: 2rem;"><strong>Sistema de Gestión Empresarial</strong></h1>
+        <div class="blog-meta">
+            <span>📅 Diciembre 2024</span> | <span>💻 Aplicación de Escritorio</span> | <span>🏢 YJG Solución TI</span>
+        </div>
     </div>
 </section>
 
-<section class="service-content">
+<section class="blog-content">
     <div class="container">
-        <div class="row mb-3">
-            <div class="col-12 col-md-6 mb-4">
-                <img src="assets/images/yjg-solucion-ti-aplicaciones-moviles-ios-android-smartphone-desarrollo.jpg" 
-                     alt="YJG Solución TI - Desarrollo de aplicaciones móviles nativas iOS y Android para smartphones en Costa Rica" 
-                     title="Desarrollo de aplicaciones móviles iOS y Android - YJG Solución TI"
-                     class="img-fluid" 
-                     loading="lazy"
-                     style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; height: auto;">
-                <h4 class="mt-3 text-center" style="color: #333; font-weight: 600;">Desarrollo de Aplicaciones Móviles iOS y Android</h4>
-                <p class="text-center" style="color: #666; font-size: 0.95rem;">Aplicaciones móviles nativas e híbridas desarrolladas con tecnologías modernas para iOS y Android en Costa Rica</p>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <img src="assets/images/yjg-solucion-ti-aplicaciones-moviles-react-native-multiplataforma-desarrollo.jpg" 
-                     alt="YJG Solución TI - Desarrollo de aplicaciones móviles multiplataforma con React Native para iOS y Android en Costa Rica" 
-                     title="Aplicaciones móviles multiplataforma con React Native - YJG Solución TI"
-                     class="img-fluid" 
-                     loading="lazy"
-                     style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; height: auto;">
-                <h4 class="mt-3 text-center" style="color: #333; font-weight: 600;">Aplicaciones Móviles con React Native</h4>
-                <p class="text-center" style="color: #666; font-size: 0.95rem;">Desarrollo de aplicaciones móviles multiplataforma utilizando React Native y otras tecnologías de vanguardia</p>
-            </div>
-        </div>
-        
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="service-feature">
-                    <div class="service-feature-icon">
-                        <span class="mobi-mbri mobi-mbri-globe-2 mobi-mbri"></span>
+            <div class="col-12 col-md-8 offset-md-2">
+                <img src="assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg" alt="Sistema de gestión empresarial desarrollado por YJG Solución TI" class="img-fluid">
+                
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">Desarrollo de Sistema Multiplataforma</h2>
+                
+                <p>En YJG Solución TI, hemos desarrollado un sistema completo de gestión empresarial multiplataforma que funciona perfectamente en Windows, macOS y Linux. Este proyecto representa nuestra capacidad para crear soluciones robustas y eficientes que se adaptan a las necesidades específicas de cada empresa.</p>
+                
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;">Módulos Principales</h3>
+                <ul>
+                    <li><strong>Gestión de Inventario:</strong> Control completo de stock, entradas, salidas y movimientos de inventario en tiempo real.</li>
+                    <li><strong>Facturación:</strong> Sistema completo de facturación electrónica con generación automática de documentos.</li>
+                    <li><strong>Reportes y Análisis:</strong> Módulo avanzado de reportes con gráficos y análisis de datos para toma de decisiones.</li>
+                    <li><strong>Gestión de Clientes:</strong> CRM integrado para administración de clientes y seguimiento de relaciones comerciales.</li>
+                </ul>
+                
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;">Tecnologías Utilizadas</h3>
+                <p><strong>Python:</strong> Lenguaje de programación principal para la lógica de negocio</p>
+                <p><strong>Electron:</strong> Framework para crear la interfaz multiplataforma</p>
+                <p><strong>MySQL:</strong> Base de datos relacional para almacenamiento de información</p>
+                <p><strong>Qt:</strong> Librerías adicionales para componentes de interfaz avanzados</p>
+                
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;">Ventajas del Sistema</h3>
+                <p>Este sistema multiplataforma ofrece la flexibilidad de funcionar en cualquier sistema operativo, lo que permite a las empresas utilizar su plataforma preferida sin limitaciones. La arquitectura modular permite personalización según las necesidades específicas de cada cliente.</p>
+                
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;">Resultados</h3>
+                <p>El sistema ha mejorado significativamente la eficiencia operativa de nuestros clientes, reduciendo tiempos de procesamiento y errores manuales. La automatización de procesos ha permitido a las empresas enfocarse en el crecimiento y desarrollo de su negocio.</p>
+                
+                <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;">¿Necesitas un sistema de gestión para tu empresa?</p>
+                    <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;">Contáctanos</a>
+                </div>
+                
+                <div class="blog-share" style="margin-top: 3rem;">
+                    <span class="blog-share-label">Compartir este artículo:</span>
+                    <div class="share-buttons">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyjgsolucionti.com%2Fblog-3.html" style="background-color: #1877F2; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Compartir en Facebook
+                        </a>
                     </div>
-                    <h3 class="mb-3"><strong>iOS y Android</strong></h3>
-                    <p>Desarrollamos aplicaciones para ambas plataformas móviles principales, garantizando compatibilidad y funcionalidad en iOS y Android.</p>
                 </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="service-feature">
-                    <div class="service-feature-icon">
-                        <span class="mobi-mbri mobi-mbri-code mobi-mbri"></span>
-                    </div>
-                    <h3 class="mb-3"><strong>React Native</strong></h3>
-                    <p>Utilizamos React Native para crear aplicaciones híbridas de alto rendimiento que funcionan nativamente en ambas plataformas.</p>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="service-feature">
-                    <div class="service-feature-icon">
-                        <span class="mobi-mbri mobi-mbri-palette mobi-mbri"></span>
-                    </div>
-                    <h3 class="mb-3"><strong>Diseño UI/UX</strong></h3>
-                    <p>Interfaces de usuario intuitivas y atractivas diseñadas siguiendo las mejores prácticas de UX para móviles.</p>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="service-feature">
-                    <div class="service-feature-icon">
-                        <span class="mobi-mbri mobi-mbri-speed mobi-mbri"></span>
-                    </div>
-                    <h3 class="mb-3"><strong>Alto Rendimiento</strong></h3>
-                    <p>Aplicaciones optimizadas para ofrecer el mejor rendimiento, con tiempos de carga rápidos y uso eficiente de recursos.</p>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="service-feature">
-                    <div class="service-feature-icon">
-                        <span class="mobi-mbri mobi-mbri-cloud mobi-mbri"></span>
-                    </div>
-                    <h3 class="mb-3"><strong>Integración en la Nube</strong></h3>
-                    <p>Integración con servicios en la nube para sincronización de datos, almacenamiento y funcionalidades avanzadas.</p>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="service-feature">
-                    <div class="service-feature-icon">
-                        <span class="mobi-mbri mobi-mbri-shield-check mobi-mbri"></span>
-                    </div>
-                    <h3 class="mb-3"><strong>Seguridad</strong></h3>
-                    <p>Implementamos las mejores prácticas de seguridad móvil para proteger los datos de tus usuarios.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-5">
-            <div class="col-12">
-                <div class="card" style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px;">
-                    <h3 class="mb-3" style="color: #ec0f0f;"><strong>Tecnologías que Utilizamos</strong></h3>
-                    <p>Utilizamos React Native, Flutter, Swift, Kotlin y otras tecnologías modernas para desarrollar aplicaciones móviles nativas e híbridas de alta calidad que ofrecen una experiencia de usuario excepcional.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <a href="#" onclick="openContactPanel(); return false;" class="btn btn-primary" style="background-color: #ec0f0f; border-color: #ec0f0f; padding: 12px 30px; font-size: 1.1rem; border-radius: 5px;">
-                    Solicitar Cotización
-                </a>
             </div>
         </div>
     </div>
@@ -478,14 +379,14 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
             <div class="footer-column" style="flex: 1; min-width: 250px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;"><span style="color: #ec0f0f;">YJG Solución TI</span></h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">YJG Solución TI</h3>
                 <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Enlaces Útiles</h3>
                 <ul style="list-style: none; padding: 0; line-height: 2;">
-                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;">Política de Privacidad</a></li>
-                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none;">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none;">Términos y Condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
@@ -496,26 +397,24 @@
                     <strong>Metodología:</strong><br>
                     Desarrollo Ágil<br><br>
                     <strong>Garantía:</strong><br>
-                    Soporte post-entrega<br><br>
-                    <strong>Respuesta:</strong><br>
-                    En menos de 24 horas
+                    Soporte post-entrega
                 </p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Síguenos</h3>
                 <div class="footer-icons" style="margin-top: 10px; display: flex; align-items: center;">
-                    <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="display: inline-block; margin-right: 15px; text-decoration: none; transition: transform 0.3s;">
+                    <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="display: inline-block; margin-right: 15px; text-decoration: none;">
                         <span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
                     </a>
-                    <a href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="display: inline-block; text-decoration: none; transition: transform 0.3s;">
+                    <a href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="display: inline-block; text-decoration: none;">
                         <span class="mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
                     </a>
                 </div>
             </div>
         </div>
         <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center;">
-            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem; padding-top: 20px;">
-                © 2025 <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span>. Todos los derechos reservados.
+            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem;">
+                © 2025 YJG Solución TI. Todos los derechos reservados.
             </p>
         </div>
     </div>
@@ -536,10 +435,9 @@
 <script src="assets/formoid/formoid.min.js"></script>
 
 <script>
-  // Función global para abrir el panel de contacto
-  window.openContactPanel = function() {
+  function openContactPanel() {
     window.location.href = 'index.html#form5-x';
-  };
+  }
   
   // Toggle del menú móvil
   document.addEventListener('DOMContentLoaded', function() {
