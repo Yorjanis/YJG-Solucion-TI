@@ -213,11 +213,87 @@
       margin-right: 0.5rem !important;
       margin-left: -8rem !important;
     }
+    .custom-navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-left: 1rem;
+    }
+    .language-selector-wrapper {
+      position: relative;
+    }
+    #languageDropdown {
+      padding: 0.3rem 0.8rem !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      border: none;
+      background: transparent;
+      position: relative;
+    }
+    #languageDropdown::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      border-top: 4px solid #ec0f0f;
+      border-right: 3px solid transparent;
+      border-bottom: 0;
+      border-left: 3px solid transparent;
+    }
+    #languageDropdown:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:focus {
+      outline: none;
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:active,
+    #languageDropdown:visited {
+      text-decoration: none !important;
+    }
+    .language-selector-wrapper a,
+    .language-selector-wrapper a:hover,
+    .language-selector-wrapper a:focus,
+    .language-selector-wrapper a:active,
+    .language-selector-wrapper a:visited {
+      text-decoration: none !important;
+    }
+    #currentLanguageFlag {
+      font-size: 1.3rem;
+      line-height: 1;
+      display: inline-block;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] {
+      min-width: 150px;
+      padding: 0.5rem 0;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.2s ease;
+      text-decoration: none !important;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
     .custom-navbar-social {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-left: 1rem;
     }
     .custom-navbar-social a {
       color: #1877F2;
@@ -228,6 +304,14 @@
     }
     .custom-navbar-social a:hover {
       transform: scale(1.2);
+    }
+    @media (max-width: 991px) {
+      .custom-navbar-actions {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
     }
     .custom-navbar-toggle {
       display: none;
@@ -271,9 +355,11 @@
         box-shadow: none;
         margin-top: 0.5rem;
       }
-      .custom-navbar-social {
+      .custom-navbar-actions {
         margin-left: 0;
         margin-top: 0.5rem;
+        width: 100%;
+        justify-content: flex-start;
       }
     }
     
@@ -418,20 +504,20 @@
       </a>
       <button class="custom-navbar-toggle" id="menuToggle">☰</button>
       <ul class="custom-navbar-menu" id="navbarMenu">
-        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Inicio</a></li>
-        <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Acerca de</a></li>
-        <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Contacto</a></li>
+        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.home">Inicio</span></a></li>
+        <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.about">Acerca de</span></a></li>
+        <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.contact">Contacto</span></a></li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Servicio ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> ▼</a>
           <ul class="dropdown-menu">
-            <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones de Escritorio</a></li>
-            <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Páginas Web</a></li>
-            <li><a href="aplicaciones-web.html"><span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones Web</a></li>
-            <li><a href="aplicaciones-moviles.html"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones Móviles</a></li>
+            <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.desktop">Aplicaciones de Escritorio</span></a></li>
+            <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webpages">Páginas Web</span></a></li>
+            <li><a href="aplicaciones-web.html"><span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webapps">Aplicaciones Web</span></a></li>
+            <li><a href="aplicaciones-moviles.html"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.mobile">Aplicaciones Móviles</span></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Blog ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> ▼</a>
           <ul class="dropdown-menu" style="max-height: 300px; overflow-y: auto;">
             <li><a href="blog-1.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> OptiControl - Sistema de Gestión Oftalmológica</a></li>
             <li><a href="blog-4.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> RestoControl - Sistema de Gestión de Restaurantes</a></li>
@@ -439,18 +525,37 @@
           </ul>
         </li>
       </ul>
-      <div class="custom-navbar-social">
-        <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank"><span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span></a>
-        <a href="https://github.com/Yorjanis?tab=repositories" target="_blank"><span class="mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span></a>
+      <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px;">
+        <div class="language-selector-wrapper" style="position: relative;">
+          <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
+            <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
+            <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
+              <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+            </a>
+            <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
+              <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+            </a>
+          </div>
+        </div>
+        <div class="icons-menu">
+          <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank">
+            <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
+          </a>
+          <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank">
+            <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
 <section class="blog-header">
     <div class="container">
-        <h1 style="color: #ec0f0f; margin-bottom: 1rem; font-size: 2rem;"><strong>🏨 HotelControl: Sistema Integral de Gestión para Hoteles</strong></h1>
+        <h1 style="color: #ec0f0f; margin-bottom: 1rem; font-size: 2rem;"><strong data-translate="blog.hotelcontrol.title">🏨 HotelControl: Sistema Integral de Gestión para Hoteles</strong></h1>
         <div class="blog-meta">
-            <span>📅 Diciembre 2025</span> | <span>🏨 Sistema de Gestión Hotelera</span> | <span>🏢 YJG Solución TI</span>
+            <span data-translate="blog.hotelcontrol.date">📅 Diciembre 2025</span> | <span data-translate="blog.hotelcontrol.category">🏨 Sistema de Gestión Hotelera</span> | <span data-translate="blog.company">🏢 YJG Solución TI</span>
         </div>
     </div>
 </section>
@@ -463,259 +568,259 @@
                 
                 <img src="assets/images/yjg-solucion-ti-hotelcontrol-sistema-gestion-hotelera-dashboard-costa-rica.png" alt="YJG Solución TI - HotelControl sistema de gestión hotelera dashboard con métricas de huéspedes empleados reservas habitaciones servicios e ingresos en Costa Rica" class="img-fluid blog-image-zoom" loading="lazy" onclick="openImageZoom(this.src, this.alt)">
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📋 Descripción General</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.section1.title">📋 Descripción General</h2>
                 
-                <p><strong>HotelControl</strong> es una solución tecnológica completa y moderna diseñada específicamente para la gestión integral de hoteles. Desarrollada con las tecnologías más avanzadas del mercado, combina la potencia de una aplicación web con la versatilidad de una aplicación de escritorio multiplataforma, ofreciendo control total sobre todas las operaciones del hotel desde un solo lugar.</p>
+                <p data-translate="blog.hotelcontrol.section1.text"><strong>HotelControl</strong> es una solución tecnológica completa y moderna diseñada específicamente para la gestión integral de hoteles. Desarrollada con las tecnologías más avanzadas del mercado, combina la potencia de una aplicación web con la versatilidad de una aplicación de escritorio multiplataforma, ofreciendo control total sobre todas las operaciones del hotel desde un solo lugar.</p>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🎯 ¿Qué es HotelControl?</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.section2.title">🎯 ¿Qué es HotelControl?</h2>
                 
-                <p>HotelControl es un <strong>Sistema de Gestión Hotelera (SGH)</strong> que permite a los hoteles gestionar de manera eficiente y profesional todos los aspectos de su operación diaria. Desde el control de reservas y huéspedes hasta la gestión de habitaciones, servicios y reportes financieros, HotelControl centraliza toda la información en una plataforma intuitiva y segura.</p>
+                <p data-translate="blog.hotelcontrol.section2.text">HotelControl es un <strong>Sistema de Gestión Hotelera (SGH)</strong> que permite a los hoteles gestionar de manera eficiente y profesional todos los aspectos de su operación diaria. Desde el control de reservas y huéspedes hasta la gestión de habitaciones, servicios y reportes financieros, HotelControl centraliza toda la información en una plataforma intuitiva y segura.</p>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Público Objetivo</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.target.title">Público Objetivo</strong></h3>
                 <ul>
-                    <li>Hoteles de todos los tamaños</li>
-                    <li>Resorts y complejos turísticos</li>
-                    <li>Hostales y albergues</li>
-                    <li>Apartamentos turísticos</li>
-                    <li>Cadenas hoteleras</li>
-                    <li>Bed & Breakfast</li>
+                    <li data-translate="blog.hotelcontrol.target.item1">Hoteles de todos los tamaños</li>
+                    <li data-translate="blog.hotelcontrol.target.item2">Resorts y complejos turísticos</li>
+                    <li data-translate="blog.hotelcontrol.target.item3">Hostales y albergues</li>
+                    <li data-translate="blog.hotelcontrol.target.item4">Apartamentos turísticos</li>
+                    <li data-translate="blog.hotelcontrol.target.item5">Cadenas hoteleras</li>
+                    <li data-translate="blog.hotelcontrol.target.item6">Bed & Breakfast</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">✨ Características Principales</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.features.title">✨ Características Principales</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>1. Dashboard en Tiempo Real</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature1.title">1. Dashboard en Tiempo Real</strong></h3>
                 <ul>
-                    <li><strong>Métricas clave:</strong> Visualización instantánea de huéspedes, empleados, reservas, habitaciones y servicios</li>
-                    <li><strong>Ingresos totales:</strong> Seguimiento de ingresos en tiempo real</li>
-                    <li><strong>Ingresos del mes:</strong> Análisis de ingresos mensuales con total de reservas, promedio por reserva y ocupación promedio</li>
-                    <li><strong>Actualización automática:</strong> Datos actualizados en tiempo real</li>
+                    <li data-translate="blog.hotelcontrol.features.feature1.item1"><strong>Métricas clave:</strong> Visualización instantánea de huéspedes, empleados, reservas, habitaciones y servicios</li>
+                    <li data-translate="blog.hotelcontrol.features.feature1.item2"><strong>Ingresos totales:</strong> Seguimiento de ingresos en tiempo real</li>
+                    <li data-translate="blog.hotelcontrol.features.feature1.item3"><strong>Ingresos del mes:</strong> Análisis de ingresos mensuales con total de reservas, promedio por reserva y ocupación promedio</li>
+                    <li data-translate="blog.hotelcontrol.features.feature1.item4"><strong>Actualización automática:</strong> Datos actualizados en tiempo real</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>2. Gestión de Huéspedes</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature2.title">2. Gestión de Huéspedes</strong></h3>
                 <ul>
-                    <li><strong>Registro completo:</strong> Información de contacto, historial de estancias y preferencias</li>
-                    <li><strong>Búsqueda avanzada:</strong> Por nombre, documento de identidad, teléfono, email o historial</li>
-                    <li><strong>Programa de fidelización:</strong> Seguimiento de puntos y recompensas</li>
-                    <li><strong>Historial completo:</strong> Acceso rápido a todas las estancias anteriores del huésped</li>
+                    <li data-translate="blog.hotelcontrol.features.feature2.item1"><strong>Registro completo:</strong> Información de contacto, historial de estancias y preferencias</li>
+                    <li data-translate="blog.hotelcontrol.features.feature2.item2"><strong>Búsqueda avanzada:</strong> Por nombre, documento de identidad, teléfono, email o historial</li>
+                    <li data-translate="blog.hotelcontrol.features.feature2.item3"><strong>Programa de fidelización:</strong> Seguimiento de puntos y recompensas</li>
+                    <li data-translate="blog.hotelcontrol.features.feature2.item4"><strong>Historial completo:</strong> Acceso rápido a todas las estancias anteriores del huésped</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>3. Administración de Empleados</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature3.title">3. Administración de Empleados</strong></h3>
                 <ul>
-                    <li><strong>Gestión de personal:</strong> Registro completo de empleados con roles y permisos</li>
-                    <li><strong>Control de horarios:</strong> Gestión de turnos y disponibilidad</li>
-                    <li><strong>Asignación de tareas:</strong> Vinculación de empleados con departamentos específicos</li>
-                    <li><strong>Estadísticas de productividad:</strong> Reportes de desempeño por empleado</li>
+                    <li data-translate="blog.hotelcontrol.features.feature3.item1"><strong>Gestión de personal:</strong> Registro completo de empleados con roles y permisos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature3.item2"><strong>Control de horarios:</strong> Gestión de turnos y disponibilidad</li>
+                    <li data-translate="blog.hotelcontrol.features.feature3.item3"><strong>Asignación de tareas:</strong> Vinculación de empleados con departamentos específicos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature3.item4"><strong>Estadísticas de productividad:</strong> Reportes de desempeño por empleado</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>4. Gestión de Habitaciones</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature4.title">4. Gestión de Habitaciones</strong></h3>
                 <ul>
-                    <li><strong>Catálogo completo:</strong> Gestión de habitaciones con tipos, características y precios</li>
-                    <li><strong>Estados de habitación:</strong> Disponible, ocupada, en limpieza, en mantenimiento, fuera de servicio</li>
-                    <li><strong>Disponibilidad en tiempo real:</strong> Control de disponibilidad de habitaciones</li>
-                    <li><strong>Tarifas dinámicas:</strong> Actualización de precios y ofertas especiales</li>
+                    <li data-translate="blog.hotelcontrol.features.feature4.item1"><strong>Catálogo completo:</strong> Gestión de habitaciones con tipos, características y precios</li>
+                    <li data-translate="blog.hotelcontrol.features.feature4.item2"><strong>Estados de habitación:</strong> Disponible, ocupada, en limpieza, en mantenimiento, fuera de servicio</li>
+                    <li data-translate="blog.hotelcontrol.features.feature4.item3"><strong>Disponibilidad en tiempo real:</strong> Control de disponibilidad de habitaciones</li>
+                    <li data-translate="blog.hotelcontrol.features.feature4.item4"><strong>Tarifas dinámicas:</strong> Actualización de precios y ofertas especiales</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>5. Gestión de Reservas</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature5.title">5. Gestión de Reservas</strong></h3>
                 <ul>
-                    <li><strong>Registro completo:</strong> Gestión de reservas desde la creación hasta el check-out</li>
-                    <li><strong>Estados de reserva:</strong> Pendiente, confirmada, en curso, completada, cancelada</li>
-                    <li><strong>Asignación de habitaciones:</strong> Vinculación de reservas con habitaciones específicas</li>
-                    <li><strong>Notificaciones:</strong> Alertas en tiempo real para recepción y departamentos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature5.item1"><strong>Registro completo:</strong> Gestión de reservas desde la creación hasta el check-out</li>
+                    <li data-translate="blog.hotelcontrol.features.feature5.item2"><strong>Estados de reserva:</strong> Pendiente, confirmada, en curso, completada, cancelada</li>
+                    <li data-translate="blog.hotelcontrol.features.feature5.item3"><strong>Asignación de habitaciones:</strong> Vinculación de reservas con habitaciones específicas</li>
+                    <li data-translate="blog.hotelcontrol.features.feature5.item4"><strong>Notificaciones:</strong> Alertas en tiempo real para recepción y departamentos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>6. Check-in y Check-out</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature6.title">6. Check-in y Check-out</strong></h3>
                 <ul>
-                    <li><strong>Proceso de check-in:</strong> Registro rápido de huéspedes con validación de documentos</li>
-                    <li><strong>Proceso de check-out:</strong> Cálculo automático de facturación y cierre de estancia</li>
-                    <li><strong>Asignación automática:</strong> Asignación de habitaciones según disponibilidad</li>
-                    <li><strong>Gestión de pagos:</strong> Control de pagos y métodos de pago</li>
+                    <li data-translate="blog.hotelcontrol.features.feature6.item1"><strong>Proceso de check-in:</strong> Registro rápido de huéspedes con validación de documentos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature6.item2"><strong>Proceso de check-out:</strong> Cálculo automático de facturación y cierre de estancia</li>
+                    <li data-translate="blog.hotelcontrol.features.feature6.item3"><strong>Asignación automática:</strong> Asignación de habitaciones según disponibilidad</li>
+                    <li data-translate="blog.hotelcontrol.features.feature6.item4"><strong>Gestión de pagos:</strong> Control de pagos y métodos de pago</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>7. Gestión de Servicios</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature7.title">7. Gestión de Servicios</strong></h3>
                 <ul>
-                    <li><strong>Catálogo de servicios:</strong> Gestión de servicios adicionales (SPA, restaurante, lavandería, etc.)</li>
-                    <li><strong>Reservas de servicios:</strong> Sistema de reservas para servicios del hotel</li>
-                    <li><strong>Facturación:</strong> Carga automática de servicios a la cuenta del huésped</li>
-                    <li><strong>Disponibilidad:</strong> Control de disponibilidad de servicios en tiempo real</li>
+                    <li data-translate="blog.hotelcontrol.features.feature7.item1"><strong>Catálogo de servicios:</strong> Gestión de servicios adicionales (SPA, restaurante, lavandería, etc.)</li>
+                    <li data-translate="blog.hotelcontrol.features.feature7.item2"><strong>Reservas de servicios:</strong> Sistema de reservas para servicios del hotel</li>
+                    <li data-translate="blog.hotelcontrol.features.feature7.item3"><strong>Facturación:</strong> Carga automática de servicios a la cuenta del huésped</li>
+                    <li data-translate="blog.hotelcontrol.features.feature7.item4"><strong>Disponibilidad:</strong> Control de disponibilidad de servicios en tiempo real</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>8. Gestión de Eventos</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature8.title">8. Gestión de Eventos</strong></h3>
                 <ul>
-                    <li><strong>Calendario de eventos:</strong> Gestión de eventos y actividades del hotel</li>
-                    <li><strong>Reservas de espacios:</strong> Sistema de reservas para salones y espacios de eventos</li>
-                    <li><strong>Coordinación:</strong> Gestión de recursos y personal para eventos</li>
-                    <li><strong>Facturación:</strong> Control de costos y facturación de eventos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature8.item1"><strong>Calendario de eventos:</strong> Gestión de eventos y actividades del hotel</li>
+                    <li data-translate="blog.hotelcontrol.features.feature8.item2"><strong>Reservas de espacios:</strong> Sistema de reservas para salones y espacios de eventos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature8.item3"><strong>Coordinación:</strong> Gestión de recursos y personal para eventos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature8.item4"><strong>Facturación:</strong> Control de costos y facturación de eventos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>9. Gestión de Mantenimiento</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature9.title">9. Gestión de Mantenimiento</strong></h3>
                 <ul>
-                    <li><strong>Órdenes de trabajo:</strong> Gestión de solicitudes de mantenimiento</li>
-                    <li><strong>Programación:</strong> Planificación de mantenimiento preventivo</li>
-                    <li><strong>Seguimiento:</strong> Control del estado de trabajos de mantenimiento</li>
-                    <li><strong>Historial:</strong> Registro completo de mantenimientos realizados</li>
+                    <li data-translate="blog.hotelcontrol.features.feature9.item1"><strong>Órdenes de trabajo:</strong> Gestión de solicitudes de mantenimiento</li>
+                    <li data-translate="blog.hotelcontrol.features.feature9.item2"><strong>Programación:</strong> Planificación de mantenimiento preventivo</li>
+                    <li data-translate="blog.hotelcontrol.features.feature9.item3"><strong>Seguimiento:</strong> Control del estado de trabajos de mantenimiento</li>
+                    <li data-translate="blog.hotelcontrol.features.feature9.item4"><strong>Historial:</strong> Registro completo de mantenimientos realizados</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>10. Control de Inventario</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature10.title">10. Control de Inventario</strong></h3>
                 <ul>
-                    <li><strong>Gestión de productos:</strong> Catálogo completo de suministros y productos</li>
-                    <li><strong>Control de stock:</strong> Niveles actual, mínimo y máximo con alertas automáticas</li>
-                    <li><strong>Movimientos:</strong> Registro de entradas y salidas de inventario</li>
-                    <li><strong>Valoración:</strong> Cálculo del valor total del inventario</li>
-                    <li><strong>Historial completo:</strong> Trazabilidad de todos los movimientos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature10.item1"><strong>Gestión de productos:</strong> Catálogo completo de suministros y productos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature10.item2"><strong>Control de stock:</strong> Niveles actual, mínimo y máximo con alertas automáticas</li>
+                    <li data-translate="blog.hotelcontrol.features.feature10.item3"><strong>Movimientos:</strong> Registro de entradas y salidas de inventario</li>
+                    <li data-translate="blog.hotelcontrol.features.feature10.item4"><strong>Valoración:</strong> Cálculo del valor total del inventario</li>
+                    <li data-translate="blog.hotelcontrol.features.feature10.item5"><strong>Historial completo:</strong> Trazabilidad de todos los movimientos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>11. Gestión de Proveedores</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature11.title">11. Gestión de Proveedores</strong></h3>
                 <ul>
-                    <li><strong>Base de datos:</strong> Registro completo de proveedores con información de contacto</li>
-                    <li><strong>Órdenes de compra:</strong> Gestión de pedidos a proveedores</li>
-                    <li><strong>Historial:</strong> Seguimiento de compras y entregas</li>
-                    <li><strong>Evaluación:</strong> Sistema de evaluación de proveedores</li>
+                    <li data-translate="blog.hotelcontrol.features.feature11.item1"><strong>Base de datos:</strong> Registro completo de proveedores con información de contacto</li>
+                    <li data-translate="blog.hotelcontrol.features.feature11.item2"><strong>Órdenes de compra:</strong> Gestión de pedidos a proveedores</li>
+                    <li data-translate="blog.hotelcontrol.features.feature11.item3"><strong>Historial:</strong> Seguimiento de compras y entregas</li>
+                    <li data-translate="blog.hotelcontrol.features.feature11.item4"><strong>Evaluación:</strong> Sistema de evaluación de proveedores</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>12. Facturación y Tarifas</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature12.title">12. Facturación y Tarifas</strong></h3>
                 <ul>
-                    <li><strong>Gestión de tarifas:</strong> Configuración de tarifas por tipo de habitación y temporada</li>
-                    <li><strong>Facturación automática:</strong> Generación automática de facturas</li>
-                    <li><strong>Métodos de pago:</strong> Control de efectivo, tarjetas y otros métodos de pago</li>
-                    <li><strong>Reportes financieros:</strong> Análisis de ingresos y gastos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature12.item1"><strong>Gestión de tarifas:</strong> Configuración de tarifas por tipo de habitación y temporada</li>
+                    <li data-translate="blog.hotelcontrol.features.feature12.item2"><strong>Facturación automática:</strong> Generación automática de facturas</li>
+                    <li data-translate="blog.hotelcontrol.features.feature12.item3"><strong>Métodos de pago:</strong> Control de efectivo, tarjetas y otros métodos de pago</li>
+                    <li data-translate="blog.hotelcontrol.features.feature12.item4"><strong>Reportes financieros:</strong> Análisis de ingresos y gastos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>13. Sistema de Reportes</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature13.title">13. Sistema de Reportes</strong></h3>
                 <ul>
-                    <li><strong>Reportes de ocupación:</strong> Análisis de ocupación por período, tipo de habitación</li>
-                    <li><strong>Reportes de ingresos:</strong> Análisis de ingresos por período, servicio, habitación</li>
-                    <li><strong>Reportes de huéspedes:</strong> Estadísticas de huéspedes y estancias</li>
-                    <li><strong>Reportes de empleados:</strong> Productividad y desempeño del personal</li>
-                    <li><strong>Reportes financieros:</strong> Ingresos, gastos y utilidades</li>
-                    <li><strong>Exportación:</strong> PDF, Excel, CSV para análisis externos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature13.item1"><strong>Reportes de ocupación:</strong> Análisis de ocupación por período, tipo de habitación</li>
+                    <li data-translate="blog.hotelcontrol.features.feature13.item2"><strong>Reportes de ingresos:</strong> Análisis de ingresos por período, servicio, habitación</li>
+                    <li data-translate="blog.hotelcontrol.features.feature13.item3"><strong>Reportes de huéspedes:</strong> Estadísticas de huéspedes y estancias</li>
+                    <li data-translate="blog.hotelcontrol.features.feature13.item4"><strong>Reportes de empleados:</strong> Productividad y desempeño del personal</li>
+                    <li data-translate="blog.hotelcontrol.features.feature13.item5"><strong>Reportes financieros:</strong> Ingresos, gastos y utilidades</li>
+                    <li data-translate="blog.hotelcontrol.features.feature13.item6"><strong>Exportación:</strong> PDF, Excel, CSV para análisis externos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>14. Sistema de Auditoría</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.features.feature14.title">14. Sistema de Auditoría</strong></h3>
                 <ul>
-                    <li><strong>Registro completo:</strong> Historial de todas las operaciones realizadas</li>
-                    <li><strong>Trazabilidad:</strong> Seguimiento de cambios con datos anteriores y nuevos</li>
-                    <li><strong>Seguridad:</strong> Registro de accesos y modificaciones</li>
-                    <li><strong>Cumplimiento:</strong> Preparado para auditorías y regulaciones</li>
+                    <li data-translate="blog.hotelcontrol.features.feature14.item1"><strong>Registro completo:</strong> Historial de todas las operaciones realizadas</li>
+                    <li data-translate="blog.hotelcontrol.features.feature14.item2"><strong>Trazabilidad:</strong> Seguimiento de cambios con datos anteriores y nuevos</li>
+                    <li data-translate="blog.hotelcontrol.features.feature14.item3"><strong>Seguridad:</strong> Registro de accesos y modificaciones</li>
+                    <li data-translate="blog.hotelcontrol.features.feature14.item4"><strong>Cumplimiento:</strong> Preparado para auditorías y regulaciones</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">💻 Aplicación Multiplataforma</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.platform.title">💻 Aplicación Multiplataforma</h2>
                 
-                <p>HotelControl está disponible como <strong>aplicación web</strong> y <strong>aplicación de escritorio nativa</strong> para Windows, Linux y macOS, ofreciendo:</p>
+                <p data-translate="blog.hotelcontrol.platform.intro">HotelControl está disponible como <strong>aplicación web</strong> y <strong>aplicación de escritorio nativa</strong> para Windows, Linux y macOS, ofreciendo:</p>
                 
                 <ul>
-                    <li><strong>Acceso desde cualquier lugar:</strong> Funciona en navegador web o como aplicación de escritorio</li>
-                    <li><strong>Sincronización en tiempo real:</strong> Datos actualizados instantáneamente</li>
-                    <li><strong>Interfaz intuitiva:</strong> Diseño moderno y fácil de usar</li>
-                    <li><strong>Rendimiento optimizado:</strong> Respuesta rápida incluso con grandes volúmenes de datos</li>
+                    <li data-translate="blog.hotelcontrol.platform.item1"><strong>Acceso desde cualquier lugar:</strong> Funciona en navegador web o como aplicación de escritorio</li>
+                    <li data-translate="blog.hotelcontrol.platform.item2"><strong>Sincronización en tiempo real:</strong> Datos actualizados instantáneamente</li>
+                    <li data-translate="blog.hotelcontrol.platform.item3"><strong>Interfaz intuitiva:</strong> Diseño moderno y fácil de usar</li>
+                    <li data-translate="blog.hotelcontrol.platform.item4"><strong>Rendimiento optimizado:</strong> Respuesta rápida incluso con grandes volúmenes de datos</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🎯 Ventajas y Beneficios</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.benefits.title">🎯 Ventajas y Beneficios</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Para Hoteles</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.benefits.hotels.title">Para Hoteles</strong></h3>
                 <ul>
-                    <li>✅ <strong>Eficiencia operativa:</strong> Reducción de tiempos en check-in/check-out y gestión de reservas</li>
-                    <li>✅ <strong>Control total:</strong> Visibilidad completa de todas las operaciones</li>
-                    <li>✅ <strong>Reducción de errores:</strong> Menos errores en reservas y facturación</li>
-                    <li>✅ <strong>Optimización de ocupación:</strong> Control preciso de disponibilidad y tarifas</li>
-                    <li>✅ <strong>Mejora en servicio:</strong> Atención más rápida y personalizada a huéspedes</li>
-                    <li>✅ <strong>Análisis de datos:</strong> Decisiones basadas en información real</li>
+                    <li data-translate="blog.hotelcontrol.benefits.hotels.item1">✅ <strong>Eficiencia operativa:</strong> Reducción de tiempos en check-in/check-out y gestión de reservas</li>
+                    <li data-translate="blog.hotelcontrol.benefits.hotels.item2">✅ <strong>Control total:</strong> Visibilidad completa de todas las operaciones</li>
+                    <li data-translate="blog.hotelcontrol.benefits.hotels.item3">✅ <strong>Reducción de errores:</strong> Menos errores en reservas y facturación</li>
+                    <li data-translate="blog.hotelcontrol.benefits.hotels.item4">✅ <strong>Optimización de ocupación:</strong> Control preciso de disponibilidad y tarifas</li>
+                    <li data-translate="blog.hotelcontrol.benefits.hotels.item5">✅ <strong>Mejora en servicio:</strong> Atención más rápida y personalizada a huéspedes</li>
+                    <li data-translate="blog.hotelcontrol.benefits.hotels.item6">✅ <strong>Análisis de datos:</strong> Decisiones basadas en información real</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Para Administradores</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.benefits.admins.title">Para Administradores</strong></h3>
                 <ul>
-                    <li>✅ <strong>Control financiero:</strong> Reportes detallados de ingresos y gastos</li>
-                    <li>✅ <strong>Gestión de personal:</strong> Control de horarios y productividad</li>
-                    <li>✅ <strong>Optimización de recursos:</strong> Control preciso de inventario y mantenimiento</li>
-                    <li>✅ <strong>Auditoría completa:</strong> Registro de todas las operaciones</li>
+                    <li data-translate="blog.hotelcontrol.benefits.admins.item1">✅ <strong>Control financiero:</strong> Reportes detallados de ingresos y gastos</li>
+                    <li data-translate="blog.hotelcontrol.benefits.admins.item2">✅ <strong>Gestión de personal:</strong> Control de horarios y productividad</li>
+                    <li data-translate="blog.hotelcontrol.benefits.admins.item3">✅ <strong>Optimización de recursos:</strong> Control preciso de inventario y mantenimiento</li>
+                    <li data-translate="blog.hotelcontrol.benefits.admins.item4">✅ <strong>Auditoría completa:</strong> Registro de todas las operaciones</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Para Empleados</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.benefits.employees.title">Para Empleados</strong></h3>
                 <ul>
-                    <li>✅ <strong>Facilidad de uso:</strong> Interfaz intuitiva que requiere mínima capacitación</li>
-                    <li>✅ <strong>Eficiencia:</strong> Procesos más rápidos y organizados</li>
-                    <li>✅ <strong>Menos errores:</strong> Sistema que previene errores comunes</li>
+                    <li data-translate="blog.hotelcontrol.benefits.employees.item1">✅ <strong>Facilidad de uso:</strong> Interfaz intuitiva que requiere mínima capacitación</li>
+                    <li data-translate="blog.hotelcontrol.benefits.employees.item2">✅ <strong>Eficiencia:</strong> Procesos más rápidos y organizados</li>
+                    <li data-translate="blog.hotelcontrol.benefits.employees.item3">✅ <strong>Menos errores:</strong> Sistema que previene errores comunes</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📊 Casos de Uso</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.usecases.title">📊 Casos de Uso</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 1: Proceso de Check-in Completo</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.usecases.case1.title">Caso 1: Proceso de Check-in Completo</strong></h3>
                 <ol>
-                    <li>El huésped realiza una reserva o llega sin reserva</li>
-                    <li>El recepcionista busca o crea el perfil del huésped en HotelControl</li>
-                    <li>Se verifica la disponibilidad de habitaciones</li>
-                    <li>Se asigna una habitación disponible</li>
-                    <li>Se registra el check-in con validación de documentos</li>
-                    <li>Se genera la factura inicial y se registra el método de pago</li>
-                    <li>La habitación se marca como ocupada automáticamente</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step1">El huésped realiza una reserva o llega sin reserva</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step2">El recepcionista busca o crea el perfil del huésped en HotelControl</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step3">Se verifica la disponibilidad de habitaciones</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step4">Se asigna una habitación disponible</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step5">Se registra el check-in con validación de documentos</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step6">Se genera la factura inicial y se registra el método de pago</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case1.step7">La habitación se marca como ocupada automáticamente</li>
                 </ol>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 2: Gestión de Reservas</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.usecases.case2.title">Caso 2: Gestión de Reservas</strong></h3>
                 <ol>
-                    <li>El cliente contacta al hotel para hacer una reserva</li>
-                    <li>El recepcionista consulta la disponibilidad en HotelControl</li>
-                    <li>Se crea la reserva con los datos del cliente y fechas</li>
-                    <li>Se confirma la reserva y se envía confirmación al cliente</li>
-                    <li>El sistema bloquea automáticamente la habitación para las fechas reservadas</li>
-                    <li>Al llegar el día del check-in, el sistema notifica al recepcionista</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case2.step1">El cliente contacta al hotel para hacer una reserva</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case2.step2">El recepcionista consulta la disponibilidad en HotelControl</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case2.step3">Se crea la reserva con los datos del cliente y fechas</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case2.step4">Se confirma la reserva y se envía confirmación al cliente</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case2.step5">El sistema bloquea automáticamente la habitación para las fechas reservadas</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case2.step6">Al llegar el día del check-in, el sistema notifica al recepcionista</li>
                 </ol>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 3: Análisis de Rentabilidad</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.hotelcontrol.usecases.case3.title">Caso 3: Análisis de Rentabilidad</strong></h3>
                 <ol>
-                    <li>El administrador accede al módulo de reportes</li>
-                    <li>Selecciona un período (semanal, mensual, trimestral)</li>
-                    <li>Analiza la ocupación promedio y los ingresos por tipo de habitación</li>
-                    <li>Revisa los servicios más utilizados y su rentabilidad</li>
-                    <li>Identifica oportunidades de mejora en tarifas y servicios</li>
-                    <li>Exporta los datos para análisis más detallados</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case3.step1">El administrador accede al módulo de reportes</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case3.step2">Selecciona un período (semanal, mensual, trimestral)</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case3.step3">Analiza la ocupación promedio y los ingresos por tipo de habitación</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case3.step4">Revisa los servicios más utilizados y su rentabilidad</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case3.step5">Identifica oportunidades de mejora en tarifas y servicios</li>
+                    <li data-translate="blog.hotelcontrol.usecases.case3.step6">Exporta los datos para análisis más detallados</li>
                 </ol>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🔒 Seguridad y Cumplimiento</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.security.title">🔒 Seguridad y Cumplimiento</h2>
                 <ul>
-                    <li><strong>Autenticación segura:</strong> Sistema de login con roles y permisos</li>
-                    <li><strong>Encriptación:</strong> Datos sensibles protegidos</li>
-                    <li><strong>Auditoría completa:</strong> Registro de todas las operaciones</li>
-                    <li><strong>Backup automático:</strong> Sistema de respaldos programados</li>
-                    <li><strong>Protección de datos:</strong> Cumplimiento con normativas de privacidad</li>
+                    <li data-translate="blog.hotelcontrol.security.item1"><strong>Autenticación segura:</strong> Sistema de login con roles y permisos</li>
+                    <li data-translate="blog.hotelcontrol.security.item2"><strong>Encriptación:</strong> Datos sensibles protegidos</li>
+                    <li data-translate="blog.hotelcontrol.security.item3"><strong>Auditoría completa:</strong> Registro de todas las operaciones</li>
+                    <li data-translate="blog.hotelcontrol.security.item4"><strong>Backup automático:</strong> Sistema de respaldos programados</li>
+                    <li data-translate="blog.hotelcontrol.security.item5"><strong>Protección de datos:</strong> Cumplimiento con normativas de privacidad</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🚀 ¿Cómo Empezar?</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.getstarted.title">🚀 ¿Cómo Empezar?</h2>
                 
-                <p>HotelControl está diseñado para ser fácil de implementar y usar. El sistema incluye:</p>
+                <p data-translate="blog.hotelcontrol.getstarted.intro">HotelControl está diseñado para ser fácil de implementar y usar. El sistema incluye:</p>
                 
                 <ul>
-                    <li><strong>Configuración inicial:</strong> Asistente de configuración paso a paso</li>
-                    <li><strong>Capacitación:</strong> Manuales y tutoriales completos</li>
-                    <li><strong>Soporte:</strong> Asistencia técnica durante la implementación</li>
+                    <li data-translate="blog.hotelcontrol.getstarted.item1"><strong>Configuración inicial:</strong> Asistente de configuración paso a paso</li>
+                    <li data-translate="blog.hotelcontrol.getstarted.item2"><strong>Capacitación:</strong> Manuales y tutoriales completos</li>
+                    <li data-translate="blog.hotelcontrol.getstarted.item3"><strong>Soporte:</strong> Asistencia técnica durante la implementación</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📞 Soporte y Contacto</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.support.title">📞 Soporte y Contacto</h2>
                 <ul>
-                    <li><strong>Soporte técnico:</strong> Disponible dentro de la aplicación</li>
-                    <li><strong>Documentación:</strong> Manuales completos y tutoriales</li>
-                    <li><strong>Email:</strong> solucion@yjgsolucionti.com</li>
+                    <li data-translate="blog.hotelcontrol.support.item1"><strong>Soporte técnico:</strong> Disponible dentro de la aplicación</li>
+                    <li data-translate="blog.hotelcontrol.support.item2"><strong>Documentación:</strong> Manuales completos y tutoriales</li>
+                    <li data-translate="blog.hotelcontrol.support.item3"><strong>Email:</strong> solucion@yjgsolucionti.com</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🎉 Conclusión</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.hotelcontrol.conclusion.title">🎉 Conclusión</h2>
                 
-                <p>HotelControl es más que un software de gestión: es una <strong>solución integral</strong> que transforma la forma en que los hoteles operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, HotelControl está diseñado para ayudarte a gestionar tu hotel de manera más eficiente y rentable.</p>
+                <p data-translate="blog.hotelcontrol.conclusion.text1">HotelControl es más que un software de gestión: es una <strong>solución integral</strong> que transforma la forma en que los hoteles operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, HotelControl está diseñado para ayudarte a gestionar tu hotel de manera más eficiente y rentable.</p>
                 
-                <p><strong>¿Listo para transformar tu hotel?</strong> Contacta con nosotros y descubre cómo HotelControl puede mejorar tu operación.</p>
+                <p data-translate="blog.hotelcontrol.conclusion.text2"><strong>¿Listo para transformar tu hotel?</strong> Contacta con nosotros y descubre cómo HotelControl puede mejorar tu operación.</p>
                 
-                <p style="color: #666; font-style: italic; margin-top: 2rem;"><em>HotelControl - Gestión Inteligente para Hoteles</em></p>
+                <p style="color: #666; font-style: italic; margin-top: 2rem;" data-translate="blog.hotelcontrol.conclusion.tagline"><em>HotelControl - Gestión Inteligente para Hoteles</em></p>
                 
                 <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
-                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;">¿Interesado en HotelControl para tu hotel?</p>
-                    <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;">Contáctanos</a>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;" data-translate="blog.hotelcontrol.cta.text">¿Interesado en HotelControl para tu hotel?</p>
+                    <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;" data-translate="blog.hotelcontrol.cta.button">Contáctanos</a>
                 </div>
                 
                 <div class="blog-share" style="margin-top: 3rem;">
-                    <span class="blog-share-label">Compartir este artículo:</span>
+                    <span class="blog-share-label" data-translate="blog.share.label">Compartir este artículo:</span>
                     <div class="share-buttons">
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyjgsolucionti.com%2Fblog-5.html" style="background-color: #1877F2; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
-                            Compartir en Facebook
+                            <span data-translate="blog.share.facebook">Compartir en Facebook</span>
                         </a>
                     </div>
                 </div>
@@ -728,19 +833,19 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
             <div class="footer-column" style="flex: 1; min-width: 250px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">YJG Solución TI</h3>
-                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.company.title">YJG Solución TI</h3>
+                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;" data-translate="footer.company.description">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Enlaces Útiles</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.links.title">Enlaces Útiles</h3>
                 <ul style="list-style: none; padding: 0; line-height: 2;">
-                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none;">Política de Privacidad</a></li>
-                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none;">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none;" data-translate="footer.links.privacy">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none;" data-translate="footer.links.terms">Términos y Condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Información Adicional</h3>
-                <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;">
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
+                <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
                     <strong>Área de Servicio:</strong><br>
                     Costa Rica y Exterior<br><br>
                     <strong>Metodología:</strong><br>
@@ -750,7 +855,7 @@
                 </p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Síguenos</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.follow.title">Síguenos</h3>
                 <div class="footer-icons" style="margin-top: 10px; display: flex; align-items: center;">
                     <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="display: inline-block; margin-right: 15px; text-decoration: none;">
                         <span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
@@ -762,7 +867,7 @@
             </div>
         </div>
         <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center;">
-            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem;">
+            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem;" data-translate="footer.copyright">
                 © 2025 YJG Solución TI. Todos los derechos reservados.
             </p>
         </div>
@@ -782,6 +887,642 @@
 <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="assets/theme/js/script.js"></script>
 <script src="assets/formoid/formoid.min.js"></script>
+
+<script>
+  // Sistema de traducción
+  const translations = {
+    es: {
+      menu: {
+        home: "Inicio",
+        about: "Acerca de",
+        contact: "Contacto",
+        services: "Servicio",
+        desktop: "Aplicaciones de Escritorio",
+        webpages: "Páginas Web",
+        webapps: "Aplicaciones Web",
+        mobile: "Aplicaciones Móviles",
+        blog: "Blog"
+      },
+      blog: {
+        hotelcontrol: {
+          title: "🏨 HotelControl: Sistema Integral de Gestión para Hoteles",
+          date: "📅 Diciembre 2025",
+          category: "🏨 Sistema de Gestión Hotelera",
+          section1: {
+            title: "📋 Descripción General",
+            text: "HotelControl es una solución tecnológica completa y moderna diseñada específicamente para la gestión integral de hoteles. Desarrollada con las tecnologías más avanzadas del mercado, combina la potencia de una aplicación web con la versatilidad de una aplicación de escritorio multiplataforma, ofreciendo control total sobre todas las operaciones del hotel desde un solo lugar."
+          },
+          section2: {
+            title: "🎯 ¿Qué es HotelControl?",
+            text: "HotelControl es un Sistema de Gestión Hotelera (SGH) que permite a los hoteles gestionar de manera eficiente y profesional todos los aspectos de su operación diaria. Desde el control de reservas y huéspedes hasta la gestión de habitaciones, servicios y reportes financieros, HotelControl centraliza toda la información en una plataforma intuitiva y segura."
+          },
+          target: {
+            title: "Público Objetivo",
+            item1: "Hoteles de todos los tamaños",
+            item2: "Resorts y complejos turísticos",
+            item3: "Hostales y albergues",
+            item4: "Apartamentos turísticos",
+            item5: "Cadenas hoteleras",
+            item6: "Bed & Breakfast"
+          },
+          features: {
+            title: "✨ Características Principales",
+            feature1: {
+              title: "1. Dashboard en Tiempo Real",
+              item1: "Métricas clave: Visualización instantánea de huéspedes, empleados, reservas, habitaciones y servicios",
+              item2: "Ingresos totales: Seguimiento de ingresos en tiempo real",
+              item3: "Ingresos del mes: Análisis de ingresos mensuales con total de reservas, promedio por reserva y ocupación promedio",
+              item4: "Actualización automática: Datos actualizados en tiempo real"
+            },
+            feature2: {
+              title: "2. Gestión de Huéspedes",
+              item1: "Registro completo: Información de contacto, historial de estancias y preferencias",
+              item2: "Búsqueda avanzada: Por nombre, documento de identidad, teléfono, email o historial",
+              item3: "Programa de fidelización: Seguimiento de puntos y recompensas",
+              item4: "Historial completo: Acceso rápido a todas las estancias anteriores del huésped"
+            },
+            feature3: {
+              title: "3. Administración de Empleados",
+              item1: "Gestión de personal: Registro completo de empleados con roles y permisos",
+              item2: "Control de horarios: Gestión de turnos y disponibilidad",
+              item3: "Asignación de tareas: Vinculación de empleados con departamentos específicos",
+              item4: "Estadísticas de productividad: Reportes de desempeño por empleado"
+            },
+            feature4: {
+              title: "4. Gestión de Habitaciones",
+              item1: "Catálogo completo: Gestión de habitaciones con tipos, características y precios",
+              item2: "Estados de habitación: Disponible, ocupada, en limpieza, en mantenimiento, fuera de servicio",
+              item3: "Disponibilidad en tiempo real: Control de disponibilidad de habitaciones",
+              item4: "Tarifas dinámicas: Actualización de precios y ofertas especiales"
+            },
+            feature5: {
+              title: "5. Gestión de Reservas",
+              item1: "Registro completo: Gestión de reservas desde la creación hasta el check-out",
+              item2: "Estados de reserva: Pendiente, confirmada, en curso, completada, cancelada",
+              item3: "Asignación de habitaciones: Vinculación de reservas con habitaciones específicas",
+              item4: "Notificaciones: Alertas en tiempo real para recepción y departamentos"
+            },
+            feature6: {
+              title: "6. Check-in y Check-out",
+              item1: "Proceso de check-in: Registro rápido de huéspedes con validación de documentos",
+              item2: "Proceso de check-out: Cálculo automático de facturación y cierre de estancia",
+              item3: "Asignación automática: Asignación de habitaciones según disponibilidad",
+              item4: "Gestión de pagos: Control de pagos y métodos de pago"
+            },
+            feature7: {
+              title: "7. Gestión de Servicios",
+              item1: "Catálogo de servicios: Gestión de servicios adicionales (SPA, restaurante, lavandería, etc.)",
+              item2: "Reservas de servicios: Sistema de reservas para servicios del hotel",
+              item3: "Facturación: Carga automática de servicios a la cuenta del huésped",
+              item4: "Disponibilidad: Control de disponibilidad de servicios en tiempo real"
+            },
+            feature8: {
+              title: "8. Gestión de Eventos",
+              item1: "Calendario de eventos: Gestión de eventos y actividades del hotel",
+              item2: "Reservas de espacios: Sistema de reservas para salones y espacios de eventos",
+              item3: "Coordinación: Gestión de recursos y personal para eventos",
+              item4: "Facturación: Control de costos y facturación de eventos"
+            },
+            feature9: {
+              title: "9. Gestión de Mantenimiento",
+              item1: "Órdenes de trabajo: Gestión de solicitudes de mantenimiento",
+              item2: "Programación: Planificación de mantenimiento preventivo",
+              item3: "Seguimiento: Control del estado de trabajos de mantenimiento",
+              item4: "Historial: Registro completo de mantenimientos realizados"
+            },
+            feature10: {
+              title: "10. Control de Inventario",
+              item1: "Gestión de productos: Catálogo completo de suministros y productos",
+              item2: "Control de stock: Niveles actual, mínimo y máximo con alertas automáticas",
+              item3: "Movimientos: Registro de entradas y salidas de inventario",
+              item4: "Valoración: Cálculo del valor total del inventario",
+              item5: "Historial completo: Trazabilidad de todos los movimientos"
+            },
+            feature11: {
+              title: "11. Gestión de Proveedores",
+              item1: "Base de datos: Registro completo de proveedores con información de contacto",
+              item2: "Órdenes de compra: Gestión de pedidos a proveedores",
+              item3: "Historial: Seguimiento de compras y entregas",
+              item4: "Evaluación: Sistema de evaluación de proveedores"
+            },
+            feature12: {
+              title: "12. Facturación y Tarifas",
+              item1: "Gestión de tarifas: Configuración de tarifas por tipo de habitación y temporada",
+              item2: "Facturación automática: Generación automática de facturas",
+              item3: "Métodos de pago: Control de efectivo, tarjetas y otros métodos de pago",
+              item4: "Reportes financieros: Análisis de ingresos y gastos"
+            },
+            feature13: {
+              title: "13. Sistema de Reportes",
+              item1: "Reportes de ocupación: Análisis de ocupación por período, tipo de habitación",
+              item2: "Reportes de ingresos: Análisis de ingresos por período, servicio, habitación",
+              item3: "Reportes de huéspedes: Estadísticas de huéspedes y estancias",
+              item4: "Reportes de empleados: Productividad y desempeño del personal",
+              item5: "Reportes financieros: Ingresos, gastos y utilidades",
+              item6: "Exportación: PDF, Excel, CSV para análisis externos"
+            },
+            feature14: {
+              title: "14. Sistema de Auditoría",
+              item1: "Registro completo: Historial de todas las operaciones realizadas",
+              item2: "Trazabilidad: Seguimiento de cambios con datos anteriores y nuevos",
+              item3: "Seguridad: Registro de accesos y modificaciones",
+              item4: "Cumplimiento: Preparado para auditorías y regulaciones"
+            }
+          },
+          platform: {
+            title: "💻 Aplicación Multiplataforma",
+            intro: "HotelControl está disponible como aplicación web y aplicación de escritorio nativa para Windows, Linux y macOS, ofreciendo:",
+            item1: "Acceso desde cualquier lugar: Funciona en navegador web o como aplicación de escritorio",
+            item2: "Sincronización en tiempo real: Datos actualizados instantáneamente",
+            item3: "Interfaz intuitiva: Diseño moderno y fácil de usar",
+            item4: "Rendimiento optimizado: Respuesta rápida incluso con grandes volúmenes de datos"
+          },
+          benefits: {
+            title: "🎯 Ventajas y Beneficios",
+            hotels: {
+              title: "Para Hoteles",
+              item1: "✅ Eficiencia operativa: Reducción de tiempos en check-in/check-out y gestión de reservas",
+              item2: "✅ Control total: Visibilidad completa de todas las operaciones",
+              item3: "✅ Reducción de errores: Menos errores en reservas y facturación",
+              item4: "✅ Optimización de ocupación: Control preciso de disponibilidad y tarifas",
+              item5: "✅ Mejora en servicio: Atención más rápida y personalizada a huéspedes",
+              item6: "✅ Análisis de datos: Decisiones basadas en información real"
+            },
+            admins: {
+              title: "Para Administradores",
+              item1: "✅ Control financiero: Reportes detallados de ingresos y gastos",
+              item2: "✅ Gestión de personal: Control de horarios y productividad",
+              item3: "✅ Optimización de recursos: Control preciso de inventario y mantenimiento",
+              item4: "✅ Auditoría completa: Registro de todas las operaciones"
+            },
+            employees: {
+              title: "Para Empleados",
+              item1: "✅ Facilidad de uso: Interfaz intuitiva que requiere mínima capacitación",
+              item2: "✅ Eficiencia: Procesos más rápidos y organizados",
+              item3: "✅ Menos errores: Sistema que previene errores comunes"
+            }
+          },
+          usecases: {
+            title: "📊 Casos de Uso",
+            case1: {
+              title: "Caso 1: Proceso de Check-in Completo",
+              step1: "El huésped realiza una reserva o llega sin reserva",
+              step2: "El recepcionista busca o crea el perfil del huésped en HotelControl",
+              step3: "Se verifica la disponibilidad de habitaciones",
+              step4: "Se asigna una habitación disponible",
+              step5: "Se registra el check-in con validación de documentos",
+              step6: "Se genera la factura inicial y se registra el método de pago",
+              step7: "La habitación se marca como ocupada automáticamente"
+            },
+            case2: {
+              title: "Caso 2: Gestión de Reservas",
+              step1: "El cliente contacta al hotel para hacer una reserva",
+              step2: "El recepcionista consulta la disponibilidad en HotelControl",
+              step3: "Se crea la reserva con los datos del cliente y fechas",
+              step4: "Se confirma la reserva y se envía confirmación al cliente",
+              step5: "El sistema bloquea automáticamente la habitación para las fechas reservadas",
+              step6: "Al llegar el día del check-in, el sistema notifica al recepcionista"
+            },
+            case3: {
+              title: "Caso 3: Análisis de Rentabilidad",
+              step1: "El administrador accede al módulo de reportes",
+              step2: "Selecciona un período (semanal, mensual, trimestral)",
+              step3: "Analiza la ocupación promedio y los ingresos por tipo de habitación",
+              step4: "Revisa los servicios más utilizados y su rentabilidad",
+              step5: "Identifica oportunidades de mejora en tarifas y servicios",
+              step6: "Exporta los datos para análisis más detallados"
+            }
+          },
+          security: {
+            title: "🔒 Seguridad y Cumplimiento",
+            item1: "Autenticación segura: Sistema de login con roles y permisos",
+            item2: "Encriptación: Datos sensibles protegidos",
+            item3: "Auditoría completa: Registro de todas las operaciones",
+            item4: "Backup automático: Sistema de respaldos programados",
+            item5: "Protección de datos: Cumplimiento con normativas de privacidad"
+          },
+          getstarted: {
+            title: "🚀 ¿Cómo Empezar?",
+            intro: "HotelControl está diseñado para ser fácil de implementar y usar. El sistema incluye:",
+            item1: "Configuración inicial: Asistente de configuración paso a paso",
+            item2: "Capacitación: Manuales y tutoriales completos",
+            item3: "Soporte: Asistencia técnica durante la implementación"
+          },
+          support: {
+            title: "📞 Soporte y Contacto",
+            item1: "Soporte técnico: Disponible dentro de la aplicación",
+            item2: "Documentación: Manuales completos y tutoriales",
+            item3: "Email: solucion@yjgsolucionti.com"
+          },
+          conclusion: {
+            title: "🎉 Conclusión",
+            text1: "HotelControl es más que un software de gestión: es una solución integral que transforma la forma en que los hoteles operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, HotelControl está diseñado para ayudarte a gestionar tu hotel de manera más eficiente y rentable.",
+            text2: "¿Listo para transformar tu hotel? Contacta con nosotros y descubre cómo HotelControl puede mejorar tu operación.",
+            tagline: "HotelControl - Gestión Inteligente para Hoteles"
+          },
+          cta: {
+            text: "¿Interesado en HotelControl para tu hotel?",
+            button: "Contáctanos"
+          }
+        },
+        share: {
+          label: "Compartir este artículo:",
+          facebook: "Compartir en Facebook"
+        },
+        company: "🏢 YJG Solución TI"
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
+        },
+        links: {
+          title: "Enlaces Útiles",
+          privacy: "Política de Privacidad",
+          terms: "Términos y Condiciones"
+        },
+        info: {
+          title: "Información Adicional",
+          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega"
+        },
+        follow: {
+          title: "Síguenos"
+        },
+        copyright: "© 2025 YJG Solución TI. Todos los derechos reservados."
+      }
+    },
+    en: {
+      menu: {
+        home: "Home",
+        about: "About",
+        contact: "Contact",
+        services: "Services",
+        desktop: "Desktop Applications",
+        webpages: "Web Pages",
+        webapps: "Web Applications",
+        mobile: "Mobile Applications",
+        blog: "Blog"
+      },
+      blog: {
+        hotelcontrol: {
+          title: "🏨 HotelControl: Comprehensive Management System for Hotels",
+          date: "📅 December 2025",
+          category: "🏨 Hotel Management System",
+          section1: {
+            title: "📋 General Description",
+            text: "HotelControl is a complete and modern technological solution specifically designed for the comprehensive management of hotels. Developed with the most advanced technologies on the market, it combines the power of a web application with the versatility of a cross-platform desktop application, offering total control over all hotel operations from a single place."
+          },
+          section2: {
+            title: "🎯 What is HotelControl?",
+            text: "HotelControl is a Hotel Management System (HMS) that allows hotels to efficiently and professionally manage all aspects of their daily operations. From reservation and guest control to room, service and financial report management, HotelControl centralizes all information on an intuitive and secure platform."
+          },
+          target: {
+            title: "Target Audience",
+            item1: "Hotels of all sizes",
+            item2: "Resorts and tourist complexes",
+            item3: "Hostels and lodges",
+            item4: "Tourist apartments",
+            item5: "Hotel chains",
+            item6: "Bed & Breakfast"
+          },
+          features: {
+            title: "✨ Main Features",
+            feature1: {
+              title: "1. Real-Time Dashboard",
+              item1: "Key metrics: Instant visualization of guests, employees, reservations, rooms and services",
+              item2: "Total income: Real-time income tracking",
+              item3: "Monthly income: Monthly income analysis with total reservations, average per reservation and average occupancy",
+              item4: "Automatic update: Real-time updated data"
+            },
+            feature2: {
+              title: "2. Guest Management",
+              item1: "Complete registration: Contact information, stay history and preferences",
+              item2: "Advanced search: By name, ID document, phone, email or history",
+              item3: "Loyalty program: Points and rewards tracking",
+              item4: "Complete history: Quick access to all previous guest stays"
+            },
+            feature3: {
+              title: "3. Employee Administration",
+              item1: "Staff management: Complete registration of employees with roles and permissions",
+              item2: "Schedule control: Shift and availability management",
+              item3: "Task assignment: Linking employees with specific departments",
+              item4: "Productivity statistics: Performance reports by employee"
+            },
+            feature4: {
+              title: "4. Room Management",
+              item1: "Complete catalog: Room management with types, features and prices",
+              item2: "Room status: Available, occupied, cleaning, maintenance, out of service",
+              item3: "Real-time availability: Room availability control",
+              item4: "Dynamic rates: Price updates and special offers"
+            },
+            feature5: {
+              title: "5. Reservation Management",
+              item1: "Complete record: Reservation management from creation to check-out",
+              item2: "Reservation status: Pending, confirmed, in progress, completed, cancelled",
+              item3: "Room assignment: Linking reservations with specific rooms",
+              item4: "Notifications: Real-time alerts for reception and departments"
+            },
+            feature6: {
+              title: "6. Check-in and Check-out",
+              item1: "Check-in process: Quick guest registration with document validation",
+              item2: "Check-out process: Automatic billing calculation and stay closure",
+              item3: "Automatic assignment: Room assignment according to availability",
+              item4: "Payment management: Payment and payment method control"
+            },
+            feature7: {
+              title: "7. Service Management",
+              item1: "Service catalog: Management of additional services (SPA, restaurant, laundry, etc.)",
+              item2: "Service reservations: Reservation system for hotel services",
+              item3: "Billing: Automatic service charges to guest account",
+              item4: "Availability: Real-time service availability control"
+            },
+            feature8: {
+              title: "8. Event Management",
+              item1: "Event calendar: Management of hotel events and activities",
+              item2: "Space reservations: Reservation system for halls and event spaces",
+              item3: "Coordination: Resource and staff management for events",
+              item4: "Billing: Cost control and event billing"
+            },
+            feature9: {
+              title: "9. Maintenance Management",
+              item1: "Work orders: Maintenance request management",
+              item2: "Scheduling: Preventive maintenance planning",
+              item3: "Tracking: Maintenance work status control",
+              item4: "History: Complete record of performed maintenance"
+            },
+            feature10: {
+              title: "10. Inventory Control",
+              item1: "Product management: Complete catalog of supplies and products",
+              item2: "Stock control: Current, minimum and maximum levels with automatic alerts",
+              item3: "Movements: Record of inventory entries and exits",
+              item4: "Valuation: Calculation of total inventory value",
+              item5: "Complete history: Traceability of all movements"
+            },
+            feature11: {
+              title: "11. Supplier Management",
+              item1: "Database: Complete supplier registration with contact information",
+              item2: "Purchase orders: Supplier order management",
+              item3: "History: Purchase and delivery tracking",
+              item4: "Evaluation: Supplier evaluation system"
+            },
+            feature12: {
+              title: "12. Billing and Rates",
+              item1: "Rate management: Rate configuration by room type and season",
+              item2: "Automatic billing: Automatic invoice generation",
+              item3: "Payment methods: Cash, card and other payment method control",
+              item4: "Financial reports: Income and expense analysis"
+            },
+            feature13: {
+              title: "13. Reporting System",
+              item1: "Occupancy reports: Occupancy analysis by period, room type",
+              item2: "Income reports: Income analysis by period, service, room",
+              item3: "Guest reports: Guest and stay statistics",
+              item4: "Employee reports: Staff productivity and performance",
+              item5: "Financial reports: Income, expenses and profits",
+              item6: "Export: PDF, Excel, CSV for external analysis"
+            },
+            feature14: {
+              title: "14. Audit System",
+              item1: "Complete record: History of all operations performed",
+              item2: "Traceability: Change tracking with previous and new data",
+              item3: "Security: Access and modification records",
+              item4: "Compliance: Prepared for audits and regulations"
+            }
+          },
+          platform: {
+            title: "💻 Cross-Platform Application",
+            intro: "HotelControl is available as a web application and native desktop application for Windows, Linux and macOS, offering:",
+            item1: "Access from anywhere: Works in web browser or as desktop application",
+            item2: "Real-time synchronization: Data updated instantly",
+            item3: "Intuitive interface: Modern and easy-to-use design",
+            item4: "Optimized performance: Fast response even with large volumes of data"
+          },
+          benefits: {
+            title: "🎯 Advantages and Benefits",
+            hotels: {
+              title: "For Hotels",
+              item1: "✅ Operational efficiency: Reduction in check-in/check-out times and reservation management",
+              item2: "✅ Total control: Complete visibility of all operations",
+              item3: "✅ Error reduction: Fewer errors in reservations and billing",
+              item4: "✅ Occupancy optimization: Precise availability and rate control",
+              item5: "✅ Service improvement: Faster and personalized attention to guests",
+              item6: "✅ Data analysis: Decisions based on real information"
+            },
+            admins: {
+              title: "For Administrators",
+              item1: "✅ Financial control: Detailed income and expense reports",
+              item2: "✅ Staff management: Schedule and productivity control",
+              item3: "✅ Resource optimization: Precise inventory and maintenance control",
+              item4: "✅ Complete audit: Record of all operations"
+            },
+            employees: {
+              title: "For Employees",
+              item1: "✅ Ease of use: Intuitive interface requiring minimal training",
+              item2: "✅ Efficiency: Faster and organized processes",
+              item3: "✅ Fewer errors: System that prevents common errors"
+            }
+          },
+          usecases: {
+            title: "📊 Use Cases",
+            case1: {
+              title: "Case 1: Complete Check-in Process",
+              step1: "The guest makes a reservation or arrives without reservation",
+              step2: "The receptionist searches or creates the guest profile in HotelControl",
+              step3: "Room availability is verified",
+              step4: "An available room is assigned",
+              step5: "Check-in is recorded with document validation",
+              step6: "Initial invoice is generated and payment method is recorded",
+              step7: "The room is automatically marked as occupied"
+            },
+            case2: {
+              title: "Case 2: Reservation Management",
+              step1: "The client contacts the hotel to make a reservation",
+              step2: "The receptionist checks availability in HotelControl",
+              step3: "The reservation is created with client data and dates",
+              step4: "The reservation is confirmed and confirmation is sent to the client",
+              step5: "The system automatically blocks the room for reserved dates",
+              step6: "When check-in day arrives, the system notifies the receptionist"
+            },
+            case3: {
+              title: "Case 3: Profitability Analysis",
+              step1: "The administrator accesses the reports module",
+              step2: "Selects a period (weekly, monthly, quarterly)",
+              step3: "Analyzes average occupancy and income by room type",
+              step4: "Reviews most used services and their profitability",
+              step5: "Identifies improvement opportunities in rates and services",
+              step6: "Exports data for more detailed analysis"
+            }
+          },
+          security: {
+            title: "🔒 Security and Compliance",
+            item1: "Secure authentication: Login system with roles and permissions",
+            item2: "Encryption: Protected sensitive data",
+            item3: "Complete audit: Record of all operations",
+            item4: "Automatic backup: Scheduled backup system",
+            item5: "Data protection: Compliance with privacy regulations"
+          },
+          getstarted: {
+            title: "🚀 How to Get Started?",
+            intro: "HotelControl is designed to be easy to implement and use. The system includes:",
+            item1: "Initial configuration: Step-by-step configuration assistant",
+            item2: "Training: Complete manuals and tutorials",
+            item3: "Support: Technical assistance during implementation"
+          },
+          support: {
+            title: "📞 Support and Contact",
+            item1: "Technical support: Available within the application",
+            item2: "Documentation: Complete manuals and tutorials",
+            item3: "Email: solucion@yjgsolucionti.com"
+          },
+          conclusion: {
+            title: "🎉 Conclusion",
+            text1: "HotelControl is more than management software: it is a comprehensive solution that transforms how hotels operate. With its unique combination of power, flexibility and ease of use, HotelControl is designed to help you manage your hotel more efficiently and profitably.",
+            text2: "Ready to transform your hotel? Contact us and discover how HotelControl can improve your operation.",
+            tagline: "HotelControl - Smart Management for Hotels"
+          },
+          cta: {
+            text: "Interested in HotelControl for your hotel?",
+            button: "Contact Us"
+          }
+        },
+        share: {
+          label: "Share this article:",
+          facebook: "Share on Facebook"
+        },
+        company: "🏢 YJG Solución TI"
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Specialists in mobile application development, desktop applications and web pages. Comprehensive technological solutions in Costa Rica."
+        },
+        links: {
+          title: "Useful Links",
+          privacy: "Privacy Policy",
+          terms: "Terms and Conditions"
+        },
+        info: {
+          title: "Additional Information",
+          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support"
+        },
+        follow: {
+          title: "Follow Us"
+        },
+        copyright: "© 2025 YJG Solución TI. All rights reserved."
+      }
+    }
+  };
+  
+  // Función para obtener el idioma guardado o usar español por defecto
+  function getSavedLanguage() {
+    return localStorage.getItem('language') || 'es';
+  }
+  
+  // Función para guardar el idioma
+  function saveLanguage(lang) {
+    localStorage.setItem('language', lang);
+  }
+  
+  // Función para obtener el texto traducido
+  function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let value = translations[lang];
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  }
+  
+  // Función para aplicar traducciones
+  function applyTranslations(lang) {
+    // Traducir elementos con data-translate (todos los elementos, no solo spans)
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+      // Solo traducir si no es un enlace que contiene iconos
+      if (element.tagName === 'A' && element.querySelector('.menu-icon')) {
+        return; // Saltar enlaces del menú que contienen iconos
+      }
+      const key = element.getAttribute('data-translate');
+      const translation = getTranslation(key, lang);
+      if (translation) {
+        // Si el elemento tiene data-translate-html, insertar HTML, sino solo texto
+        if (element.getAttribute('data-translate-html') === 'true') {
+          element.innerHTML = translation;
+        } else {
+          element.textContent = translation;
+        }
+      }
+    });
+    
+    // Actualizar la bandera del selector de idioma
+    const currentFlag = document.getElementById('currentLanguageFlag');
+    if (currentFlag) {
+      currentFlag.textContent = lang === 'es' ? '🇪🇸' : '🇺🇸';
+    }
+    
+    // Actualizar el atributo lang del HTML
+    document.documentElement.lang = lang;
+  }
+  
+  // Función para cambiar el idioma
+  function changeLanguage(lang) {
+    saveLanguage(lang);
+    applyTranslations(lang);
+    // Disparar evento personalizado para actualizar otras partes de la página
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+  }
+  
+  // Inicializar traducciones al cargar la página
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = getSavedLanguage();
+    applyTranslations(savedLang);
+    
+    // Agregar event listeners a los botones de idioma
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        changeLanguage(lang);
+      });
+    });
+    
+    // Escuchar cambios en localStorage para actualizar cuando cambie el idioma en otra pestaña
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'language') {
+        const newLang = e.newValue || 'es';
+        applyTranslations(newLang);
+      }
+    });
+    
+    // Escuchar evento personalizado para actualizar cuando cambie el idioma en la misma página
+    window.addEventListener('languageChanged', function(e) {
+      if (e.detail && e.detail.lang) {
+        applyTranslations(e.detail.lang);
+      }
+    });
+  });
+  
+  // Inicialización inmediata para aplicar el idioma antes de que se cargue el DOM
+  (function() {
+    const savedLang = localStorage.getItem('language') || 'es';
+    const currentFlag = document.getElementById('currentLanguageFlag');
+    if (currentFlag) {
+      currentFlag.textContent = savedLang === 'es' ? '🇪🇸' : '🇺🇸';
+    }
+    if (document.documentElement) {
+      document.documentElement.lang = savedLang;
+    }
+    // Aplicar traducciones inmediatamente si el DOM ya está listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        applyTranslations(savedLang);
+      });
+    } else {
+      applyTranslations(savedLang);
+    }
+  })();
+</script>
 
 <script>
   function openContactPanel() {

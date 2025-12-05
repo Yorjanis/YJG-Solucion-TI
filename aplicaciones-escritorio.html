@@ -163,11 +163,86 @@
       margin-right: 0.5rem;
       margin-left: -8rem;
     }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .language-selector-wrapper {
+      position: relative;
+    }
+    #languageDropdown {
+      padding: 0.3rem 0.8rem !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      border: none;
+      background: transparent;
+      position: relative;
+    }
+    #languageDropdown::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      border-top: 4px solid #ec0f0f;
+      border-right: 3px solid transparent;
+      border-bottom: 0;
+      border-left: 3px solid transparent;
+    }
+    #languageDropdown:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:focus {
+      outline: none;
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:active,
+    #languageDropdown:visited {
+      text-decoration: none !important;
+    }
+    .language-selector-wrapper a,
+    .language-selector-wrapper a:hover,
+    .language-selector-wrapper a:focus,
+    .language-selector-wrapper a:active,
+    .language-selector-wrapper a:visited {
+      text-decoration: none !important;
+    }
+    #currentLanguageFlag {
+      font-size: 1.3rem;
+      line-height: 1;
+      display: inline-block;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] {
+      min-width: 150px;
+      padding: 0.5rem 0;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.2s ease;
+      text-decoration: none !important;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
     .custom-navbar-social {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-left: 1rem;
     }
     .custom-navbar-social a {
       color: #1877F2;
@@ -178,6 +253,14 @@
     }
     .custom-navbar-social a:hover {
       transform: scale(1.2);
+    }
+    @media (max-width: 991px) {
+      .navbar-actions {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
     }
     .custom-navbar-social a .socicon {
       display: inline-block;
@@ -224,9 +307,11 @@
         box-shadow: none;
         margin-top: 0.5rem;
       }
-      .custom-navbar-social {
+      .navbar-actions {
         margin-left: 0;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-start;
       }
     }
     
@@ -338,20 +423,20 @@
       </a>
       <button class="custom-navbar-toggle" id="menuToggle">☰</button>
       <ul class="custom-navbar-menu" id="navbarMenu">
-        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Inicio</a></li>
-        <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Acerca de</a></li>
-        <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Contacto</a></li>
+        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.home">Inicio</span></a></li>
+        <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.about">Acerca de</span></a></li>
+        <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.contact">Contacto</span></a></li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Servicio ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> ▼</a>
           <ul class="dropdown-menu">
-            <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones de Escritorio</a></li>
-            <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Páginas Web</a></li>
-            <li><a href="aplicaciones-web.html"><span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones Web</a></li>
-            <li><a href="aplicaciones-moviles.html"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones Móviles</a></li>
+            <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.desktop">Aplicaciones de Escritorio</span></a></li>
+            <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webpages">Páginas Web</span></a></li>
+            <li><a href="aplicaciones-web.html"><span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webapps">Aplicaciones Web</span></a></li>
+            <li><a href="aplicaciones-moviles.html"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.mobile">Aplicaciones Móviles</span></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Blog ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> ▼</a>
           <ul class="dropdown-menu" style="max-height: 300px; overflow-y: auto;">
             <li><a href="blog-1.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> OptiControl - Sistema de Gestión Oftalmológica</a></li>
             <li><a href="blog-4.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> RestoControl - Sistema de Gestión de Restaurantes</a></li>
@@ -359,17 +444,36 @@
           </ul>
         </li>
       </ul>
-      <div class="custom-navbar-social">
-        <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank"><span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span></a>
-        <a href="https://github.com/Yorjanis?tab=repositories" target="_blank"><span class="mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span></a>
+      <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px;">
+        <div class="language-selector-wrapper" style="position: relative;">
+          <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
+            <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
+            <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
+              <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+            </a>
+            <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
+              <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+            </a>
+          </div>
+        </div>
+        <div class="icons-menu">
+          <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank">
+            <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
+          </a>
+          <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank">
+            <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
 <section class="service-header">
     <div class="container">
-        <h1 class="display-2"><strong>Aplicaciones de Escritorio</strong></h1>
-        <p class="lead">Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.</p>
+        <h1 class="display-2"><strong data-translate="services.desktop.title">Aplicaciones de Escritorio</strong></h1>
+        <p class="lead" data-translate="services.desktop.description">Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.</p>
     </div>
 </section>
 
@@ -383,8 +487,8 @@
                      class="img-fluid" 
                      loading="lazy"
                      style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; height: auto;">
-                <h4 class="mt-3 text-center" style="color: #333; font-weight: 600;">Aplicaciones de Escritorio Multiplataforma</h4>
-                <p class="text-center" style="color: #666; font-size: 0.95rem;">Desarrollo de software desktop personalizado para Windows, macOS y Linux con tecnologías modernas</p>
+                <h4 class="mt-3 text-center" style="color: #333; font-weight: 600;" data-translate="services.desktop.subtitle1">Aplicaciones de Escritorio Multiplataforma</h4>
+                <p class="text-center" style="color: #666; font-size: 0.95rem;" data-translate="services.desktop.text1">Desarrollo de software desktop personalizado para Windows, macOS y Linux con tecnologías modernas</p>
             </div>
             <div class="col-12 col-md-6 mb-4">
                 <img src="assets/images/yjg-solucion-ti-aplicaciones-escritorio-software-desktop-costa-rica.jpg" 
@@ -393,8 +497,8 @@
                      class="img-fluid" 
                      loading="lazy"
                      style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; height: auto;">
-                <h4 class="mt-3 text-center" style="color: #333; font-weight: 600;">Software Desktop Personalizado</h4>
-                <p class="text-center" style="color: #666; font-size: 0.95rem;">Soluciones de software desktop robustas y eficientes adaptadas a las necesidades específicas de tu negocio</p>
+                <h4 class="mt-3 text-center" style="color: #333; font-weight: 600;" data-translate="services.desktop.subtitle2">Software Desktop Personalizado</h4>
+                <p class="text-center" style="color: #666; font-size: 0.95rem;" data-translate="services.desktop.text2">Soluciones de software desktop robustas y eficientes adaptadas a las necesidades específicas de tu negocio</p>
             </div>
         </div>
         
@@ -404,8 +508,8 @@
                     <div class="service-feature-icon">
                         <span class="mobi-mbri mobi-mbri-code mobi-mbri"></span>
                     </div>
-                    <h3 class="mb-3"><strong>Multiplataforma</strong></h3>
-                    <p>Desarrollamos aplicaciones que funcionan en Windows, macOS y Linux, garantizando compatibilidad y acceso desde cualquier sistema operativo.</p>
+                    <h3 class="mb-3"><strong data-translate="services.desktop.feature1.title">Multiplataforma</strong></h3>
+                    <p data-translate="services.desktop.feature1.text">Desarrollamos aplicaciones que funcionan en Windows, macOS y Linux, garantizando compatibilidad y acceso desde cualquier sistema operativo.</p>
                 </div>
             </div>
             
@@ -414,8 +518,8 @@
                     <div class="service-feature-icon">
                         <span class="mobi-mbri mobi-mbri-setting mobi-mbri"></span>
                     </div>
-                    <h3 class="mb-3"><strong>Personalización Total</strong></h3>
-                    <p>Cada aplicación es desarrollada según tus necesidades específicas, con interfaces intuitivas y funcionalidades adaptadas a tu negocio.</p>
+                    <h3 class="mb-3"><strong data-translate="services.desktop.feature2.title">Personalización Total</strong></h3>
+                    <p data-translate="services.desktop.feature2.text">Cada aplicación es desarrollada según tus necesidades específicas, con interfaces intuitivas y funcionalidades adaptadas a tu negocio.</p>
                 </div>
             </div>
             
@@ -424,8 +528,8 @@
                     <div class="service-feature-icon">
                         <span class="mobi-mbri mobi-mbri-speed mobi-mbri"></span>
                     </div>
-                    <h3 class="mb-3"><strong>Alto Rendimiento</strong></h3>
-                    <p>Aplicaciones optimizadas para ofrecer el mejor rendimiento, con tiempos de respuesta rápidos y uso eficiente de recursos del sistema.</p>
+                    <h3 class="mb-3"><strong data-translate="services.desktop.feature3.title">Alto Rendimiento</strong></h3>
+                    <p data-translate="services.desktop.feature3.text">Aplicaciones optimizadas para ofrecer el mejor rendimiento, con tiempos de respuesta rápidos y uso eficiente de recursos del sistema.</p>
                 </div>
             </div>
             
@@ -434,8 +538,8 @@
                     <div class="service-feature-icon">
                         <span class="mobi-mbri mobi-mbri-shield-check mobi-mbri"></span>
                     </div>
-                    <h3 class="mb-3"><strong>Seguridad</strong></h3>
-                    <p>Implementamos las mejores prácticas de seguridad para proteger tus datos y la información de tus clientes.</p>
+                    <h3 class="mb-3"><strong data-translate="services.desktop.feature4.title">Seguridad</strong></h3>
+                    <p data-translate="services.desktop.feature4.text">Implementamos las mejores prácticas de seguridad para proteger tus datos y la información de tus clientes.</p>
                 </div>
             </div>
             
@@ -444,8 +548,8 @@
                     <div class="service-feature-icon">
                         <span class="mobi-mbri mobi-mbri-sync mobi-mbri"></span>
                     </div>
-                    <h3 class="mb-3"><strong>Mantenimiento</strong></h3>
-                    <p>Ofrecemos soporte continuo y actualizaciones para mantener tu aplicación funcionando perfectamente.</p>
+                    <h3 class="mb-3"><strong data-translate="services.desktop.feature5.title">Mantenimiento</strong></h3>
+                    <p data-translate="services.desktop.feature5.text">Ofrecemos soporte continuo y actualizaciones para mantener tu aplicación funcionando perfectamente.</p>
                 </div>
             </div>
             
@@ -454,8 +558,8 @@
                     <div class="service-feature-icon">
                         <span class="mobi-mbri mobi-mbri-users mbr-iconfont"></span>
                     </div>
-                    <h3 class="mb-3"><strong>Experiencia de Usuario</strong></h3>
-                    <p>Interfaces modernas y fáciles de usar que mejoran la productividad y satisfacción de los usuarios.</p>
+                    <h3 class="mb-3"><strong data-translate="services.desktop.feature6.title">Experiencia de Usuario</strong></h3>
+                    <p data-translate="services.desktop.feature6.text">Interfaces modernas y fáciles de usar que mejoran la productividad y satisfacción de los usuarios.</p>
                 </div>
             </div>
         </div>
@@ -463,8 +567,8 @@
         <div class="row mt-5">
             <div class="col-12">
                 <div class="card" style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px;">
-                    <h3 class="mb-3" style="color: #ec0f0f;"><strong>Tecnologías que Utilizamos</strong></h3>
-                    <p>Utilizamos tecnologías modernas como Python, Electron, .NET, Java, C++, Qt y otras herramientas de desarrollo para crear aplicaciones de escritorio de alta calidad que se adaptan a tus necesidades específicas.</p>
+                    <h3 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.desktop.technologies.title">Tecnologías que Utilizamos</strong></h3>
+                    <p data-translate="services.desktop.technologies.text">Utilizamos tecnologías modernas como Python, Electron, .NET, Java, C++, Qt y otras herramientas de desarrollo para crear aplicaciones de escritorio de alta calidad que se adaptan a tus necesidades específicas.</p>
                 </div>
             </div>
         </div>
@@ -472,7 +576,7 @@
         <div class="row mt-4">
             <div class="col-12 text-center">
                 <a href="#" onclick="openContactPanel(); return false;" class="btn btn-primary" style="background-color: #ec0f0f; border-color: #ec0f0f; padding: 12px 30px; font-size: 1.1rem; border-radius: 5px;">
-                    Solicitar Cotización
+                    <span data-translate="services.quote">Solicitar Cotización</span>
                 </a>
             </div>
         </div>
@@ -483,19 +587,19 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
             <div class="footer-column" style="flex: 1; min-width: 250px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;"><span style="color: #ec0f0f;">YJG Solución TI</span></h3>
-                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.company.title"><span style="color: #ec0f0f;">YJG Solución TI</span></h3>
+                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;" data-translate="footer.company.description">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Enlaces Útiles</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.links.title">Enlaces Útiles</h3>
                 <ul style="list-style: none; padding: 0; line-height: 2;">
-                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;">Política de Privacidad</a></li>
-                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;" data-translate="footer.links.privacy">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;" data-translate="footer.links.terms">Términos y Condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Información Adicional</h3>
-                <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;">
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
+                <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
                     <strong>Área de Servicio:</strong><br>
                     Costa Rica y Exterior<br><br>
                     <strong>Metodología:</strong><br>
@@ -507,7 +611,7 @@
                 </p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Síguenos</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.follow.title">Síguenos</h3>
                 <div class="footer-icons" style="margin-top: 10px; display: flex; align-items: center;">
                     <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="display: inline-block; margin-right: 15px; text-decoration: none; transition: transform 0.3s;">
                         <span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
@@ -519,7 +623,7 @@
             </div>
         </div>
         <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center;">
-            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem; padding-top: 20px;">
+            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem; padding-top: 20px;" data-translate-html="footer.copyright">
                 © 2025 <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span>. Todos los derechos reservados.
             </p>
         </div>
@@ -539,6 +643,305 @@
 <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="assets/theme/js/script.js"></script>
 <script src="assets/formoid/formoid.min.js"></script>
+
+<script>
+  // Sistema de traducción
+  const translations = {
+    es: {
+      menu: {
+        home: "Inicio",
+        about: "Acerca de",
+        contact: "Contacto",
+        services: "Servicio",
+        desktop: "Aplicaciones de Escritorio",
+        webpages: "Páginas Web",
+        webapps: "Aplicaciones Web",
+        mobile: "Aplicaciones Móviles",
+        blog: "Blog"
+      },
+      services: {
+        desktop: {
+          title: "Aplicaciones de Escritorio",
+          description: "Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.",
+          subtitle1: "Aplicaciones de Escritorio Multiplataforma",
+          text1: "Desarrollo de software desktop personalizado para Windows, macOS y Linux con tecnologías modernas",
+          subtitle2: "Software Desktop Personalizado",
+          text2: "Soluciones de software desktop robustas y eficientes adaptadas a las necesidades específicas de tu negocio",
+          feature1: {
+            title: "Multiplataforma",
+            text: "Desarrollamos aplicaciones que funcionan en Windows, macOS y Linux, garantizando compatibilidad y acceso desde cualquier sistema operativo."
+          },
+          feature2: {
+            title: "Personalización Total",
+            text: "Cada aplicación es desarrollada según tus necesidades específicas, con interfaces intuitivas y funcionalidades adaptadas a tu negocio."
+          },
+          feature3: {
+            title: "Alto Rendimiento",
+            text: "Aplicaciones optimizadas para ofrecer el mejor rendimiento, con tiempos de respuesta rápidos y uso eficiente de recursos del sistema."
+          },
+          feature4: {
+            title: "Seguridad",
+            text: "Implementamos las mejores prácticas de seguridad para proteger tus datos y la información de tus clientes."
+          },
+          feature5: {
+            title: "Mantenimiento",
+            text: "Ofrecemos soporte continuo y actualizaciones para mantener tu aplicación funcionando perfectamente."
+          },
+          feature6: {
+            title: "Experiencia de Usuario",
+            text: "Interfaces modernas y fáciles de usar que mejoran la productividad y satisfacción de los usuarios."
+          },
+          technologies: {
+            title: "Tecnologías que Utilizamos",
+            text: "Utilizamos tecnologías modernas como Python, Electron, .NET, Java, C++, Qt y otras herramientas de desarrollo para crear aplicaciones de escritorio de alta calidad que se adaptan a tus necesidades específicas."
+          }
+        },
+        quote: "Solicitar Cotización"
+      }
+    },
+    en: {
+      menu: {
+        home: "Home",
+        about: "About",
+        contact: "Contact",
+        services: "Services",
+        desktop: "Desktop Applications",
+        webpages: "Web Pages",
+        webapps: "Web Applications",
+        mobile: "Mobile Applications",
+        blog: "Blog"
+      },
+      services: {
+        desktop: {
+          title: "Desktop Applications",
+          description: "Development of customized desktop applications for Windows, macOS and Linux. Robust and efficient solutions for your business.",
+          subtitle1: "Cross-Platform Desktop Applications",
+          text1: "Custom desktop software development for Windows, macOS and Linux with modern technologies",
+          subtitle2: "Custom Desktop Software",
+          text2: "Robust and efficient desktop software solutions adapted to your business's specific needs",
+          feature1: {
+            title: "Cross-Platform",
+            text: "We develop applications that work on Windows, macOS and Linux, ensuring compatibility and access from any operating system."
+          },
+          feature2: {
+            title: "Total Customization",
+            text: "Each application is developed according to your specific needs, with intuitive interfaces and functionalities adapted to your business."
+          },
+          feature3: {
+            title: "High Performance",
+            text: "Optimized applications to offer the best performance, with fast response times and efficient use of system resources."
+          },
+          feature4: {
+            title: "Security",
+            text: "We implement best security practices to protect your data and your customers' information."
+          },
+          feature5: {
+            title: "Maintenance",
+            text: "We offer continuous support and updates to keep your application running perfectly."
+          },
+          feature6: {
+            title: "User Experience",
+            text: "Modern and easy-to-use interfaces that improve user productivity and satisfaction."
+          },
+          technologies: {
+            title: "Technologies We Use",
+            text: "We use modern technologies such as Python, Electron, .NET, Java, C++, Qt and other development tools to create high-quality desktop applications that adapt to your specific needs."
+          }
+        },
+        quote: "Request Quote"
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
+        },
+        links: {
+          title: "Enlaces Útiles",
+          privacy: "Política de Privacidad",
+          terms: "Términos y Condiciones"
+        },
+        info: {
+          title: "Información Adicional",
+          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
+        },
+        follow: {
+          title: "Síguenos"
+        },
+        copyright: "© 2025 <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span>. Todos los derechos reservados."
+      }
+    },
+    en: {
+      menu: {
+        home: "Home",
+        about: "About",
+        contact: "Contact",
+        services: "Services",
+        blog: "Blog"
+      },
+      services: {
+        desktop: {
+          title: "Desktop Applications",
+          subtitle: "Custom Software Solutions for Your Business",
+          description: "We develop robust and efficient desktop applications for Windows, macOS and Linux, tailored to your specific needs.",
+          features: {
+            title: "Key Features",
+            crossPlatform: "Cross-platform development (Windows, macOS, Linux)",
+            custom: "Custom solutions adapted to your business",
+            performance: "High performance and efficiency",
+            security: "Security and data protection",
+            integration: "Integration with existing systems",
+            support: "Technical support and maintenance"
+          },
+          technologies: {
+            title: "Technologies We Use",
+            languages: "Programming Languages: Python, Java, C#, C++, JavaScript, TypeScript",
+            frameworks: "Frameworks: Electron, .NET, Qt, GTK",
+            databases: "Databases: PostgreSQL, MySQL, SQLite, MongoDB",
+            tools: "Development Tools: Visual Studio, IntelliJ IDEA, VS Code"
+          },
+          benefits: {
+            title: "Benefits",
+            efficiency: "Increased operational efficiency",
+            automation: "Process automation",
+            scalability: "Scalable solutions",
+            customization: "Full customization",
+            support: "Ongoing technical support"
+          },
+          quote: "Request Quote"
+        }
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Specialists in mobile application development, desktop applications and web pages. Comprehensive technological solutions in Costa Rica."
+        },
+        links: {
+          title: "Useful Links",
+          privacy: "Privacy Policy",
+          terms: "Terms and Conditions"
+        },
+        info: {
+          title: "Additional Information",
+          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support<br><br><strong>Response:</strong><br>In less than 24 hours"
+        },
+        follow: {
+          title: "Follow Us"
+        },
+        copyright: "© 2025 <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span>. All rights reserved."
+      }
+    }
+  };
+  
+  // Función para obtener el idioma guardado o usar español por defecto
+  function getSavedLanguage() {
+    return localStorage.getItem('language') || 'es';
+  }
+  
+  // Función para guardar el idioma
+  function saveLanguage(lang) {
+    localStorage.setItem('language', lang);
+  }
+  
+  // Función para obtener el texto traducido
+  function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let value = translations[lang];
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  }
+  
+  // Función para aplicar traducciones
+  function applyTranslations(lang) {
+    // Traducir elementos con data-translate (todos los elementos, no solo spans)
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+      // Solo traducir si no es un enlace que contiene iconos
+      if (element.tagName === 'A' && element.querySelector('.menu-icon')) {
+        return; // Saltar enlaces del menú que contienen iconos
+      }
+      const key = element.getAttribute('data-translate');
+      const translation = getTranslation(key, lang);
+      if (translation) {
+        // Si el elemento tiene data-translate-html, insertar HTML, sino solo texto
+        if (element.getAttribute('data-translate-html') === 'true') {
+          element.innerHTML = translation;
+        } else {
+          element.textContent = translation;
+        }
+      }
+    });
+    
+    // Actualizar la bandera del selector de idioma
+    const currentFlag = document.getElementById('currentLanguageFlag');
+    if (currentFlag) {
+      currentFlag.textContent = lang === 'es' ? '🇪🇸' : '🇺🇸';
+    }
+    
+    // Actualizar el atributo lang del HTML
+    document.documentElement.lang = lang;
+  }
+  
+  // Función para cambiar el idioma
+  function changeLanguage(lang) {
+    saveLanguage(lang);
+    applyTranslations(lang);
+    // Disparar evento personalizado para actualizar otras partes de la página
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+  }
+  
+  // Inicializar traducciones al cargar la página
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = getSavedLanguage();
+    applyTranslations(savedLang);
+    
+    // Agregar event listeners a los botones de idioma
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        changeLanguage(lang);
+      });
+    });
+    
+    // Escuchar cambios en localStorage para actualizar cuando cambie el idioma en otra pestaña
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'language') {
+        const newLang = e.newValue || 'es';
+        applyTranslations(newLang);
+      }
+    });
+    
+    // Escuchar evento personalizado para actualizar cuando cambie el idioma en la misma página
+    window.addEventListener('languageChanged', function(e) {
+      if (e.detail && e.detail.lang) {
+        applyTranslations(e.detail.lang);
+      }
+    });
+  });
+  
+  // Inicialización inmediata para aplicar el idioma antes de que se cargue el DOM
+  (function() {
+    const savedLang = localStorage.getItem('language') || 'es';
+    const currentFlag = document.getElementById('currentLanguageFlag');
+    if (currentFlag) {
+      currentFlag.textContent = savedLang === 'es' ? '🇪🇸' : '🇺🇸';
+    }
+    if (document.documentElement) {
+      document.documentElement.lang = savedLang;
+    }
+    // Aplicar traducciones inmediatamente si el DOM ya está listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        applyTranslations(savedLang);
+      });
+    } else {
+      applyTranslations(savedLang);
+    }
+  })();
+</script>
 
 <script>
   // Función global para abrir el panel de contacto

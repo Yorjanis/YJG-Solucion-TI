@@ -213,11 +213,86 @@
       margin-right: 0.5rem !important;
       margin-left: -8rem !important;
     }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .language-selector-wrapper {
+      position: relative;
+    }
+    #languageDropdown {
+      padding: 0.3rem 0.8rem !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      border: none;
+      background: transparent;
+      position: relative;
+    }
+    #languageDropdown::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      border-top: 4px solid #ec0f0f;
+      border-right: 3px solid transparent;
+      border-bottom: 0;
+      border-left: 3px solid transparent;
+    }
+    #languageDropdown:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:focus {
+      outline: none;
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:active,
+    #languageDropdown:visited {
+      text-decoration: none !important;
+    }
+    .language-selector-wrapper a,
+    .language-selector-wrapper a:hover,
+    .language-selector-wrapper a:focus,
+    .language-selector-wrapper a:active,
+    .language-selector-wrapper a:visited {
+      text-decoration: none !important;
+    }
+    #currentLanguageFlag {
+      font-size: 1.3rem;
+      line-height: 1;
+      display: inline-block;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] {
+      min-width: 150px;
+      padding: 0.5rem 0;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.2s ease;
+      text-decoration: none !important;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
     .custom-navbar-social {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-left: 1rem;
     }
     .custom-navbar-social a {
       color: #1877F2;
@@ -228,6 +303,14 @@
     }
     .custom-navbar-social a:hover {
       transform: scale(1.2);
+    }
+    @media (max-width: 991px) {
+      .navbar-actions {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
     }
     .custom-navbar-toggle {
       display: none;
@@ -271,9 +354,11 @@
         box-shadow: none;
         margin-top: 0.5rem;
       }
-      .custom-navbar-social {
+      .navbar-actions {
         margin-left: 0;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-start;
       }
     }
     
@@ -418,20 +503,20 @@
       </a>
       <button class="custom-navbar-toggle" id="menuToggle">☰</button>
       <ul class="custom-navbar-menu" id="navbarMenu">
-        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Inicio</a></li>
-        <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Acerca de</a></li>
-        <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Contacto</a></li>
+        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.home">Inicio</span></a></li>
+        <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.about">Acerca de</span></a></li>
+        <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.contact">Contacto</span></a></li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Servicio ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> ▼</a>
           <ul class="dropdown-menu">
-            <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones de Escritorio</a></li>
-            <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Páginas Web</a></li>
-            <li><a href="aplicaciones-web.html"><span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones Web</a></li>
-            <li><a href="aplicaciones-moviles.html"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Aplicaciones Móviles</a></li>
+            <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.desktop">Aplicaciones de Escritorio</span></a></li>
+            <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webpages">Páginas Web</span></a></li>
+            <li><a href="aplicaciones-web.html"><span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webapps">Aplicaciones Web</span></a></li>
+            <li><a href="aplicaciones-moviles.html"><span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.mobile">Aplicaciones Móviles</span></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> Blog ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> ▼</a>
           <ul class="dropdown-menu" style="max-height: 300px; overflow-y: auto;">
             <li><a href="blog-1.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> OptiControl - Sistema de Gestión Oftalmológica</a></li>
             <li><a href="blog-4.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> RestoControl - Sistema de Gestión de Restaurantes</a></li>
@@ -439,18 +524,37 @@
           </ul>
         </li>
       </ul>
-      <div class="custom-navbar-social">
-        <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank"><span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span></a>
-        <a href="https://github.com/Yorjanis?tab=repositories" target="_blank"><span class="mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span></a>
+      <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px;">
+        <div class="language-selector-wrapper" style="position: relative;">
+          <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
+            <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
+            <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
+              <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+            </a>
+            <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
+              <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+            </a>
+          </div>
+        </div>
+        <div class="icons-menu">
+          <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank">
+            <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
+          </a>
+          <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank">
+            <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
 <section class="blog-header">
     <div class="container">
-        <h1 style="color: #ec0f0f; margin-bottom: 1rem; font-size: 2rem;"><strong>🏥 OptiControl: Sistema Integral de Gestión para Clínicas Oftalmológicas</strong></h1>
+        <h1 style="color: #ec0f0f; margin-bottom: 1rem; font-size: 2rem;"><strong data-translate="blog.opticontrol.title">🏥 OptiControl: Sistema Integral de Gestión para Clínicas Oftalmológicas</strong></h1>
         <div class="blog-meta">
-            <span>📅 Diciembre 2025</span> | <span>🏥 Sistema de Gestión Clínica</span> | <span>🏢 YJG Solución TI</span>
+            <span data-translate="blog.opticontrol.date">📅 Diciembre 2025</span> | <span data-translate="blog.opticontrol.category">🏥 Sistema de Gestión Clínica</span> | <span data-translate="blog.company">🏢 YJG Solución TI</span>
         </div>
     </div>
 </section>
@@ -463,106 +567,106 @@
                 
                 <img src="assets/images/yjg-solucion-ti-opticontrol-aplicacion-oftalmologia-interfaz-usuario-costa-rica.png" alt="YJG Solución TI - OptiControl aplicación de oftalmología interfaz de usuario moderna y funcional para clínicas oftalmológicas en Costa Rica" class="img-fluid blog-image-zoom" loading="lazy" onclick="openImageZoom(this.src, this.alt)">
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📋 Descripción General</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.section1.title">📋 Descripción General</h2>
                 
-                <p><strong>OptiControl</strong> es una solución tecnológica completa y moderna diseñada específicamente para la gestión integral de clínicas oftalmológicas. Desarrollada con las tecnologías más avanzadas del mercado, combina la potencia de una aplicación web con la versatilidad de una aplicación de escritorio multiplataforma, ofreciendo funcionalidad híbrida (online/offline) con sincronización automática.</p>
+                <p data-translate="blog.opticontrol.section1.text"><strong>OptiControl</strong> es una solución tecnológica completa y moderna diseñada específicamente para la gestión integral de clínicas oftalmológicas. Desarrollada con las tecnologías más avanzadas del mercado, combina la potencia de una aplicación web con la versatilidad de una aplicación de escritorio multiplataforma, ofreciendo funcionalidad híbrida (online/offline) con sincronización automática.</p>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🎯 ¿Qué es OptiControl?</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.section2.title">🎯 ¿Qué es OptiControl?</h2>
                 
-                <p>OptiControl es un <strong>Sistema de Gestión Clínica (SGC)</strong> especializado en oftalmología que permite a las clínicas gestionar de manera eficiente y profesional todos los aspectos de su operación diaria. Desde el registro de pacientes hasta la generación de reportes financieros, OptiControl centraliza toda la información en una plataforma intuitiva y segura.</p>
+                <p data-translate="blog.opticontrol.section2.text">OptiControl es un <strong>Sistema de Gestión Clínica (SGC)</strong> especializado en oftalmología que permite a las clínicas gestionar de manera eficiente y profesional todos los aspectos de su operación diaria. Desde el registro de pacientes hasta la generación de reportes financieros, OptiControl centraliza toda la información en una plataforma intuitiva y segura.</p>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Público Objetivo</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.target.title">Público Objetivo</strong></h3>
                 <ul>
-                    <li>Clínicas oftalmológicas privadas</li>
-                    <li>Consultorios oftalmológicos</li>
-                    <li>Ópticas con servicios médicos</li>
-                    <li>Centros de salud especializados en visión</li>
-                    <li>Profesionales independientes de la salud visual</li>
+                    <li data-translate="blog.opticontrol.target.item1">Clínicas oftalmológicas privadas</li>
+                    <li data-translate="blog.opticontrol.target.item2">Consultorios oftalmológicos</li>
+                    <li data-translate="blog.opticontrol.target.item3">Ópticas con servicios médicos</li>
+                    <li data-translate="blog.opticontrol.target.item4">Centros de salud especializados en visión</li>
+                    <li data-translate="blog.opticontrol.target.item5">Profesionales independientes de la salud visual</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">✨ Características Principales</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.features.title">✨ Características Principales</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>1. Gestión Integral de Pacientes</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature1.title">1. Gestión Integral de Pacientes</strong></h3>
                 <ul>
-                    <li><strong>Registro completo:</strong> Información demográfica, contacto, historial médico</li>
-                    <li><strong>Búsqueda avanzada:</strong> Por nombre, cédula, teléfono, fecha de registro</li>
-                    <li><strong>Filtros inteligentes:</strong> Por edad, sexo, estado activo/inactivo</li>
-                    <li><strong>Historial médico completo:</strong> Acceso rápido a todas las consultas previas</li>
-                    <li><strong>Exportación de datos:</strong> PDF, Excel, CSV para análisis externos</li>
+                    <li data-translate="blog.opticontrol.features.feature1.item1"><strong>Registro completo:</strong> Información demográfica, contacto, historial médico</li>
+                    <li data-translate="blog.opticontrol.features.feature1.item2"><strong>Búsqueda avanzada:</strong> Por nombre, cédula, teléfono, fecha de registro</li>
+                    <li data-translate="blog.opticontrol.features.feature1.item3"><strong>Filtros inteligentes:</strong> Por edad, sexo, estado activo/inactivo</li>
+                    <li data-translate="blog.opticontrol.features.feature1.item4"><strong>Historial médico completo:</strong> Acceso rápido a todas las consultas previas</li>
+                    <li data-translate="blog.opticontrol.features.feature1.item5"><strong>Exportación de datos:</strong> PDF, Excel, CSV para análisis externos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>2. Administración de Doctores</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature2.title">2. Administración de Doctores</strong></h3>
                 <ul>
-                    <li><strong>Gestión de especialistas:</strong> Registro completo de doctores y sus especialidades</li>
-                    <li><strong>Horarios de trabajo:</strong> Configuración de disponibilidad por días y horas</li>
-                    <li><strong>Asignación a consultas:</strong> Vinculación automática con pacientes</li>
-                    <li><strong>Estadísticas de productividad:</strong> Reportes de consultas por doctor</li>
+                    <li data-translate="blog.opticontrol.features.feature2.item1"><strong>Gestión de especialistas:</strong> Registro completo de doctores y sus especialidades</li>
+                    <li data-translate="blog.opticontrol.features.feature2.item2"><strong>Horarios de trabajo:</strong> Configuración de disponibilidad por días y horas</li>
+                    <li data-translate="blog.opticontrol.features.feature2.item3"><strong>Asignación a consultas:</strong> Vinculación automática con pacientes</li>
+                    <li data-translate="blog.opticontrol.features.feature2.item4"><strong>Estadísticas de productividad:</strong> Reportes de consultas por doctor</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>3. Registro de Diagnósticos Oftalmológicos</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature3.title">3. Registro de Diagnósticos Oftalmológicos</strong></h3>
                 <ul>
-                    <li><strong>Formulario médico completo:</strong> Captura detallada de exámenes oftalmológicos</li>
-                    <li><strong>Prescripción de lentes:</strong> 
+                    <li data-translate="blog.opticontrol.features.feature3.item1"><strong>Formulario médico completo:</strong> Captura detallada de exámenes oftalmológicos</li>
+                    <li data-translate="blog.opticontrol.features.feature3.item2"><strong>Prescripción de lentes:</strong> 
                         <ul>
                             <li>Lentes normales (OD/OI) con parámetros completos</li>
                             <li>Lentes de contacto con especificaciones técnicas</li>
                         </ul>
                     </li>
-                    <li><strong>Parámetros oftalmológicos:</strong> Esférico, cilindro, eje, adición, distancia pupilar</li>
-                    <li><strong>Estados de receta:</strong> Pendiente, completada, entregada</li>
-                    <li><strong>Seguimiento de citas:</strong> Programación automática de próximas consultas</li>
+                    <li data-translate="blog.opticontrol.features.feature3.item3"><strong>Parámetros oftalmológicos:</strong> Esférico, cilindro, eje, adición, distancia pupilar</li>
+                    <li data-translate="blog.opticontrol.features.feature3.item4"><strong>Estados de receta:</strong> Pendiente, completada, entregada</li>
+                    <li data-translate="blog.opticontrol.features.feature3.item5"><strong>Seguimiento de citas:</strong> Programación automática de próximas consultas</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>4. Control de Consultas</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature4.title">4. Control de Consultas</strong></h3>
                 <ul>
-                    <li><strong>Historial completo:</strong> Registro de todas las consultas realizadas</li>
-                    <li><strong>Búsqueda avanzada:</strong> Por paciente, doctor, fecha, diagnóstico</li>
-                    <li><strong>Estados de consulta:</strong> Seguimiento del ciclo de vida de cada consulta</li>
-                    <li><strong>Gestión de costos:</strong> Registro de pagos y facturación</li>
-                    <li><strong>Programación de citas:</strong> Sistema integrado de calendario</li>
+                    <li data-translate="blog.opticontrol.features.feature4.item1"><strong>Historial completo:</strong> Registro de todas las consultas realizadas</li>
+                    <li data-translate="blog.opticontrol.features.feature4.item2"><strong>Búsqueda avanzada:</strong> Por paciente, doctor, fecha, diagnóstico</li>
+                    <li data-translate="blog.opticontrol.features.feature4.item3"><strong>Estados de consulta:</strong> Seguimiento del ciclo de vida de cada consulta</li>
+                    <li data-translate="blog.opticontrol.features.feature4.item4"><strong>Gestión de costos:</strong> Registro de pagos y facturación</li>
+                    <li data-translate="blog.opticontrol.features.feature4.item5"><strong>Programación de citas:</strong> Sistema integrado de calendario</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>5. Sistema de Reportes Avanzados</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature5.title">5. Sistema de Reportes Avanzados</strong></h3>
                 <ul>
-                    <li><strong>Dashboard en tiempo real:</strong> Métricas y estadísticas actualizadas</li>
-                    <li><strong>Reportes de pacientes:</strong> Distribución por edad, género, diagnósticos</li>
-                    <li><strong>Reportes de consultas:</strong> Análisis de frecuencia y tipos de consulta</li>
-                    <li><strong>Reportes de diagnósticos:</strong> Estadísticas de condiciones más comunes</li>
-                    <li><strong>Reportes de ingresos:</strong> Análisis financiero por períodos</li>
-                    <li><strong>Reportes de doctores:</strong> Productividad y especialidades</li>
-                    <li><strong>Exportación múltiple:</strong> PDF profesional, Excel, CSV</li>
-                    <li><strong>Filtros personalizables:</strong> Por fecha, doctor, paciente, tipo de consulta</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item1"><strong>Dashboard en tiempo real:</strong> Métricas y estadísticas actualizadas</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item2"><strong>Reportes de pacientes:</strong> Distribución por edad, género, diagnósticos</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item3"><strong>Reportes de consultas:</strong> Análisis de frecuencia y tipos de consulta</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item4"><strong>Reportes de diagnósticos:</strong> Estadísticas de condiciones más comunes</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item5"><strong>Reportes de ingresos:</strong> Análisis financiero por períodos</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item6"><strong>Reportes de doctores:</strong> Productividad y especialidades</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item7"><strong>Exportación múltiple:</strong> PDF profesional, Excel, CSV</li>
+                    <li data-translate="blog.opticontrol.features.feature5.item8"><strong>Filtros personalizables:</strong> Por fecha, doctor, paciente, tipo de consulta</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>6. Módulo de Inventario</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature6.title">6. Módulo de Inventario</strong></h3>
                 <ul>
-                    <li><strong>Gestión de lentes:</strong> Catálogo completo de productos disponibles</li>
-                    <li><strong>Control de stock:</strong> Niveles actual, mínimo y máximo</li>
-                    <li><strong>Alertas automáticas:</strong> Notificaciones de stock bajo</li>
-                    <li><strong>Movimientos de inventario:</strong> Registro de entradas y salidas</li>
-                    <li><strong>Cálculo de valor:</strong> Valor total del inventario y márgenes de ganancia</li>
-                    <li><strong>Historial completo:</strong> Trazabilidad de todos los movimientos</li>
+                    <li data-translate="blog.opticontrol.features.feature6.item1"><strong>Gestión de lentes:</strong> Catálogo completo de productos disponibles</li>
+                    <li data-translate="blog.opticontrol.features.feature6.item2"><strong>Control de stock:</strong> Niveles actual, mínimo y máximo</li>
+                    <li data-translate="blog.opticontrol.features.feature6.item3"><strong>Alertas automáticas:</strong> Notificaciones de stock bajo</li>
+                    <li data-translate="blog.opticontrol.features.feature6.item4"><strong>Movimientos de inventario:</strong> Registro de entradas y salidas</li>
+                    <li data-translate="blog.opticontrol.features.feature6.item5"><strong>Cálculo de valor:</strong> Valor total del inventario y márgenes de ganancia</li>
+                    <li data-translate="blog.opticontrol.features.feature6.item6"><strong>Historial completo:</strong> Trazabilidad de todos los movimientos</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>7. Sistema de Licencias y Pagos</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature7.title">7. Sistema de Licencias y Pagos</strong></h3>
                 <ul>
-                    <li><strong>Planes flexibles:</strong> 
+                    <li data-translate="blog.opticontrol.features.feature7.item1"><strong>Planes flexibles:</strong> 
                         <ul>
                             <li><strong>Trial:</strong> 7 días de prueba gratuita</li>
                             <li><strong>Mensual:</strong> Suscripción mensual</li>
                             <li><strong>Anual:</strong> Suscripción anual con descuento</li>
                         </ul>
                     </li>
-                    <li><strong>Integración de pagos:</strong> Paddle (en implementación)</li>
-                    <li><strong>Control de acceso:</strong> Bloqueo automático por licencia expirada</li>
-                    <li><strong>Webhooks:</strong> Manejo automático de eventos de pago</li>
-                    <li><strong>Gestión de límites:</strong> Control de funcionalidades por plan</li>
+                    <li data-translate="blog.opticontrol.features.feature7.item2"><strong>Integración de pagos:</strong> Paddle (en implementación)</li>
+                    <li data-translate="blog.opticontrol.features.feature7.item3"><strong>Control de acceso:</strong> Bloqueo automático por licencia expirada</li>
+                    <li data-translate="blog.opticontrol.features.feature7.item4"><strong>Webhooks:</strong> Manejo automático de eventos de pago</li>
+                    <li data-translate="blog.opticontrol.features.feature7.item5"><strong>Gestión de límites:</strong> Control de funcionalidades por plan</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>8. Sistema de Usuarios y Seguridad</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature8.title">8. Sistema de Usuarios y Seguridad</strong></h3>
                 <ul>
-                    <li><strong>Autenticación segura:</strong> Laravel Sanctum con tokens</li>
-                    <li><strong>Roles y permisos:</strong> 
+                    <li data-translate="blog.opticontrol.features.feature8.item1"><strong>Autenticación segura:</strong> Laravel Sanctum con tokens</li>
+                    <li data-translate="blog.opticontrol.features.feature8.item2"><strong>Roles y permisos:</strong> 
                         <ul>
                             <li>Administrador (acceso completo)</li>
                             <li>Doctor (gestión de consultas y diagnósticos)</li>
@@ -570,14 +674,14 @@
                             <li>Usuario (solo consultas y reportes básicos)</li>
                         </ul>
                     </li>
-                    <li><strong>Auditoría completa:</strong> Registro de todas las operaciones CRUD</li>
-                    <li><strong>Trazabilidad:</strong> Historial de cambios con datos anteriores/nuevos</li>
-                    <li><strong>Protección de datos:</strong> Cumplimiento con regulaciones médicas</li>
+                    <li data-translate="blog.opticontrol.features.feature8.item3"><strong>Auditoría completa:</strong> Registro de todas las operaciones CRUD</li>
+                    <li data-translate="blog.opticontrol.features.feature8.item4"><strong>Trazabilidad:</strong> Historial de cambios con datos anteriores/nuevos</li>
+                    <li data-translate="blog.opticontrol.features.feature8.item5"><strong>Protección de datos:</strong> Cumplimiento con regulaciones médicas</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>9. Sistema de Soporte Técnico</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature9.title">9. Sistema de Soporte Técnico</strong></h3>
                 <ul>
-                    <li><strong>6 módulos especializados:</strong>
+                    <li data-translate="blog.opticontrol.features.feature9.item1"><strong>6 módulos especializados:</strong>
                         <ul>
                             <li><strong>Contacto:</strong> Sistema de WhatsApp y correo</li>
                             <li><strong>Recursos:</strong> Manuales y documentación</li>
@@ -589,229 +693,212 @@
                     </li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>10. Internacionalización y Configuración</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.features.feature10.title">10. Internacionalización y Configuración</strong></h3>
                 <ul>
-                    <li><strong>Multi-idioma:</strong> Español e Inglés</li>
-                    <li><strong>Zonas horarias:</strong> Costa Rica y Estados Unidos (configurable)</li>
-                    <li><strong>Monedas:</strong> Colón costarricense (₡), Dólar estadounidense ($), Colombiana (COP$), Mexicana (MXN$), Euro (€), Chilena (CLP$)</li>
-                    <li><strong>Configuración flexible:</strong> Cada opción es independiente</li>
-                    <li><strong>Detección automática:</strong> Valores por defecto basados en ubicación</li>
+                    <li data-translate="blog.opticontrol.features.feature10.item1"><strong>Multi-idioma:</strong> Español e Inglés</li>
+                    <li data-translate="blog.opticontrol.features.feature10.item2"><strong>Zonas horarias:</strong> Costa Rica y Estados Unidos (configurable)</li>
+                    <li data-translate="blog.opticontrol.features.feature10.item3"><strong>Monedas:</strong> Colón costarricense (₡), Dólar estadounidense ($), Colombiana (COP$), Mexicana (MXN$), Euro (€), Chilena (CLP$)</li>
+                    <li data-translate="blog.opticontrol.features.feature10.item4"><strong>Configuración flexible:</strong> Cada opción es independiente</li>
+                    <li data-translate="blog.opticontrol.features.feature10.item5"><strong>Detección automática:</strong> Valores por defecto basados en ubicación</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">💻 Aplicación de Escritorio Multiplataforma</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.desktop.title">💻 Aplicación de Escritorio Multiplataforma</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Características de la Aplicación Desktop</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.desktop.subtitle">Características de la Aplicación Desktop</strong></h3>
                 
-                <p>OptiControl está disponible como <strong>aplicación de escritorio nativa</strong> para Windows, Linux y macOS, ofreciendo:</p>
+                <p data-translate="blog.opticontrol.desktop.intro">OptiControl está disponible como <strong>aplicación de escritorio nativa</strong> para Windows, Linux y macOS, ofreciendo:</p>
                 
-                <h4 style="color: #333; margin-top: 1.5rem; font-size: 1.1rem;"><strong>Funcionalidad Híbrida (Online/Offline)</strong></h4>
+                <h4 style="color: #333; margin-top: 1.5rem; font-size: 1.1rem;"><strong data-translate="blog.opticontrol.desktop.hybrid.title">Funcionalidad Híbrida (Online/Offline)</strong></h4>
                 <ul>
-                    <li><strong>Modo offline completo:</strong> Trabaja sin conexión a internet</li>
-                    <li><strong>Sincronización automática:</strong> Sincroniza datos cuando detecta conexión</li>
-                    <li><strong>Almacenamiento local:</strong> Datos guardados localmente con electron-store</li>
-                    <li><strong>Cola de operaciones:</strong> Operaciones pendientes se ejecutan al reconectar</li>
-                    <li><strong>Indicador visual:</strong> Estado de conexión (online/offline/sincronizando)</li>
-                    <li><strong>Manejo de conflictos:</strong> Resolución automática de conflictos de sincronización</li>
+                    <li data-translate="blog.opticontrol.desktop.hybrid.item1"><strong>Modo offline completo:</strong> Trabaja sin conexión a internet</li>
+                    <li data-translate="blog.opticontrol.desktop.hybrid.item2"><strong>Sincronización automática:</strong> Sincroniza datos cuando detecta conexión</li>
+                    <li data-translate="blog.opticontrol.desktop.hybrid.item3"><strong>Almacenamiento local:</strong> Datos guardados localmente con electron-store</li>
+                    <li data-translate="blog.opticontrol.desktop.hybrid.item4"><strong>Cola de operaciones:</strong> Operaciones pendientes se ejecutan al reconectar</li>
+                    <li data-translate="blog.opticontrol.desktop.hybrid.item5"><strong>Indicador visual:</strong> Estado de conexión (online/offline/sincronizando)</li>
+                    <li data-translate="blog.opticontrol.desktop.hybrid.item6"><strong>Manejo de conflictos:</strong> Resolución automática de conflictos de sincronización</li>
                 </ul>
                 
-                <h4 style="color: #333; margin-top: 1.5rem; font-size: 1.1rem;"><strong>Distribución Multiplataforma</strong></h4>
+                <h4 style="color: #333; margin-top: 1.5rem; font-size: 1.1rem;"><strong data-translate="blog.opticontrol.desktop.distribution.title">Distribución Multiplataforma</strong></h4>
                 <ul>
-                    <li><strong>Windows:</strong> 
-                        <ul>
-                            <li>Microsoft Store (AppX/MSIX)</li>
-                            <li>Instalador NSIS (distribución directa)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Linux:</strong> 
-                        <ul>
-                            <li>AppImage (portable, no requiere instalación)</li>
-                            <li>DEB (Debian/Ubuntu)</li>
-                            <li>RPM (Fedora/RedHat)</li>
-                        </ul>
-                    </li>
-                    <li><strong>macOS:</strong> 
-                        <ul>
-                            <li>DMG (instalador con interfaz gráfica)</li>
-                            <li>ZIP (portable)</li>
-                            <li>Soporte para Intel (x64) y Apple Silicon (ARM64)</li>
-                        </ul>
-                    </li>
+                    <li data-translate="blog.opticontrol.desktop.distribution.windows"><strong>Windows:</strong> Microsoft Store (AppX/MSIX), Instalador NSIS (distribución directa)</li>
+                    <li data-translate="blog.opticontrol.desktop.distribution.linux"><strong>Linux:</strong> AppImage (portable, no requiere instalación), DEB (Debian/Ubuntu), RPM (Fedora/RedHat)</li>
+                    <li data-translate="blog.opticontrol.desktop.distribution.macos"><strong>macOS:</strong> DMG (instalador con interfaz gráfica), ZIP (portable), Soporte para Intel (x64) y Apple Silicon (ARM64)</li>
                 </ul>
                 
-                <h4 style="color: #333; margin-top: 1.5rem; font-size: 1.1rem;"><strong>Actualizaciones Automáticas</strong></h4>
+                <h4 style="color: #333; margin-top: 1.5rem; font-size: 1.1rem;"><strong data-translate="blog.opticontrol.desktop.updates.title">Actualizaciones Automáticas</strong></h4>
                 <ul>
-                    <li><strong>Auto-updater integrado:</strong> Actualizaciones automáticas desde GitHub Releases</li>
-                    <li><strong>Notificaciones:</strong> Aviso cuando hay actualizaciones disponibles</li>
-                    <li><strong>Instalación en segundo plano:</strong> Sin interrumpir el trabajo del usuario</li>
+                    <li data-translate="blog.opticontrol.desktop.updates.item1"><strong>Auto-updater integrado:</strong> Actualizaciones automáticas desde GitHub Releases</li>
+                    <li data-translate="blog.opticontrol.desktop.updates.item2"><strong>Notificaciones:</strong> Aviso cuando hay actualizaciones disponibles</li>
+                    <li data-translate="blog.opticontrol.desktop.updates.item3"><strong>Instalación en segundo plano:</strong> Sin interrumpir el trabajo del usuario</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🏗️ Arquitectura Técnica</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.architecture.title">🏗️ Arquitectura Técnica</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Backend (Laravel 12)</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.architecture.backend.title">Backend (Laravel 12)</strong></h3>
                 <ul>
-                    <li><strong>Framework:</strong> Laravel 12 (PHP 8.2+)</li>
-                    <li><strong>Base de Datos:</strong> PostgreSQL con esquemas organizados</li>
-                    <li><strong>API REST:</strong> Endpoints seguros con autenticación Sanctum</li>
-                    <li><strong>ORM:</strong> Eloquent para gestión de modelos</li>
-                    <li><strong>Validación:</strong> Form Requests con reglas personalizadas</li>
-                    <li><strong>Caché:</strong> Optimización de consultas frecuentes</li>
-                    <li><strong>Logging:</strong> Sistema completo de logs para producción</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item1"><strong>Framework:</strong> Laravel 12 (PHP 8.2+)</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item2"><strong>Base de Datos:</strong> PostgreSQL con esquemas organizados</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item3"><strong>API REST:</strong> Endpoints seguros con autenticación Sanctum</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item4"><strong>ORM:</strong> Eloquent para gestión de modelos</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item5"><strong>Validación:</strong> Form Requests con reglas personalizadas</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item6"><strong>Caché:</strong> Optimización de consultas frecuentes</li>
+                    <li data-translate="blog.opticontrol.architecture.backend.item7"><strong>Logging:</strong> Sistema completo de logs para producción</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Frontend (React.js)</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.architecture.frontend.title">Frontend (React.js)</strong></h3>
                 <ul>
-                    <li><strong>Framework:</strong> React 18+ con Vite</li>
-                    <li><strong>Routing:</strong> React Router v6</li>
-                    <li><strong>Estado:</strong> Context API + useReducer</li>
-                    <li><strong>HTTP Client:</strong> Axios con interceptores</li>
-                    <li><strong>UI:</strong> Tailwind CSS + Headless UI</li>
-                    <li><strong>Formularios:</strong> React Hook Form + Zod</li>
-                    <li><strong>Gráficos:</strong> Recharts para visualización de datos</li>
-                    <li><strong>Notificaciones:</strong> React Hot Toast</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item1"><strong>Framework:</strong> React 18+ con Vite</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item2"><strong>Routing:</strong> React Router v6</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item3"><strong>Estado:</strong> Context API + useReducer</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item4"><strong>HTTP Client:</strong> Axios con interceptores</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item5"><strong>UI:</strong> Tailwind CSS + Headless UI</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item6"><strong>Formularios:</strong> React Hook Form + Zod</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item7"><strong>Gráficos:</strong> Recharts para visualización de datos</li>
+                    <li data-translate="blog.opticontrol.architecture.frontend.item8"><strong>Notificaciones:</strong> React Hot Toast</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Aplicación de Escritorio (Electron)</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.architecture.electron.title">Aplicación de Escritorio (Electron)</strong></h3>
                 <ul>
-                    <li><strong>Framework:</strong> Electron 39+</li>
-                    <li><strong>Empaquetado:</strong> Electron Builder</li>
-                    <li><strong>Almacenamiento:</strong> Electron Store</li>
-                    <li><strong>Actualizaciones:</strong> Electron Updater</li>
-                    <li><strong>Seguridad:</strong> Content Security Policy (CSP) configurado</li>
+                    <li data-translate="blog.opticontrol.architecture.electron.item1"><strong>Framework:</strong> Electron 39+</li>
+                    <li data-translate="blog.opticontrol.architecture.electron.item2"><strong>Empaquetado:</strong> Electron Builder</li>
+                    <li data-translate="blog.opticontrol.architecture.electron.item3"><strong>Almacenamiento:</strong> Electron Store</li>
+                    <li data-translate="blog.opticontrol.architecture.electron.item4"><strong>Actualizaciones:</strong> Electron Updater</li>
+                    <li data-translate="blog.opticontrol.architecture.electron.item5"><strong>Seguridad:</strong> Content Security Policy (CSP) configurado</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🎯 Ventajas y Beneficios</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.benefits.title">🎯 Ventajas y Beneficios</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Para Clínicas Oftalmológicas</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.benefits.clinics.title">Para Clínicas Oftalmológicas</strong></h3>
                 <ul>
-                    <li>✅ <strong>Ahorro de tiempo:</strong> 2-3 horas diarias en gestión administrativa</li>
-                    <li>✅ <strong>Reducción de errores:</strong> 90% menos errores en prescripciones</li>
-                    <li>✅ <strong>Eficiencia:</strong> 50% más rápido en generar reportes</li>
-                    <li>✅ <strong>Organización:</strong> Toda la información centralizada</li>
-                    <li>✅ <strong>Trazabilidad:</strong> Cumplimiento con auditorías médicas</li>
-                    <li>✅ <strong>Escalabilidad:</strong> Crece con tu clínica</li>
+                    <li data-translate="blog.opticontrol.benefits.clinics.item1">✅ <strong>Ahorro de tiempo:</strong> 2-3 horas diarias en gestión administrativa</li>
+                    <li data-translate="blog.opticontrol.benefits.clinics.item2">✅ <strong>Reducción de errores:</strong> 90% menos errores en prescripciones</li>
+                    <li data-translate="blog.opticontrol.benefits.clinics.item3">✅ <strong>Eficiencia:</strong> 50% más rápido en generar reportes</li>
+                    <li data-translate="blog.opticontrol.benefits.clinics.item4">✅ <strong>Organización:</strong> Toda la información centralizada</li>
+                    <li data-translate="blog.opticontrol.benefits.clinics.item5">✅ <strong>Trazabilidad:</strong> Cumplimiento con auditorías médicas</li>
+                    <li data-translate="blog.opticontrol.benefits.clinics.item6">✅ <strong>Escalabilidad:</strong> Crece con tu clínica</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Para Doctores</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.benefits.doctors.title">Para Doctores</strong></h3>
                 <ul>
-                    <li>✅ <strong>Acceso rápido:</strong> Historial completo del paciente en segundos</li>
-                    <li>✅ <strong>Prescripciones precisas:</strong> Formularios especializados</li>
-                    <li>✅ <strong>Estadísticas:</strong> Análisis de diagnósticos más comunes</li>
-                    <li>✅ <strong>Productividad:</strong> Más tiempo para atender pacientes</li>
+                    <li data-translate="blog.opticontrol.benefits.doctors.item1">✅ <strong>Acceso rápido:</strong> Historial completo del paciente en segundos</li>
+                    <li data-translate="blog.opticontrol.benefits.doctors.item2">✅ <strong>Prescripciones precisas:</strong> Formularios especializados</li>
+                    <li data-translate="blog.opticontrol.benefits.doctors.item3">✅ <strong>Estadísticas:</strong> Análisis de diagnósticos más comunes</li>
+                    <li data-translate="blog.opticontrol.benefits.doctors.item4">✅ <strong>Productividad:</strong> Más tiempo para atender pacientes</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Para Administradores</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.benefits.admins.title">Para Administradores</strong></h3>
                 <ul>
-                    <li>✅ <strong>Control financiero:</strong> Reportes de ingresos detallados</li>
-                    <li>✅ <strong>Gestión de inventario:</strong> Control de stock en tiempo real</li>
-                    <li>✅ <strong>Auditoría:</strong> Registro completo de todas las operaciones</li>
+                    <li data-translate="blog.opticontrol.benefits.admins.item1">✅ <strong>Control financiero:</strong> Reportes de ingresos detallados</li>
+                    <li data-translate="blog.opticontrol.benefits.admins.item2">✅ <strong>Gestión de inventario:</strong> Control de stock en tiempo real</li>
+                    <li data-translate="blog.opticontrol.benefits.admins.item3">✅ <strong>Auditoría:</strong> Registro completo de todas las operaciones</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📊 Casos de Uso</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.usecases.title">📊 Casos de Uso</h2>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 1: Consulta Médica Completa</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.usecases.case1.title">Caso 1: Consulta Médica Completa</strong></h3>
                 <ol>
-                    <li>El recepcionista registra al paciente (o busca uno existente)</li>
-                    <li>El doctor accede al historial médico completo del paciente</li>
-                    <li>Se realiza el examen oftalmológico y se registra el diagnóstico</li>
-                    <li>Se genera la prescripción de lentes con todos los parámetros</li>
-                    <li>Se programa la próxima cita</li>
-                    <li>Se registra el pago de la consulta</li>
+                    <li data-translate="blog.opticontrol.usecases.case1.step1">El recepcionista registra al paciente (o busca uno existente)</li>
+                    <li data-translate="blog.opticontrol.usecases.case1.step2">El doctor accede al historial médico completo del paciente</li>
+                    <li data-translate="blog.opticontrol.usecases.case1.step3">Se realiza el examen oftalmológico y se registra el diagnóstico</li>
+                    <li data-translate="blog.opticontrol.usecases.case1.step4">Se genera la prescripción de lentes con todos los parámetros</li>
+                    <li data-translate="blog.opticontrol.usecases.case1.step5">Se programa la próxima cita</li>
+                    <li data-translate="blog.opticontrol.usecases.case1.step6">Se registra el pago de la consulta</li>
                 </ol>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 2: Análisis de Negocio</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.usecases.case2.title">Caso 2: Análisis de Negocio</strong></h3>
                 <ol>
-                    <li>El administrador accede al dashboard de reportes</li>
-                    <li>Selecciona un período (mensual, trimestral, anual)</li>
-                    <li>Analiza ingresos, consultas más frecuentes, diagnósticos comunes</li>
-                    <li>Exporta los datos a Excel para análisis externo</li>
-                    <li>Toma decisiones basadas en datos reales</li>
+                    <li data-translate="blog.opticontrol.usecases.case2.step1">El administrador accede al dashboard de reportes</li>
+                    <li data-translate="blog.opticontrol.usecases.case2.step2">Selecciona un período (mensual, trimestral, anual)</li>
+                    <li data-translate="blog.opticontrol.usecases.case2.step3">Analiza ingresos, consultas más frecuentes, diagnósticos comunes</li>
+                    <li data-translate="blog.opticontrol.usecases.case2.step4">Exporta los datos a Excel para análisis externo</li>
+                    <li data-translate="blog.opticontrol.usecases.case2.step5">Toma decisiones basadas en datos reales</li>
                 </ol>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 3: Gestión de Inventario</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.usecases.case3.title">Caso 3: Gestión de Inventario</strong></h3>
                 <ol>
-                    <li>Se recibe un nuevo lote de lentes</li>
-                    <li>Se registra la entrada en el inventario</li>
-                    <li>El sistema actualiza automáticamente el stock</li>
-                    <li>Si el stock baja del mínimo, se genera una alerta</li>
-                    <li>Se puede consultar el valor total del inventario en cualquier momento</li>
+                    <li data-translate="blog.opticontrol.usecases.case3.step1">Se recibe un nuevo lote de lentes</li>
+                    <li data-translate="blog.opticontrol.usecases.case3.step2">Se registra la entrada en el inventario</li>
+                    <li data-translate="blog.opticontrol.usecases.case3.step3">El sistema actualiza automáticamente el stock</li>
+                    <li data-translate="blog.opticontrol.usecases.case3.step4">Si el stock baja del mínimo, se genera una alerta</li>
+                    <li data-translate="blog.opticontrol.usecases.case3.step5">Se puede consultar el valor total del inventario en cualquier momento</li>
                 </ol>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Caso 4: Trabajo Offline</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.usecases.case4.title">Caso 4: Trabajo Offline</strong></h3>
                 <ol>
-                    <li>La clínica pierde conexión a internet</li>
-                    <li>La aplicación detecta el estado offline automáticamente</li>
-                    <li>El personal continúa trabajando normalmente</li>
-                    <li>Todas las operaciones se guardan localmente</li>
-                    <li>Al reconectar, la sincronización se realiza automáticamente</li>
-                    <li>No se pierde ningún dato</li>
+                    <li data-translate="blog.opticontrol.usecases.case4.step1">La clínica pierde conexión a internet</li>
+                    <li data-translate="blog.opticontrol.usecases.case4.step2">La aplicación detecta el estado offline automáticamente</li>
+                    <li data-translate="blog.opticontrol.usecases.case4.step3">El personal continúa trabajando normalmente</li>
+                    <li data-translate="blog.opticontrol.usecases.case4.step4">Todas las operaciones se guardan localmente</li>
+                    <li data-translate="blog.opticontrol.usecases.case4.step5">Al reconectar, la sincronización se realiza automáticamente</li>
+                    <li data-translate="blog.opticontrol.usecases.case4.step6">No se pierde ningún dato</li>
                 </ol>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🔒 Seguridad y Cumplimiento</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.security.title">🔒 Seguridad y Cumplimiento</h2>
                 <ul>
-                    <li><strong>Autenticación segura:</strong> Tokens JWT con expiración</li>
-                    <li><strong>Encriptación:</strong> Datos sensibles encriptados</li>
-                    <li><strong>Auditoría completa:</strong> Registro de todas las operaciones</li>
-                    <li><strong>Cumplimiento legal:</strong> Preparado para regulaciones médicas</li>
-                    <li><strong>Backup automático:</strong> Sistema de respaldos programados</li>
-                    <li><strong>Protección de datos:</strong> Cumplimiento con normativas de privacidad</li>
+                    <li data-translate="blog.opticontrol.security.item1"><strong>Autenticación segura:</strong> Tokens JWT con expiración</li>
+                    <li data-translate="blog.opticontrol.security.item2"><strong>Encriptación:</strong> Datos sensibles encriptados</li>
+                    <li data-translate="blog.opticontrol.security.item3"><strong>Auditoría completa:</strong> Registro de todas las operaciones</li>
+                    <li data-translate="blog.opticontrol.security.item4"><strong>Cumplimiento legal:</strong> Preparado para regulaciones médicas</li>
+                    <li data-translate="blog.opticontrol.security.item5"><strong>Backup automático:</strong> Sistema de respaldos programados</li>
+                    <li data-translate="blog.opticontrol.security.item6"><strong>Protección de datos:</strong> Cumplimiento con normativas de privacidad</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📈 Roadmap y Futuras Mejoras</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.roadmap.title">📈 Roadmap y Futuras Mejoras</h2>
                 <ul>
-                    <li><strong>Escalabilidad:</strong> Soporte para múltiples clínicas</li>
-                    <li><strong>Integración:</strong> APIs con sistemas externos (laboratorios, seguros)</li>
-                    <li><strong>Mobile App:</strong> Aplicación móvil nativa para iOS/Android</li>
-                    <li><strong>IA/ML:</strong> Diagnósticos asistidos por inteligencia artificial</li>
-                    <li><strong>Telemedicina:</strong> Consultas remotas y videollamadas</li>
-                    <li><strong>Analytics Avanzados:</strong> Business Intelligence y reportes predictivos</li>
-                    <li><strong>Integración con Dispositivos:</strong> Conexión con equipos oftalmológicos</li>
+                    <li data-translate="blog.opticontrol.roadmap.item1"><strong>Escalabilidad:</strong> Soporte para múltiples clínicas</li>
+                    <li data-translate="blog.opticontrol.roadmap.item2"><strong>Integración:</strong> APIs con sistemas externos (laboratorios, seguros)</li>
+                    <li data-translate="blog.opticontrol.roadmap.item3"><strong>Mobile App:</strong> Aplicación móvil nativa para iOS/Android</li>
+                    <li data-translate="blog.opticontrol.roadmap.item4"><strong>IA/ML:</strong> Diagnósticos asistidos por inteligencia artificial</li>
+                    <li data-translate="blog.opticontrol.roadmap.item5"><strong>Telemedicina:</strong> Consultas remotas y videollamadas</li>
+                    <li data-translate="blog.opticontrol.roadmap.item6"><strong>Analytics Avanzados:</strong> Business Intelligence y reportes predictivos</li>
+                    <li data-translate="blog.opticontrol.roadmap.item7"><strong>Integración con Dispositivos:</strong> Conexión con equipos oftalmológicos</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🚀 ¿Cómo Empezar?</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.getstarted.title">🚀 ¿Cómo Empezar?</h2>
                 
-                <p>OptiControl ofrece un <strong>período de prueba gratuito de 7 días</strong> con acceso completo a todas las funcionalidades. Después, puedes elegir entre:</p>
+                <p data-translate="blog.opticontrol.getstarted.intro">OptiControl ofrece un <strong>período de prueba gratuito de 7 días</strong> con acceso completo a todas las funcionalidades. Después, puedes elegir entre:</p>
                 
                 <ul>
-                    <li><strong>Plan Mensual:</strong> $29.99 USD/mes</li>
-                    <li><strong>Plan Anual:</strong> $299.99 USD/año (ahorro del 17%)</li>
+                    <li data-translate="blog.opticontrol.getstarted.plan1"><strong>Plan Mensual:</strong> $29.99 USD/mes</li>
+                    <li data-translate="blog.opticontrol.getstarted.plan2"><strong>Plan Anual:</strong> $299.99 USD/año (ahorro del 17%)</li>
                 </ul>
                 
-                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong>Instalación</strong></h3>
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.getstarted.installation.title">Instalación</strong></h3>
                 <ol>
-                    <li>Descarga la aplicación desde Microsoft Store (Windows), repositorios (Linux) o contáctame.</li>
-                    <li>Crea tu cuenta y activa tu período de prueba</li>
-                    <li>Configura tu clínica y comienza a usar todas las funcionalidades</li>
-                    <li>Importa tus datos existentes o comienza desde cero</li>
+                    <li data-translate="blog.opticontrol.getstarted.installation.step1">Descarga la aplicación desde Microsoft Store (Windows), repositorios (Linux) o contáctame.</li>
+                    <li data-translate="blog.opticontrol.getstarted.installation.step2">Crea tu cuenta y activa tu período de prueba</li>
+                    <li data-translate="blog.opticontrol.getstarted.installation.step3">Configura tu clínica y comienza a usar todas las funcionalidades</li>
+                    <li data-translate="blog.opticontrol.getstarted.installation.step4">Importa tus datos existentes o comienza desde cero</li>
                 </ol>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">📞 Soporte y Contacto</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.support.title">📞 Soporte y Contacto</h2>
                 <ul>
-                    <li><strong>Soporte técnico:</strong> Disponible dentro de la aplicación</li>
-                    <li><strong>Documentación:</strong> Manuales completos y tutoriales</li>
-                    <li><strong>Email:</strong> solucion@yjgsolucionti.com</li>
+                    <li data-translate="blog.opticontrol.support.item1"><strong>Soporte técnico:</strong> Disponible dentro de la aplicación</li>
+                    <li data-translate="blog.opticontrol.support.item2"><strong>Documentación:</strong> Manuales completos y tutoriales</li>
+                    <li data-translate="blog.opticontrol.support.item3"><strong>Email:</strong> solucion@yjgsolucionti.com</li>
                 </ul>
                 
-                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;">🎉 Conclusión</h2>
+                <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.opticontrol.conclusion.title">🎉 Conclusión</h2>
                 
-                <p>OptiControl es más que un software de gestión: es una <strong>solución integral</strong> que transforma la forma en que las clínicas oftalmológicas operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, OptiControl está diseñado para crecer contigo y ayudarte a brindar el mejor servicio a tus pacientes.</p>
+                <p data-translate="blog.opticontrol.conclusion.text1">OptiControl es más que un software de gestión: es una <strong>solución integral</strong> que transforma la forma en que las clínicas oftalmológicas operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, OptiControl está diseñado para crecer contigo y ayudarte a brindar el mejor servicio a tus pacientes.</p>
                 
-                <p><strong>¿Listo para transformar tu clínica?</strong> Prueba OptiControl hoy mismo y descubre cómo la tecnología puede mejorar tu práctica médica.</p>
+                <p data-translate="blog.opticontrol.conclusion.text2"><strong>¿Listo para transformar tu clínica?</strong> Prueba OptiControl hoy mismo y descubre cómo la tecnología puede mejorar tu práctica médica.</p>
                 
-                <p style="color: #666; font-style: italic; margin-top: 2rem;"><em>OptiControl - Gestión Inteligente para Clínicas Oftalmológicas</em></p>
+                <p style="color: #666; font-style: italic; margin-top: 2rem;" data-translate="blog.opticontrol.conclusion.tagline"><em>OptiControl - Gestión Inteligente para Clínicas Oftalmológicas</em></p>
                 
                 <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
-                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;">¿Interesado en OptiControl para tu clínica oftalmológica?</p>
-                    <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;">Contáctanos</a>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;" data-translate="blog.opticontrol.cta.text">¿Interesado en OptiControl para tu clínica oftalmológica?</p>
+                    <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;" data-translate="blog.opticontrol.cta.button">Contáctanos</a>
                 </div>
                 
                 <div class="blog-share" style="margin-top: 3rem;">
-                    <span class="blog-share-label">Compartir este artículo:</span>
+                    <span class="blog-share-label" data-translate="blog.share.label">Compartir este artículo:</span>
                     <div class="share-buttons">
                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyjgsolucionti.com%2Fblog-1.html" style="background-color: #1877F2; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
-                            Compartir en Facebook
+                            <span data-translate="blog.share.facebook">Compartir en Facebook</span>
                         </a>
                     </div>
                 </div>
@@ -824,19 +911,19 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
             <div class="footer-column" style="flex: 1; min-width: 250px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">YJG Solución TI</h3>
-                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.company.title">YJG Solución TI</h3>
+                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;" data-translate="footer.company.description">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Enlaces Útiles</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.links.title">Enlaces Útiles</h3>
                 <ul style="list-style: none; padding: 0; line-height: 2;">
-                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none;">Política de Privacidad</a></li>
-                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none;">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none;" data-translate="footer.links.privacy">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none;" data-translate="footer.links.terms">Términos y Condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Información Adicional</h3>
-                <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;">
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
+                <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
                     <strong>Área de Servicio:</strong><br>
                     Costa Rica y Exterior<br><br>
                     <strong>Metodología:</strong><br>
@@ -846,7 +933,7 @@
                 </p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Síguenos</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.follow.title">Síguenos</h3>
                 <div class="footer-icons" style="margin-top: 10px; display: flex; align-items: center;">
                     <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="display: inline-block; margin-right: 15px; text-decoration: none;">
                         <span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
@@ -858,7 +945,7 @@
             </div>
         </div>
         <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center;">
-            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem;">
+            <p style="color: #95a5a6; margin: 0; font-size: 0.85rem;" data-translate="footer.copyright">
                 © 2025 YJG Solución TI. Todos los derechos reservados.
             </p>
         </div>
@@ -878,6 +965,742 @@
 <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="assets/theme/js/script.js"></script>
 <script src="assets/formoid/formoid.min.js"></script>
+
+<script>
+  // Sistema de traducción
+  const translations = {
+    es: {
+      menu: {
+        home: "Inicio",
+        about: "Acerca de",
+        contact: "Contacto",
+        services: "Servicio",
+        desktop: "Aplicaciones de Escritorio",
+        webpages: "Páginas Web",
+        webapps: "Aplicaciones Web",
+        mobile: "Aplicaciones Móviles",
+        blog: "Blog"
+      },
+      blog: {
+        opticontrol: {
+          title: "🏥 OptiControl: Sistema Integral de Gestión para Clínicas Oftalmológicas",
+          date: "📅 Diciembre 2025",
+          category: "🏥 Sistema de Gestión Clínica",
+          section1: {
+            title: "📋 Descripción General",
+            text: "OptiControl es una solución tecnológica completa y moderna diseñada específicamente para la gestión integral de clínicas oftalmológicas. Desarrollada con las tecnologías más avanzadas del mercado, combina la potencia de una aplicación web con la versatilidad de una aplicación de escritorio multiplataforma, ofreciendo funcionalidad híbrida (online/offline) con sincronización automática."
+          },
+          section2: {
+            title: "🎯 ¿Qué es OptiControl?",
+            text: "OptiControl es un Sistema de Gestión Clínica (SGC) especializado en oftalmología que permite a las clínicas gestionar de manera eficiente y profesional todos los aspectos de su operación diaria. Desde el registro de pacientes hasta la generación de reportes financieros, OptiControl centraliza toda la información en una plataforma intuitiva y segura."
+          },
+          target: {
+            title: "Público Objetivo",
+            item1: "Clínicas oftalmológicas privadas",
+            item2: "Consultorios oftalmológicos",
+            item3: "Ópticas con servicios médicos",
+            item4: "Centros de salud especializados en visión",
+            item5: "Profesionales independientes de la salud visual"
+          },
+          features: {
+            title: "✨ Características Principales",
+            feature1: {
+              title: "1. Gestión Integral de Pacientes",
+              item1: "Registro completo: Información demográfica, contacto, historial médico",
+              item2: "Búsqueda avanzada: Por nombre, cédula, teléfono, fecha de registro",
+              item3: "Filtros inteligentes: Por edad, sexo, estado activo/inactivo",
+              item4: "Historial médico completo: Acceso rápido a todas las consultas previas",
+              item5: "Exportación de datos: PDF, Excel, CSV para análisis externos"
+            },
+            feature2: {
+              title: "2. Administración de Doctores",
+              item1: "Gestión de especialistas: Registro completo de doctores y sus especialidades",
+              item2: "Horarios de trabajo: Configuración de disponibilidad por días y horas",
+              item3: "Asignación a consultas: Vinculación automática con pacientes",
+              item4: "Estadísticas de productividad: Reportes de consultas por doctor"
+            },
+            feature3: {
+              title: "3. Registro de Diagnósticos Oftalmológicos",
+              item1: "Formulario médico completo: Captura detallada de exámenes oftalmológicos",
+              item2: "Prescripción de lentes: Lentes normales (OD/OI) con parámetros completos, Lentes de contacto con especificaciones técnicas",
+              item3: "Parámetros oftalmológicos: Esférico, cilindro, eje, adición, distancia pupilar",
+              item4: "Estados de receta: Pendiente, completada, entregada",
+              item5: "Seguimiento de citas: Programación automática de próximas consultas"
+            },
+            feature4: {
+              title: "4. Control de Consultas",
+              item1: "Historial completo: Registro de todas las consultas realizadas",
+              item2: "Búsqueda avanzada: Por paciente, doctor, fecha, diagnóstico",
+              item3: "Estados de consulta: Seguimiento del ciclo de vida de cada consulta",
+              item4: "Gestión de costos: Registro de pagos y facturación",
+              item5: "Programación de citas: Sistema integrado de calendario"
+            },
+            feature5: {
+              title: "5. Sistema de Reportes Avanzados",
+              item1: "Dashboard en tiempo real: Métricas y estadísticas actualizadas",
+              item2: "Reportes de pacientes: Distribución por edad, género, diagnósticos",
+              item3: "Reportes de consultas: Análisis de frecuencia y tipos de consulta",
+              item4: "Reportes de diagnósticos: Estadísticas de condiciones más comunes",
+              item5: "Reportes de ingresos: Análisis financiero por períodos",
+              item6: "Reportes de doctores: Productividad y especialidades",
+              item7: "Exportación múltiple: PDF profesional, Excel, CSV",
+              item8: "Filtros personalizables: Por fecha, doctor, paciente, tipo de consulta"
+            },
+            feature6: {
+              title: "6. Módulo de Inventario",
+              item1: "Gestión de lentes: Catálogo completo de productos disponibles",
+              item2: "Control de stock: Niveles actual, mínimo y máximo",
+              item3: "Alertas automáticas: Notificaciones de stock bajo",
+              item4: "Movimientos de inventario: Registro de entradas y salidas",
+              item5: "Cálculo de valor: Valor total del inventario y márgenes de ganancia",
+              item6: "Historial completo: Trazabilidad de todos los movimientos"
+            },
+            feature7: {
+              title: "7. Sistema de Licencias y Pagos",
+              item1: "Planes flexibles: Trial (7 días de prueba gratuita), Mensual (Suscripción mensual), Anual (Suscripción anual con descuento)",
+              item2: "Integración de pagos: Paddle (en implementación)",
+              item3: "Control de acceso: Bloqueo automático por licencia expirada",
+              item4: "Webhooks: Manejo automático de eventos de pago",
+              item5: "Gestión de límites: Control de funcionalidades por plan"
+            },
+            feature8: {
+              title: "8. Sistema de Usuarios y Seguridad",
+              item1: "Autenticación segura: Laravel Sanctum con tokens",
+              item2: "Roles y permisos: Administrador (acceso completo), Doctor (gestión de consultas y diagnósticos), Recepcionista (gestión de pacientes y citas), Usuario (solo consultas y reportes básicos)",
+              item3: "Auditoría completa: Registro de todas las operaciones CRUD",
+              item4: "Trazabilidad: Historial de cambios con datos anteriores/nuevos",
+              item5: "Protección de datos: Cumplimiento con regulaciones médicas"
+            },
+            feature9: {
+              title: "9. Sistema de Soporte Técnico",
+              item1: "6 módulos especializados: Contacto (Sistema de WhatsApp y correo), Recursos (Manuales y documentación), Diagnósticos (Auto-diagnóstico del sistema), Monitoreo (Dashboard de métricas en tiempo real), Feedback (Sistema de reportes de bugs y sugerencias), Backup (Sistema de respaldos y restauración)"
+            },
+            feature10: {
+              title: "10. Internacionalización y Configuración",
+              item1: "Multi-idioma: Español e Inglés",
+              item2: "Zonas horarias: Costa Rica y Estados Unidos (configurable)",
+              item3: "Monedas: Colón costarricense (₡), Dólar estadounidense ($), Colombiana (COP$), Mexicana (MXN$), Euro (€), Chilena (CLP$)",
+              item4: "Configuración flexible: Cada opción es independiente",
+              item5: "Detección automática: Valores por defecto basados en ubicación"
+            }
+          },
+          desktop: {
+            title: "💻 Aplicación de Escritorio Multiplataforma",
+            subtitle: "Características de la Aplicación Desktop",
+            intro: "OptiControl está disponible como aplicación de escritorio nativa para Windows, Linux y macOS, ofreciendo:",
+            hybrid: {
+              title: "Funcionalidad Híbrida (Online/Offline)",
+              item1: "Modo offline completo: Trabaja sin conexión a internet",
+              item2: "Sincronización automática: Sincroniza datos cuando detecta conexión",
+              item3: "Almacenamiento local: Datos guardados localmente con electron-store",
+              item4: "Cola de operaciones: Operaciones pendientes se ejecutan al reconectar",
+              item5: "Indicador visual: Estado de conexión (online/offline/sincronizando)",
+              item6: "Manejo de conflictos: Resolución automática de conflictos de sincronización"
+            },
+            distribution: {
+              title: "Distribución Multiplataforma",
+              windows: "Windows: Microsoft Store (AppX/MSIX), Instalador NSIS (distribución directa)",
+              linux: "Linux: AppImage (portable, no requiere instalación), DEB (Debian/Ubuntu), RPM (Fedora/RedHat)",
+              macos: "macOS: DMG (instalador con interfaz gráfica), ZIP (portable), Soporte para Intel (x64) y Apple Silicon (ARM64)"
+            },
+            updates: {
+              title: "Actualizaciones Automáticas",
+              item1: "Auto-updater integrado: Actualizaciones automáticas desde GitHub Releases",
+              item2: "Notificaciones: Aviso cuando hay actualizaciones disponibles",
+              item3: "Instalación en segundo plano: Sin interrumpir el trabajo del usuario"
+            }
+          },
+          architecture: {
+            title: "🏗️ Arquitectura Técnica",
+            backend: {
+              title: "Backend (Laravel 12)",
+              item1: "Framework: Laravel 12 (PHP 8.2+)",
+              item2: "Base de Datos: PostgreSQL con esquemas organizados",
+              item3: "API REST: Endpoints seguros con autenticación Sanctum",
+              item4: "ORM: Eloquent para gestión de modelos",
+              item5: "Validación: Form Requests con reglas personalizadas",
+              item6: "Caché: Optimización de consultas frecuentes",
+              item7: "Logging: Sistema completo de logs para producción"
+            },
+            frontend: {
+              title: "Frontend (React.js)",
+              item1: "Framework: React 18+ con Vite",
+              item2: "Routing: React Router v6",
+              item3: "Estado: Context API + useReducer",
+              item4: "HTTP Client: Axios con interceptores",
+              item5: "UI: Tailwind CSS + Headless UI",
+              item6: "Formularios: React Hook Form + Zod",
+              item7: "Gráficos: Recharts para visualización de datos",
+              item8: "Notificaciones: React Hot Toast"
+            },
+            electron: {
+              title: "Aplicación de Escritorio (Electron)",
+              item1: "Framework: Electron 39+",
+              item2: "Empaquetado: Electron Builder",
+              item3: "Almacenamiento: Electron Store",
+              item4: "Actualizaciones: Electron Updater",
+              item5: "Seguridad: Content Security Policy (CSP) configurado"
+            }
+          },
+          benefits: {
+            title: "🎯 Ventajas y Beneficios",
+            clinics: {
+              title: "Para Clínicas Oftalmológicas",
+              item1: "✅ Ahorro de tiempo: 2-3 horas diarias en gestión administrativa",
+              item2: "✅ Reducción de errores: 90% menos errores en prescripciones",
+              item3: "✅ Eficiencia: 50% más rápido en generar reportes",
+              item4: "✅ Organización: Toda la información centralizada",
+              item5: "✅ Trazabilidad: Cumplimiento con auditorías médicas",
+              item6: "✅ Escalabilidad: Crece con tu clínica"
+            },
+            doctors: {
+              title: "Para Doctores",
+              item1: "✅ Acceso rápido: Historial completo del paciente en segundos",
+              item2: "✅ Prescripciones precisas: Formularios especializados",
+              item3: "✅ Estadísticas: Análisis de diagnósticos más comunes",
+              item4: "✅ Productividad: Más tiempo para atender pacientes"
+            },
+            admins: {
+              title: "Para Administradores",
+              item1: "✅ Control financiero: Reportes de ingresos detallados",
+              item2: "✅ Gestión de inventario: Control de stock en tiempo real",
+              item3: "✅ Auditoría: Registro completo de todas las operaciones"
+            }
+          },
+          usecases: {
+            title: "📊 Casos de Uso",
+            case1: {
+              title: "Caso 1: Consulta Médica Completa",
+              step1: "El recepcionista registra al paciente (o busca uno existente)",
+              step2: "El doctor accede al historial médico completo del paciente",
+              step3: "Se realiza el examen oftalmológico y se registra el diagnóstico",
+              step4: "Se genera la prescripción de lentes con todos los parámetros",
+              step5: "Se programa la próxima cita",
+              step6: "Se registra el pago de la consulta"
+            },
+            case2: {
+              title: "Caso 2: Análisis de Negocio",
+              step1: "El administrador accede al dashboard de reportes",
+              step2: "Selecciona un período (mensual, trimestral, anual)",
+              step3: "Analiza ingresos, consultas más frecuentes, diagnósticos comunes",
+              step4: "Exporta los datos a Excel para análisis externo",
+              step5: "Toma decisiones basadas en datos reales"
+            },
+            case3: {
+              title: "Caso 3: Gestión de Inventario",
+              step1: "Se recibe un nuevo lote de lentes",
+              step2: "Se registra la entrada en el inventario",
+              step3: "El sistema actualiza automáticamente el stock",
+              step4: "Si el stock baja del mínimo, se genera una alerta",
+              step5: "Se puede consultar el valor total del inventario en cualquier momento"
+            },
+            case4: {
+              title: "Caso 4: Trabajo Offline",
+              step1: "La clínica pierde conexión a internet",
+              step2: "La aplicación detecta el estado offline automáticamente",
+              step3: "El personal continúa trabajando normalmente",
+              step4: "Todas las operaciones se guardan localmente",
+              step5: "Al reconectar, la sincronización se realiza automáticamente",
+              step6: "No se pierde ningún dato"
+            }
+          },
+          security: {
+            title: "🔒 Seguridad y Cumplimiento",
+            item1: "Autenticación segura: Tokens JWT con expiración",
+            item2: "Encriptación: Datos sensibles encriptados",
+            item3: "Auditoría completa: Registro de todas las operaciones",
+            item4: "Cumplimiento legal: Preparado para regulaciones médicas",
+            item5: "Backup automático: Sistema de respaldos programados",
+            item6: "Protección de datos: Cumplimiento con normativas de privacidad"
+          },
+          roadmap: {
+            title: "📈 Roadmap y Futuras Mejoras",
+            item1: "Escalabilidad: Soporte para múltiples clínicas",
+            item2: "Integración: APIs con sistemas externos (laboratorios, seguros)",
+            item3: "Mobile App: Aplicación móvil nativa para iOS/Android",
+            item4: "IA/ML: Diagnósticos asistidos por inteligencia artificial",
+            item5: "Telemedicina: Consultas remotas y videollamadas",
+            item6: "Analytics Avanzados: Business Intelligence y reportes predictivos",
+            item7: "Integración con Dispositivos: Conexión con equipos oftalmológicos"
+          },
+          getstarted: {
+            title: "🚀 ¿Cómo Empezar?",
+            intro: "OptiControl ofrece un período de prueba gratuito de 7 días con acceso completo a todas las funcionalidades. Después, puedes elegir entre:",
+            plan1: "Plan Mensual: $29.99 USD/mes",
+            plan2: "Plan Anual: $299.99 USD/año (ahorro del 17%)",
+            installation: {
+              title: "Instalación",
+              step1: "Descarga la aplicación desde Microsoft Store (Windows), repositorios (Linux) o contáctame.",
+              step2: "Crea tu cuenta y activa tu período de prueba",
+              step3: "Configura tu clínica y comienza a usar todas las funcionalidades",
+              step4: "Importa tus datos existentes o comienza desde cero"
+            }
+          },
+          support: {
+            title: "📞 Soporte y Contacto",
+            item1: "Soporte técnico: Disponible dentro de la aplicación",
+            item2: "Documentación: Manuales completos y tutoriales",
+            item3: "Email: solucion@yjgsolucionti.com"
+          },
+          conclusion: {
+            title: "🎉 Conclusión",
+            text1: "OptiControl es más que un software de gestión: es una solución integral que transforma la forma en que las clínicas oftalmológicas operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, OptiControl está diseñado para crecer contigo y ayudarte a brindar el mejor servicio a tus pacientes.",
+            text2: "¿Listo para transformar tu clínica? Prueba OptiControl hoy mismo y descubre cómo la tecnología puede mejorar tu práctica médica.",
+            tagline: "OptiControl - Gestión Inteligente para Clínicas Oftalmológicas"
+          },
+          cta: {
+            text: "¿Interesado en OptiControl para tu clínica oftalmológica?",
+            button: "Contáctanos"
+          }
+        },
+        share: {
+          label: "Compartir este artículo:",
+          facebook: "Compartir en Facebook"
+        },
+        company: "🏢 YJG Solución TI"
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
+        },
+        links: {
+          title: "Enlaces Útiles",
+          privacy: "Política de Privacidad",
+          terms: "Términos y Condiciones"
+        },
+        info: {
+          title: "Información Adicional",
+          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega"
+        },
+        follow: {
+          title: "Síguenos"
+        },
+        copyright: "© 2025 YJG Solución TI. Todos los derechos reservados."
+      }
+    },
+    en: {
+      menu: {
+        home: "Home",
+        about: "About",
+        contact: "Contact",
+        services: "Services",
+        desktop: "Desktop Applications",
+        webpages: "Web Pages",
+        webapps: "Web Applications",
+        mobile: "Mobile Applications",
+        blog: "Blog"
+      },
+      blog: {
+        opticontrol: {
+          title: "🏥 OptiControl: Comprehensive Management System for Ophthalmology Clinics",
+          date: "📅 December 2025",
+          category: "🏥 Clinical Management System",
+          section1: {
+            title: "📋 General Description",
+            text: "OptiControl is a complete and modern technological solution specifically designed for the comprehensive management of ophthalmology clinics. Developed with the most advanced technologies on the market, it combines the power of a web application with the versatility of a cross-platform desktop application, offering hybrid functionality (online/offline) with automatic synchronization."
+          },
+          section2: {
+            title: "🎯 What is OptiControl?",
+            text: "OptiControl is a Clinical Management System (CMS) specialized in ophthalmology that allows clinics to efficiently and professionally manage all aspects of their daily operations. From patient registration to financial report generation, OptiControl centralizes all information on an intuitive and secure platform."
+          },
+          target: {
+            title: "Target Audience",
+            item1: "Private ophthalmology clinics",
+            item2: "Ophthalmology offices",
+            item3: "Optical stores with medical services",
+            item4: "Health centers specialized in vision",
+            item5: "Independent visual health professionals"
+          },
+          features: {
+            title: "✨ Main Features",
+            feature1: {
+              title: "1. Comprehensive Patient Management",
+              item1: "Complete registration: Demographic information, contact, medical history",
+              item2: "Advanced search: By name, ID, phone, registration date",
+              item3: "Smart filters: By age, gender, active/inactive status",
+              item4: "Complete medical history: Quick access to all previous consultations",
+              item5: "Data export: PDF, Excel, CSV for external analysis"
+            },
+            feature2: {
+              title: "2. Doctor Administration",
+              item1: "Specialist management: Complete registration of doctors and their specialties",
+              item2: "Work schedules: Availability configuration by days and hours",
+              item3: "Consultation assignment: Automatic linking with patients",
+              item4: "Productivity statistics: Consultation reports by doctor"
+            },
+            feature3: {
+              title: "3. Ophthalmological Diagnosis Registration",
+              item1: "Complete medical form: Detailed capture of ophthalmological examinations",
+              item2: "Lens prescription: Normal lenses (OD/OI) with complete parameters, Contact lenses with technical specifications",
+              item3: "Ophthalmological parameters: Spherical, cylinder, axis, addition, pupillary distance",
+              item4: "Prescription status: Pending, completed, delivered",
+              item5: "Appointment follow-up: Automatic scheduling of next consultations"
+            },
+            feature4: {
+              title: "4. Consultation Control",
+              item1: "Complete history: Record of all consultations performed",
+              item2: "Advanced search: By patient, doctor, date, diagnosis",
+              item3: "Consultation status: Tracking of each consultation's lifecycle",
+              item4: "Cost management: Payment and billing records",
+              item5: "Appointment scheduling: Integrated calendar system"
+            },
+            feature5: {
+              title: "5. Advanced Reporting System",
+              item1: "Real-time dashboard: Updated metrics and statistics",
+              item2: "Patient reports: Distribution by age, gender, diagnoses",
+              item3: "Consultation reports: Analysis of frequency and consultation types",
+              item4: "Diagnosis reports: Statistics of most common conditions",
+              item5: "Income reports: Financial analysis by periods",
+              item6: "Doctor reports: Productivity and specialties",
+              item7: "Multiple export: Professional PDF, Excel, CSV",
+              item8: "Customizable filters: By date, doctor, patient, consultation type"
+            },
+            feature6: {
+              title: "6. Inventory Module",
+              item1: "Lens management: Complete catalog of available products",
+              item2: "Stock control: Current, minimum and maximum levels",
+              item3: "Automatic alerts: Low stock notifications",
+              item4: "Inventory movements: Record of entries and exits",
+              item5: "Value calculation: Total inventory value and profit margins",
+              item6: "Complete history: Traceability of all movements"
+            },
+            feature7: {
+              title: "7. License and Payment System",
+              item1: "Flexible plans: Trial (7-day free trial), Monthly (Monthly subscription), Annual (Annual subscription with discount)",
+              item2: "Payment integration: Paddle (in implementation)",
+              item3: "Access control: Automatic blocking for expired license",
+              item4: "Webhooks: Automatic handling of payment events",
+              item5: "Limit management: Control of features by plan"
+            },
+            feature8: {
+              title: "8. User and Security System",
+              item1: "Secure authentication: Laravel Sanctum with tokens",
+              item2: "Roles and permissions: Administrator (full access), Doctor (consultation and diagnosis management), Receptionist (patient and appointment management), User (only basic queries and reports)",
+              item3: "Complete audit: Record of all CRUD operations",
+              item4: "Traceability: Change history with previous/new data",
+              item5: "Data protection: Compliance with medical regulations"
+            },
+            feature9: {
+              title: "9. Technical Support System",
+              item1: "6 specialized modules: Contact (WhatsApp and email system), Resources (Manuals and documentation), Diagnostics (System self-diagnosis), Monitoring (Real-time metrics dashboard), Feedback (Bug reports and suggestions system), Backup (Backup and restoration system)"
+            },
+            feature10: {
+              title: "10. Internationalization and Configuration",
+              item1: "Multi-language: Spanish and English",
+              item2: "Time zones: Costa Rica and United States (configurable)",
+              item3: "Currencies: Costa Rican Colón (₡), US Dollar ($), Colombian (COP$), Mexican (MXN$), Euro (€), Chilean (CLP$)",
+              item4: "Flexible configuration: Each option is independent",
+              item5: "Automatic detection: Default values based on location"
+            }
+          },
+          desktop: {
+            title: "💻 Cross-Platform Desktop Application",
+            subtitle: "Desktop Application Features",
+            intro: "OptiControl is available as a native desktop application for Windows, Linux and macOS, offering:",
+            hybrid: {
+              title: "Hybrid Functionality (Online/Offline)",
+              item1: "Complete offline mode: Works without internet connection",
+              item2: "Automatic synchronization: Syncs data when connection is detected",
+              item3: "Local storage: Data saved locally with electron-store",
+              item4: "Operation queue: Pending operations execute upon reconnection",
+              item5: "Visual indicator: Connection status (online/offline/syncing)",
+              item6: "Conflict handling: Automatic resolution of synchronization conflicts"
+            },
+            distribution: {
+              title: "Cross-Platform Distribution",
+              windows: "Windows: Microsoft Store (AppX/MSIX), NSIS Installer (direct distribution)",
+              linux: "Linux: AppImage (portable, no installation required), DEB (Debian/Ubuntu), RPM (Fedora/RedHat)",
+              macos: "macOS: DMG (installer with graphical interface), ZIP (portable), Support for Intel (x64) and Apple Silicon (ARM64)"
+            },
+            updates: {
+              title: "Automatic Updates",
+              item1: "Integrated auto-updater: Automatic updates from GitHub Releases",
+              item2: "Notifications: Alert when updates are available",
+              item3: "Background installation: Without interrupting user work"
+            }
+          },
+          architecture: {
+            title: "🏗️ Technical Architecture",
+            backend: {
+              title: "Backend (Laravel 12)",
+              item1: "Framework: Laravel 12 (PHP 8.2+)",
+              item2: "Database: PostgreSQL with organized schemas",
+              item3: "REST API: Secure endpoints with Sanctum authentication",
+              item4: "ORM: Eloquent for model management",
+              item5: "Validation: Form Requests with custom rules",
+              item6: "Cache: Optimization of frequent queries",
+              item7: "Logging: Complete logging system for production"
+            },
+            frontend: {
+              title: "Frontend (React.js)",
+              item1: "Framework: React 18+ with Vite",
+              item2: "Routing: React Router v6",
+              item3: "State: Context API + useReducer",
+              item4: "HTTP Client: Axios with interceptors",
+              item5: "UI: Tailwind CSS + Headless UI",
+              item6: "Forms: React Hook Form + Zod",
+              item7: "Charts: Recharts for data visualization",
+              item8: "Notifications: React Hot Toast"
+            },
+            electron: {
+              title: "Desktop Application (Electron)",
+              item1: "Framework: Electron 39+",
+              item2: "Packaging: Electron Builder",
+              item3: "Storage: Electron Store",
+              item4: "Updates: Electron Updater",
+              item5: "Security: Content Security Policy (CSP) configured"
+            }
+          },
+          benefits: {
+            title: "🎯 Advantages and Benefits",
+            clinics: {
+              title: "For Ophthalmology Clinics",
+              item1: "✅ Time savings: 2-3 hours daily in administrative management",
+              item2: "✅ Error reduction: 90% fewer errors in prescriptions",
+              item3: "✅ Efficiency: 50% faster in generating reports",
+              item4: "✅ Organization: All information centralized",
+              item5: "✅ Traceability: Compliance with medical audits",
+              item6: "✅ Scalability: Grows with your clinic"
+            },
+            doctors: {
+              title: "For Doctors",
+              item1: "✅ Quick access: Complete patient history in seconds",
+              item2: "✅ Accurate prescriptions: Specialized forms",
+              item3: "✅ Statistics: Analysis of most common diagnoses",
+              item4: "✅ Productivity: More time to attend to patients"
+            },
+            admins: {
+              title: "For Administrators",
+              item1: "✅ Financial control: Detailed income reports",
+              item2: "✅ Inventory management: Real-time stock control",
+              item3: "✅ Audit: Complete record of all operations"
+            }
+          },
+          usecases: {
+            title: "📊 Use Cases",
+            case1: {
+              title: "Case 1: Complete Medical Consultation",
+              step1: "The receptionist registers the patient (or searches for an existing one)",
+              step2: "The doctor accesses the patient's complete medical history",
+              step3: "The ophthalmological examination is performed and the diagnosis is recorded",
+              step4: "The lens prescription is generated with all parameters",
+              step5: "The next appointment is scheduled",
+              step6: "The consultation payment is recorded"
+            },
+            case2: {
+              title: "Case 2: Business Analysis",
+              step1: "The administrator accesses the reports dashboard",
+              step2: "Selects a period (monthly, quarterly, annual)",
+              step3: "Analyzes income, most frequent consultations, common diagnoses",
+              step4: "Exports data to Excel for external analysis",
+              step5: "Makes decisions based on real data"
+            },
+            case3: {
+              title: "Case 3: Inventory Management",
+              step1: "A new batch of lenses is received",
+              step2: "The entry is recorded in the inventory",
+              step3: "The system automatically updates the stock",
+              step4: "If stock falls below minimum, an alert is generated",
+              step5: "Total inventory value can be consulted at any time"
+            },
+            case4: {
+              title: "Case 4: Offline Work",
+              step1: "The clinic loses internet connection",
+              step2: "The application automatically detects offline status",
+              step3: "Staff continues working normally",
+              step4: "All operations are saved locally",
+              step5: "Upon reconnection, synchronization is performed automatically",
+              step6: "No data is lost"
+            }
+          },
+          security: {
+            title: "🔒 Security and Compliance",
+            item1: "Secure authentication: JWT tokens with expiration",
+            item2: "Encryption: Sensitive data encrypted",
+            item3: "Complete audit: Record of all operations",
+            item4: "Legal compliance: Prepared for medical regulations",
+            item5: "Automatic backup: Scheduled backup system",
+            item6: "Data protection: Compliance with privacy regulations"
+          },
+          roadmap: {
+            title: "📈 Roadmap and Future Improvements",
+            item1: "Scalability: Support for multiple clinics",
+            item2: "Integration: APIs with external systems (laboratories, insurance)",
+            item3: "Mobile App: Native mobile application for iOS/Android",
+            item4: "AI/ML: AI-assisted diagnoses",
+            item5: "Telemedicine: Remote consultations and video calls",
+            item6: "Advanced Analytics: Business Intelligence and predictive reports",
+            item7: "Device Integration: Connection with ophthalmological equipment"
+          },
+          getstarted: {
+            title: "🚀 How to Get Started?",
+            intro: "OptiControl offers a 7-day free trial period with full access to all features. After that, you can choose between:",
+            plan1: "Monthly Plan: $29.99 USD/month",
+            plan2: "Annual Plan: $299.99 USD/year (17% savings)",
+            installation: {
+              title: "Installation",
+              step1: "Download the application from Microsoft Store (Windows), repositories (Linux) or contact me.",
+              step2: "Create your account and activate your trial period",
+              step3: "Configure your clinic and start using all features",
+              step4: "Import your existing data or start from scratch"
+            }
+          },
+          support: {
+            title: "📞 Support and Contact",
+            item1: "Technical support: Available within the application",
+            item2: "Documentation: Complete manuals and tutorials",
+            item3: "Email: solucion@yjgsolucionti.com"
+          },
+          conclusion: {
+            title: "🎉 Conclusion",
+            text1: "OptiControl is more than management software: it is a comprehensive solution that transforms how ophthalmology clinics operate. With its unique combination of power, flexibility and ease of use, OptiControl is designed to grow with you and help you provide the best service to your patients.",
+            text2: "Ready to transform your clinic? Try OptiControl today and discover how technology can improve your medical practice.",
+            tagline: "OptiControl - Smart Management for Ophthalmology Clinics"
+          },
+          cta: {
+            text: "Interested in OptiControl for your ophthalmology clinic?",
+            button: "Contact Us"
+          }
+        },
+        share: {
+          label: "Share this article:",
+          facebook: "Share on Facebook"
+        },
+        company: "🏢 YJG Solución TI"
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Specialists in mobile application development, desktop applications and web pages. Comprehensive technological solutions in Costa Rica."
+        },
+        links: {
+          title: "Useful Links",
+          privacy: "Privacy Policy",
+          terms: "Terms and Conditions"
+        },
+        info: {
+          title: "Additional Information",
+          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support"
+        },
+        follow: {
+          title: "Follow Us"
+        },
+        copyright: "© 2025 YJG Solución TI. All rights reserved."
+      }
+    }
+  };
+  
+  // Función para obtener el idioma guardado o usar español por defecto
+  function getSavedLanguage() {
+    return localStorage.getItem('language') || 'es';
+  }
+  
+  // Función para guardar el idioma
+  function saveLanguage(lang) {
+    localStorage.setItem('language', lang);
+  }
+  
+  // Función para obtener el texto traducido
+  function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let value = translations[lang];
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  }
+  
+  // Función para aplicar traducciones
+  function applyTranslations(lang) {
+    // Traducir elementos con data-translate (todos los elementos, no solo spans)
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+      // Solo traducir si no es un enlace que contiene iconos
+      if (element.tagName === 'A' && element.querySelector('.menu-icon')) {
+        return; // Saltar enlaces del menú que contienen iconos
+      }
+      const key = element.getAttribute('data-translate');
+      const translation = getTranslation(key, lang);
+      if (translation) {
+        // Si el elemento tiene data-translate-html, insertar HTML, sino solo texto
+        if (element.getAttribute('data-translate-html') === 'true') {
+          element.innerHTML = translation;
+        } else {
+          element.textContent = translation;
+        }
+      }
+    });
+    
+    // Actualizar la bandera del selector de idioma
+    const currentFlag = document.getElementById('currentLanguageFlag');
+    if (currentFlag) {
+      currentFlag.textContent = lang === 'es' ? '🇪🇸' : '🇺🇸';
+    }
+    
+    // Actualizar el atributo lang del HTML
+    document.documentElement.lang = lang;
+  }
+  
+  // Función para cambiar el idioma
+  function changeLanguage(lang) {
+    saveLanguage(lang);
+    applyTranslations(lang);
+    // Disparar evento personalizado para actualizar otras partes de la página
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+  }
+  
+  // Inicializar traducciones al cargar la página
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = getSavedLanguage();
+    applyTranslations(savedLang);
+    
+    // Agregar event listeners a los botones de idioma
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        changeLanguage(lang);
+      });
+    });
+    
+    // Escuchar cambios en localStorage para actualizar cuando cambie el idioma en otra pestaña
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'language') {
+        const newLang = e.newValue || 'es';
+        applyTranslations(newLang);
+      }
+    });
+    
+    // Escuchar evento personalizado para actualizar cuando cambie el idioma en la misma página
+    window.addEventListener('languageChanged', function(e) {
+      if (e.detail && e.detail.lang) {
+        applyTranslations(e.detail.lang);
+      }
+    });
+  });
+  
+  // Inicialización inmediata para aplicar el idioma antes de que se cargue el DOM
+  (function() {
+    const savedLang = localStorage.getItem('language') || 'es';
+    const currentFlag = document.getElementById('currentLanguageFlag');
+    if (currentFlag) {
+      currentFlag.textContent = savedLang === 'es' ? '🇪🇸' : '🇺🇸';
+    }
+    if (document.documentElement) {
+      document.documentElement.lang = savedLang;
+    }
+    // Aplicar traducciones inmediatamente si el DOM ya está listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        applyTranslations(savedLang);
+      });
+    } else {
+      applyTranslations(savedLang);
+    }
+  })();
+</script>
 
 <script>
   function openContactPanel() {
