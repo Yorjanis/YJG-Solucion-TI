@@ -110,6 +110,92 @@
       margin-left: 0;
     }
     
+    /* Ajustar padding del menú del blog para que el texto quede junto a los iconos */
+    .cid-s48OLK6784 .blog-dropdown-menu .dropdown-item,
+    .cid-s48OLK6784 [aria-labelledby="blogDropdown"] .dropdown-item,
+    .blog-dropdown-menu .dropdown-item {
+      padding-left: 0.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+    .cid-s48OLK6784 .blog-dropdown-menu .dropdown-item span,
+    .cid-s48OLK6784 [aria-labelledby="blogDropdown"] .dropdown-item span,
+    .blog-dropdown-menu .dropdown-item span {
+      margin-right: -0.2rem !important;
+      margin-left: 0 !important;
+    }
+    
+    /* Ancho específico para el menú del blog - Sobrescribir TODOS los estilos de Mobirise y Bootstrap */
+    .cid-s48OLK6784 div.dropdown-menu[aria-labelledby="blogDropdown"],
+    .cid-s48OLK6784 .dropdown-menu[aria-labelledby="blogDropdown"],
+    div.dropdown-menu[aria-labelledby="blogDropdown"],
+    .dropdown-menu[aria-labelledby="blogDropdown"],
+    #blogDropdown + .dropdown-menu,
+    [aria-labelledby="blogDropdown"].dropdown-menu {
+      min-width: 800px !important;
+      max-width: 900px !important;
+      width: auto !important;
+    }
+    /* Asegurar que el contenedor padre no limite el ancho */
+    .cid-s48OLK6784 .container-fluid,
+    .cid-s48OLK6784 .navbar-collapse,
+    .cid-s48OLK6784 .navbar-nav,
+    .cid-s48OLK6784 .nav-dropdown {
+      overflow: visible !important;
+      max-width: none !important;
+    }
+    /* Forzar que el dropdown del blog pueda expandirse y posicionarlo a la derecha */
+    .blog-dropdown-menu,
+    .cid-s48OLK6784 .blog-dropdown-menu {
+      min-width: 800px !important;
+      max-width: 900px !important;
+      width: auto !important;
+      left: auto !important;
+      right: -500px !important;
+      transform: translateX(0) !important;
+    }
+    /* Posicionar el dropdown del blog más a la derecha */
+    .cid-s48OLK6784 .nav-item.dropdown:last-of-type .dropdown-menu,
+    .cid-s48OLK6784 li.nav-item.dropdown:has(#blogDropdown) .dropdown-menu,
+    .cid-s48OLK6784 .nav-item.dropdown .dropdown-menu[aria-labelledby="blogDropdown"],
+    .cid-s48OLK6784 .blog-dropdown-menu {
+      left: auto !important;
+      right: -500px !important;
+      transform: translateX(0) !important;
+    }
+    .blog-dropdown-menu .dropdown-item,
+    .cid-s48OLK6784 .blog-dropdown-menu .dropdown-item {
+      white-space: normal !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      width: 100% !important;
+      padding-right: 2.5rem !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+    .cid-s48OLK6784 div.dropdown-menu[aria-labelledby="blogDropdown"] .dropdown-item,
+    .cid-s48OLK6784 .dropdown-menu[aria-labelledby="blogDropdown"] .dropdown-item,
+    div.dropdown-menu[aria-labelledby="blogDropdown"] .dropdown-item,
+    [aria-labelledby="blogDropdown"] .dropdown-item {
+      white-space: normal !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      width: 100% !important;
+      padding-right: 2.5rem !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+    div.dropdown-menu[aria-labelledby="blogDropdown"] .dropdown-item span,
+    [aria-labelledby="blogDropdown"] .dropdown-item span {
+      flex-shrink: 0 !important;
+      margin-right: 0.5rem !important;
+    }
+    
     /* Efecto hover para enlaces del pie de página */
     .footer-column a {
       transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
@@ -1058,7 +1144,189 @@
       transform: scale(1.05);
     }
     
+    /* Estilos para la sección de testimonios */
+    .testimonials-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(236, 15, 15, 0.03) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .testimonials-section::after {
+      content: '';
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      width: 300px;
+      height: 300px;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(236, 15, 15, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(236, 15, 15, 0.02) 0%, transparent 50%);
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .testimonials-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    .testimonials-label {
+      color: #ec0f0f;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .testimonials-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 0;
+    }
+    .testimonials-title .highlight {
+      color: #ec0f0f;
+    }
+    .testimonials-nav {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .testimonials-nav-btn {
+      background: none;
+      border: none;
+      color: #5a6c7d;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s ease;
+      padding: 5px 10px;
+    }
+    .testimonials-nav-btn:hover {
+      color: #ec0f0f;
+    }
+    .testimonials-nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .testimonials-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    .testimonials-slider {
+      display: flex;
+      transition: transform 0.5s ease;
+      gap: 30px;
+    }
+    .testimonial-card {
+      flex: 0 0 calc(33.333% - 20px);
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 0;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+    .testimonial-quote {
+      font-size: 4rem;
+      color: #2c3e50;
+      line-height: 1;
+      margin-bottom: 20px;
+      font-family: Georgia, serif;
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 20px;
+    }
+    .testimonial-star {
+      color: #ec0f0f;
+      font-size: 1.2rem;
+    }
+    .testimonial-star.empty {
+      color: #d0d0d0;
+    }
+    .testimonial-text {
+      color: #5a6c7d;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      min-height: 80px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .testimonial-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ec0f0f;
+    }
+    .testimonial-info {
+      flex: 1;
+    }
+    .testimonial-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin: 0 0 5px 0;
+    }
+    .testimonial-role {
+      font-size: 0.9rem;
+      color: #5a6c7d;
+      margin: 0;
+    }
+    @media (max-width: 992px) {
+      .testimonial-card {
+        flex: 0 0 calc(50% - 15px);
+      }
+    }
     @media (max-width: 768px) {
+      .testimonials-section {
+        padding: 60px 0;
+      }
+      .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .testimonials-title {
+        font-size: 2rem;
+      }
+      .testimonials-nav {
+        align-self: flex-end;
+      }
+      .testimonial-card {
+        flex: 0 0 100%;
+      }
+      .testimonial-quote {
+        font-size: 3rem;
+      }
       .latest-projects-section {
         padding: 60px 0;
       }
@@ -1175,15 +1443,15 @@
                         <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span>Blog
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="blogDropdown" style="max-height: 300px; overflow-y: auto;">
-                            <a class="dropdown-item" href="blog-1.html">
-                                <span class="mobi-mbri mobi-mbri-file mbr-iconfont" style="color: rgb(236, 15, 15);"></span> OptiControl - Sistema de Gestión Oftalmológica
+                        <div class="dropdown-menu blog-dropdown-menu" aria-labelledby="blogDropdown" style="max-height: 300px; overflow-y: auto; min-width: 800px !important; max-width: 900px !important; width: auto !important; overflow-x: visible !important; left: auto !important; right: -500px !important;">
+                            <a class="dropdown-item" href="blog-1.html" style="white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; padding-left: 0.5rem !important; padding-right: 1.5rem !important;">
+                                <span class="mobi-mbri mobi-mbri-file mbr-iconfont" style="color: rgb(236, 15, 15); margin-right: -0.2rem !important;"></span> OptiControl - Sistema de Gestión Oftalmológica
                             </a>
-                            <a class="dropdown-item" href="blog-2.html">
-                                <span class="mobi-mbri mobi-mbri-file mbr-iconfont" style="color: rgb(236, 15, 15);"></span> Aplicación Web Progresiva
+                            <a class="dropdown-item" href="blog-4.html" style="white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; padding-left: 0.5rem !important; padding-right: 1.5rem !important;">
+                                <span class="mobi-mbri mobi-mbri-file mbr-iconfont" style="color: rgb(236, 15, 15); margin-right: -0.2rem !important;"></span> RestoControl - Sistema de Gestión de Restaurantes
                             </a>
-                            <a class="dropdown-item" href="blog-3.html">
-                                <span class="mobi-mbri mobi-mbri-file mbr-iconfont" style="color: rgb(236, 15, 15);"></span> Sistema de Gestión Empresarial
+                            <a class="dropdown-item" href="blog-5.html" style="white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; padding-left: 0.5rem !important; padding-right: 1.5rem !important;">
+                                <span class="mobi-mbri mobi-mbri-file mbr-iconfont" style="color: rgb(236, 15, 15); margin-right: -0.2rem !important;"></span> HotelControl - Sistema de Gestión Hotelera
                             </a>
                         </div>
                     </li>
@@ -1324,6 +1592,196 @@
     </div>
 </section>
 
+<!-- Sección de Testimonios -->
+<section class="testimonials-section" id="testimonials-section">
+    <div class="container">
+        <div class="testimonials-header">
+            <div>
+                <div class="testimonials-label">Testimonios</div>
+                <h2 class="testimonials-title">Lo que dicen <span class="highlight">nuestros clientes</span></h2>
+            </div>
+            <div class="testimonials-nav">
+                <button class="testimonials-nav-btn" id="testimonialsPrev" aria-label="Anterior">
+                    <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span> Prev
+                </button>
+                <button class="testimonials-nav-btn" id="testimonialsNext" aria-label="Siguiente">
+                    Next <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                </button>
+            </div>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <!-- Testimonio 1 - Francela -->
+                <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                    </div>
+                    <p class="testimonial-text" itemprop="reviewBody">
+                        Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación.
+                    </p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg" alt="Francela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de aplicaciones en Costa Rica" class="testimonial-photo" itemprop="image">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name" itemprop="name">Francela</h4>
+                            <p class="testimonial-role" itemprop="jobTitle">Gerente de Proyectos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 - Francine -->
+                <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                    </div>
+                    <p class="testimonial-text" itemprop="reviewBody">
+                        Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas.
+                    </p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg" alt="Francine - Cliente satisfecha de YJG Solución TI desarrollo de aplicaciones móviles en Costa Rica" class="testimonial-photo" itemprop="image">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name" itemprop="name">Francine</h4>
+                            <p class="testimonial-role" itemprop="jobTitle">Directora de Tecnología</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 3 - Maria -->
+                <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="4">
+                        <meta itemprop="bestRating" content="5">
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star empty">★</span>
+                    </div>
+                    <p class="testimonial-text" itemprop="reviewBody">
+                        La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados.
+                    </p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg" alt="María - Cliente satisfecha de YJG Solución TI desarrollo de páginas web corporativas en Costa Rica" class="testimonial-photo" itemprop="image">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name" itemprop="name">María</h4>
+                            <p class="testimonial-role" itemprop="jobTitle">Propietaria de Negocio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 4 - Pamela -->
+                <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                        <span class="testimonial-star">★</span>
+                    </div>
+                    <p class="testimonial-text" itemprop="reviewBody">
+                        Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente.
+                    </p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg" alt="Pamela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de software en Costa Rica" class="testimonial-photo" itemprop="image">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name" itemprop="name">Pamela</h4>
+                            <p class="testimonial-role" itemprop="jobTitle">CEO de Empresa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Schema.org para la sección de testimonios -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "YJG Solución TI",
+  "url": "https://yjgsolucionti.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.75",
+    "reviewCount": "4",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Francela"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Francine"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "María"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5"
+      },
+      "reviewBody": "La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Pamela"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente."
+    }
+  ]
+}
+</script>
+
 <!-- Sección de Últimos Proyectos -->
 <section class="latest-projects-section" id="latest-projects" style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
@@ -1353,37 +1811,37 @@
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="blog-2.html" class="project-card-link">
+                <a href="blog-4.html" class="project-card-link">
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="assets/images/yjg-solucion-ti-aplicaciones-web-progresivas-pwa-desarrollo-costa-rica.jpg" alt="Aplicación Web Progresiva PWA" class="project-image img-fluid">
+                            <img src="assets/images/yjg-solucion-ti-restocontrol-sistema-gestion-restaurantes-dashboard-costa-rica.png" alt="RestoControl - Sistema de Gestión para Restaurantes" class="project-image img-fluid">
                             <div class="project-overlay">
                                 <span class="read-more">Leer más →</span>
                             </div>
                         </div>
                         <div class="project-content">
-                            <div class="project-date">📅 Enero 2025</div>
-                            <h3 class="project-title">Aplicación Web Progresiva (PWA)</h3>
-                            <p class="project-description">Lanzamiento de aplicación web progresiva con funcionalidades offline y notificaciones push para mejorar la experiencia del usuario.</p>
-                            <div class="project-tag">🌐 Aplicación Web</div>
+                            <div class="project-date">📅 Diciembre 2025</div>
+                            <h3 class="project-title">RestoControl - Sistema de Gestión de Restaurantes</h3>
+                            <p class="project-description">Sistema integral de gestión para restaurantes con control de pedidos, mesas, inventario, empleados y reportes. Aplicación web y de escritorio multiplataforma.</p>
+                            <div class="project-tag">🍽️ Sistema de Gestión</div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="blog-3.html" class="project-card-link">
+                <a href="blog-5.html" class="project-card-link">
                     <div class="project-card">
                         <div class="project-image-wrapper">
-                            <img src="assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg" alt="Sistema de Gestión Empresarial" class="project-image img-fluid">
+                            <img src="assets/images/yjg-solucion-ti-hotelcontrol-sistema-gestion-hotelera-dashboard-costa-rica.png" alt="HotelControl - Sistema de Gestión para Hoteles" class="project-image img-fluid">
                             <div class="project-overlay">
                                 <span class="read-more">Leer más →</span>
                             </div>
                         </div>
                         <div class="project-content">
-                            <div class="project-date">📅 Diciembre 2024</div>
-                            <h3 class="project-title">Sistema de Gestión Empresarial</h3>
-                            <p class="project-description">Desarrollo de sistema completo de gestión empresarial multiplataforma para Windows, macOS y Linux con módulos avanzados.</p>
-                            <div class="project-tag">💻 Aplicación de Escritorio</div>
+                            <div class="project-date">📅 Diciembre 2025</div>
+                            <h3 class="project-title">HotelControl - Sistema de Gestión Hotelera</h3>
+                            <p class="project-description">Sistema integral de gestión para hoteles con control de reservas, huéspedes, habitaciones, check-in/check-out, servicios y reportes. Aplicación web y de escritorio multiplataforma.</p>
+                            <div class="project-tag">🏨 Sistema de Gestión</div>
                         </div>
                     </div>
                 </a>
@@ -1811,6 +2269,72 @@
       }
     });
     
+    // Carrusel de testimonios
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('testimonialsSlider');
+      const prevBtn = document.getElementById('testimonialsPrev');
+      const nextBtn = document.getElementById('testimonialsNext');
+      const cards = slider ? slider.querySelectorAll('.testimonial-card') : [];
+      
+      if (!slider || cards.length === 0) return;
+      
+      let currentIndex = 0;
+      const cardsPerView = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+      const maxIndex = Math.max(0, cards.length - cardsPerView);
+      
+      function updateSlider() {
+        const cardWidth = cards[0].offsetWidth + 30; // width + gap
+        const translateX = -currentIndex * cardWidth;
+        slider.style.transform = `translateX(${translateX}px)`;
+        
+        // Actualizar estado de botones
+        if (prevBtn) {
+          prevBtn.disabled = currentIndex === 0;
+        }
+        if (nextBtn) {
+          nextBtn.disabled = currentIndex >= maxIndex;
+        }
+      }
+      
+      function goToNext() {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateSlider();
+        }
+      }
+      
+      function goToPrev() {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      }
+      
+      if (prevBtn) {
+        prevBtn.addEventListener('click', goToPrev);
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', goToNext);
+      }
+      
+      // Actualizar en resize
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          const newCardsPerView = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+          const newMaxIndex = Math.max(0, cards.length - newCardsPerView);
+          if (currentIndex > newMaxIndex) {
+            currentIndex = newMaxIndex;
+          }
+          updateSlider();
+        }, 250);
+      });
+      
+      // Inicializar
+      updateSlider();
+    });
+    
     // Botón de copiar número de teléfono
     document.addEventListener('DOMContentLoaded', function() {
       const copyPhoneBtn = document.getElementById('copyPhoneBtn');
@@ -1974,6 +2498,91 @@
       
       if (statsSection) {
         observer.observe(statsSection);
+      }
+    });
+    
+    // Forzar ancho del menú del blog
+    document.addEventListener('DOMContentLoaded', function() {
+      const blogDropdown = document.getElementById('blogDropdown');
+      const blogMenu = document.querySelector('[aria-labelledby="blogDropdown"]');
+      
+      function applyBlogMenuStyles() {
+        if (blogMenu) {
+          // Forzar ancho del menú
+          blogMenu.style.setProperty('min-width', '800px', 'important');
+          blogMenu.style.setProperty('max-width', '900px', 'important');
+          blogMenu.style.setProperty('width', 'auto', 'important');
+          blogMenu.style.setProperty('overflow-x', 'visible', 'important');
+          
+          // Posicionar más a la derecha
+          blogMenu.style.setProperty('left', 'auto', 'important');
+          blogMenu.style.setProperty('right', '-500px', 'important');
+          blogMenu.style.setProperty('transform', 'translateX(0)', 'important');
+          
+          // Asegurar que el contenedor padre no limite
+          let parent = blogMenu.parentElement;
+          while (parent && parent !== document.body) {
+            if (parent.classList.contains('navbar-collapse') || 
+                parent.classList.contains('container-fluid') ||
+                parent.classList.contains('navbar-nav')) {
+              parent.style.setProperty('overflow', 'visible', 'important');
+              parent.style.setProperty('max-width', 'none', 'important');
+            }
+            parent = parent.parentElement;
+          }
+          
+          // Aplicar estilos a los items
+          const items = blogMenu.querySelectorAll('.dropdown-item');
+          items.forEach(item => {
+            item.style.setProperty('white-space', 'normal', 'important');
+            item.style.setProperty('word-wrap', 'break-word', 'important');
+            item.style.setProperty('overflow-wrap', 'break-word', 'important');
+            item.style.setProperty('max-width', 'none', 'important');
+            item.style.setProperty('width', '100%', 'important');
+            item.style.setProperty('padding-left', '0.5rem', 'important');
+            item.style.setProperty('padding-right', '1.5rem', 'important');
+            item.style.setProperty('overflow', 'visible', 'important');
+            
+            // Ajustar el span del icono
+            const iconSpan = item.querySelector('span.mbr-iconfont');
+            if (iconSpan) {
+              iconSpan.style.setProperty('margin-right', '-0.2rem', 'important');
+              iconSpan.style.setProperty('margin-left', '0', 'important');
+            }
+          });
+        }
+      }
+      
+      // Aplicar estilos inmediatamente
+      applyBlogMenuStyles();
+      
+      // Aplicar cuando se muestre el dropdown (Bootstrap 4)
+      if (blogDropdown && typeof $ !== 'undefined') {
+        $(blogDropdown).on('shown.bs.dropdown', function() {
+          setTimeout(applyBlogMenuStyles, 10);
+        });
+      }
+      
+      // También usar MutationObserver para detectar cambios
+      if (blogMenu) {
+        const observer = new MutationObserver(function(mutations) {
+          if (blogMenu && blogMenu.style.display !== 'none' && blogMenu.offsetWidth > 0) {
+            applyBlogMenuStyles();
+          }
+        });
+        
+        observer.observe(blogMenu, {
+          attributes: true,
+          attributeFilter: ['style', 'class'],
+          childList: true
+        });
+      }
+      
+      // Aplicar estilos cuando se haga hover o click
+      if (blogDropdown) {
+        blogDropdown.addEventListener('click', function() {
+          setTimeout(applyBlogMenuStyles, 50);
+        });
       }
     });
   </script>
