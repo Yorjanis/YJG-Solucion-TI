@@ -94,6 +94,13 @@
       text-decoration: underline !important;
       transition: text-decoration 0.2s ease-in-out;
     }
+    /* Excepción: el selector de idioma nunca debe tener subrayado */
+    .cid-s48OLK6784 #languageDropdown:hover,
+    .cid-s48OLK6784 #languageDropdown:hover span,
+    .cid-s48OLK6784 .language-selector-wrapper .nav-link:hover,
+    .cid-s48OLK6784 .language-selector-wrapper .nav-link:hover span {
+      text-decoration: none !important;
+    }
     /* Efecto active para enlaces seleccionados del menú */
     .cid-s48OLK6784 .nav-link.active,
     .cid-s48OLK6784 .nav-link.active span {
@@ -1144,6 +1151,84 @@
       transform: scale(1.05);
     }
     
+    /* Estilos para el selector de idioma y acciones del navbar */
+    .cid-s48OLK6784 .navbar-collapse {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+    }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-left: auto;
+    }
+    .language-selector-wrapper {
+      position: relative;
+    }
+    #languageDropdown {
+      padding: 0.3rem 0.8rem !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      border: none;
+      background: transparent;
+    }
+    #languageDropdown:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:focus {
+      outline: none;
+      background-color: rgba(236, 15, 15, 0.1);
+      text-decoration: none !important;
+    }
+    #languageDropdown:active,
+    #languageDropdown:visited {
+      text-decoration: none !important;
+    }
+    /* Asegurar que el selector de idioma nunca tenga subrayado */
+    .language-selector-wrapper a,
+    .language-selector-wrapper a:hover,
+    .language-selector-wrapper a:focus,
+    .language-selector-wrapper a:active,
+    .language-selector-wrapper a:visited {
+      text-decoration: none !important;
+    }
+    @media (max-width: 991px) {
+      .navbar-actions {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+    #currentLanguageFlag {
+      font-size: 1.3rem;
+      line-height: 1;
+      display: inline-block;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] {
+      min-width: 150px;
+      padding: 0.5rem 0;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.2s ease;
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:hover {
+      background-color: rgba(236, 15, 15, 0.1);
+    }
+    .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+    
     /* Estilos para la sección de testimonios */
     .testimonials-section {
       padding: 80px 0;
@@ -1417,31 +1502,31 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                    <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="index.html#top"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;Inicio</span></a></li>
-                    <li class="nav-item"><a class="nav-link link text-secondary display-4" href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span>Acerca de</a></li>
-                    <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;Contacto</span></a></li>
+                    <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="index.html#top"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;<span data-translate="menu.home">Inicio</span></span></a></li>
+                    <li class="nav-item"><a class="nav-link link text-secondary display-4" href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span><span data-translate="menu.about">Acerca de</span></a></li>
+                    <li class="nav-item"><a class="nav-link link text-secondary text-primary display-4" href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);">&nbsp;<span data-translate="menu.contact">Contacto</span></span></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="serviciosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span>Servicio
+                            <span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span><span data-translate="menu.services">Servicio</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="serviciosDropdown">
                             <a class="dropdown-item" href="aplicaciones-escritorio.html">
-                                <span class="mobi-mbri mobi-mbri-code mbr-iconfont" style="color: rgb(236, 15, 15);"></span> Aplicaciones de Escritorio
+                                <span class="mobi-mbri mobi-mbri-code mbr-iconfont" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.desktop">Aplicaciones de Escritorio</span>
                             </a>
                             <a class="dropdown-item" href="paginas-web.html">
-                                <span class="mobi-mbri mobi-mbri-devices mbr-iconfont" style="color: rgb(236, 15, 15);"></span> Páginas Web
+                                <span class="mobi-mbri mobi-mbri-devices mbr-iconfont" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webpages">Páginas Web</span>
                             </a>
                             <a class="dropdown-item" href="aplicaciones-web.html">
-                                <span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont" style="color: rgb(236, 15, 15);"></span> Aplicaciones Web
+                                <span class="mobi-mbri mobi-mbri-website-theme mbr-iconfont" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webapps">Aplicaciones Web</span>
                             </a>
                             <a class="dropdown-item" href="aplicaciones-moviles.html">
-                                <span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont" style="color: rgb(236, 15, 15);"></span> Aplicaciones Móviles
+                                <span class="mobi-mbri mobi-mbri-globe-2 mbr-iconfont" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.mobile">Aplicaciones Móviles</span>
                             </a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span>Blog
+                            <span class="mobi-mbri mobi-mbri-file mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 15, 15);"></span><span data-translate="menu.blog">Blog</span>
                         </a>
                         <div class="dropdown-menu blog-dropdown-menu" aria-labelledby="blogDropdown" style="max-height: 300px; overflow-y: auto; min-width: 800px !important; max-width: 900px !important; width: auto !important; overflow-x: visible !important; left: auto !important; right: -500px !important;">
                             <a class="dropdown-item" href="blog-1.html" style="white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; padding-left: 0.5rem !important; padding-right: 1.5rem !important;">
@@ -1456,13 +1541,28 @@
                         </div>
                     </li>
                 </ul>
-                <div class="icons-menu">
+                <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px;">
+                    <div class="language-selector-wrapper" style="position: relative;">
+                        <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center;">
+                            <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
+                            <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
+                                <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+                            </a>
+                            <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
+                                <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+                            </a>
+                        </div>
+                    </div>
+                    <div class="icons-menu">
                     <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank">
                         <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
                     </a>
                     <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank">
                         <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
                     </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1516,8 +1616,8 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="title col-12 col-md-10">
-                <h1 class="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong><em><span style="color: #ec0f0f;">YJG Solución TI</span> - Soluciones Tecnológicas Integrales en Costa Rica</em></strong></h1>
-                <h2 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Somos especialistas en el desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web corporativas y personales. Ofrecemos servicios completos de desarrollo, mantenimiento y soporte técnico para garantizar que tu negocio tenga la mejor presencia digital. Trabajamos con las últimas tecnologías y metodologías para entregar soluciones de alta calidad que se adapten a las necesidades específicas de cada cliente.</h2>
+                <h1 class="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong><em><span style="color: #ec0f0f;">YJG Solución TI</span> - <span data-translate="about.title">Soluciones Tecnológicas Integrales en Costa Rica</span></em></strong></h1>
+                <h2 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7" data-translate="about.subtitle">Somos especialistas en el desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web corporativas y personales. Ofrecemos servicios completos de desarrollo, mantenimiento y soporte técnico para garantizar que tu negocio tenga la mejor presencia digital. Trabajamos con las últimas tecnologías y metodologías para entregar soluciones de alta calidad que se adapten a las necesidades específicas de cada cliente.</h2>
             </div>
         </div>
         
@@ -1526,8 +1626,8 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-briefcase mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
-                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong>Nuestros Servicios Principales</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7">Desarrollamos <strong>aplicaciones móviles</strong> nativas e híbridas para iOS y Android, utilizando React Native y otras tecnologías modernas. Creamos <strong>aplicaciones de escritorio</strong> personalizadas para Windows, macOS y Linux. Desarrollamos <strong>aplicaciones web</strong> dinámicas e interactivas con funcionalidades avanzadas. Nuestras <strong>páginas web</strong> están construidas con tecnologías modernas y son completamente responsivas.</p>
+                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.services.title">Nuestros Servicios Principales</strong></h3>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.services.text">Desarrollamos <strong>aplicaciones móviles</strong> nativas e híbridas para iOS y Android, utilizando React Native y otras tecnologías modernas. Creamos <strong>aplicaciones de escritorio</strong> personalizadas para Windows, macOS y Linux. Desarrollamos <strong>aplicaciones web</strong> dinámicas e interactivas con funcionalidades avanzadas. Nuestras <strong>páginas web</strong> están construidas con tecnologías modernas y son completamente responsivas.</p>
                     </div>
                 </div>
             </div>
@@ -1536,8 +1636,8 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-code mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
-                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong>Tecnologías y Experiencia</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7">Trabajamos con un amplio stack tecnológico incluyendo Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, frameworks modernos, PHP, MySQL, Node.js, MongoDB, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git.</p>
+                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.tech.title">Tecnologías y Experiencia</strong></h3>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.tech.text">Trabajamos con un amplio stack tecnológico incluyendo Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, frameworks modernos, PHP, MySQL, Node.js, MongoDB, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git.</p>
                     </div>
                 </div>
             </div>
@@ -1546,8 +1646,8 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-setting mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
-                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong>Proceso de Desarrollo</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7">Seguimos un proceso estructurado desde la consultoría inicial hasta la entrega final. Realizamos análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas, y documentación completa. Mantenemos comunicación constante con nuestros clientes durante todo el ciclo de vida del proyecto.</p>
+                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.process.title">Proceso de Desarrollo</strong></h3>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.process.text">Seguimos un proceso estructurado desde la consultoría inicial hasta la entrega final. Realizamos análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas, y documentación completa. Mantenemos comunicación constante con nuestros clientes durante todo el ciclo de vida del proyecto.</p>
                     </div>
                 </div>
             </div>
@@ -1556,8 +1656,8 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-star mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
-                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong>Compromiso con la Calidad</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7">En <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span> nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo.</p>
+                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.quality.title">Compromiso con la Calidad</strong></h3>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.quality.text" data-translate-html="true">En <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span> nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo.</p>
                     </div>
                 </div>
             </div>
@@ -1573,19 +1673,19 @@
             <div class="col-12 col-md-4 mb-4 mb-md-0" style="display: flex;">
                 <div class="stat-card" style="width: 100%;">
                     <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-label">Proyectos Completados</div>
+                    <div class="stat-label" data-translate="stats.projects">Proyectos Completados</div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4 mb-md-0" style="display: flex;">
                 <div class="stat-card" style="width: 100%;">
                     <div class="stat-number" data-target="50">0</div>
-                    <div class="stat-label">Clientes Satisfechos</div>
+                    <div class="stat-label" data-translate="stats.clients">Clientes Satisfechos</div>
                 </div>
             </div>
             <div class="col-12 col-md-4" style="display: flex;">
                 <div class="stat-card" style="width: 100%;">
                     <div class="stat-number" data-target="5">0</div>
-                    <div class="stat-label">Años de Experiencia</div>
+                    <div class="stat-label" data-translate="stats.experience">Años de Experiencia</div>
                 </div>
             </div>
         </div>
@@ -1597,15 +1697,15 @@
     <div class="container">
         <div class="testimonials-header">
             <div>
-                <div class="testimonials-label">Testimonios</div>
-                <h2 class="testimonials-title">Lo que dicen <span class="highlight">nuestros clientes</span></h2>
+                <div class="testimonials-label" data-translate="testimonials.label">Testimonios</div>
+                <h2 class="testimonials-title"><span data-translate="testimonials.title1">Lo que dicen</span> <span class="highlight" data-translate="testimonials.title2">nuestros clientes</span></h2>
             </div>
             <div class="testimonials-nav">
                 <button class="testimonials-nav-btn" id="testimonialsPrev" aria-label="Anterior">
-                    <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span> Prev
+                    <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"></span> <span data-translate="testimonials.prev">Prev</span>
                 </button>
                 <button class="testimonials-nav-btn" id="testimonialsNext" aria-label="Siguiente">
-                    Next <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                    <span data-translate="testimonials.next">Next</span> <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
                 </button>
             </div>
         </div>
@@ -1623,14 +1723,14 @@
                         <span class="testimonial-star">★</span>
                         <span class="testimonial-star">★</span>
                     </div>
-                    <p class="testimonial-text" itemprop="reviewBody">
+                    <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial1.text">
                         Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg" alt="Francela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de aplicaciones en Costa Rica" class="testimonial-photo" itemprop="image">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Francela</h4>
-                            <p class="testimonial-role" itemprop="jobTitle">Gerente de Proyectos</p>
+                            <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial1.role">Gerente de Proyectos</p>
                         </div>
                     </div>
                 </div>
@@ -1647,14 +1747,14 @@
                         <span class="testimonial-star">★</span>
                         <span class="testimonial-star">★</span>
                     </div>
-                    <p class="testimonial-text" itemprop="reviewBody">
+                    <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial2.text">
                         Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg" alt="Francine - Cliente satisfecha de YJG Solución TI desarrollo de aplicaciones móviles en Costa Rica" class="testimonial-photo" itemprop="image">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Francine</h4>
-                            <p class="testimonial-role" itemprop="jobTitle">Directora de Tecnología</p>
+                            <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial2.role">Directora de Tecnología</p>
                         </div>
                     </div>
                 </div>
@@ -1671,14 +1771,14 @@
                         <span class="testimonial-star">★</span>
                         <span class="testimonial-star empty">★</span>
                     </div>
-                    <p class="testimonial-text" itemprop="reviewBody">
+                    <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial3.text">
                         La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <img src="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg" alt="María - Cliente satisfecha de YJG Solución TI desarrollo de páginas web corporativas en Costa Rica" class="testimonial-photo" itemprop="image">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">María</h4>
-                            <p class="testimonial-role" itemprop="jobTitle">Propietaria de Negocio</p>
+                            <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial3.role">Propietaria de Negocio</p>
                         </div>
                     </div>
                 </div>
@@ -1695,14 +1795,14 @@
                         <span class="testimonial-star">★</span>
                         <span class="testimonial-star">★</span>
                     </div>
-                    <p class="testimonial-text" itemprop="reviewBody">
+                    <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial4.text">
                         Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <img src="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg" alt="Pamela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de software en Costa Rica" class="testimonial-photo" itemprop="image">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Pamela</h4>
-                            <p class="testimonial-role" itemprop="jobTitle">CEO de Empresa</p>
+                            <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial4.role">CEO de Empresa</p>
                         </div>
                     </div>
                 </div>
@@ -1787,8 +1887,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-12 text-center">
-                <h2 class="section-title" style="color: #ec0f0f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;">Últimos Proyectos</h2>
-                <p class="section-subtitle" style="color: #5a6c7d; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Conoce nuestros proyectos más recientes y las soluciones tecnológicas que hemos desarrollado</p>
+                <h2 class="section-title" style="color: #ec0f0f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;" data-translate="projects.title">Últimos Proyectos</h2>
+                <p class="section-subtitle" style="color: #5a6c7d; font-size: 1.2rem; max-width: 600px; margin: 0 auto;" data-translate="projects.subtitle">Conoce nuestros proyectos más recientes y las soluciones tecnológicas que hemos desarrollado</p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -1798,14 +1898,14 @@
                         <div class="project-image-wrapper">
                             <img src="assets/images/yjg-solucion-ti-opticontrol-aplicacion-oftalmologia-gestion-pacientes-costa-rica.png" alt="OptiControl - Sistema de Gestión para Clínicas Oftalmológicas" class="project-image img-fluid">
                             <div class="project-overlay">
-                                <span class="read-more">Leer más →</span>
+                                <span class="read-more" data-translate="projects.readMore">Leer más →</span>
                             </div>
                         </div>
                         <div class="project-content">
                             <div class="project-date">📅 Diciembre 2025</div>
-                            <h3 class="project-title">OptiControl - Sistema de Gestión Oftalmológica</h3>
-                            <p class="project-description">Sistema integral de gestión para clínicas oftalmológicas. Aplicación de escritorio y web multiplataforma con funcionalidad híbrida online/offline para Linux, Windows y macOS.</p>
-                            <div class="project-tag">💻 Aplicación de Escritorio y Web</div>
+                            <h3 class="project-title" data-translate="projects.optiControl.title">OptiControl - Sistema de Gestión Oftalmológica</h3>
+                            <p class="project-description" data-translate="projects.optiControl.description">Sistema integral de gestión para clínicas oftalmológicas. Aplicación de escritorio y web multiplataforma con funcionalidad híbrida online/offline para Linux, Windows y macOS.</p>
+                            <div class="project-tag" data-translate="projects.optiControl.tag">💻 Aplicación de Escritorio y Web</div>
                         </div>
                     </div>
                 </a>
@@ -1816,14 +1916,14 @@
                         <div class="project-image-wrapper">
                             <img src="assets/images/yjg-solucion-ti-restocontrol-sistema-gestion-restaurantes-dashboard-costa-rica.png" alt="RestoControl - Sistema de Gestión para Restaurantes" class="project-image img-fluid">
                             <div class="project-overlay">
-                                <span class="read-more">Leer más →</span>
+                                <span class="read-more" data-translate="projects.readMore">Leer más →</span>
                             </div>
                         </div>
                         <div class="project-content">
                             <div class="project-date">📅 Diciembre 2025</div>
-                            <h3 class="project-title">RestoControl - Sistema de Gestión de Restaurantes</h3>
-                            <p class="project-description">Sistema integral de gestión para restaurantes con control de pedidos, mesas, inventario, empleados y reportes. Aplicación web y de escritorio multiplataforma.</p>
-                            <div class="project-tag">🍽️ Sistema de Gestión</div>
+                            <h3 class="project-title" data-translate="projects.restoControl.title">RestoControl - Sistema de Gestión de Restaurantes</h3>
+                            <p class="project-description" data-translate="projects.restoControl.description">Sistema integral de gestión para restaurantes con control de pedidos, mesas, inventario, empleados y reportes. Aplicación web y de escritorio multiplataforma.</p>
+                            <div class="project-tag" data-translate="projects.restoControl.tag">🍽️ Sistema de Gestión</div>
                         </div>
                     </div>
                 </a>
@@ -1834,14 +1934,14 @@
                         <div class="project-image-wrapper">
                             <img src="assets/images/yjg-solucion-ti-hotelcontrol-sistema-gestion-hotelera-dashboard-costa-rica.png" alt="HotelControl - Sistema de Gestión para Hoteles" class="project-image img-fluid">
                             <div class="project-overlay">
-                                <span class="read-more">Leer más →</span>
+                                <span class="read-more" data-translate="projects.readMore">Leer más →</span>
                             </div>
                         </div>
                         <div class="project-content">
                             <div class="project-date">📅 Diciembre 2025</div>
-                            <h3 class="project-title">HotelControl - Sistema de Gestión Hotelera</h3>
-                            <p class="project-description">Sistema integral de gestión para hoteles con control de reservas, huéspedes, habitaciones, check-in/check-out, servicios y reportes. Aplicación web y de escritorio multiplataforma.</p>
-                            <div class="project-tag">🏨 Sistema de Gestión</div>
+                            <h3 class="project-title" data-translate="projects.hotelControl.title">HotelControl - Sistema de Gestión Hotelera</h3>
+                            <p class="project-description" data-translate="projects.hotelControl.description">Sistema integral de gestión para hoteles con control de reservas, huéspedes, habitaciones, check-in/check-out, servicios y reportes. Aplicación web y de escritorio multiplataforma.</p>
+                            <div class="project-tag" data-translate="projects.hotelControl.tag">🏨 Sistema de Gestión</div>
                         </div>
                     </div>
                 </a>
@@ -1861,7 +1961,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-code mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em>Aplicaciones de Escritorio</em></strong><br><br>Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.<br><br><strong><br></strong></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.desktop.title">Aplicaciones de Escritorio</em></strong><br><br><span data-translate="services.desktop.description">Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.</span><br><br><strong><br></strong></h4>
                     </div>
                 </div>
             </div>
@@ -1869,7 +1969,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-devices mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em>Páginas Web</em></strong><div><br></div><div>Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno.</div><div><br><br><strong><br></strong></div></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.webpages.title">Páginas Web</em></strong><div><br></div><div data-translate="services.webpages.description">Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno.</div><div><br><br><strong><br></strong></div></h4>
                     </div>
                 </div>
             </div>
@@ -1877,7 +1977,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-website-theme mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em>Aplicaciones Web</em></strong><div><br></div><div>Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas.</div><div><br><br><strong><br></strong></div></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.webapps.title">Aplicaciones Web</em></strong><div><br></div><div data-translate="services.webapps.description">Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas.</div><div><br><br><strong><br></strong></div></h4>
                     </div>
                 </div>
             </div>
@@ -1885,7 +1985,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-globe-2 mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em>Aplicaciones Móviles</em></strong><div><br></div><div>Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad.</div></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.mobile.title">Aplicaciones Móviles</em></strong><div><br></div><div data-translate="services.mobile.description">Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad.</div></h4>
                     </div>
                 </div>
             </div>
@@ -1957,7 +2057,7 @@
 <!-- Sección de marcas/clientes -->
 <section class="clients-section">
     <div class="container-fluid">
-        <h3 class="clients-title">Empresas y Clientes que Confían en Nosotros</h3>
+        <h3 class="clients-title" data-translate="clients.title">Empresas y Clientes que Confían en Nosotros</h3>
         <div class="clients-wrapper">
             <div class="clients-slider">
                 <!-- Primera serie de logos -->
@@ -2020,35 +2120,35 @@
     
     <div class="container">
         <div class="mbr-section-head">
-            <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-7"><strong>Contacta con Nosotros</strong></h2>
+            <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-7"><strong data-translate="contact.title">Contacta con Nosotros</strong></h2>
             <div class="form-title-line"></div>
-            <p class="form-subtitle align-center mbr-fonts-style">Estamos listos para ayudarte a llevar tu negocio al siguiente nivel</p>
+            <p class="form-subtitle align-center mbr-fonts-style" data-translate="contact.subtitle">Estamos listos para ayudarte a llevar tu negocio al siguiente nivel</p>
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form">
                 <form id="contact-form" method="POST" class="mbr-form form-with-styler">
                     <div class="row">
                         <div id="form-alert-success" class="alert alert-success col-12" style="display: none; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
-                            <strong>¡Mensaje enviado!</strong> Gracias por contactarnos. Te responderemos en breve.
+                            <strong data-translate="contact.success.title">¡Mensaje enviado!</strong> <span data-translate="contact.success.message">Gracias por contactarnos. Te responderemos en breve.</span>
                         </div>
                         <div id="form-alert-danger" class="alert alert-danger col-12" style="display: none; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
-                            <strong>Error:</strong> <span id="error-message">Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.</span>
+                            <strong data-translate="contact.error.title">Error:</strong> <span id="error-message" data-translate="contact.error.message">Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.</span>
                         </div>
                     </div>
                     <div class="dragArea row">
                         <div class="col-md col-sm-12 form-group" data-for="name">
-                            <input type="text" name="name" placeholder="Nombre" data-form-field="name" class="form-control" value="" id="name-form5-x" required>
+                            <input type="text" name="name" data-translate-placeholder="contact.form.name" placeholder="Nombre" data-form-field="name" class="form-control" value="" id="name-form5-x" required>
                         </div>
                         <div class="col-md col-sm-12 form-group" data-for="email">
-                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form5-x" required>
+                            <input type="email" name="email" data-translate-placeholder="contact.form.email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form5-x" required>
                         </div>
                         
                         <div class="col-12 form-group" data-for="message">
-                            <textarea name="message" placeholder="Mensaje" data-form-field="message" class="form-control" id="textarea-form5-x" rows="5" required></textarea>
+                            <textarea name="message" data-translate-placeholder="contact.form.message" placeholder="Mensaje" data-form-field="message" class="form-control" id="textarea-form5-x" rows="5" required></textarea>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
                             <button type="submit" class="btn btn-primary display-4" id="submit-btn">
-                                <span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;Enviar Mensaje</span>
+                                <span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;<span data-translate="contact.form.submit">Enviar Mensaje</span></span>
                             </button>
                         </div>
                     </div>
@@ -2064,7 +2164,7 @@
     <div class="container">
         <div class="mbr-section-head mb-4">
             <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
-                <strong>Mapa</strong></h2>
+                <strong data-translate="map.title">Mapa</strong></h2>
             
         </div>
         <div class="google-map"><iframe frameborder="0" style="border:0; width: 100%; height: 480px; min-height: 480px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNveGQ9bfpKFwWzQLLftrR9hNiHwdqQG8&amp;q=Costa Rica, Guanacaste, Santa Cruz" allowfullscreen=""></iframe></div>
@@ -2092,8 +2192,8 @@
 <!-- Panel de contacto deslizable -->
 <div class="contact-panel" id="contactPanel">
     <div class="contact-panel-header">
-        <h3>Contacto</h3>
-        <button class="contact-panel-close" id="contactPanelClose" title="Cerrar">×</button>
+        <h3 data-translate="contact.panel.title">Contacto</h3>
+        <button class="contact-panel-close" id="contactPanelClose" data-translate-title="contact.panel.close" title="Cerrar">×</button>
     </div>
     <div class="contact-panel-content">
         <div class="contact-item">
@@ -2101,12 +2201,12 @@
                 <span class="mobi-mbri mobi-mbri-phone mbr-iconfont"></span>
             </div>
             <div class="contact-item-content">
-                <h6>Teléfono</h6>
+                <h6 data-translate="contact.panel.phone">Teléfono</h6>
                 <div class="contact-phone-wrapper">
                     <p style="margin: 0;"><a href="tel:+50671559055" style="color: #ec0f0f; text-decoration: none;">+506 71559055</a></p>
-                    <button class="copy-phone-btn" id="copyPhoneBtn" title="Copiar número">
+                    <button class="copy-phone-btn" id="copyPhoneBtn" data-translate-title="contact.panel.copy" title="Copiar número">
                         <span class="copy-icon">📋</span>
-                        <span class="copy-text">Copiar</span>
+                        <span class="copy-text" data-translate="contact.panel.copyText">Copiar</span>
                     </button>
                 </div>
             </div>
@@ -2116,7 +2216,7 @@
                 <span class="mobi-mbri mobi-mbri-letter mbr-iconfont"></span>
             </div>
             <div class="contact-item-content">
-                <h6>Email</h6>
+                <h6 data-translate="contact.panel.email">Email</h6>
                 <p><a href="mailto:solucion@yjgsolucionti.com">solucion@yjgsolucionti.com</a></p>
             </div>
         </div>
@@ -2125,7 +2225,7 @@
                 <span class="mobi-mbri mobi-mbri-globe mbr-iconfont"></span>
             </div>
             <div class="contact-item-content">
-                <h6>Dirección</h6>
+                <h6 data-translate="contact.panel.address">Dirección</h6>
                 <p>Costa Rica, Guanacaste, Santa Cruz</p>
             </div>
         </div>
@@ -2146,30 +2246,30 @@
         <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
             <div class="footer-column" style="flex: 1; min-width: 250px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;"><span style="color: #ec0f0f;">YJG Solución TI</span></h3>
-                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
+                <p style="line-height: 1.6; font-size: 0.9rem; color: #ecf0f1;" data-translate="footer.description">Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.</p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Enlaces Útiles</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.usefulLinks">Enlaces Útiles</h3>
                 <ul style="list-style: none; padding: 0; line-height: 2;">
-                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;">Política de Privacidad</a></li>
-                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;" data-translate="footer.privacy">Política de Privacidad</a></li>
+                    <li><a href="terminos-condiciones.html" style="color: #ecf0f1; text-decoration: none; transition: color 0.3s;" data-translate="footer.terms">Términos y Condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Información Adicional</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.additionalInfo">Información Adicional</h3>
                 <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;">
-                    <strong>Área de Servicio:</strong><br>
-                    Costa Rica y Exterior<br><br>
-                    <strong>Metodología:</strong><br>
-                    Desarrollo Ágil<br><br>
-                    <strong>Garantía:</strong><br>
-                    Soporte post-entrega<br><br>
-                    <strong>Respuesta:</strong><br>
-                    En menos de 24 horas
+                    <strong data-translate="footer.serviceArea">Área de Servicio:</strong><br>
+                    <span data-translate="footer.serviceAreaValue">Costa Rica y Exterior</span><br><br>
+                    <strong data-translate="footer.methodology">Metodología:</strong><br>
+                    <span data-translate="footer.methodologyValue">Desarrollo Ágil</span><br><br>
+                    <strong data-translate="footer.warranty">Garantía:</strong><br>
+                    <span data-translate="footer.warrantyValue">Soporte post-entrega</span><br><br>
+                    <strong data-translate="footer.response">Respuesta:</strong><br>
+                    <span data-translate="footer.responseValue">En menos de 24 horas</span>
                 </p>
             </div>
             <div class="footer-column" style="flex: 1; min-width: 200px;">
-                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;">Síguenos</h3>
+                <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.followUs">Síguenos</h3>
                 <div class="footer-icons" style="margin-top: 10px; display: flex; align-items: center;">
                     <a href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="display: inline-block; margin-right: 15px; text-decoration: none; transition: transform 0.3s;">
                         <span class="mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
@@ -2182,7 +2282,7 @@
         </div>
         <div style="border-top: 1px solid #34495e; padding-top: 20px; text-align: center;">
             <p style="color: #95a5a6; margin: 0; font-size: 0.85rem; padding-top: 20px;">
-                © 2025 <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span>. Todos los derechos reservados.
+                © 2025 <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span>. <span data-translate="footer.copyright">Todos los derechos reservados.</span>
             </p>
         </div>
     </div>
@@ -2267,6 +2367,404 @@
       if (e.key === 'Escape' && contactPanel && contactPanel.classList.contains('open')) {
         closeContactPanel();
       }
+    });
+    
+    // Sistema de traducción
+    const translations = {
+      es: {
+        menu: {
+          home: "Inicio",
+          about: "Acerca de",
+          contact: "Contacto",
+          services: "Servicio",
+          desktop: "Aplicaciones de Escritorio",
+          webpages: "Páginas Web",
+          webapps: "Aplicaciones Web",
+          mobile: "Aplicaciones Móviles",
+          blog: "Blog"
+        },
+        stats: {
+          projects: "Proyectos Completados",
+          clients: "Clientes Satisfechos",
+          experience: "Años de Experiencia"
+        },
+        testimonials: {
+          label: "Testimonios",
+          title1: "Lo que dicen",
+          title2: "nuestros clientes",
+          prev: "Prev",
+          next: "Next"
+        },
+        testimonial1: {
+          text: "Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación.",
+          role: "Gerente de Proyectos"
+        },
+        testimonial2: {
+          text: "Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas.",
+          role: "Directora de Tecnología"
+        },
+        testimonial3: {
+          text: "La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados.",
+          role: "Propietaria de Negocio"
+        },
+        testimonial4: {
+          text: "Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente.",
+          role: "CEO de Empresa"
+        },
+        projects: {
+          title: "Últimos Proyectos",
+          subtitle: "Conoce nuestros proyectos más recientes y las soluciones tecnológicas que hemos desarrollado",
+          readMore: "Leer más →",
+          optiControl: {
+            title: "OptiControl - Sistema de Gestión Oftalmológica",
+            description: "Sistema integral de gestión para clínicas oftalmológicas. Aplicación de escritorio y web multiplataforma con funcionalidad híbrida online/offline para Linux, Windows y macOS.",
+            tag: "💻 Aplicación de Escritorio y Web"
+          },
+          restoControl: {
+            title: "RestoControl - Sistema de Gestión de Restaurantes",
+            description: "Sistema integral de gestión para restaurantes con control de pedidos, mesas, inventario, empleados y reportes. Aplicación web y de escritorio multiplataforma.",
+            tag: "🍽️ Sistema de Gestión"
+          },
+          hotelControl: {
+            title: "HotelControl - Sistema de Gestión Hotelera",
+            description: "Sistema integral de gestión para hoteles con control de reservas, huéspedes, habitaciones, check-in/check-out, servicios y reportes. Aplicación web y de escritorio multiplataforma.",
+            tag: "🏨 Sistema de Gestión"
+          }
+        },
+        about: {
+          title: "Soluciones Tecnológicas Integrales en Costa Rica",
+          subtitle: "Somos especialistas en el desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web corporativas y personales. Ofrecemos servicios completos de desarrollo, mantenimiento y soporte técnico para garantizar que tu negocio tenga la mejor presencia digital. Trabajamos con las últimas tecnologías y metodologías para entregar soluciones de alta calidad que se adapten a las necesidades específicas de cada cliente.",
+          services: {
+            title: "Nuestros Servicios Principales",
+            text: "Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android, utilizando React Native y otras tecnologías modernas. Creamos aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Desarrollamos aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Nuestras páginas web están construidas con tecnologías modernas y son completamente responsivas."
+          },
+          tech: {
+            title: "Tecnologías y Experiencia",
+            text: "Trabajamos con un amplio stack tecnológico incluyendo Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, frameworks modernos, PHP, MySQL, Node.js, MongoDB, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git."
+          },
+          process: {
+            title: "Proceso de Desarrollo",
+            text: "Seguimos un proceso estructurado desde la consultoría inicial hasta la entrega final. Realizamos análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas, y documentación completa. Mantenemos comunicación constante con nuestros clientes durante todo el ciclo de vida del proyecto."
+          },
+          quality: {
+            title: "Compromiso con la Calidad",
+            text: "En <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span> nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo."
+          }
+        },
+        contact: {
+          title: "Contacta con Nosotros",
+          subtitle: "Estamos listos para ayudarte a llevar tu negocio al siguiente nivel",
+          form: {
+            name: "Nombre",
+            email: "E-mail",
+            message: "Mensaje",
+            submit: "Enviar Mensaje"
+          },
+          success: {
+            title: "¡Mensaje enviado!",
+            message: "Gracias por contactarnos. Te responderemos en breve."
+          },
+          error: {
+            title: "Error:",
+            message: "Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo."
+          },
+          panel: {
+            title: "Contacto",
+            close: "Cerrar",
+            phone: "Teléfono",
+            email: "Email",
+            address: "Dirección",
+            copy: "Copiar número",
+            copyText: "Copiar"
+          }
+        },
+        services: {
+          desktop: {
+            title: "Aplicaciones de Escritorio",
+            description: "Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio."
+          },
+          webpages: {
+            title: "Páginas Web",
+            description: "Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno."
+          },
+          webapps: {
+            title: "Aplicaciones Web",
+            description: "Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas."
+          },
+          mobile: {
+            title: "Aplicaciones Móviles",
+            description: "Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad."
+          }
+        },
+        clients: {
+          title: "Empresas y Clientes que Confían en Nosotros"
+        },
+        map: {
+          title: "Mapa"
+        },
+        footer: {
+          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.",
+          usefulLinks: "Enlaces Útiles",
+          privacy: "Política de Privacidad",
+          terms: "Términos y Condiciones",
+          additionalInfo: "Información Adicional",
+          serviceArea: "Área de Servicio:",
+          serviceAreaValue: "Costa Rica y Exterior",
+          methodology: "Metodología:",
+          methodologyValue: "Desarrollo Ágil",
+          warranty: "Garantía:",
+          warrantyValue: "Soporte post-entrega",
+          response: "Respuesta:",
+          responseValue: "En menos de 24 horas",
+          followUs: "Síguenos",
+          copyright: "Todos los derechos reservados."
+        }
+      },
+      en: {
+        menu: {
+          home: "Home",
+          about: "About",
+          contact: "Contact",
+          services: "Services",
+          desktop: "Desktop Applications",
+          webpages: "Web Pages",
+          webapps: "Web Applications",
+          mobile: "Mobile Applications",
+          blog: "Blog"
+        },
+        stats: {
+          projects: "Completed Projects",
+          clients: "Satisfied Clients",
+          experience: "Years of Experience"
+        },
+        testimonials: {
+          label: "Testimonials",
+          title1: "What Our",
+          title2: "Clients Say",
+          prev: "Prev",
+          next: "Next"
+        },
+        testimonial1: {
+          text: "Their high level of customer service complemented their technical expertise. They were responsive, supportive, and communicative throughout the entire development process of our application.",
+          role: "Project Manager"
+        },
+        testimonial2: {
+          text: "Excellent work on the development of our mobile application. The YJG Solución TI team demonstrated professionalism and delivered a high-quality product that exceeded our expectations.",
+          role: "Technology Director"
+        },
+        testimonial3: {
+          text: "The website they developed for our business has significantly improved our online presence. The design is modern, functional, and easy to use. Highly recommended.",
+          role: "Business Owner"
+        },
+        testimonial4: {
+          text: "Working with YJG Solución TI was an exceptional experience. Their attention to detail and commitment to quality was reflected in every stage of the project. We will definitely hire them again.",
+          role: "Company CEO"
+        },
+        projects: {
+          title: "Latest Projects",
+          subtitle: "Discover our most recent projects and the technological solutions we have developed",
+          readMore: "Read more →",
+          optiControl: {
+            title: "OptiControl - Ophthalmology Management System",
+            description: "Comprehensive management system for ophthalmology clinics. Cross-platform desktop and web application with hybrid online/offline functionality for Linux, Windows, and macOS.",
+            tag: "💻 Desktop and Web Application"
+          },
+          restoControl: {
+            title: "RestoControl - Restaurant Management System",
+            description: "Comprehensive management system for restaurants with order control, tables, inventory, employees, and reports. Cross-platform web and desktop application.",
+            tag: "🍽️ Management System"
+          },
+          hotelControl: {
+            title: "HotelControl - Hotel Management System",
+            description: "Comprehensive management system for hotels with reservation control, guests, rooms, check-in/check-out, services, and reports. Cross-platform web and desktop application.",
+            tag: "🏨 Management System"
+          }
+        },
+        about: {
+          title: "Comprehensive Technological Solutions in Costa Rica",
+          subtitle: "We are specialists in the development of mobile applications, desktop applications, and corporate and personal websites. We offer complete development, maintenance, and technical support services to ensure your business has the best digital presence. We work with the latest technologies and methodologies to deliver high-quality solutions that adapt to the specific needs of each client.",
+          services: {
+            title: "Our Main Services",
+            text: "We develop native and hybrid mobile applications for iOS and Android, using React Native and other modern technologies. We create customized desktop applications for Windows, macOS, and Linux. We develop dynamic and interactive web applications with advanced functionalities. Our websites are built with modern technologies and are fully responsive."
+          },
+          tech: {
+            title: "Technologies and Experience",
+            text: "We work with a wide technological stack including Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, modern frameworks, PHP, MySQL, Node.js, MongoDB, and multiple programming languages. We use agile methodologies and version control with Git."
+          },
+          process: {
+            title: "Development Process",
+            text: "We follow a structured process from initial consultation to final delivery. We perform requirements analysis, architecture design, iterative development with continuous testing, and complete documentation. We maintain constant communication with our clients throughout the entire project lifecycle."
+          },
+          quality: {
+            title: "Commitment to Quality",
+            text: "At <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span> we are committed to delivering high-quality technological solutions that drive your business growth. Each project is unique and we treat it with the attention and dedication it deserves, from planning to continuous maintenance."
+          }
+        },
+        contact: {
+          title: "Contact Us",
+          subtitle: "We are ready to help you take your business to the next level",
+          form: {
+            name: "Name",
+            email: "E-mail",
+            message: "Message",
+            submit: "Send Message"
+          },
+          success: {
+            title: "Message sent!",
+            message: "Thank you for contacting us. We will respond shortly."
+          },
+          error: {
+            title: "Error:",
+            message: "There was a problem sending the message. Please try again."
+          },
+          panel: {
+            title: "Contact",
+            close: "Close",
+            phone: "Phone",
+            email: "Email",
+            address: "Address",
+            copy: "Copy number",
+            copyText: "Copy"
+          }
+        },
+        services: {
+          desktop: {
+            title: "Desktop Applications",
+            description: "Development of custom desktop applications for Windows, macOS, and Linux. Robust and efficient solutions for your business."
+          },
+          webpages: {
+            title: "Web Pages",
+            description: "Design and development of corporate, personal, portfolio, and informational websites. Responsive and modern design."
+          },
+          webapps: {
+            title: "Web Applications",
+            description: "Development of dynamic and interactive web applications with advanced functionalities. Progressive web applications (PWA), management systems, and custom web platforms."
+          },
+          mobile: {
+            title: "Mobile Applications",
+            description: "Development of native and hybrid mobile applications for iOS and Android. We use React Native and modern technologies to create high-quality apps."
+          }
+        },
+        clients: {
+          title: "Companies and Clients that Trust Us"
+        },
+        map: {
+          title: "Map"
+        },
+        footer: {
+          description: "Specialists in mobile application development, desktop applications, and web pages. Comprehensive technological solutions in Costa Rica.",
+          usefulLinks: "Useful Links",
+          privacy: "Privacy Policy",
+          terms: "Terms and Conditions",
+          additionalInfo: "Additional Information",
+          serviceArea: "Service Area:",
+          serviceAreaValue: "Costa Rica and Abroad",
+          methodology: "Methodology:",
+          methodologyValue: "Agile Development",
+          warranty: "Warranty:",
+          warrantyValue: "Post-delivery support",
+          response: "Response:",
+          responseValue: "In less than 24 hours",
+          followUs: "Follow Us",
+          copyright: "All rights reserved."
+        }
+      }
+    };
+    
+    // Función para obtener el idioma guardado o usar español por defecto
+    function getSavedLanguage() {
+      return localStorage.getItem('language') || 'es';
+    }
+    
+    // Función para guardar el idioma
+    function saveLanguage(lang) {
+      localStorage.setItem('language', lang);
+    }
+    
+    // Función para obtener el texto traducido
+    function getTranslation(key, lang) {
+      const keys = key.split('.');
+      let value = translations[lang];
+      for (const k of keys) {
+        value = value?.[k];
+      }
+      return value || key;
+    }
+    
+    // Función para aplicar traducciones
+    function applyTranslations(lang) {
+      // Traducir elementos con data-translate
+      const elements = document.querySelectorAll('[data-translate]');
+      elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const translation = getTranslation(key, lang);
+        if (translation) {
+          // Si el elemento tiene data-translate-html, insertar HTML, sino solo texto
+          if (element.getAttribute('data-translate-html') === 'true') {
+            element.innerHTML = translation;
+          } else {
+            element.textContent = translation;
+          }
+        }
+      });
+      
+      // Traducir placeholders
+      const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+      placeholderElements.forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        const translation = getTranslation(key, lang);
+        if (translation) {
+          element.placeholder = translation;
+        }
+      });
+      
+      // Traducir atributos title
+      const titleElements = document.querySelectorAll('[data-translate-title]');
+      titleElements.forEach(element => {
+        const key = element.getAttribute('data-translate-title');
+        const translation = getTranslation(key, lang);
+        if (translation) {
+          element.title = translation;
+        }
+      });
+      
+      // Actualizar la bandera del selector de idioma
+      const currentFlag = document.getElementById('currentLanguageFlag');
+      if (currentFlag) {
+        currentFlag.textContent = lang === 'es' ? '🇪🇸' : '🇺🇸';
+      }
+      
+      // Actualizar el atributo lang del HTML
+      document.documentElement.lang = lang;
+      
+      // Actualizar texto del botón de envío cuando está en estado "Enviando..."
+      const submitBtn = document.getElementById('submit-btn');
+      if (submitBtn && submitBtn.innerHTML.includes('Enviando')) {
+        const sendingText = lang === 'es' ? 'Enviando...' : 'Sending...';
+        submitBtn.innerHTML = '<span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;' + sendingText + '</span>';
+      }
+    }
+    
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+      saveLanguage(lang);
+      applyTranslations(lang);
+    }
+    
+    // Inicializar traducciones al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = getSavedLanguage();
+      applyTranslations(savedLang);
+      
+      // Agregar event listeners a los botones de idioma
+      const languageOptions = document.querySelectorAll('.language-option');
+      languageOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+          e.preventDefault();
+          const lang = this.getAttribute('data-lang');
+          changeLanguage(lang);
+        });
+      });
     });
     
     // Carrusel de testimonios
@@ -2405,7 +2903,8 @@
       
       // Deshabilitar botón mientras se envía
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;Enviando...</span>';
+      const sendingText = getSavedLanguage() === 'es' ? 'Enviando...' : 'Sending...';
+      submitBtn.innerHTML = '<span class="mbrib-share mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);">&nbsp;' + sendingText + '</span>';
       
       // Obtener datos del formulario
       const formData = new FormData(form);
