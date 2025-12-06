@@ -63,7 +63,7 @@
 </head>
 <body>
   
-  <a href="index.html" class="back-button" data-translate-title="terms.backButton">←</a>
+  <a href="javascript:void(0);" class="back-button" id="backButton" data-translate-title="terms.backButton" onclick="goBack(); return false;">←</a>
 
   <section class="content1 cid-s48udlf8KU" style="padding-top: 40px; padding-bottom: 60px; margin-top: 0;">
     <div class="container-fluid">
@@ -375,6 +375,24 @@
         document.documentElement.lang = savedLang;
       }
     })();
+    
+    // Función para regresar a la página anterior
+    function goBack(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      
+      // Usar history.back() que es la forma más confiable de regresar
+      // El navegador automáticamente regresa a la página anterior en el historial
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        // Si no hay historial, regresar a index.html
+        window.location.href = 'index.html';
+      }
+      return false;
+    }
   </script>
 </body>
 </html>

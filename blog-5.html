@@ -120,11 +120,16 @@
       height: 2rem;
       margin-right: 10px;
     }
-    .custom-navbar-brand span {
-      color: #ec0f0f;
-      font-weight: bold;
-      font-size: 1.2rem;
-      white-space: nowrap;
+    .custom-navbar-brand .company-name {
+      color: #ec0f0f !important;
+      font-weight: bold !important;
+      font-size: 1.2rem !important;
+      white-space: nowrap !important;
+      line-height: 1 !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-style: normal !important;
+      word-break: break-word !important;
+      word-wrap: break-word !important;
     }
     .custom-navbar-menu {
       display: flex;
@@ -239,12 +244,13 @@
       display: inline-block;
       width: 0;
       height: 0;
-      margin-left: 0.3rem;
+      margin-left: 0.5rem;
+      margin-top: 0.2rem;
       vertical-align: middle;
-      border-top: 4px solid #ec0f0f;
-      border-right: 3px solid transparent;
+      border-top: 5.6px solid #ec0f0f;
+      border-right: 5.6px solid transparent;
       border-bottom: 0;
-      border-left: 3px solid transparent;
+      border-left: 5.6px solid transparent;
     }
     #languageDropdown:hover {
       background-color: rgba(236, 15, 15, 0.1);
@@ -270,6 +276,16 @@
       font-size: 1.3rem;
       line-height: 1;
       display: inline-block;
+    }
+    
+    /* Hacer más pequeñas las flechas "▼" de los menús Servicio y Blog */
+    .custom-navbar-menu .dropdown > a .dropdown-arrow {
+      color: #ec0f0f;
+      font-size: 0.65rem;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 1;
     }
     .dropdown-menu[aria-labelledby="languageDropdown"] {
       min-width: 150px;
@@ -498,9 +514,9 @@
   <!-- Nuevo menú simple sin Mobirise -->
   <nav class="custom-navbar">
     <div class="custom-navbar-container">
-      <a href="index.html" class="custom-navbar-brand">
-        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos">
-        <span>YJG Solución TI</span>
+      <a href="index.html" class="custom-navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="height: 2rem; margin-right: 10px;">
+        <span class="company-name" style="color: #ec0f0f; font-weight: bold; font-size: 1.2rem;">YJG Solución TI</span>
       </a>
       <button class="custom-navbar-toggle" id="menuToggle">☰</button>
       <ul class="custom-navbar-menu" id="navbarMenu">
@@ -508,7 +524,7 @@
         <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.about">Acerca de</span></a></li>
         <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.contact">Contacto</span></a></li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> <span class="dropdown-arrow">▼</span></a>
           <ul class="dropdown-menu">
             <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.desktop">Aplicaciones de Escritorio</span></a></li>
             <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webpages">Páginas Web</span></a></li>
@@ -517,7 +533,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> <span class="dropdown-arrow">▼</span></a>
           <ul class="dropdown-menu" style="max-height: 300px; overflow-y: auto;">
             <li><a href="blog-1.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> OptiControl - Sistema de Gestión Oftalmológica</a></li>
             <li><a href="blog-4.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> RestoControl - Sistema de Gestión de Restaurantes</a></li>
@@ -1435,9 +1451,23 @@
   
   // Función para aplicar traducciones
   function applyTranslations(lang) {
+    // Traducir elementos con data-translate-html primero
+    const htmlElements = document.querySelectorAll('[data-translate-html]');
+    htmlElements.forEach(element => {
+      const key = element.getAttribute('data-translate-html');
+      const translation = getTranslation(key, lang);
+      if (translation) {
+        element.innerHTML = translation;
+      }
+    });
+    
     // Traducir elementos con data-translate (todos los elementos, no solo spans)
     const elements = document.querySelectorAll('[data-translate]');
     elements.forEach(element => {
+      // Saltar si ya tiene data-translate-html (ya fue traducido)
+      if (element.hasAttribute('data-translate-html')) {
+        return;
+      }
       // Solo traducir si no es un enlace que contiene iconos
       if (element.tagName === 'A' && element.querySelector('.menu-icon')) {
         return; // Saltar enlaces del menú que contienen iconos
@@ -1445,12 +1475,7 @@
       const key = element.getAttribute('data-translate');
       const translation = getTranslation(key, lang);
       if (translation) {
-        // Si el elemento tiene data-translate-html, insertar HTML, sino solo texto
-        if (element.getAttribute('data-translate-html') === 'true') {
-          element.innerHTML = translation;
-        } else {
-          element.textContent = translation;
-        }
+        element.textContent = translation;
       }
     });
     

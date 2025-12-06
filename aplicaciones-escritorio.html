@@ -14,23 +14,70 @@
   <meta name="keywords" content="aplicaciones escritorio, desarrollo software desktop, aplicaciones Windows, aplicaciones macOS, aplicaciones Linux, desarrollo multiplataforma, YJG Solución TI">
   <meta name="author" content="YJG Solución TI">
   <meta name="robots" content="index, follow">
+  <meta name="language" content="Spanish">
+  <meta name="geo.region" content="CR">
+  <meta name="geo.placename" content="Santa Cruz, Guanacaste, Costa Rica">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yjgsolucionti.com/aplicaciones-escritorio.html">
   <meta property="og:title" content="Aplicaciones de Escritorio - YJG Solución TI">
   <meta property="og:description" content="Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux.">
-  <meta property="og:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
+  <meta property="og:image" content="https://yjgsolucionti.com/assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_CR">
+  <meta property="og:site_name" content="YJG Solución TI">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yjgsolucionti.com/aplicaciones-escritorio.html">
   <meta property="twitter:title" content="Aplicaciones de Escritorio - YJG Solución TI">
   <meta property="twitter:description" content="Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux.">
-  <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
+  <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg">
+  <meta property="twitter:site" content="@YJGSolucionTI">
+  <meta property="twitter:creator" content="@YJGSolucionTI">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://yjgsolucionti.com/aplicaciones-escritorio.html">
+  
+  <!-- Schema.org markup for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Desarrollo de Aplicaciones de Escritorio",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "YJG Solución TI",
+      "url": "https://yjgsolucionti.com",
+      "logo": "https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Cruz",
+        "addressRegion": "Guanacaste",
+        "addressCountry": "CR"
+      },
+      "telephone": "+50671559055",
+      "email": "solucion@yjgsolucionti.com",
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Costa Rica"
+      }
+    },
+    "name": "Aplicaciones de Escritorio",
+    "description": "Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.",
+    "url": "https://yjgsolucionti.com/aplicaciones-escritorio.html",
+    "image": "https://yjgsolucionti.com/assets/images/yjg-solucion-ti-aplicaciones-escritorio-windows-macos-linux-desarrollo.jpg",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "CRC"
+    }
+  }
+  </script>
+  
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -74,11 +121,16 @@
       height: 2rem;
       margin-right: 10px;
     }
-    .custom-navbar-brand span {
-      color: #ec0f0f;
-      font-weight: bold;
-      font-size: 1.2rem;
-      white-space: nowrap;
+    .custom-navbar-brand .company-name {
+      color: #ec0f0f !important;
+      font-weight: bold !important;
+      font-size: 1.2rem !important;
+      white-space: nowrap !important;
+      line-height: 1 !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-style: normal !important;
+      word-break: break-word !important;
+      word-wrap: break-word !important;
     }
     .custom-navbar-menu {
       display: flex;
@@ -188,12 +240,13 @@
       display: inline-block;
       width: 0;
       height: 0;
-      margin-left: 0.3rem;
+      margin-left: 0.5rem;
+      margin-top: 0.2rem;
       vertical-align: middle;
-      border-top: 4px solid #ec0f0f;
-      border-right: 3px solid transparent;
+      border-top: 5.6px solid #ec0f0f;
+      border-right: 5.6px solid transparent;
       border-bottom: 0;
-      border-left: 3px solid transparent;
+      border-left: 5.6px solid transparent;
     }
     #languageDropdown:hover {
       background-color: rgba(236, 15, 15, 0.1);
@@ -219,6 +272,16 @@
       font-size: 1.3rem;
       line-height: 1;
       display: inline-block;
+    }
+    
+    /* Hacer más pequeñas las flechas "▼" de los menús Servicio y Blog */
+    .custom-navbar-menu .dropdown > a .dropdown-arrow {
+      color: #ec0f0f;
+      font-size: 0.65rem;
+      margin-left: 0.3rem;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 1;
     }
     .dropdown-menu[aria-labelledby="languageDropdown"] {
       min-width: 150px;
@@ -417,9 +480,9 @@
   <!-- Nuevo menú simple sin Mobirise -->
   <nav class="custom-navbar">
     <div class="custom-navbar-container">
-      <a href="index.html" class="custom-navbar-brand">
-        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos">
-        <span>YJG Solución TI</span>
+      <a href="index.html" class="custom-navbar-brand" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="height: 2rem; margin-right: 10px;">
+        <span class="company-name" style="color: #ec0f0f; font-weight: bold; font-size: 1.2rem;">YJG Solución TI</span>
       </a>
       <button class="custom-navbar-toggle" id="menuToggle">☰</button>
       <ul class="custom-navbar-menu" id="navbarMenu">
@@ -427,7 +490,7 @@
         <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.about">Acerca de</span></a></li>
         <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.contact">Contacto</span></a></li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-briefcase mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.services">Servicio</span> <span class="dropdown-arrow">▼</span></a>
           <ul class="dropdown-menu">
             <li><a href="aplicaciones-escritorio.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.desktop">Aplicaciones de Escritorio</span></a></li>
             <li><a href="paginas-web.html"><span class="mobi-mbri mobi-mbri-devices mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.webpages">Páginas Web</span></a></li>
@@ -436,7 +499,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> ▼</a>
+          <a href="#"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.blog">Blog</span> <span class="dropdown-arrow">▼</span></a>
           <ul class="dropdown-menu" style="max-height: 300px; overflow-y: auto;">
             <li><a href="blog-1.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> OptiControl - Sistema de Gestión Oftalmológica</a></li>
             <li><a href="blog-4.html"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> RestoControl - Sistema de Gestión de Restaurantes</a></li>
@@ -470,10 +533,10 @@
     </div>
   </nav>
 
-<section class="service-header">
+<section class="service-header" itemscope itemtype="https://schema.org/Service">
     <div class="container">
-        <h1 class="display-2"><strong data-translate="services.desktop.title">Aplicaciones de Escritorio</strong></h1>
-        <p class="lead" data-translate="services.desktop.description">Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.</p>
+        <h1 class="display-2" itemprop="name"><strong data-translate="services.desktop.title">Aplicaciones de Escritorio</strong></h1>
+        <p class="lead" itemprop="description" data-translate="services.desktop.description">Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.</p>
     </div>
 </section>
 
@@ -697,6 +760,25 @@
           }
         },
         quote: "Solicitar Cotización"
+      },
+      footer: {
+        company: {
+          title: "YJG Solución TI",
+          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
+        },
+        links: {
+          title: "Enlaces Útiles",
+          privacy: "Política de Privacidad",
+          terms: "Términos y Condiciones"
+        },
+        info: {
+          title: "Información Adicional",
+          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
+        },
+        follow: {
+          title: "Síguenos"
+        },
+        copyright: "© 2025 <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span>. Todos los derechos reservados."
       }
     },
     en: {
@@ -745,44 +827,12 @@
           },
           technologies: {
             title: "Technologies We Use",
-            text: "We use modern technologies such as Python, Electron, .NET, Java, C++, Qt and other development tools to create high-quality desktop applications that adapt to your specific needs."
-          }
-        },
-        quote: "Request Quote"
-      },
-      footer: {
-        company: {
-          title: "YJG Solución TI",
-          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
-        },
-        links: {
-          title: "Enlaces Útiles",
-          privacy: "Política de Privacidad",
-          terms: "Términos y Condiciones"
-        },
-        info: {
-          title: "Información Adicional",
-          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
-        },
-        follow: {
-          title: "Síguenos"
-        },
-        copyright: "© 2025 <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span>. Todos los derechos reservados."
-      }
-    },
-    en: {
-      menu: {
-        home: "Home",
-        about: "About",
-        contact: "Contact",
-        services: "Services",
-        blog: "Blog"
-      },
-      services: {
-        desktop: {
-          title: "Desktop Applications",
-          subtitle: "Custom Software Solutions for Your Business",
-          description: "We develop robust and efficient desktop applications for Windows, macOS and Linux, tailored to your specific needs.",
+            text: "We use modern technologies such as Python, Electron, .NET, Java, C++, Qt and other development tools to create high-quality desktop applications that adapt to your specific needs.",
+            languages: "Programming Languages: Python, Java, C#, C++, JavaScript, TypeScript",
+            frameworks: "Frameworks: Electron, .NET, Qt, GTK",
+            databases: "Databases: PostgreSQL, MySQL, SQLite, MongoDB",
+            tools: "Development Tools: Visual Studio, IntelliJ IDEA, VS Code"
+          },
           features: {
             title: "Key Features",
             crossPlatform: "Cross-platform development (Windows, macOS, Linux)",
@@ -792,13 +842,6 @@
             integration: "Integration with existing systems",
             support: "Technical support and maintenance"
           },
-          technologies: {
-            title: "Technologies We Use",
-            languages: "Programming Languages: Python, Java, C#, C++, JavaScript, TypeScript",
-            frameworks: "Frameworks: Electron, .NET, Qt, GTK",
-            databases: "Databases: PostgreSQL, MySQL, SQLite, MongoDB",
-            tools: "Development Tools: Visual Studio, IntelliJ IDEA, VS Code"
-          },
           benefits: {
             title: "Benefits",
             efficiency: "Increased operational efficiency",
@@ -806,9 +849,9 @@
             scalability: "Scalable solutions",
             customization: "Full customization",
             support: "Ongoing technical support"
-          },
-          quote: "Request Quote"
-        }
+          }
+        },
+        quote: "Request Quote"
       },
       footer: {
         company: {
@@ -854,9 +897,23 @@
   
   // Función para aplicar traducciones
   function applyTranslations(lang) {
+    // Traducir elementos con data-translate-html primero
+    const htmlElements = document.querySelectorAll('[data-translate-html]');
+    htmlElements.forEach(element => {
+      const key = element.getAttribute('data-translate-html');
+      const translation = getTranslation(key, lang);
+      if (translation) {
+        element.innerHTML = translation;
+      }
+    });
+    
     // Traducir elementos con data-translate (todos los elementos, no solo spans)
     const elements = document.querySelectorAll('[data-translate]');
     elements.forEach(element => {
+      // Saltar si ya tiene data-translate-html (ya fue traducido)
+      if (element.hasAttribute('data-translate-html')) {
+        return;
+      }
       // Solo traducir si no es un enlace que contiene iconos
       if (element.tagName === 'A' && element.querySelector('.menu-icon')) {
         return; // Saltar enlaces del menú que contienen iconos
@@ -864,12 +921,7 @@
       const key = element.getAttribute('data-translate');
       const translation = getTranslation(key, lang);
       if (translation) {
-        // Si el elemento tiene data-translate-html, insertar HTML, sino solo texto
-        if (element.getAttribute('data-translate-html') === 'true') {
-          element.innerHTML = translation;
-        } else {
-          element.textContent = translation;
-        }
+        element.textContent = translation;
       }
     });
     
@@ -959,6 +1011,16 @@
         navbarMenu.classList.toggle('active');
       });
     }
+    
+    // Reemplazar el símbolo "▼" con uno más pequeño en los menús Servicio y Blog
+    const dropdownLinks = document.querySelectorAll('.custom-navbar-menu .dropdown > a');
+    dropdownLinks.forEach(link => {
+      if (link.textContent.includes('▼')) {
+        const text = link.innerHTML;
+        // Reemplazar el símbolo "▼" con un span más pequeño
+        link.innerHTML = text.replace('▼', '<span class="dropdown-arrow">▼</span>');
+      }
+    });
   });
   
 </script>
