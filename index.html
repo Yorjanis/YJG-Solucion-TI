@@ -41,6 +41,8 @@
   
   <!-- Preload critical resources -->
   <link rel="preload" href="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" as="image">
+  <!-- Preload LCP image (first slider image) for faster rendering -->
+  <link rel="preload" href="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" as="image" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   
@@ -1735,9 +1737,9 @@
             
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item slider-image item active">
+            <div class="carousel-item slider-image item active" style="display: block !important; visibility: visible !important;">
                 <div class="item-wrapper">
-                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important;">
                     
                     
                 </div>
@@ -2984,18 +2986,34 @@
       const cardsPerView = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
       const maxIndex = Math.max(0, cards.length - cardsPerView);
       
+      // Cachear el ancho de la tarjeta para evitar reflows forzados
+      let cachedCardWidth = null;
+      
+      function getCardWidth() {
+        if (cachedCardWidth === null && cards[0]) {
+          // Leer todas las propiedades geométricas de una vez para evitar múltiples reflows
+          cachedCardWidth = cards[0].offsetWidth + 30;
+        }
+        return cachedCardWidth || 300; // Fallback a 300px si no está disponible
+      }
+      
       function updateSlider() {
-        const cardWidth = cards[0].offsetWidth + 30; // width + gap
+        // Agrupar todas las lecturas primero, luego todas las escrituras
+        const cardWidth = getCardWidth();
         const translateX = -currentIndex * cardWidth;
-        slider.style.transform = `translateX(${translateX}px)`;
         
-        // Actualizar estado de botones
-        if (prevBtn) {
-          prevBtn.disabled = currentIndex === 0;
-        }
-        if (nextBtn) {
-          nextBtn.disabled = currentIndex >= maxIndex;
-        }
+        // Usar requestAnimationFrame para agrupar todas las escrituras DOM
+        requestAnimationFrame(() => {
+          slider.style.transform = `translateX(${translateX}px)`;
+          
+          // Actualizar estado de botones
+          if (prevBtn) {
+            prevBtn.disabled = currentIndex === 0;
+          }
+          if (nextBtn) {
+            nextBtn.disabled = currentIndex >= maxIndex;
+          }
+        });
       }
       
       function goToNext() {
@@ -3019,9 +3037,10 @@
         nextBtn.addEventListener('click', goToNext);
       }
       
-      // Actualizar en resize
+      // Actualizar en resize - invalidar cache y recalcular
       let resizeTimer;
       window.addEventListener('resize', function() {
+        cachedCardWidth = null; // Invalidar cache en resize
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
           const newCardsPerView = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
@@ -3269,9 +3288,16 @@
       // También usar MutationObserver para detectar cambios
       if (blogMenu) {
         const observer = new MutationObserver(function(mutations) {
-          if (blogMenu && blogMenu.style.display !== 'none' && blogMenu.offsetWidth > 0) {
-            applyBlogMenuStyles();
-          }
+          // Usar requestAnimationFrame para evitar reflows forzados
+          requestAnimationFrame(() => {
+            if (blogMenu && blogMenu.style.display !== 'none') {
+              // Leer offsetWidth solo cuando sea necesario y en el frame correcto
+              const width = blogMenu.offsetWidth;
+              if (width > 0) {
+                applyBlogMenuStyles();
+              }
+            }
+          });
         });
         
         observer.observe(blogMenu, {
