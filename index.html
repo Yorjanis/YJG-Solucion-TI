@@ -35,16 +35,26 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://yjgsolucionti.com/">
   
+  <!-- Cache Control Meta Tags (para GitHub Pages) -->
+  <meta http-equiv="Cache-Control" content="public, max-age=3600">
+  <meta http-equiv="Expires" content="">
+  
   <!-- Preload critical resources -->
   <link rel="preload" href="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   
-  <!-- Critical CSS - Load first -->
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <!-- Preconnect to own domain for faster resource loading -->
+  <link rel="preconnect" href="https://yjgsolucionti.com">
   
-  <!-- Defer non-critical CSS -->
+  <!-- Critical CSS - Load first (only essential for above-the-fold content) -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" media="all">
+  <link rel="stylesheet" href="assets/theme/css/style.css" media="all">
+  
+  <!-- Bootstrap Grid - Load with media query to reduce blocking (only needed for responsive layouts) -->
+  <link rel="preload" as="style" href="assets/bootstrap/css/bootstrap-grid.min.css" onload="this.onload=null;this.rel='stylesheet'" media="(min-width: 576px)">
+  
+  <!-- Defer non-critical CSS (load after page render) -->
   <link rel="preload" as="style" href="assets/web/assets/mobirise-icons2/mobirise2.css" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="style" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="style" href="assets/tether/tether.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -1657,7 +1667,7 @@
         <div class="carousel-inner">
             <div class="carousel-item slider-image item active">
                 <div class="item-wrapper">
-                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080">
+                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w">
                     
                     
                 </div>
@@ -1807,7 +1817,7 @@
                         Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg" alt="Francela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de aplicaciones en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg" alt="Francela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de aplicaciones en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Francela</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial1.role">Gerente de Proyectos</p>
@@ -1835,7 +1845,7 @@
                         Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg" alt="Francine - Cliente satisfecha de YJG Solución TI desarrollo de aplicaciones móviles en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg" alt="Francine - Cliente satisfecha de YJG Solución TI desarrollo de aplicaciones móviles en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Francine</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial2.role">Directora de Tecnología</p>
@@ -1863,7 +1873,7 @@
                         La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg" alt="María - Cliente satisfecha de YJG Solución TI desarrollo de páginas web corporativas en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg" alt="María - Cliente satisfecha de YJG Solución TI desarrollo de páginas web corporativas en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">María</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial3.role">Propietaria de Negocio</p>
@@ -1891,7 +1901,7 @@
                         Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg" alt="Pamela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de software en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg" alt="Pamela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de software en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Pamela</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial4.role">CEO de Empresa</p>
