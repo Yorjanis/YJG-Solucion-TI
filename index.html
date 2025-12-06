@@ -47,6 +47,11 @@
   <!-- Preconnect to own domain for faster resource loading -->
   <link rel="preconnect" href="https://yjgsolucionti.com">
   
+  <!-- Preload critical fonts to prevent layout shift -->
+  <link rel="preload" href="assets/web/assets/mobirise-icons2/mobirise2.ttf?f2bix4" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.ttf?m1l4yr" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/socicon/fonts/socicon.woff2" as="font" type="font/woff2" crossorigin>
+  
   <!-- Critical CSS - Load with print media first, then switch to all (non-blocking) -->
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"></noscript>
@@ -332,9 +337,57 @@
       max-width: 100%;
     }
     
+    /* Prevenir layout shifts - CLS optimizations */
+    /* Reservar espacio para el logo para prevenir layout shift */
+    .cid-s48OLK6784 .navbar-brand img {
+      width: 92px !important;
+      height: 92px !important;
+      display: block;
+      flex-shrink: 0;
+    }
+    
+    /* Prevenir layout shift en body */
+    body {
+      min-height: 100vh;
+    }
+    
     /* Slider responsive - Imágenes adaptables - Sobrescribe estilos de Mobirise */
+    /* Reservar espacio para imágenes del slider para prevenir CLS */
+    .cid-ssZ004fWZ2 .carousel-item {
+      position: relative;
+      width: 100%;
+      /* Reservar espacio con aspect-ratio 16:9 (1920x1080) */
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      background-color: #f0f0f0; /* Placeholder color mientras carga */
+      overflow: hidden;
+    }
+    @supports (aspect-ratio: 16 / 9) {
+      .cid-ssZ004fWZ2 .carousel-item {
+        aspect-ratio: 16 / 9;
+        padding-bottom: 0;
+      }
+    }
+    .cid-ssZ004fWZ2 .item-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: #f0f0f0; /* Placeholder color */
+    }
     .cid-ssZ004fWZ2 .carousel-item img {
-      height: auto !important;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* Prevenir layout shift mientras carga */
+      min-width: 100%;
+      min-height: 100%;
     }
     
     @media (max-width: 991px) {
@@ -352,28 +405,37 @@
         align-items: flex-start !important;
       }
       .cid-ssZ004fWZ2 .carousel-item {
-        height: auto !important;
+        padding-bottom: 70vh !important; /* Reservar espacio para móvil */
         min-height: 70vh !important;
-        display: flex !important;
-        align-items: flex-start !important;
+      }
+      @supports (aspect-ratio: 16 / 9) {
+        .cid-ssZ004fWZ2 .carousel-item {
+          aspect-ratio: auto;
+          padding-bottom: 70vh !important;
+        }
       }
       .cid-ssZ004fWZ2 .carousel-item img {
         width: 100% !important;
-        height: auto !important;
+        height: 100% !important;
         min-height: 70vh !important;
         max-height: 85vh !important;
         object-fit: cover !important;
         object-position: top center !important;
         max-width: 100% !important;
         display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
       }
       .cid-ssZ004fWZ2 .item-wrapper {
         width: 100% !important;
-        height: auto !important;
+        height: 100% !important;
         min-height: 70vh !important;
-        overflow: visible !important;
+        overflow: hidden !important;
         display: block !important;
-        position: relative !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
       }
     }
     
@@ -383,15 +445,18 @@
         max-height: 80vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item {
+        padding-bottom: 70vh !important;
         min-height: 70vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item img {
         min-height: 70vh !important;
         max-height: 80vh !important;
         object-position: top center !important;
+        height: 100% !important;
       }
       .cid-ssZ004fWZ2 .item-wrapper {
         min-height: 70vh !important;
+        height: 100% !important;
       }
     }
     
@@ -401,15 +466,18 @@
         max-height: 70vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item {
+        padding-bottom: 60vh !important;
         min-height: 60vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item img {
         min-height: 60vh !important;
         max-height: 70vh !important;
         object-position: top center !important;
+        height: 100% !important;
       }
       .cid-ssZ004fWZ2 .item-wrapper {
         min-height: 60vh !important;
+        height: 100% !important;
       }
       .cid-ssZ004fWZ2 .carousel-control {
         width: 40px !important;
@@ -1568,7 +1636,7 @@
             <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="height: 2rem; margin-right: 10px;" loading="eager" fetchpriority="high" width="92" height="92">
+                        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="width: 92px; height: 92px; margin-right: 10px; display: block; flex-shrink: 0;" loading="eager" fetchpriority="high" width="92" height="92">
                         <span class="company-name" style="color: #ec0f0f; font-weight: bold; font-size: 1.2rem;">YJG Solución TI</span>
                     </a>
                 </span>
@@ -1669,19 +1737,19 @@
         <div class="carousel-inner">
             <div class="carousel-item slider-image item active">
                 <div class="item-wrapper">
-                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w">
+                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                     
                     
                 </div>
             </div><div class="carousel-item slider-image item">
                 <div class="item-wrapper">
-                    <img class="imagen2 d-block w-100" src="assets/images/aplicaciones-moviles-escritorio-desarrollo-web-costa-rica.jpg" alt="Aplicaciones móviles React Native, aplicaciones de escritorio multiplataforma y desarrollo web responsive en Costa Rica - YJG Solución TI" data-slide-to="3" loading="lazy" width="1920" height="1080">
+                    <img class="imagen2 d-block w-100" src="assets/images/aplicaciones-moviles-escritorio-desarrollo-web-costa-rica.jpg" alt="Aplicaciones móviles React Native, aplicaciones de escritorio multiplataforma y desarrollo web responsive en Costa Rica - YJG Solución TI" data-slide-to="3" loading="lazy" width="1920" height="1080" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                     
                     
                 </div>
             </div><div class="carousel-item slider-image item">
                 <div class="item-wrapper">
-                    <img class="imagen3 d-block w-100" src="assets/images/desarrollo-aplicaciones-moviles-soluciones-tecnologicas.jpg" alt="Desarrollo de aplicaciones móviles nativas e híbridas, soluciones tecnológicas personalizadas y servicios informáticos en Costa Rica" data-slide-to="4" loading="lazy" width="1920" height="1080">
+                    <img class="imagen3 d-block w-100" src="assets/images/desarrollo-aplicaciones-moviles-soluciones-tecnologicas.jpg" alt="Desarrollo de aplicaciones móviles nativas e híbridas, soluciones tecnológicas personalizadas y servicios informáticos en Costa Rica" data-slide-to="4" loading="lazy" width="1920" height="1080" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                     
                     
                 </div>
