@@ -47,9 +47,11 @@
   <!-- Preconnect to own domain for faster resource loading -->
   <link rel="preconnect" href="https://yjgsolucionti.com">
   
-  <!-- Critical CSS - Load first (only essential for above-the-fold content) -->
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" media="all">
-  <link rel="stylesheet" href="assets/theme/css/style.css" media="all">
+  <!-- Critical CSS - Load with print media first, then switch to all (non-blocking) -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"></noscript>
+  <link rel="stylesheet" href="assets/theme/css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="assets/theme/css/style.css"></noscript>
   
   <!-- Bootstrap Grid - Load with media query to reduce blocking (only needed for responsive layouts) -->
   <link rel="preload" as="style" href="assets/bootstrap/css/bootstrap-grid.min.css" onload="this.onload=null;this.rel='stylesheet'" media="(min-width: 576px)">
