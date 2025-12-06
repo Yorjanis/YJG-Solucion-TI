@@ -12,14 +12,6 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Página de Inicio (index.html) -->
-  <url>
-    <loc>https://yjgsolucionti.com/index.html</loc>
-    <lastmod>2025-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
   <!-- Servicios - Aplicaciones de Escritorio -->
   <url>
     <loc>https://yjgsolucionti.com/aplicaciones-escritorio.html</loc>
