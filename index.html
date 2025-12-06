@@ -41,8 +41,8 @@
   
   <!-- Preload critical resources -->
   <link rel="preload" href="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" as="image">
-  <!-- Preload LCP image (first slider image) for faster rendering -->
-  <link rel="preload" href="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" as="image" fetchpriority="high">
+  <!-- Preload LCP image (first slider image) for faster rendering - MUST be before any CSS -->
+  <link rel="preload" href="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" as="image" fetchpriority="high" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   
@@ -110,7 +110,7 @@
       padding: 0.2em 0.8em !important;
     }
     .cid-s48OLK6784 .navbar-brand .navbar-logo img {
-      height: 1.8rem;
+      height: 2.5rem;
     }
     
     .cid-s48OLK6784 .navbar-brand .company-name {
@@ -316,7 +316,7 @@
     
     @media (max-width: 480px) {
       .cid-s48OLK6784 .navbar-brand .navbar-logo img {
-        height: 1.5rem;
+        height: 2rem;
       }
       .cid-s48OLK6784 .navbar-brand .company-name {
         font-size: 0.9rem;
@@ -342,8 +342,8 @@
     /* Prevenir layout shifts - CLS optimizations */
     /* Reservar espacio para el logo para prevenir layout shift */
     .cid-s48OLK6784 .navbar-brand img {
-      width: 92px !important;
-      height: 92px !important;
+      width: 50px !important;
+      height: 50px !important;
       display: block;
       flex-shrink: 0;
     }
@@ -351,6 +351,26 @@
     /* Prevenir layout shift en body */
     body {
       min-height: 100vh;
+    }
+    
+    /* Asegurar que el slider LCP esté visible desde el inicio */
+    .cid-ssZ004fWZ2 {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .cid-ssZ004fWZ2 .carousel {
+      display: block !important;
+      visibility: visible !important;
+    }
+    .cid-ssZ004fWZ2 .carousel-inner {
+      display: block !important;
+      visibility: visible !important;
+    }
+    .cid-ssZ004fWZ2 .carousel-item.active {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
     
     /* Slider responsive - Imágenes adaptables - Sobrescribe estilos de Mobirise */
@@ -1638,7 +1658,7 @@
             <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="width: 92px; height: 92px; margin-right: 10px; display: block; flex-shrink: 0;" loading="eager" fetchpriority="high" width="92" height="92">
+                        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="width: 50px; height: 50px; margin-right: 10px; display: block; flex-shrink: 0;" loading="eager" fetchpriority="high" width="50" height="50">
                         <span class="company-name" style="color: #ec0f0f; font-weight: bold; font-size: 1.2rem;">YJG Solución TI</span>
                     </a>
                 </span>
@@ -1728,16 +1748,16 @@
 
 </section>
 
-<section class="slider1 cid-ssZ004fWZ2 mbr-fullscreen" id="slider1-m">
+<section class="slider1 cid-ssZ004fWZ2 mbr-fullscreen" id="slider1-m" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
     
-    <div class="carousel slide carousel-fade" id="syfO5I8LVS" data-ride="carousel" data-interval="3000">
+    <div class="carousel slide carousel-fade" id="syfO5I8LVS" data-ride="carousel" data-interval="3000" style="display: block !important; visibility: visible !important;">
         <ol class="carousel-indicators">
             <li data-slide-to="0" class="active" data-target="#syfO5I8LVS"></li>
             <li data-slide-to="1" data-target="#syfO5I8LVS"></li><li data-slide-to="2" data-target="#syfO5I8LVS"></li>
             
         </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item slider-image item active" style="display: block !important; visibility: visible !important;">
+        <div class="carousel-inner" style="display: block !important; visibility: visible !important;">
+            <div class="carousel-item slider-image item active" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
                 <div class="item-wrapper">
                     <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important;">
                     
