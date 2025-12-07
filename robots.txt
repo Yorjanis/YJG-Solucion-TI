@@ -10,7 +10,6 @@ Disallow: /*.json$
 
 # Permitir acceso a páginas principales
 Allow: /index.html
-Allow: /blog.html
 Allow: /politica-privacidad.html
 Allow: /terminos-condiciones.html
 
