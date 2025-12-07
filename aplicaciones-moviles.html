@@ -102,6 +102,15 @@
     .custom-navbar-menu li:first-child {
       margin-left: -70px;
     }
+    /* Mantener distancia consistente para "Inicio" independientemente del idioma */
+    .custom-navbar-menu li:first-of-type {
+      min-width: 80px !important;
+      display: inline-block !important;
+    }
+    .custom-navbar-menu li:first-of-type a {
+      min-width: 80px !important;
+      display: inline-block !important;
+    }
     .custom-navbar-menu a {
       display: flex;
       align-items: center;
@@ -492,7 +501,7 @@
       </a>
       <button class="custom-navbar-toggle" id="menuToggle">☰</button>
       <ul class="custom-navbar-menu" id="navbarMenu">
-        <li><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.home">Inicio</span></a></li>
+        <li style="margin-left: 0px !important;"><a href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.home">Inicio</span></a></li>
         <li><a href="index.html#content1-8"><span class="mobi-mbri mobi-mbri-file mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.about">Acerca de</span></a></li>
         <li><a href="#" onclick="openContactPanel(); return false;"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont menu-icon" style="color: rgb(236, 15, 15);"></span> <span data-translate="menu.contact">Contacto</span></a></li>
         <li class="dropdown">
@@ -918,6 +927,18 @@
     
     // Actualizar el atributo lang del HTML
     document.documentElement.lang = lang;
+    
+    // Ajustar posición de "Inicio" según el idioma
+    const inicioItem = document.querySelector('.custom-navbar-menu li:first-of-type');
+    if (inicioItem) {
+      if (lang === 'en') {
+        // En inglés, mover 65px hacia la izquierda (de 0px a -65px)
+        inicioItem.style.setProperty('margin-left', '-65px', 'important');
+      } else {
+        // En español, mover 35px hacia la izquierda
+        inicioItem.style.setProperty('margin-left', '-35px', 'important');
+      }
+    }
   }
   
   // Función para cambiar el idioma

@@ -1723,6 +1723,18 @@
     
     // Actualizar el atributo lang del HTML
     document.documentElement.lang = lang;
+    
+    // Ajustar posición de "Inicio" según el idioma
+    const inicioItem = document.querySelector('.custom-navbar-menu li:first-of-type');
+    if (inicioItem) {
+      if (lang === 'es') {
+        // En español, mover 20px hacia la izquierda (de -40px a -20px)
+        inicioItem.style.setProperty('margin-left', '-20px', 'important');
+      } else {
+        // En inglés, mover 45px hacia la izquierda (de -40px a -45px)
+        inicioItem.style.setProperty('margin-left', '-45px', 'important');
+      }
+    }
   }
   
   // Función para cambiar el idioma
