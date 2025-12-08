@@ -92,6 +92,11 @@
         border-right: 0.35em solid transparent;
         border-left: 0.35em solid transparent;
         border-bottom: 0; }
+      /* En móvil, las flechas deben estar pegadas al texto */
+      @media (max-width: 991px) {
+        .nav-dropdown .link.dropdown-toggle::after {
+          margin-left: 0 !important; }
+      }
       .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
         margin: 0;
         padding: 0.667em 3.263em  0.667em 1.667em; }

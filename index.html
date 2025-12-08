@@ -248,11 +248,12 @@
       }
     }
     
-    /* Encabezado más angosto */
+    /* Encabezado más angosto - estilo similar a páginas de servicios */
     .cid-s48OLK6784 {
       min-height: 40px;
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
+      padding-top: 0 !important;
       background-color: #ffffff !important;
     }
     .cid-s48OLK6784 nav.navbar {
@@ -266,6 +267,27 @@
     .cid-s48OLK6784 .navbar {
       background-color: #ffffff !important;
       background: #ffffff !important;
+    }
+    /* En móvil, hacer la barra un poco más ancha */
+    @media (max-width: 991px) {
+      .cid-s48OLK6784 {
+        min-height: 50px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+      }
+      .cid-s48OLK6784 nav.navbar {
+        min-height: 50px !important;
+      }
+      .cid-s48OLK6784 .navbar {
+        min-height: 50px !important;
+      }
+      .cid-s48OLK6784 .navbar-brand .navbar-logo img,
+      .cid-s48OLK6784 .navbar-brand img {
+        height: 50px !important;
+        width: 50px !important;
+        margin-right: 10px !important;
+        max-height: 50px !important;
+        max-width: 50px !important;
+      }
     }
     /* Prevenir flash azul de Mobirise - Forzar fondo blanco */
     .cid-s48OLK6784 nav.navbar,
@@ -282,7 +304,9 @@
       padding: 0.2em 0.8em !important;
     }
     .cid-s48OLK6784 .navbar-brand .navbar-logo img {
-      height: 2.5rem;
+      height: 50px !important;
+      width: 50px !important;
+      margin-right: 10px !important;
     }
     
     .cid-s48OLK6784 .navbar-brand .company-name {
@@ -290,13 +314,49 @@
       font-weight: bold;
       font-size: 1.2rem;
       white-space: nowrap;
+      line-height: 1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     .cid-s48OLK6784 .container-fluid {
       padding-left: 15px !important;
       padding-right: 15px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
     }
     .cid-s48OLK6784 .navbar-brand {
       margin-left: -8px !important;
+    }
+    /* Hacer la barra del menú más angosta en móvil */
+    @media (max-width: 991px) {
+      .cid-s48OLK6784 {
+        min-height: 28px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .cid-s48OLK6784 nav.navbar {
+        min-height: 28px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .cid-s48OLK6784 .navbar-brand .company-name {
+        font-size: 1.2rem !important;
+      }
+      .cid-s48OLK6784 .container-fluid {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .cid-s48OLK6784 .navbar-toggler {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 1rem !important;
+      }
+      .cid-s48OLK6784 .navbar-brand {
+        margin-left: -15px !important;
+        padding-left: 0.25rem !important;
+      }
+      .cid-s48OLK6784 .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 5px !important;
+      }
     }
     
     /* Efecto hover uniforme para todos los enlaces del menú */
@@ -532,6 +592,13 @@
       height: 50px !important;
       display: block;
       flex-shrink: 0;
+    }
+    /* En móvil, el logo debe tener el mismo ancho que la barra (50px) */
+    @media (max-width: 991px) {
+      .cid-s48OLK6784 .navbar-brand img {
+        width: 50px !important;
+        height: 50px !important;
+      }
     }
     
     /* Prevenir layout shift en body */
@@ -1942,13 +2009,48 @@
         vertical-align: middle !important;
         font-size: 1.1rem !important;
       }
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions {
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions[style] {
         order: 2 !important;
         width: 100% !important;
         margin: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         margin-top: 1rem !important;
+        padding-top: 1rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-top: 1px solid rgba(0,0,0,0.1) !important;
         justify-content: flex-start !important;
         flex-wrap: wrap !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions > div {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        justify-content: center !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:first-child,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"] {
+        margin-left: 3rem !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:last-child,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="github"] {
+        margin-left: auto !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper {
+        position: relative !important;
+        margin: 0 !important;
       }
       /* Ajustar la flecha del dropdown en móvil para que esté más cerca del texto */
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
@@ -2409,6 +2511,17 @@
         position: relative !important;
         left: 0 !important;
         right: auto !important;
+        transform: translateX(-0.25rem) !important; /* Mover la flecha hacia la izquierda para compensar el espacio */
+      }
+      /* Eliminar espacios en blanco entre el texto y la flecha */
+      .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown,
+      .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown {
+        letter-spacing: -0.1em !important; /* Reducir el espacio entre caracteres */
+        word-spacing: -0.1em !important; /* Reducir el espacio entre palabras */
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown > span:last-child,
+      .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown > span:last-child {
+        margin-right: -0.25rem !important; /* Mover el texto hacia la derecha para acercarlo a la flecha */
       }
     }
   </style>
@@ -2458,7 +2571,7 @@
             <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="width: 50px; height: 50px; margin-right: 10px; display: block; flex-shrink: 0;" loading="eager" fetchpriority="high" width="50" height="50">
+                        <img src="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" alt="Logo YJG Solución TI - Servicios Informáticos" style="width: 50px; height: 50px; margin-right: 10px; display: block; flex-shrink: 0;" loading="eager" fetchpriority="high">
                         <span class="company-name" style="color: #ec0f0f; font-weight: bold; font-size: 1.2rem;">YJG Solución TI</span>
                     </a>
                 </span>
@@ -2521,7 +2634,7 @@
                 </ul>
                 <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px; flex-shrink: 0 !important; white-space: nowrap !important; margin-left: auto !important;">
                     <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important;">
-                        <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; white-space: nowrap !important;">
+                        <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
                             <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
@@ -2533,7 +2646,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="icons-menu" style="flex-shrink: 0 !important; white-space: nowrap !important;">
+                    <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
                     <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="white-space: nowrap !important;">
                         <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
                     </a>
@@ -4669,77 +4782,75 @@
       window.addEventListener('resize', forceDropdownArrowSize);
     });
     
-    // FORZAR margin-left: 0 en las flechas después de que se carguen todos los CSS
-    // Esto sobrescribe el margin-left: .25rem de assets/dropdown/css/style.css línea 90
+    
+    // Ajustar distribución de iconos en móvil para que coincida con páginas de servicio
     document.addEventListener('DOMContentLoaded', function() {
-      function forceArrowMarginZero() {
+      function adjustMobileIconsDistribution() {
         if (window.innerWidth <= 991) {
-          // Crear un estilo dinámico con máxima prioridad al final del head
-          const styleId = 'force-arrow-margin-zero-mobile';
-          let styleElement = document.getElementById(styleId);
-          
-          if (!styleElement) {
-            styleElement = document.createElement('style');
-            styleElement.id = styleId;
-            // Insertar al final del head para máxima prioridad
-            document.head.appendChild(styleElement);
+          const navbarActions = document.querySelector('.cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions');
+          if (navbarActions) {
+            navbarActions.style.setProperty('margin-left', '0', 'important');
+            navbarActions.style.setProperty('justify-content', 'flex-start', 'important');
+            navbarActions.style.setProperty('gap', '15px', 'important');
           }
-          
-          // Aplicar con máxima especificidad - usar todos los selectores posibles
-          styleElement.textContent = `
-            @media (max-width: 991px) {
-              /* Sobrescribir el margin-left: .25rem de dropdown.css línea 90 */
-              /* Usar múltiples selectores con máxima especificidad */
-              .cid-s48OLK6784 #navbarSupportedContent.show .nav-dropdown .link.dropdown-toggle::after,
-              .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
-              .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
-              .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown::after,
-              .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown::after,
-              .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
-              .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
-              .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
-              .cid-s48OLK6784 #serviciosDropdown::after,
-              .cid-s48OLK6784 #blogDropdown::after,
-              /* Selectores adicionales para máxima cobertura */
-              a#serviciosDropdown.dropdown-toggle::after,
-              a#blogDropdown.dropdown-toggle::after,
-              .nav-link.dropdown-toggle#serviciosDropdown::after,
-              .nav-link.dropdown-toggle#blogDropdown::after {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-              }
-            }
-          `;
         }
       }
       
-      // Ejecutar después de que se carguen todos los recursos
-      forceArrowMarginZero();
-      setTimeout(forceArrowMarginZero, 100);
-      setTimeout(forceArrowMarginZero, 500);
-      setTimeout(forceArrowMarginZero, 1000);
-      setTimeout(forceArrowMarginZero, 2000);
-      
-      // Ejecutar cuando el menú móvil se abra
+      // Observar cuando se abre el menú móvil
       const navbarCollapse = document.getElementById('navbarSupportedContent');
       if (navbarCollapse) {
-        const observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-              if (navbarCollapse.classList.contains('show')) {
-                setTimeout(forceArrowMarginZero, 100);
-                setTimeout(forceArrowMarginZero, 300);
-              }
-            }
-          });
-        });
-        observer.observe(navbarCollapse, { attributes: true });
-        
-        // También escuchar eventos de Bootstrap
         navbarCollapse.addEventListener('shown.bs.collapse', function() {
-          setTimeout(forceArrowMarginZero, 100);
+          setTimeout(adjustMobileIconsDistribution, 100);
         });
+        
+        // También verificar si ya está abierto
+        if (navbarCollapse.classList.contains('show')) {
+          adjustMobileIconsDistribution();
+        }
       }
+      
+      // Ejecutar al redimensionar
+      window.addEventListener('resize', adjustMobileIconsDistribution);
+    });
+    
+    // SOLUCIÓN: Mover la flecha al último span del texto para que esté pegada
+    document.addEventListener('DOMContentLoaded', function() {
+      const styleId = 'fix-arrow-spacing-mobile';
+      let styleElement = document.getElementById(styleId);
+      
+      if (!styleElement) {
+        styleElement = document.createElement('style');
+        styleElement.id = styleId;
+        document.head.appendChild(styleElement);
+      }
+      
+      styleElement.textContent = `
+        @media (max-width: 991px) {
+          /* Ocultar el ::after original del enlace */
+          .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown::after,
+          .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown::after {
+            display: none !important;
+            content: none !important;
+          }
+          
+          /* Crear la flecha en el último span (el que contiene el texto) */
+          .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown > span[data-translate]::after,
+          .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown > span[data-translate]::after {
+            content: '' !important;
+            display: inline-block !important;
+            width: 0 !important;
+            height: 0 !important;
+            margin-left: 0.3rem !important;
+            margin-right: 0 !important;
+            margin-top: 0.1rem !important;
+            vertical-align: middle !important;
+            border-top: 0.35em solid #ec0f0f !important;
+            border-right: 0.35em solid transparent !important;
+            border-left: 0.35em solid transparent !important;
+            border-bottom: 0 !important;
+          }
+        }
+      `;
     });
   </script>
   
