@@ -556,23 +556,85 @@
     }
     .cid-ssZ004fWZ2.mbr-fullscreen {
       padding-top: 0 !important;
+      padding-bottom: 0 !important;
       margin-top: 0 !important;
+      margin-bottom: 0 !important;
       top: 0 !important;
     }
     section.slider1 {
       margin-top: 0 !important;
+      margin-bottom: 0 !important;
       padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .cid-ssZ004fWZ2 .carousel-item {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    /* En desktop, asegurar que el slider tenga altura completa */
+    @media (min-width: 992px) {
+      .cid-ssZ004fWZ2.mbr-fullscreen {
+        height: 100vh !important;
+        min-height: 100vh !important;
+      }
+      .cid-ssZ004fWZ2 .carousel-item {
+        height: 100vh !important;
+        min-height: 100vh !important;
+      }
+      .cid-ssZ004fWZ2 .carousel-item .item-wrapper {
+        height: 100vh !important;
+        min-height: 100vh !important;
+      }
+      .cid-ssZ004fWZ2 .carousel-item img {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        object-fit: cover !important;
+      }
+    }
+    .cid-ssZ004fWZ2 .carousel-item .item-wrapper {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .cid-ssZ004fWZ2 .carousel-inner {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .cid-ssZ004fWZ2 .carousel {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    /* Eliminar completamente el espacio vacío debajo del banner */
+    @media (max-width: 991px) {
+      .cid-ssZ004fWZ2 {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .cid-ssZ004fWZ2 .carousel-item.active {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .cid-ssZ004fWZ2 .carousel-item.active .item-wrapper {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .cid-ssZ004fWZ2 .carousel-item.active img {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        display: block !important;
+      }
     }
     .cid-ssZ004fWZ2 .carousel {
       display: block !important;
       visibility: visible !important;
       margin: 0 !important;
+      margin-bottom: 0 !important;
       padding: 0 !important;
     }
     .cid-ssZ004fWZ2 .carousel-inner {
       display: block !important;
       visibility: visible !important;
       margin: 0 !important;
+      margin-bottom: 0 !important;
       padding: 0 !important;
     }
     .cid-ssZ004fWZ2 .carousel-item.active {
@@ -752,7 +814,7 @@
         align-items: flex-start !important;
       }
       .cid-ssZ004fWZ2 .carousel-item {
-        padding-bottom: 70vh !important; /* Reservar espacio para móvil */
+        padding-bottom: 0 !important; /* Eliminar padding que causa espacio vacío */
         min-height: 70vh !important;
       }
       @supports (aspect-ratio: 16 / 9) {
@@ -788,11 +850,15 @@
         width: 100% !important;
         height: 100% !important;
         min-height: 70vh !important;
+        max-height: 85vh !important;
         overflow: hidden !important;
         display: block !important;
         position: absolute !important;
         top: 0 !important;
         left: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-bottom: 0 !important;
       }
     }
     
@@ -802,7 +868,7 @@
         max-height: 80vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item {
-        padding-bottom: 70vh !important;
+        padding-bottom: 0 !important; /* Eliminar padding que causa espacio vacío */
         min-height: 70vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item img {
@@ -823,8 +889,11 @@
         max-height: 70vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item {
-        padding-bottom: 60vh !important;
+        padding-bottom: 0 !important; /* Eliminar padding que causa espacio vacío */
+        margin-bottom: 0 !important;
         min-height: 60vh !important;
+        height: 60vh !important;
+        max-height: 70vh !important;
       }
       .cid-ssZ004fWZ2 .carousel-item img {
         min-height: 60vh !important;
@@ -1039,32 +1108,84 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
-    
     .contact-panel-header h3 {
       margin: 0;
       font-size: 1.5rem;
       font-weight: bold;
     }
     
+    /* Ajustar header en móvil para que el botón X sea más visible */
+    @media (max-width: 991px) {
+      .contact-panel-header {
+        padding: 65px 20px 20px 20px !important;
+        min-height: 105px !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-top: 65px !important;
+      }
+      .contact-panel-header h3 {
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        font-size: 1.3rem !important;
+      }
+    }
+    
     .contact-panel-close {
       background: none;
       border: none;
       color: white;
-      font-size: 1.5rem;
+      font-size: 2rem;
       cursor: pointer;
       padding: 0;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       transition: background-color 0.3s;
+      z-index: 1001;
+      position: relative;
     }
     
     .contact-panel-close:hover {
       background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Asegurar que el botón de cerrar sea más visible en móvil */
+    @media (max-width: 991px) {
+      .contact-panel-close {
+        font-size: 2.5rem !important;
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        min-height: 50px !important;
+        font-weight: bold !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: white !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border: 2px solid white !important;
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        align-self: center !important;
+        vertical-align: middle !important;
+      }
+      .contact-panel-header {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
     }
     
     .contact-panel-content {
@@ -1191,6 +1312,13 @@
         right: 15px;
         font-size: 1.2rem;
       }
+      /* Ocultar el botón flotante cuando el menú móvil está abierto */
+      #navbarSupportedContent.show ~ .contact-float-btn,
+      body:has(#navbarSupportedContent.show) .contact-float-btn {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
       
       .contact-panel {
         width: 320px;
@@ -1207,13 +1335,20 @@
         width: 100%;
         right: -100%;
         border-radius: 0;
-        top: 0;
-        transform: none;
+        top: 0 !important;
+        transform: none !important;
         max-height: 100vh;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
       }
       
       .contact-panel.open {
         right: 0;
+      }
+      
+      .contact-panel-header {
+        padding-top: 75px !important;
+        min-height: 115px !important;
       }
     }
     
@@ -1625,6 +1760,301 @@
       flex-wrap: nowrap !important;
       width: 100% !important;
     }
+    /* Ocultar botón hamburguesa en desktop (navbar-expand-xl significa que se muestra solo en < 1200px) */
+    @media (min-width: 992px) {
+      .cid-s48OLK6784 .navbar-toggler,
+      .cid-s48OLK6784 button.navbar-toggler,
+      .cid-s48OLK6784 .navbar button[data-toggle="collapse"],
+      .cid-s48OLK6784 .navbar-toggler .hamburger,
+      .cid-s48OLK6784 button.navbar-toggler .hamburger {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+    }
+    /* Forzar visibilidad del botón hamburguesa solo en móvil - Sobrescribir Bootstrap navbar-expand-xl */
+    @media (max-width: 991px) {
+      .cid-s48OLK6784 .navbar-toggler,
+      .cid-s48OLK6784 button.navbar-toggler,
+      .cid-s48OLK6784 .navbar button[data-toggle="collapse"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 1000 !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 0.25rem 0.5rem !important;
+        margin-left: auto !important;
+      }
+      .cid-s48OLK6784 .navbar-toggler .hamburger,
+      .cid-s48OLK6784 button.navbar-toggler .hamburger {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .cid-s48OLK6784 .navbar-toggler .hamburger span,
+      .cid-s48OLK6784 button.navbar-toggler .hamburger span {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: 2px !important;
+        background-color: #ec0f0f !important;
+        margin: 4px 0 !important;
+      }
+    }
+    /* En móvil, el menú debe estar oculto por defecto */
+    @media (max-width: 991px) {
+      .cid-s48OLK6784 .navbar-collapse:not(.show) {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+      /* Asegurar que los dropdowns estén ocultos por defecto en móvil */
+      .cid-s48OLK6784 .dropdown-menu:not(.show) {
+        display: none !important;
+      }
+      .cid-s48OLK6784 .dropdown-menu.show {
+        display: block !important;
+      }
+      .cid-s48OLK6784 .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        padding: 1rem 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+      /* Asegurar que el menú colapsado esté oculto incluso si tiene otros estilos */
+      .cid-s48OLK6784 #navbarSupportedContent:not(.show) {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show {
+        display: flex !important;
+        flex-direction: column !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+      /* Ordenar elementos del menú móvil */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav {
+        order: 1 !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item {
+        width: 100% !important;
+        margin: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 0.5rem !important;
+      }
+      /* Eliminar el margin-left del primer elemento (Inicio) en móvil para alinearlo con los demás */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item:first-child {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item:first-child .nav-link {
+        margin-left: 0 !important;
+        padding-left: 1rem !important;
+      }
+      /* Asegurar que todos los nav-items tengan el mismo padding en móvil */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link {
+        padding-left: 1rem !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link {
+        width: 100% !important;
+        padding: 0.75rem 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+      }
+      /* Alinear iconos verticalmente en el menú móvil */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link {
+        align-items: center !important;
+        gap: 0.75rem !important;
+        position: relative !important;
+      }
+      /* Spans que contienen iconos - hacer que solo muestren el icono */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mbr-iconfont,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mobi-mbri,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mbr-iconfont-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        min-width: 24px !important;
+        max-width: 24px !important;
+        height: 24px !important;
+        line-height: 24px !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+        margin-right: 0.75rem !important;
+        padding: 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        font-size: 1.1rem !important;
+      }
+      /* Ocultar el texto que está dentro del span del icono (será extraído por JavaScript) */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mbr-iconfont > span,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mobi-mbri > span,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mbr-iconfont-btn > span {
+        display: none !important;
+      }
+      /* Texto que está después del span del icono (después de ser extraído por JavaScript) */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span:not(.mbr-iconfont):not(.mobi-mbri):not(.mbr-iconfont-btn):not([class*="mobi-"]):not([class*="mbr-"]) {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        line-height: 1.5 !important;
+        flex: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      /* Asegurar que los iconos se muestren usando ::before */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mbr-iconfont::before,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mobi-mbri::before,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link > span.mbr-iconfont-btn::before {
+        display: inline-block !important;
+        width: 100% !important;
+        height: 100% !important;
+        line-height: 24px !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        font-size: 1.1rem !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions {
+        order: 2 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        margin-top: 1rem !important;
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+      }
+      /* Ajustar la flecha del dropdown en móvil para que esté más cerca del texto */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown::after,
+      .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown::after {
+        margin-left: 0 !important; /* Sin margen para que esté pegado al texto */
+        margin-right: 0 !important;
+        margin-top: 0.2rem !important;
+        position: relative !important;
+        left: 0 !important;
+      }
+      /* Asegurar que los elementos del dropdown de Servicio estén alineados en móvil */
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] {
+        display: none !important; /* Oculto por defecto */
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"].show {
+        display: block !important; /* Mostrar solo cuando tiene la clase 'show' */
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item {
+        display: flex !important;
+        align-items: center !important;
+        align-content: center !important;
+        justify-content: flex-start !important;
+        padding: 0.75rem 1rem !important;
+        padding-left: 1.75rem !important; /* Aumentado para alinear los iconos con los elementos principales */
+        width: 100% !important;
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+        gap: 0 !important;
+        line-height: 1.5 !important;
+        min-height: auto !important;
+        height: auto !important;
+        flex-wrap: nowrap !important;
+        position: relative !important;
+        font-size: inherit !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item:hover,
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item:focus,
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item:active {
+        background-color: rgba(236, 15, 15, 0.1) !important;
+        color: #ec0f0f !important; /* Color rojo para el texto en hover/touch */
+        transition: color 0.2s ease-in-out !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item:hover > span:not(.mbr-iconfont):not(.mobi-mbri),
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item:focus > span:not(.mbr-iconfont):not(.mobi-mbri),
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item:active > span:not(.mbr-iconfont):not(.mobi-mbri) {
+        color: #ec0f0f !important; /* Color rojo para el texto en hover/touch */
+        transition: color 0.2s ease-in-out !important;
+      }
+      /* Iconos del dropdown - ENFOQUE SIMPLIFICADO: Misma altura que el texto */
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item > span.mbr-iconfont,
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item > span.mobi-mbri {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        min-width: 24px !important;
+        max-width: 24px !important;
+        height: 1.5em !important;
+        line-height: 1.5 !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+        margin-right: 0.75rem !important;
+        margin-left: 0.75rem !important; /* Agregar margin-left para alinear con los iconos principales */
+        padding: 0 !important;
+        position: relative !important;
+        overflow: visible !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        font-size: 1.1rem !important;
+        color: #ec0f0f !important;
+        align-self: center !important;
+      }
+      /* Texto del dropdown - ENFOQUE SIMPLIFICADO: Misma altura que el icono */
+      .cid-s48OLK6784 #navbarSupportedContent.show .dropdown-menu[aria-labelledby="serviciosDropdown"] .dropdown-item > span:not(.mbr-iconfont):not(.mobi-mbri):not([class*="mbr-"]):not([class*="mobi-"]) {
+        display: inline-flex !important;
+        align-items: center !important;
+        flex: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1.5 !important;
+        align-self: center !important;
+        vertical-align: middle !important;
+        height: 1.5em !important;
+        font-size: inherit !important;
+        transition: color 0.2s ease-in-out !important; /* Transición suave para el cambio de color */
+      }
+      /* Ocultar el botón flotante de contacto cuando el menú móvil está abierto */
+      .cid-s48OLK6784 #navbarSupportedContent.show ~ .contact-float-btn,
+      #navbarSupportedContent.show ~ .contact-float-btn,
+      body:has(#navbarSupportedContent.show) .contact-float-btn {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+    }
     .cid-s48OLK6784 .navbar-nav {
       display: flex !important;
       align-items: center !important;
@@ -1926,25 +2356,60 @@
       }
     }
     
-    /* FORZAR que todas las flechas de los dropdowns tengan exactamente el mismo tamaño - AL FINAL PARA MÁXIMA PRIORIDAD */
+    /* FORZAR que todas las flechas de los dropdowns tengan exactamente el mismo tamaño - SOLO EN DESKTOP */
     /* Usar px en lugar de em para que el tamaño sea absoluto y no dependa del font-size del padre */
-    .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
-    .cid-s48OLK6784 .nav-dropdown .nav-item .nav-link.dropdown-toggle::after,
-    .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
-    .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
-    .cid-s48OLK6784 #serviciosDropdown::after,
-    .cid-s48OLK6784 #blogDropdown::after {
-      border-top: 5.6px solid #ec0f0f !important;
-      border-right: 5.6px solid transparent !important;
-      border-left: 5.6px solid transparent !important;
-      border-bottom: 0 !important;
-      margin-left: 0.5rem !important;
-      margin-top: 0.2rem !important;
-      width: 0 !important;
-      height: 0 !important;
-      display: inline-block !important;
-      vertical-align: middle !important;
-      content: '' !important;
+    @media (min-width: 992px) {
+      .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 .nav-dropdown .nav-item .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+      .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 #serviciosDropdown::after,
+      .cid-s48OLK6784 #blogDropdown::after {
+        border-top: 5.6px solid #ec0f0f !important;
+        border-right: 5.6px solid transparent !important;
+        border-left: 5.6px solid transparent !important;
+        border-bottom: 0 !important;
+        margin-left: 0.5rem !important; /* Mantener el margen original en desktop */
+        margin-top: 0.2rem !important;
+        width: 0 !important;
+        height: 0 !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+        content: '' !important;
+      }
+    }
+    /* FORZAR que las flechas estén pegadas al texto en móvil - MÁXIMA PRIORIDAD */
+    /* Sobrescribir el estilo de assets/dropdown/css/style.css línea 90 que aplica margin-left: .25rem */
+    @media (max-width: 991px) {
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown::after,
+      .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown::after,
+      .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 .nav-dropdown .nav-item .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+      .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
+      .cid-s48OLK6784 #serviciosDropdown::after,
+      .cid-s48OLK6784 #blogDropdown::after,
+      /* Sobrescribir específicamente el estilo de dropdown.css */
+      .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+      .cid-s48OLK6784 #navbarSupportedContent.show .nav-dropdown .link.dropdown-toggle::after,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.link.dropdown-toggle::after {
+        border-top: 5.6px solid #ec0f0f !important;
+        border-right: 5.6px solid transparent !important;
+        border-left: 5.6px solid transparent !important;
+        border-bottom: 0 !important;
+        margin-left: 0 !important; /* Sobrescribir el margin-left: .25rem de dropdown.css */
+        margin-right: 0 !important;
+        margin-top: 0.2rem !important;
+        width: 0 !important;
+        height: 0 !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+        content: '' !important;
+        position: relative !important;
+        left: 0 !important;
+        right: auto !important;
+      }
     }
   </style>
   
@@ -2089,10 +2554,10 @@
         <ol class="carousel-indicators">
             <li data-slide-to="0" class="active" data-target="#syfO5I8LVS"></li>
         </ol>
-        <div class="carousel-inner" style="display: block !important; visibility: visible !important;">
-            <div class="carousel-item slider-image item active" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
-                <div class="item-wrapper">
-                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w" style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block !important; visibility: visible !important;">
+        <div class="carousel-inner" style="display: block !important; visibility: visible !important; margin-bottom: 0 !important; padding-bottom: 0 !important;">
+            <div class="carousel-item slider-image item active" style="display: block !important; visibility: visible !important; opacity: 1 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; height: auto !important;">
+                <div class="item-wrapper" style="padding: 0 !important; margin: 0 !important; margin-bottom: 0 !important; padding-bottom: 0 !important;">
+                    <img class="imagen1 d-block w-100" src="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg" alt="YJG Solución TI - Desarrollo de aplicaciones móviles iOS Android, aplicaciones de escritorio Windows macOS Linux y páginas web en Costa Rica" data-slide-to="3" loading="eager" fetchpriority="high" width="1920" height="1080" sizes="100vw" srcset="assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg 1920w" style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block !important; visibility: visible !important; margin-bottom: 0 !important; padding-bottom: 0 !important;">
                     <div class="floating-figure"></div>
                 </div>
             </div>
@@ -2109,7 +2574,7 @@
 </section>
 
 <!-- Sección de animación horizontal -->
-<section class="animated-banner" style="background-color: #000000; padding: 3px 0 !important; overflow: hidden; position: relative; display: flex !important; align-items: center !important; min-height: 30px !important;">
+<section class="animated-banner" style="background-color: #000000; padding: 3px 0 !important; overflow: hidden; position: relative; display: flex !important; align-items: center !important; min-height: 30px !important; margin-top: 0 !important;">
     <div class="animated-text-container" style="display: flex !important; align-items: center !important; white-space: nowrap; animation: scroll-horizontal 30s linear infinite; height: 100% !important; margin: 0 !important; padding: 0 !important; line-height: 1 !important;">
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
@@ -2773,7 +3238,7 @@
 <div class="contact-panel" id="contactPanel">
     <div class="contact-panel-header">
         <h3 data-translate="contact.panel.title">Contacto</h3>
-        <button class="contact-panel-close" id="contactPanelClose" data-translate-title="contact.panel.close" title="Cerrar">×</button>
+        <button class="contact-panel-close" id="contactPanelClose" data-translate-title="contact.panel.close" title="Cerrar" style="display: flex !important; visibility: visible !important; opacity: 1 !important; color: white !important; font-size: 2.5rem !important; width: 50px !important; height: 50px !important; min-width: 50px !important; min-height: 50px !important; font-weight: bold !important; background-color: rgba(255, 255, 255, 0.2) !important; border: 2px solid white !important; border-radius: 50% !important; cursor: pointer !important; align-items: center !important; justify-content: center !important; z-index: 1001 !important; position: relative !important; margin: 0 !important; padding: 0 !important; top: auto !important; bottom: auto !important;">×</button>
     </div>
     <div class="contact-panel-content">
         <div class="contact-item">
@@ -2871,6 +3336,21 @@
 <section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex; height: 0; overflow: hidden;"><a href="https://mobirise.site/j" style="flex: 1 1; height: 0; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/i" style="color:#aaa;"></a></p></section><script src="assets/web/assets/jquery/jquery.min.js" defer></script>  <script src="assets/popper/popper.min.js" defer></script>  <script src="assets/tether/tether.min.js" defer></script>  <script src="assets/bootstrap/js/bootstrap.min.js" defer></script>  <script src="assets/smoothscroll/smooth-scroll.js" defer></script>  <script src="assets/formstyler/jquery.formstyler.js" defer></script>  <script src="assets/formstyler/jquery.formstyler.min.js" defer></script>  <script src="assets/datepicker/jquery.datetimepicker.full.js" defer></script>  <script src="assets/dropdown/js/nav-dropdown.js" defer></script>  <script src="assets/dropdown/js/navbar-dropdown.js" defer></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js" defer></script>  <script src="assets/theme/js/script.js" defer></script>  <script src="assets/formoid/formoid.min.js" defer></script>
   
   <script>
+    // Asegurar que el menú móvil esté cerrado inmediatamente al cargar
+    (function() {
+      if (window.innerWidth <= 991) {
+        const navbarCollapse = document.getElementById('navbarSupportedContent');
+        if (navbarCollapse) {
+          navbarCollapse.classList.remove('show');
+          navbarCollapse.style.display = 'none';
+          navbarCollapse.style.visibility = 'hidden';
+          navbarCollapse.style.opacity = '0';
+          navbarCollapse.style.height = '0';
+          navbarCollapse.style.overflow = 'hidden';
+        }
+      }
+    })();
+    
     // Funciones de desplazamiento
     function scrollToTop() {
       window.scrollTo({
@@ -2935,6 +3415,25 @@
         contactOverlay.classList.add('active');
         contactFloatBtn.classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Cerrar menú móvil si está abierto
+        if (window.innerWidth <= 991) {
+          const navbarCollapse = document.getElementById('navbarSupportedContent');
+          if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarToggler && typeof $ !== 'undefined' && $.fn.collapse) {
+              $(navbarCollapse).collapse('hide');
+            } else {
+              navbarCollapse.classList.remove('show');
+              navbarCollapse.style.display = 'none';
+              navbarCollapse.style.visibility = 'hidden';
+              navbarCollapse.style.opacity = '0';
+              if (navbarToggler) {
+                navbarToggler.setAttribute('aria-expanded', 'false');
+              }
+            }
+          }
+        }
       }
     };
     
@@ -3381,6 +3880,43 @@
       const savedLang = getSavedLanguage();
       applyTranslations(savedLang);
       
+      // Asegurar que el menú móvil esté cerrado al cargar la página
+      function closeMobileMenu() {
+        const navbarCollapse = document.getElementById('navbarSupportedContent');
+        if (navbarCollapse && window.innerWidth <= 991) {
+          navbarCollapse.classList.remove('show');
+          navbarCollapse.style.display = 'none';
+          navbarCollapse.style.visibility = 'hidden';
+          navbarCollapse.style.opacity = '0';
+          navbarCollapse.style.height = '0';
+          navbarCollapse.style.overflow = 'hidden';
+        }
+      }
+      
+      // Ejecutar inmediatamente
+      closeMobileMenu();
+      
+      // Ejecutar después de que se cargue todo
+      setTimeout(closeMobileMenu, 100);
+      setTimeout(closeMobileMenu, 500);
+      
+      // Ejecutar cuando se cargue Bootstrap
+      if (typeof $ !== 'undefined') {
+        $(document).ready(function() {
+          closeMobileMenu();
+        });
+      }
+      
+      // También ejecutar cuando cambie el tamaño de la ventana
+      window.addEventListener('resize', function() {
+        if (window.innerWidth <= 991) {
+          const navbarCollapse = document.getElementById('navbarSupportedContent');
+          if (navbarCollapse && !navbarCollapse.classList.contains('show')) {
+            closeMobileMenu();
+          }
+        }
+      });
+      
       // Agregar event listeners a los botones de idioma
       const languageOptions = document.querySelectorAll('.language-option');
       languageOptions.forEach(option => {
@@ -3642,6 +4178,320 @@
       }
     });
     
+    // Reorganizar menú móvil para alinear iconos
+    function reorganizeMobileMenu() {
+      if (window.innerWidth <= 991) {
+        const navbarCollapse = document.getElementById('navbarSupportedContent');
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+          // Reorganizar elementos principales del menú
+          const navLinks = navbarCollapse.querySelectorAll('.navbar-nav .nav-item .nav-link');
+          navLinks.forEach(link => {
+            const iconSpans = link.querySelectorAll('span.mbr-iconfont, span.mobi-mbri, span.mbr-iconfont-btn');
+            iconSpans.forEach(iconSpan => {
+              // Si el span del icono contiene texto, extraerlo
+              const textSpan = iconSpan.querySelector('span[data-translate]');
+              if (textSpan && textSpan.parentElement === iconSpan) {
+                // Mover el texto fuera del span del icono
+                const textContent = textSpan.textContent;
+                textSpan.remove();
+                // Crear un nuevo span para el texto después del icono
+                const newTextSpan = document.createElement('span');
+                newTextSpan.setAttribute('data-translate', textSpan.getAttribute('data-translate') || '');
+                newTextSpan.textContent = textContent;
+                newTextSpan.style.display = 'inline-block';
+                newTextSpan.style.verticalAlign = 'middle';
+                newTextSpan.style.lineHeight = '1.5';
+                newTextSpan.style.margin = '0';
+                newTextSpan.style.padding = '0';
+                // Insertar después del span del icono
+                iconSpan.parentNode.insertBefore(newTextSpan, iconSpan.nextSibling);
+              }
+            });
+            
+            // Posicionar la flecha justo después del texto en dropdowns
+            if (link.classList.contains('dropdown-toggle')) {
+              const textSpan = link.querySelector('span[data-translate]');
+              if (textSpan) {
+                // Eliminar todos los nodos de texto (espacios en blanco) entre el texto y la flecha
+                let node = textSpan.nextSibling;
+                while (node) {
+                  const nextNode = node.nextSibling;
+                  if (node.nodeType === Node.TEXT_NODE) {
+                    node.remove();
+                  }
+                  node = nextNode;
+                }
+                // Asegurar que no haya espacios entre el texto y la flecha
+                textSpan.style.marginRight = '0';
+                textSpan.style.paddingRight = '0';
+                textSpan.style.display = 'inline-block';
+                // Eliminar cualquier padding o margin que pueda estar creando espacio
+                textSpan.style.letterSpacing = '0';
+                textSpan.style.wordSpacing = '0';
+              }
+              // También eliminar espacios en blanco antes del texto (después del icono)
+              const iconSpan = link.querySelector('span.mbr-iconfont, span.mobi-mbri, span.mbr-iconfont-btn');
+              if (iconSpan) {
+                let node = iconSpan.nextSibling;
+                while (node && node !== textSpan) {
+                  const nextNode = node.nextSibling;
+                  if (node.nodeType === Node.TEXT_NODE) {
+                    node.remove();
+                  }
+                  node = nextNode;
+                }
+              }
+            }
+          });
+          
+          // Reorganizar elementos del dropdown de Servicio - NUEVA LÓGICA: Reconstruir completamente
+          const serviciosDropdown = navbarCollapse.querySelector('.dropdown-menu[aria-labelledby="serviciosDropdown"]');
+          if (serviciosDropdown && serviciosDropdown.classList.contains('show')) {
+            const dropdownItems = serviciosDropdown.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(item => {
+              // Guardar el href original
+              const originalHref = item.getAttribute('href');
+              
+              // Buscar el icono y el texto
+              let iconSpan = item.querySelector('span.mbr-iconfont, span.mobi-mbri');
+              let textSpan = item.querySelector('span[data-translate]');
+              
+              // Si no hay texto con data-translate, buscar cualquier span con texto
+              if (!textSpan) {
+                const allSpans = Array.from(item.querySelectorAll('span'));
+                for (let span of allSpans) {
+                  if (!span.classList.contains('mbr-iconfont') && 
+                      !span.classList.contains('mobi-mbri') && 
+                      !span.classList.contains('mbr-iconfont-btn') &&
+                      span.textContent.trim() !== '') {
+                    textSpan = span;
+                    break;
+                  }
+                }
+              }
+              
+              if (iconSpan && textSpan) {
+                // Extraer información del icono
+                const iconClasses = iconSpan.className;
+                const iconStyle = iconSpan.getAttribute('style');
+                
+                // Extraer información del texto
+                const textContent = textSpan.textContent.trim();
+                const translateAttr = textSpan.getAttribute('data-translate');
+                
+                // Limpiar completamente el contenido del item
+                item.innerHTML = '';
+                
+                // Reconstruir: primero el icono, luego el texto
+                const newIconSpan = document.createElement('span');
+                newIconSpan.className = iconClasses;
+                if (iconStyle) {
+                  newIconSpan.setAttribute('style', iconStyle);
+                }
+                
+                const newTextSpan = document.createElement('span');
+                if (translateAttr) {
+                  newTextSpan.setAttribute('data-translate', translateAttr);
+                }
+                newTextSpan.textContent = textContent;
+                
+                // Agregar elementos en el orden correcto
+                item.appendChild(newIconSpan);
+                item.appendChild(newTextSpan);
+                
+                // Restaurar el href
+                if (originalHref) {
+                  item.setAttribute('href', originalHref);
+                }
+              }
+            });
+          }
+          
+          // Reorganizar elementos del dropdown del Blog - NUEVA LÓGICA: Reconstruir completamente
+          const blogDropdown = navbarCollapse.querySelector('.dropdown-menu[aria-labelledby="blogDropdown"]');
+          if (blogDropdown && blogDropdown.classList.contains('show')) {
+            const dropdownItems = blogDropdown.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(item => {
+              // Guardar el href original
+              const originalHref = item.getAttribute('href');
+              
+              // Buscar el icono y el texto
+              let iconSpan = item.querySelector('span.mbr-iconfont, span.mobi-mbri');
+              let textSpan = item.querySelector('span[data-translate]');
+              
+              // Si no hay texto con data-translate, buscar cualquier span con texto
+              if (!textSpan) {
+                const allSpans = Array.from(item.querySelectorAll('span'));
+                for (let span of allSpans) {
+                  if (!span.classList.contains('mbr-iconfont') && 
+                      !span.classList.contains('mobi-mbri') && 
+                      !span.classList.contains('mbr-iconfont-btn') &&
+                      span.textContent.trim() !== '') {
+                    textSpan = span;
+                    break;
+                  }
+                }
+              }
+              
+              if (iconSpan && textSpan) {
+                // Extraer información del icono
+                const iconClasses = iconSpan.className;
+                const iconStyle = iconSpan.getAttribute('style');
+                
+                // Extraer información del texto
+                const textContent = textSpan.textContent.trim();
+                const translateAttr = textSpan.getAttribute('data-translate');
+                
+                // Limpiar completamente el contenido del item
+                item.innerHTML = '';
+                
+                // Reconstruir: primero el icono, luego el texto
+                const newIconSpan = document.createElement('span');
+                newIconSpan.className = iconClasses;
+                if (iconStyle) {
+                  newIconSpan.setAttribute('style', iconStyle);
+                }
+                
+                const newTextSpan = document.createElement('span');
+                if (translateAttr) {
+                  newTextSpan.setAttribute('data-translate', translateAttr);
+                }
+                newTextSpan.textContent = textContent;
+                
+                // Agregar elementos en el orden correcto
+                item.appendChild(newIconSpan);
+                item.appendChild(newTextSpan);
+                
+                // Restaurar el href
+                if (originalHref) {
+                  item.setAttribute('href', originalHref);
+                }
+              }
+            });
+          }
+        }
+      }
+    }
+    
+    // Observar cuando el menú se abre
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarCollapse = document.getElementById('navbarSupportedContent');
+      const contactFloatBtn = document.getElementById('contactFloatBtn');
+      
+      // Función para mostrar/ocultar el botón flotante según el estado del menú móvil
+      function toggleContactFloatBtn() {
+        if (contactFloatBtn && window.innerWidth <= 991) {
+          if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            // Ocultar botón flotante cuando el menú está abierto
+            contactFloatBtn.style.display = 'none';
+            contactFloatBtn.style.visibility = 'hidden';
+            contactFloatBtn.style.opacity = '0';
+          } else {
+            // Mostrar botón flotante cuando el menú está cerrado
+            contactFloatBtn.style.display = 'flex';
+            contactFloatBtn.style.visibility = 'visible';
+            contactFloatBtn.style.opacity = '1';
+          }
+        } else if (contactFloatBtn && window.innerWidth > 991) {
+          // En desktop, siempre mostrar el botón
+          contactFloatBtn.style.display = 'flex';
+          contactFloatBtn.style.visibility = 'visible';
+          contactFloatBtn.style.opacity = '1';
+        }
+      }
+      
+      if (navbarCollapse) {
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              if (navbarCollapse.classList.contains('show')) {
+                setTimeout(reorganizeMobileMenu, 100);
+              }
+              toggleContactFloatBtn();
+            }
+          });
+        });
+        observer.observe(navbarCollapse, { attributes: true });
+        
+        // También escuchar eventos de Bootstrap
+        navbarCollapse.addEventListener('shown.bs.collapse', function() {
+          reorganizeMobileMenu();
+          toggleContactFloatBtn();
+        });
+        navbarCollapse.addEventListener('hidden.bs.collapse', toggleContactFloatBtn);
+        
+        // Manejar clicks en dropdowns - asegurar que se abran con un solo toque
+        navbarCollapse.addEventListener('click', function(e) {
+          if (window.innerWidth <= 991) {
+            const dropdownToggle = e.target.closest('.dropdown-toggle');
+            if (dropdownToggle) {
+              // NO interferir - dejar que Bootstrap maneje el dropdown normalmente
+              // Reorganizar el menú después de que se abra el dropdown
+              setTimeout(function() {
+                reorganizeMobileMenu();
+              }, 200);
+              return;
+            }
+            
+            // Si se hace click en un item del dropdown, no cerrar el menú principal
+            const dropdownItem = e.target.closest('.dropdown-item');
+            if (dropdownItem) {
+              // Permitir la navegación normal
+              return;
+            }
+            
+            // Cerrar menú móvil automáticamente al hacer clic en enlaces del menú (no dropdowns)
+            const clickedLink = e.target.closest('.nav-link:not(.dropdown-toggle)');
+            if (clickedLink && !clickedLink.hasAttribute('data-toggle')) {
+              // Si el enlace no es un dropdown toggle, cerrar el menú después de un delay
+              setTimeout(function() {
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                  // Usar Bootstrap para cerrar el menú
+                  const navbarToggler = document.querySelector('.navbar-toggler');
+                  if (navbarToggler && typeof $ !== 'undefined' && $.fn.collapse) {
+                    $(navbarCollapse).collapse('hide');
+                  } else {
+                    navbarCollapse.classList.remove('show');
+                    navbarCollapse.style.display = 'none';
+                    navbarCollapse.style.visibility = 'hidden';
+                    navbarCollapse.style.opacity = '0';
+                    // Actualizar aria-expanded del botón
+                    if (navbarToggler) {
+                      navbarToggler.setAttribute('aria-expanded', 'false');
+                    }
+                  }
+                }
+              }, 200);
+            }
+          }
+        });
+        
+        // Observar cuando se abre un dropdown para reorganizar
+        const serviciosDropdown = document.querySelector('.dropdown-menu[aria-labelledby="serviciosDropdown"]');
+        if (serviciosDropdown) {
+          // Observar cambios en la clase 'show' del dropdown para reorganizar
+          const dropdownObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+              if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                if (serviciosDropdown.classList.contains('show')) {
+                  setTimeout(function() {
+                    reorganizeMobileMenu();
+                  }, 100);
+                }
+              }
+            });
+          });
+          dropdownObserver.observe(serviciosDropdown, { attributes: true });
+        }
+        
+        // Inicializar estado del botón flotante
+        toggleContactFloatBtn();
+        
+        // Actualizar cuando cambia el tamaño de la ventana
+        window.addEventListener('resize', toggleContactFloatBtn);
+      }
+    });
+    
     // Forzar ancho del menú del blog
     document.addEventListener('DOMContentLoaded', function() {
       const blogDropdown = document.getElementById('blogDropdown');
@@ -3751,25 +4601,59 @@
           document.head.appendChild(styleElement);
         }
         
+        // Aplicar estilos diferentes para desktop y móvil
         styleElement.textContent = `
-          .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
-          .cid-s48OLK6784 .nav-dropdown .nav-item .nav-link.dropdown-toggle::after,
-          .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
-          .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
-          .cid-s48OLK6784 #serviciosDropdown::after,
-          .cid-s48OLK6784 #blogDropdown::after,
-          #languageDropdown::after {
-            border-top: 5.6px solid #ec0f0f !important;
-            border-right: 5.6px solid transparent !important;
-            border-left: 5.6px solid transparent !important;
-            border-bottom: 0 !important;
-            margin-left: 0.5rem !important;
-            margin-top: 0.2rem !important;
-            width: 0 !important;
-            height: 0 !important;
-            display: inline-block !important;
-            vertical-align: middle !important;
-            content: '' !important;
+          @media (min-width: 992px) {
+            .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 .nav-dropdown .nav-item .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+            .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 #serviciosDropdown::after,
+            .cid-s48OLK6784 #blogDropdown::after,
+            #languageDropdown::after {
+              border-top: 5.6px solid #ec0f0f !important;
+              border-right: 5.6px solid transparent !important;
+              border-left: 5.6px solid transparent !important;
+              border-bottom: 0 !important;
+              margin-left: 0.5rem !important; /* Mantener el margen original en desktop */
+              margin-top: 0.2rem !important;
+              width: 0 !important;
+              height: 0 !important;
+              display: inline-block !important;
+              vertical-align: middle !important;
+              content: '' !important;
+            }
+          }
+          @media (max-width: 991px) {
+            .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown::after,
+            .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown::after,
+            .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 .nav-dropdown .nav-item .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+            .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
+            .cid-s48OLK6784 #serviciosDropdown::after,
+            .cid-s48OLK6784 #blogDropdown::after,
+            /* Sobrescribir específicamente el estilo de dropdown.css línea 90 */
+            .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+            .cid-s48OLK6784 #navbarSupportedContent.show .nav-dropdown .link.dropdown-toggle::after,
+            .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.link.dropdown-toggle::after {
+              border-top: 5.6px solid #ec0f0f !important;
+              border-right: 5.6px solid transparent !important;
+              border-left: 5.6px solid transparent !important;
+              border-bottom: 0 !important;
+              margin-left: 0 !important; /* Sobrescribir el margin-left: .25rem de dropdown.css */
+              margin-right: 0 !important;
+              margin-top: 0.2rem !important;
+              width: 0 !important;
+              height: 0 !important;
+              display: inline-block !important;
+              vertical-align: middle !important;
+              content: '' !important;
+              position: relative !important;
+              left: 0 !important;
+              right: auto !important;
+            }
           }
         `;
       }
@@ -3783,6 +4667,79 @@
       
       // Ejecutar cuando se redimensiona la ventana
       window.addEventListener('resize', forceDropdownArrowSize);
+    });
+    
+    // FORZAR margin-left: 0 en las flechas después de que se carguen todos los CSS
+    // Esto sobrescribe el margin-left: .25rem de assets/dropdown/css/style.css línea 90
+    document.addEventListener('DOMContentLoaded', function() {
+      function forceArrowMarginZero() {
+        if (window.innerWidth <= 991) {
+          // Crear un estilo dinámico con máxima prioridad al final del head
+          const styleId = 'force-arrow-margin-zero-mobile';
+          let styleElement = document.getElementById(styleId);
+          
+          if (!styleElement) {
+            styleElement = document.createElement('style');
+            styleElement.id = styleId;
+            // Insertar al final del head para máxima prioridad
+            document.head.appendChild(styleElement);
+          }
+          
+          // Aplicar con máxima especificidad - usar todos los selectores posibles
+          styleElement.textContent = `
+            @media (max-width: 991px) {
+              /* Sobrescribir el margin-left: .25rem de dropdown.css línea 90 */
+              /* Usar múltiples selectores con máxima especificidad */
+              .cid-s48OLK6784 #navbarSupportedContent.show .nav-dropdown .link.dropdown-toggle::after,
+              .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+              .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
+              .cid-s48OLK6784 #navbarSupportedContent.show #serviciosDropdown::after,
+              .cid-s48OLK6784 #navbarSupportedContent.show #blogDropdown::after,
+              .cid-s48OLK6784 .nav-dropdown .link.dropdown-toggle::after,
+              .cid-s48OLK6784 .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
+              .cid-s48OLK6784 .navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle::after,
+              .cid-s48OLK6784 #serviciosDropdown::after,
+              .cid-s48OLK6784 #blogDropdown::after,
+              /* Selectores adicionales para máxima cobertura */
+              a#serviciosDropdown.dropdown-toggle::after,
+              a#blogDropdown.dropdown-toggle::after,
+              .nav-link.dropdown-toggle#serviciosDropdown::after,
+              .nav-link.dropdown-toggle#blogDropdown::after {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+              }
+            }
+          `;
+        }
+      }
+      
+      // Ejecutar después de que se carguen todos los recursos
+      forceArrowMarginZero();
+      setTimeout(forceArrowMarginZero, 100);
+      setTimeout(forceArrowMarginZero, 500);
+      setTimeout(forceArrowMarginZero, 1000);
+      setTimeout(forceArrowMarginZero, 2000);
+      
+      // Ejecutar cuando el menú móvil se abra
+      const navbarCollapse = document.getElementById('navbarSupportedContent');
+      if (navbarCollapse) {
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              if (navbarCollapse.classList.contains('show')) {
+                setTimeout(forceArrowMarginZero, 100);
+                setTimeout(forceArrowMarginZero, 300);
+              }
+            }
+          });
+        });
+        observer.observe(navbarCollapse, { attributes: true });
+        
+        // También escuchar eventos de Bootstrap
+        navbarCollapse.addEventListener('shown.bs.collapse', function() {
+          setTimeout(forceArrowMarginZero, 100);
+        });
+      }
     });
   </script>
   
