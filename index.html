@@ -1878,6 +1878,14 @@
     }
     /* En móvil, el menú debe estar oculto por defecto */
     @media (max-width: 991px) {
+      /* Resetear estilos de desktop en móvil */
+      .cid-s48OLK6784 .navbar-actions .icons-menu .iconfont-wrapper {
+        position: absolute !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+      }
       .cid-s48OLK6784 .navbar-collapse:not(.show) {
         display: none !important;
         visibility: hidden !important;
@@ -2009,6 +2017,10 @@
         vertical-align: middle !important;
         font-size: 1.1rem !important;
       }
+      /* Resetear estilos de desktop en móvil */
+      .cid-s48OLK6784 .navbar-actions .icons-menu .iconfont-wrapper {
+        position: absolute !important;
+      }
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions,
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions[style] {
         order: 2 !important;
@@ -2035,42 +2047,63 @@
         justify-content: space-between !important;
         gap: 0 !important;
         position: relative !important;
+        min-height: 50px !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
       }
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper {
         position: relative !important;
         margin: 0 !important;
+        margin-left: -22rem !important;
+        margin-top: -1rem !important;
         flex-shrink: 0 !important;
         order: 1 !important;
+        overflow: visible !important;
+        width: auto !important;
+        min-width: auto !important;
       }
-      /* Iconos directamente en navbar-actions */
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .iconfont-wrapper {
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper #languageDropdown {
+        padding-left: 0 !important;
+      }
+      /* Iconos en navbar-actions para móvil - restaurar posición absoluta */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu {
+        position: relative !important;
+        width: 100% !important;
+        height: 50px !important;
+        min-height: 50px !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .iconfont-wrapper,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper {
         display: inline-block !important;
         visibility: visible !important;
         opacity: 1 !important;
         position: absolute !important;
-        z-index: 1000 !important;
+        z-index: 1003 !important;
         flex-shrink: 0 !important;
       }
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions #facebookIconMobile {
-        left: 50% !important;
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions #facebookIconMobile,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu #facebookIconMobile {
+        left: 55% !important;
         top: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, -50%) translateY(-0.5rem) !important;
       }
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions #githubIconMobile {
-        right: 10px !important;
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions #githubIconMobile,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu #githubIconMobile {
+        right: -5px !important;
         top: 50% !important;
-        transform: translateY(-50%) !important;
+        transform: translateY(-50%) translateY(-0.5rem) !important;
       }
       /* Facebook centrado - usando flexbox */
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:first-child,
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"],
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a.iconfont-wrapper[href*="facebook"] {
         position: absolute !important;
-        left: 50% !important;
+        left: 55% !important;
         top: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, -50%) translateY(-0.5rem) !important;
         margin: 0 !important;
-        z-index: 10 !important;
+        z-index: 1003 !important;
         display: inline-block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -2090,11 +2123,11 @@
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="github"],
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a.iconfont-wrapper[href*="github"] {
         position: absolute !important;
-        right: 10px !important;
+        right: -5px !important;
         top: 50% !important;
-        transform: translateY(-50%) !important;
+        transform: translateY(-50%) translateY(-0.5rem) !important;
         margin: 0 !important;
-        z-index: 10 !important;
+        z-index: 1003 !important;
         display: inline-block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -2144,16 +2177,17 @@
         left: 0 !important;
         right: auto !important;
         float: none !important;
-        width: 100% !important;
+        width: auto !important;
+        min-width: 320px !important;
+        max-width: 420px !important;
         margin: 0 !important;
         margin-top: 0.25rem !important;
-        padding: 0 !important;
+        padding: 0.5rem 0 !important;
+        padding-left: 1rem !important;
         border: none !important;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
         background-color: #fff !important;
         transform: none !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
         z-index: 1000 !important;
       }
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"].show {
@@ -2163,7 +2197,8 @@
         display: flex !important;
         align-items: center !important;
         padding: 0.75rem 1rem !important;
-        padding-left: 1rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 1.5rem !important;
         width: 100% !important;
         margin: 0 !important;
         border: none !important;
@@ -2185,7 +2220,11 @@
       }
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
         margin-right: 0.75rem !important;
+        margin-left: 0 !important;
         font-size: 1.2rem !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
       }
       /* Ajustar la flecha del dropdown en móvil para que esté más cerca del texto */
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
@@ -2766,8 +2805,8 @@
                         </div>
                     </li>
                 </ul>
-                <div class="navbar-actions" style="display: flex; align-items: center; gap: 0; flex-shrink: 0 !important; white-space: nowrap !important; margin-left: auto !important; width: 100%; justify-content: space-between; position: relative;">
-                    <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important; order: 1;">
+                <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px; flex-shrink: 0 !important; white-space: nowrap !important; margin-left: auto !important;">
+                    <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important;">
                         <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
                             <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
                         </a>
@@ -2780,14 +2819,14 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Facebook centrado -->
-                    <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile" style="position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; z-index: 1000 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important;">
-                        <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
-                    </a>
-                    <!-- GitHub a la derecha -->
-                    <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile" style="position: absolute !important; right: 10px !important; top: 50% !important; transform: translateY(-50%) !important; z-index: 1000 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important;">
-                        <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
-                    </a>
+                    <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile">
+                            <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
+                        </a>
+                        <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile">
+                            <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
