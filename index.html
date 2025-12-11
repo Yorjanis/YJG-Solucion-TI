@@ -10,8 +10,8 @@
   
   <!-- SEO Meta Tags -->
   <title>YJG Solución TI - Desarrollo de Aplicaciones Móviles, de Escritorio y Páginas Web | Costa Rica</title>
-  <meta name="description" content="YJG Solución TI - Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio, páginas web corporativas, mantenimiento y soporte técnico en Costa Rica. Soluciones tecnológicas integrales.">
-  <meta name="keywords" content="desarrollo aplicaciones móviles, aplicaciones escritorio, páginas web Costa Rica, desarrollo web, aplicaciones desktop, apps móviles iOS Android, mantenimiento web, soporte técnico, YJG Solución TI">
+  <meta name="description" content="YJG Solución TI - Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones: aplicaciones móviles, aplicaciones de escritorio y sistemas web en Costa Rica. Soluciones tecnológicas integrales.">
+  <meta name="keywords" content="software gestión empresarial, productos software, licencias software, SaaS, aplicaciones escritorio, aplicaciones móviles, sistemas web, software Costa Rica, YJG Solución TI">
   <meta name="author" content="YJG Solución TI">
   <meta name="robots" content="index, follow">
   <meta name="language" content="Spanish">
@@ -22,7 +22,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yjgsolucionti.com/">
   <meta property="og:title" content="YJG Solución TI - Desarrollo de Aplicaciones Móviles, de Escritorio y Páginas Web">
-  <meta property="og:description" content="Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio, páginas web, mantenimiento y soporte técnico en Costa Rica.">
+  <meta property="og:description" content="Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles. Aplicaciones móviles, aplicaciones de escritorio y sistemas web en Costa Rica.">
   <meta property="og:image" content="https://yjgsolucionti.com/assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
@@ -32,7 +32,7 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yjgsolucionti.com/">
   <meta property="twitter:title" content="YJG Solución TI - Desarrollo de Aplicaciones Móviles, de Escritorio y Páginas Web">
-  <meta property="twitter:description" content="Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio, páginas web, mantenimiento y soporte técnico en Costa Rica.">
+  <meta property="twitter:description" content="Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles. Aplicaciones móviles, aplicaciones de escritorio y sistemas web en Costa Rica.">
   <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/yjg-solucion-ti-desarrollo-aplicaciones-moviles-escritorio-paginas-web.jpg">
   <meta property="twitter:image:alt" content="YJG Solución TI - Desarrollo de aplicaciones móviles, de escritorio y páginas web en Costa Rica">
   
@@ -2022,7 +2022,7 @@
         padding-right: 0 !important;
         border-top: 1px solid rgba(0,0,0,0.1) !important;
         justify-content: flex-start !important;
-        flex-wrap: wrap !important;
+        flex-wrap: nowrap !important;
         display: flex !important;
         align-items: center !important;
         gap: 15px !important;
@@ -2031,26 +2031,161 @@
         display: flex !important;
         align-items: center !important;
         margin: 0 !important;
-      }
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.5rem !important;
-        margin: 0 !important;
-        flex: 1 !important;
-        justify-content: center !important;
-      }
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:first-child,
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"] {
-        margin-left: 3rem !important;
-      }
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:last-child,
-      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="github"] {
-        margin-left: auto !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        gap: 0 !important;
+        position: relative !important;
       }
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper {
         position: relative !important;
         margin: 0 !important;
+        flex-shrink: 0 !important;
+        order: 1 !important;
+      }
+      /* Iconos directamente en navbar-actions */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .iconfont-wrapper {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        z-index: 1000 !important;
+        flex-shrink: 0 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions #facebookIconMobile {
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions #githubIconMobile {
+        right: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+      /* Facebook centrado - usando flexbox */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:first-child,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"],
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a.iconfont-wrapper[href*="facebook"] {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        z-index: 10 !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+      }
+      /* Forzar visibilidad del icono de Facebook */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"] *,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a.iconfont-wrapper[href*="facebook"] * {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      /* GitHub a la derecha */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper:last-child,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="github"],
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a.iconfont-wrapper[href*="github"] {
+        position: absolute !important;
+        right: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        z-index: 10 !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper span {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper span.socicon-facebook,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu .iconfont-wrapper span.socicon-github {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 1.2rem !important;
+      }
+      /* Asegurar que el icono de Facebook sea visible */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"] span,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="facebook"] .socicon-facebook,
+      #facebookIconMobile,
+      #facebookIconMobile span,
+      #facebookIconMobile .socicon-facebook {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #1877F2 !important;
+        font-size: 1.2rem !important;
+        position: relative !important;
+      }
+      /* Asegurar que el icono de GitHub sea visible */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="github"] span,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .icons-menu a[href*="github"] .socicon-github {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #000000 !important;
+        font-size: 1.2rem !important;
+      }
+      /* Ajustar el dropdown del selector de idiomas en móvil para que funcione como los otros menús */
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] {
+        display: none !important; /* Oculto por defecto */
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        float: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        margin-top: 0.25rem !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        background-color: #fff !important;
+        transform: none !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        z-index: 1000 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"].show {
+        display: block !important; /* Mostrar solo cuando tiene la clase 'show' */
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+        display: flex !important;
+        align-items: center !important;
+        padding: 0.75rem 1rem !important;
+        padding-left: 1rem !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        background-color: #fff !important;
+        color: #333 !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:hover,
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:focus {
+        background-color: rgba(236, 15, 15, 0.1) !important;
+        color: #ec0f0f !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:first-child {
+        border-top-left-radius: 4px !important;
+        border-top-right-radius: 4px !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:last-child {
+        border-bottom-left-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+      }
+      .cid-s48OLK6784 #navbarSupportedContent.show .navbar-actions .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+        margin-right: 0.75rem !important;
+        font-size: 1.2rem !important;
       }
       /* Ajustar la flecha del dropdown en móvil para que esté más cerca del texto */
       .cid-s48OLK6784 #navbarSupportedContent.show .navbar-nav .nav-item .nav-link.dropdown-toggle::after,
@@ -2532,7 +2667,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "YJG Solución TI",
-    "description": "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio, páginas web, mantenimiento y soporte técnico",
+    "description": "Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles",
     "url": "https://yjgsolucionti.com/",
     "logo": "assets/images/logo-yjg-solucion-ti-servicios-informaticos.png",
     "image": "assets/images/logo-yjg-solucion-ti-servicios-informaticos.png",
@@ -2553,8 +2688,7 @@
     "serviceType": [
       "Desarrollo de aplicaciones móviles",
       "Desarrollo de aplicaciones de escritorio",
-      "Desarrollo de páginas web",
-      "Mantenimiento y soporte técnico"
+      "Desarrollo de páginas web"
     ]
   }
   </script>
@@ -2632,8 +2766,8 @@
                         </div>
                     </li>
                 </ul>
-                <div class="navbar-actions" style="display: flex; align-items: center; gap: 15px; flex-shrink: 0 !important; white-space: nowrap !important; margin-left: auto !important;">
-                    <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important;">
+                <div class="navbar-actions" style="display: flex; align-items: center; gap: 0; flex-shrink: 0 !important; white-space: nowrap !important; margin-left: auto !important; width: 100%; justify-content: space-between; position: relative;">
+                    <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important; order: 1;">
                         <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
                             <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
                         </a>
@@ -2646,14 +2780,14 @@
                             </a>
                         </div>
                     </div>
-                    <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
-                    <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="white-space: nowrap !important;">
-                        <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+                    <!-- Facebook centrado -->
+                    <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile" style="position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; z-index: 1000 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important;">
+                        <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
                     </a>
-                    <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="white-space: nowrap !important;">
-                        <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+                    <!-- GitHub a la derecha -->
+                    <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile" style="position: absolute !important; right: 10px !important; top: 50% !important; transform: translateY(-50%) !important; z-index: 1000 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important;">
+                        <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
                     </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -2691,44 +2825,44 @@
     <div class="animated-text-container" style="display: flex !important; align-items: center !important; white-space: nowrap; animation: scroll-horizontal 30s linear infinite; height: 100% !important; margin: 0 !important; padding: 0 !important; line-height: 1 !important;">
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item1">Desarrollo de Aplicaciones Móviles iOS y Android</span>
+            <span data-translate="banner.item1">Software de Aplicaciones Móviles iOS y Android</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item2">Aplicaciones de Escritorio Windows, macOS y Linux</span>
+            <span data-translate="banner.item2">Software de Escritorio Windows, macOS y Linux</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item3">Aplicaciones Web Dinámicas e Interactivas</span>
+            <span data-translate="banner.item3">Software de Aplicaciones Web y SaaS</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item4">Páginas Web Responsive y Modernas</span>
+            <span data-translate="banner.item4">Software de Páginas Web y Plantillas</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item5">Mantenimiento y Soporte Técnico</span>
+            <span data-translate="banner.item5">Licencias y Suscripciones Disponibles</span>
         </div>
         <!-- Duplicar para scroll infinito -->
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item1">Desarrollo de Aplicaciones Móviles iOS y Android</span>
+            <span data-translate="banner.item1">Software de Aplicaciones Móviles iOS y Android</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item2">Aplicaciones de Escritorio Windows, macOS y Linux</span>
+            <span data-translate="banner.item2">Software de Escritorio Windows, macOS y Linux</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item3">Aplicaciones Web Dinámicas e Interactivas</span>
+            <span data-translate="banner.item3">Software de Aplicaciones Web y SaaS</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item4">Páginas Web Responsive y Modernas</span>
+            <span data-translate="banner.item4">Software de Páginas Web y Plantillas</span>
         </div>
         <div class="animated-text-item" style="display: inline-flex !important; align-items: center !important; margin-right: 60px !important; color: #ffffff !important; font-size: 1.1rem !important; font-weight: 600 !important; line-height: 1 !important; padding: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important;">
             <span style="color: #ec0f0f; margin-right: 15px;">●</span>
-            <span data-translate="banner.item5">Mantenimiento y Soporte Técnico</span>
+            <span data-translate="banner.item5">Licencias y Suscripciones Disponibles</span>
         </div>
     </div>
 </section>
@@ -2739,7 +2873,7 @@
         <div class="row justify-content-center">
             <div class="title col-12 col-md-10">
                 <h1 class="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong><em><span style="color: #ec0f0f;">YJG Solución TI</span> - <span data-translate="about.title">Soluciones Tecnológicas Integrales en Costa Rica</span></em></strong></h1>
-                <h2 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7" data-translate="about.subtitle">Somos especialistas en el desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web corporativas y personales. Ofrecemos servicios completos de desarrollo, mantenimiento y soporte técnico para garantizar que tu negocio tenga la mejor presencia digital. Trabajamos con las últimas tecnologías y metodologías para entregar soluciones de alta calidad que se adapten a las necesidades específicas de cada cliente.</h2>
+                <h2 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7" data-translate="about.subtitle">Somos especialistas en software de gestión empresarial. Ofrecemos productos de software listos para usar: aplicaciones móviles, aplicaciones de escritorio y sistemas web. Nuestros productos incluyen licencias de software, suscripciones SaaS y soluciones de gestión empresarial. Paddle actúa como nuestro reseller autorizado, procesando todas las compras de forma segura a través de su plataforma de pagos, con descarga inmediata después del pago y facturación automática. Sin necesidad de contratos para productos estándar.</h2>
             </div>
         </div>
         
@@ -2748,8 +2882,8 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-briefcase mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
-                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.services.title">Nuestros Servicios Principales</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.services.text">Desarrollamos <strong>aplicaciones móviles</strong> nativas e híbridas para iOS y Android, utilizando React Native y otras tecnologías modernas. Creamos <strong>aplicaciones de escritorio</strong> personalizadas para Windows, macOS y Linux. Desarrollamos <strong>aplicaciones web</strong> dinámicas e interactivas con funcionalidades avanzadas. Nuestras <strong>páginas web</strong> están construidas con tecnologías modernas y son completamente responsivas.</p>
+                        <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.services.title">Nuestros Productos Principales</strong></h3>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.services.text" data-translate-html="true">Ofrecemos <strong>productos de software móvil</strong> listos para usar para iOS y Android, desarrollados con React Native y otras tecnologías modernas. Licencias y suscripciones disponibles. Ofrecemos <strong>productos de software de escritorio</strong> multiplataforma para Windows, macOS y Linux con licencias disponibles. Ofrecemos <strong>productos de software web</strong> y aplicaciones SaaS con suscripciones mensuales/anuales. Nuestros <strong>productos de software para páginas web</strong> incluyen plantillas listas para usar, construidas con tecnologías modernas y completamente responsivas.</p>
                     </div>
                 </div>
             </div>
@@ -2759,7 +2893,7 @@
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-code mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
                         <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.tech.title">Tecnologías y Experiencia</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.tech.text">Trabajamos con un amplio stack tecnológico incluyendo Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, frameworks modernos, PHP, MySQL, Node.js, MongoDB, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git.</p>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.tech.text" data-translate-html="true">Trabajamos con un amplio stack tecnológico incluyendo <strong>Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript</strong>, frameworks modernos, <strong>PHP, MySQL, Node.js, MongoDB</strong>, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git. Nuestros productos de software están desarrollados con las mejores prácticas de la industria, garantizando seguridad, escalabilidad y rendimiento óptimo. Mantenemos nuestros productos actualizados con las últimas versiones de las tecnologías para ofrecer soluciones modernas y eficientes.</p>
                     </div>
                 </div>
             </div>
@@ -2769,7 +2903,7 @@
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-setting mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
                         <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.process.title">Proceso de Desarrollo</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.process.text">Seguimos un proceso estructurado desde la consultoría inicial hasta la entrega final. Realizamos análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas, y documentación completa. Mantenemos comunicación constante con nuestros clientes durante todo el ciclo de vida del proyecto.</p>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.process.text" data-translate-html="true">Nuestros productos de software están desarrollados siguiendo un proceso estructurado con <strong>análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas</strong>, y documentación completa. Para nuestros productos de software, ofrecemos <strong>actualizaciones regulares, soporte técnico incluido con la licencia</strong>, y mejoras basadas en feedback de usuarios. Cada producto incluye documentación detallada y guías de implementación para garantizar una configuración exitosa.</p>
                     </div>
                 </div>
             </div>
@@ -2779,7 +2913,7 @@
                     <div class="card-box align-center" style="padding: 2rem; height: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <span class="mbr-iconfont mobi-mbri-star mobi-mbri" style="font-size: 3rem; color: rgb(236, 15, 15); margin-bottom: 1rem;"></span>
                         <h3 class="card-title align-center mbr-black mbr-fonts-style display-7 mb-3"><strong data-translate="about.quality.title">Compromiso con la Calidad</strong></h3>
-                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.quality.text" data-translate-html="true">En <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span> nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo.</p>
+                        <p class="mbr-text mbr-fonts-style display-7" data-translate="about.quality.text" data-translate-html="true">En <span style="color: #ec0f0f; font-weight: bold;">YJG Solución TI</span> nos comprometemos a entregar productos de software de alta calidad que impulsen el crecimiento de tu negocio. Cada producto es desarrollado con atención y dedicación, desde el diseño hasta las actualizaciones incluidas con la licencia.</p>
                     </div>
                 </div>
             </div>
@@ -2850,10 +2984,10 @@
                         <span class="testimonial-star">★</span>
                     </div>
                     <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial1.text">
-                        Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación.
+                        Su alto nivel de servicio al cliente complementó la calidad de sus productos de software. Fueron receptivos, solidarios y comunicativos durante todo el proceso de implementación y uso del software. La licencia que adquirimos ha sido una excelente inversión.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg" alt="Francela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de aplicaciones en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg 200w">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg" alt="Francela - Cliente satisfecha de YJG Solución TI productos de software en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-francela-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Francela</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial1.role">Gerente de Proyectos</p>
@@ -2878,10 +3012,10 @@
                         <span class="testimonial-star">★</span>
                     </div>
                     <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial2.text">
-                        Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas.
+                        Excelente producto de software móvil que adquirimos. El equipo de YJG Solución TI demostró profesionalismo y el software que implementamos es de alta calidad y superó nuestras expectativas. La licencia incluye todas las funcionalidades que necesitábamos.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg" alt="Francine - Cliente satisfecha de YJG Solución TI desarrollo de aplicaciones móviles en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg 200w">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg" alt="Francine - Cliente satisfecha de YJG Solución TI productos de software móvil en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-francine-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Francine</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial2.role">Directora de Tecnología</p>
@@ -2906,10 +3040,10 @@
                         <span class="testimonial-star empty">★</span>
                     </div>
                     <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial3.text">
-                        La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados.
+                        El software de página web que adquirimos para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El producto es moderno, funcional y fácil de usar. La plantilla que incluía la licencia fue perfecta para nuestras necesidades. Muy recomendados.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg" alt="María - Cliente satisfecha de YJG Solución TI desarrollo de páginas web corporativas en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg 200w">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg" alt="María - Cliente satisfecha de YJG Solución TI productos de software de páginas web en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-maria-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">María</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial3.role">Propietaria de Negocio</p>
@@ -2934,10 +3068,10 @@
                         <span class="testimonial-star">★</span>
                     </div>
                     <p class="testimonial-text" itemprop="reviewBody" data-translate="testimonial4.text">
-                        Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente.
+                        Adquirir los productos de software de YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa de la implementación y uso del software. Definitivamente adquiriremos más licencias en el futuro.
                     </p>
                     <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg" alt="Pamela - Cliente satisfecha de YJG Solución TI servicios de desarrollo de software en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg 200w">
+                        <img src="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg" alt="Pamela - Cliente satisfecha de YJG Solución TI productos de software en Costa Rica" class="testimonial-photo" itemprop="image" loading="lazy" width="100" height="100" sizes="100px" srcset="assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg 100w, assets/images/yjg-solucion-ti-testimonio-cliente-pamela-costa-rica.jpg 200w">
                         <div class="testimonial-info">
                             <h4 class="testimonial-name" itemprop="name">Pamela</h4>
                             <p class="testimonial-role" itemprop="jobTitle" data-translate="testimonial4.role">CEO de Empresa</p>
@@ -3045,8 +3179,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-12 text-center">
-                <h2 class="section-title" style="color: #ec0f0f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;" data-translate="projects.title">Últimos Proyectos</h2>
-                <p class="section-subtitle" style="color: #5a6c7d; font-size: 1.2rem; max-width: 600px; margin: 0 auto;" data-translate="projects.subtitle">Conoce nuestros proyectos más recientes y las soluciones tecnológicas que hemos desarrollado</p>
+                <h2 class="section-title" style="color: #ec0f0f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;" data-translate="projects.title">Nuestros Productos de Software</h2>
+                <p class="section-subtitle" style="color: #5a6c7d; font-size: 1.2rem; max-width: 600px; margin: 0 auto;" data-translate="projects.subtitle">Conoce nuestros productos de software disponibles con licencias y suscripciones. Soluciones tecnológicas listas para usar para tu negocio.</p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -3119,7 +3253,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-code mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.desktop.title">Aplicaciones de Escritorio</em></strong><br><br><span data-translate="services.desktop.description">Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio.</span><br><br><strong><br></strong></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.desktop.title">Aplicaciones de Escritorio</em></strong><br><br><span data-translate="services.desktop.description">Software de escritorio multiplataforma para Windows, macOS y Linux. Productos de software listos para usar con licencias disponibles. Soluciones robustas y eficientes para tu negocio.</span><br><br><strong><br></strong></h4>
                     </div>
                 </div>
             </div>
@@ -3127,7 +3261,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-devices mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.webpages.title">Páginas Web</em></strong><div><br></div><div data-translate="services.webpages.description">Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno.</div><div><br><br><strong><br></strong></div></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.webpages.title">Páginas Web</em></strong><div><br></div><div data-translate="services.webpages.description">Software de creación de páginas web y plantillas listas para usar. Productos digitales con licencias para páginas web corporativas, personales y portafolios. Diseño responsive y moderno.</div><div><br><br><strong><br></strong></div></h4>
                     </div>
                 </div>
             </div>
@@ -3135,7 +3269,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-website-theme mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.webapps.title">Aplicaciones Web</em></strong><div><br></div><div data-translate="services.webapps.description">Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas.</div><div><br><br><strong><br></strong></div></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.webapps.title">Aplicaciones Web</em></strong><div><br></div><div data-translate="services.webapps.description">Software de gestión empresarial y aplicaciones web SaaS. Productos de software con suscripciones mensuales/anuales. Sistemas de gestión, aplicaciones web progresivas (PWA) y plataformas web listas para usar.</div><div><br><br><strong><br></strong></div></h4>
                     </div>
                 </div>
             </div>
@@ -3143,7 +3277,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-globe-2 mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.mobile.title">Aplicaciones Móviles</em></strong><div><br></div><div data-translate="services.mobile.description">Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad.</div></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong><em data-translate="services.mobile.title">Aplicaciones Móviles</em></strong><div><br></div><div data-translate="services.mobile.description">Software de aplicaciones móviles para iOS y Android. Productos de software con licencias y suscripciones disponibles. Apps listas para usar desarrolladas con tecnologías modernas.</div></h4>
                     </div>
                 </div>
             </div>
@@ -3581,7 +3715,7 @@
           home: "Inicio",
           about: "Acerca de",
           contact: "Contacto",
-          services: "Servicio",
+          services: "Productos",
           desktop: "Aplicaciones de Escritorio",
           webpages: "Páginas Web",
           webapps: "Aplicaciones Web",
@@ -3604,67 +3738,67 @@
           next: "Next"
         },
         testimonial1: {
-          text: "Su alto nivel de servicio al cliente complementó su experiencia técnica. Fueron receptivos, solidarios y comunicativos durante todo el proceso de desarrollo de nuestra aplicación.",
+          text: "Su alto nivel de servicio al cliente complementó la calidad de sus productos de software. Fueron receptivos, solidarios y comunicativos durante todo el proceso de implementación y uso del software. La licencia que adquirimos ha sido una excelente inversión.",
           role: "Gerente de Proyectos"
         },
         testimonial2: {
-          text: "Excelente trabajo en el desarrollo de nuestra aplicación móvil. El equipo de YJG Solución TI demostró profesionalismo y entregó un producto de alta calidad que superó nuestras expectativas.",
+          text: "Excelente producto de software móvil que adquirimos. El equipo de YJG Solución TI demostró profesionalismo y el software que implementamos es de alta calidad y superó nuestras expectativas. La licencia incluye todas las funcionalidades que necesitábamos.",
           role: "Directora de Tecnología"
         },
         testimonial3: {
-          text: "La página web que desarrollaron para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El diseño es moderno, funcional y fácil de usar. Muy recomendados.",
+          text: "El software de página web que adquirimos para nuestro negocio ha mejorado significativamente nuestra presencia en línea. El producto es moderno, funcional y fácil de usar. La plantilla que incluía la licencia fue perfecta para nuestras necesidades. Muy recomendados.",
           role: "Propietaria de Negocio"
         },
         testimonial4: {
-          text: "Trabajar con YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa del proyecto. Definitivamente los contrataremos nuevamente.",
+          text: "Adquirir los productos de software de YJG Solución TI fue una experiencia excepcional. Su atención al detalle y compromiso con la calidad se reflejó en cada etapa de la implementación y uso del software. Definitivamente adquiriremos más licencias en el futuro.",
           role: "CEO de Empresa"
         },
         projects: {
-          title: "Últimos Proyectos",
-          subtitle: "Conoce nuestros proyectos más recientes y las soluciones tecnológicas que hemos desarrollado",
-          readMore: "Leer más →",
+          title: "Nuestros Productos de Software",
+          subtitle: "Conoce nuestros productos de software disponibles con licencias y suscripciones. Soluciones tecnológicas listas para usar para tu negocio.",
+          readMore: "Ver Producto →",
           optiControl: {
-            date: "📅 Diciembre 2025",
+            date: "📅 Disponible desde Diciembre 2025",
             title: "OptiControl - Sistema de Gestión Oftalmológica",
-            description: "Sistema integral de gestión para clínicas oftalmológicas. Aplicación de escritorio y web multiplataforma con funcionalidad híbrida online/offline para Linux, Windows y macOS.",
-            tag: "💻 Aplicación de Escritorio y Web"
+            description: "Producto de software integral de gestión para clínicas oftalmológicas. Software de escritorio y web multiplataforma con funcionalidad híbrida online/offline para Linux, Windows y macOS. Licencias disponibles.",
+            tag: "💻 Software de Escritorio y Web"
           },
           restoControl: {
-            date: "📅 Diciembre 2025",
+            date: "📅 Disponible desde Diciembre 2025",
             title: "RestoControl - Sistema de Gestión de Restaurantes",
-            description: "Sistema integral de gestión para restaurantes con control de pedidos, mesas, inventario, empleados y reportes. Aplicación web y de escritorio multiplataforma.",
-            tag: "🍽️ Sistema de Gestión"
+            description: "Producto de software integral de gestión para restaurantes con control de pedidos, mesas, inventario, empleados y reportes. Software web y de escritorio multiplataforma. Licencias y suscripciones disponibles.",
+            tag: "🍽️ Software de Gestión"
           },
           hotelControl: {
-            date: "📅 Diciembre 2025",
+            date: "📅 Disponible desde Diciembre 2025",
             title: "HotelControl - Sistema de Gestión Hotelera",
-            description: "Sistema integral de gestión para hoteles con control de reservas, huéspedes, habitaciones, check-in/check-out, servicios y reportes. Aplicación web y de escritorio multiplataforma.",
-            tag: "🏨 Sistema de Gestión"
+            description: "Producto de software integral de gestión para hoteles con control de reservas, huéspedes, habitaciones, check-in/check-out, servicios y reportes. Software web y de escritorio multiplataforma. Licencias y suscripciones disponibles.",
+            tag: "🏨 Software de Gestión"
           }
         },
         about: {
           title: "Soluciones Tecnológicas Integrales en Costa Rica",
-          subtitle: "Somos especialistas en el desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web corporativas y personales. Ofrecemos servicios completos de desarrollo, mantenimiento y soporte técnico para garantizar que tu negocio tenga la mejor presencia digital. Trabajamos con las últimas tecnologías y metodologías para entregar soluciones de alta calidad que se adapten a las necesidades específicas de cada cliente.",
+          subtitle: "Somos especialistas en software de gestión empresarial. Ofrecemos productos de software listos para usar: aplicaciones móviles, aplicaciones de escritorio y sistemas web. Nuestros productos incluyen licencias de software, suscripciones SaaS y soluciones de gestión empresarial. Paddle actúa como nuestro reseller autorizado, procesando todas las compras de forma segura a través de su plataforma de pagos, con descarga inmediata después del pago y facturación automática. Sin necesidad de contratos para productos estándar.",
           services: {
-            title: "Nuestros Servicios Principales",
-            text: "Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android, utilizando React Native y otras tecnologías modernas. Creamos aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Desarrollamos aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Nuestras páginas web están construidas con tecnologías modernas y son completamente responsivas."
+            title: "Nuestros Productos Principales",
+            text: "Ofrecemos <strong>productos de software móvil</strong> listos para usar para iOS y Android, desarrollados con React Native y otras tecnologías modernas. Licencias y suscripciones disponibles. Ofrecemos <strong>productos de software de escritorio</strong> multiplataforma para Windows, macOS y Linux con licencias disponibles. Ofrecemos <strong>productos de software web</strong> y aplicaciones SaaS con suscripciones mensuales/anuales. Nuestros <strong>productos de software para páginas web</strong> incluyen plantillas listas para usar, construidas con tecnologías modernas y completamente responsivas."
           },
           tech: {
             title: "Tecnologías y Experiencia",
-            text: "Trabajamos con un amplio stack tecnológico incluyendo Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, frameworks modernos, PHP, MySQL, Node.js, MongoDB, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git."
+            text: "Trabajamos con un amplio stack tecnológico incluyendo <strong>Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript</strong>, frameworks modernos, <strong>PHP, MySQL, Node.js, MongoDB</strong>, y múltiples lenguajes de programación. Utilizamos metodologías ágiles y control de versiones con Git. Nuestros productos de software están desarrollados con las mejores prácticas de la industria, garantizando seguridad, escalabilidad y rendimiento óptimo. Mantenemos nuestros productos actualizados con las últimas versiones de las tecnologías para ofrecer soluciones modernas y eficientes."
           },
           process: {
             title: "Proceso de Desarrollo",
-            text: "Seguimos un proceso estructurado desde la consultoría inicial hasta la entrega final. Realizamos análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas, y documentación completa. Mantenemos comunicación constante con nuestros clientes durante todo el ciclo de vida del proyecto."
+            text: "Nuestros productos de software están desarrollados siguiendo un proceso estructurado con <strong>análisis de requisitos, diseño de arquitectura, desarrollo iterativo con pruebas continuas</strong>, y documentación completa. Para nuestros productos de software, ofrecemos <strong>actualizaciones regulares, soporte técnico incluido con la licencia</strong>, y mejoras basadas en feedback de usuarios. Cada producto incluye documentación detallada y guías de implementación para garantizar una configuración exitosa."
           },
           quality: {
             title: "Compromiso con la Calidad",
-            text: "En <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span> nos comprometemos a entregar soluciones tecnológicas de alta calidad que impulsen el crecimiento de tu negocio. Cada proyecto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta el mantenimiento continuo."
+            text: "En <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span> nos comprometemos a entregar <strong>productos de software de alta calidad</strong> que impulsen el crecimiento de tu negocio. Cada producto es único y lo tratamos con la atención y dedicación que merece, desde la planificación hasta las actualizaciones continuas. Garantizamos que todos nuestros productos de software cumplan con los más altos estándares de calidad, seguridad y rendimiento. Ofrecemos <strong>garantías de funcionamiento, soporte técnico incluido con la licencia</strong>, y actualizaciones continuas para mantener nuestros productos al día con las necesidades del mercado."
           }
         },
         contact: {
           title: "Contacta con Nosotros",
-          subtitle: "Estamos listos para ayudarte a llevar tu negocio al siguiente nivel",
+          subtitle: "Estamos listos para ayudarte a encontrar el producto de software perfecto para tu negocio. Consulta sobre licencias y suscripciones disponibles.",
           form: {
             name: "Nombre",
             email: "E-mail",
@@ -3694,19 +3828,19 @@
         services: {
           desktop: {
             title: "Aplicaciones de Escritorio",
-            description: "Desarrollo de aplicaciones de escritorio personalizadas para Windows, macOS y Linux. Soluciones robustas y eficientes para tu negocio."
+            description: "Software de escritorio multiplataforma para Windows, macOS y Linux. Productos de software listos para usar con licencias disponibles. Soluciones robustas y eficientes para tu negocio."
           },
           webpages: {
             title: "Páginas Web",
-            description: "Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno."
+            description: "Software de creación de páginas web y plantillas listas para usar. Productos digitales con licencias para páginas web corporativas, personales y portafolios. Diseño responsive y moderno."
           },
           webapps: {
             title: "Aplicaciones Web",
-            description: "Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas."
+            description: "Software de gestión empresarial y aplicaciones web SaaS. Productos de software con suscripciones mensuales/anuales. Sistemas de gestión, aplicaciones web progresivas (PWA) y plataformas web listas para usar."
           },
           mobile: {
             title: "Aplicaciones Móviles",
-            description: "Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android. Utilizamos React Native y tecnologías modernas para crear apps de alta calidad."
+            description: "Software de aplicaciones móviles para iOS y Android. Productos de software con licencias y suscripciones disponibles. Apps listas para usar desarrolladas con tecnologías modernas."
           }
         },
         clients: {
@@ -3716,24 +3850,24 @@
           title: "Mapa"
         },
         banner: {
-          item1: "Desarrollo de Aplicaciones Móviles iOS y Android",
-          item2: "Aplicaciones de Escritorio Windows, macOS y Linux",
-          item3: "Aplicaciones Web Dinámicas e Interactivas",
-          item4: "Páginas Web Responsive y Modernas",
-          item5: "Mantenimiento y Soporte Técnico"
+          item1: "Software de Aplicaciones Móviles iOS y Android",
+          item2: "Software de Escritorio Windows, macOS y Linux",
+          item3: "Software de Aplicaciones Web y SaaS",
+          item4: "Software de Páginas Web y Plantillas",
+          item5: "Licencias y Suscripciones Disponibles"
         },
         footer: {
-          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica.",
+          description: "Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles. Soluciones tecnológicas integrales en Costa Rica.",
           usefulLinks: "Enlaces Útiles",
           privacy: "Política de Privacidad",
           terms: "Términos y Condiciones",
           additionalInfo: "Información Adicional",
-          serviceArea: "Área de Servicio:",
+          serviceArea: "Disponibilidad:",
           serviceAreaValue: "Costa Rica y Exterior",
-          methodology: "Metodología:",
-          methodologyValue: "Desarrollo Ágil",
+          methodology: "Tipo de Producto:",
+          methodologyValue: "Software con Licencias y Suscripciones",
           warranty: "Garantía:",
-          warrantyValue: "Soporte post-entrega",
+          warrantyValue: "Soporte técnico incluido con licencias",
           response: "Respuesta:",
           responseValue: "En menos de 24 horas",
           followUs: "Síguenos",
@@ -3745,7 +3879,7 @@
           home: "Home",
           about: "About",
           contact: "Contact",
-          services: "Services",
+          services: "Products",
           desktop: "Desktop Applications",
           webpages: "Web Pages",
           webapps: "Web Applications",
@@ -3754,6 +3888,10 @@
           blogOptiControl: "OptiControl - Ophthalmology Management System",
           blogRestoControl: "RestoControl - Restaurant Management System",
           blogHotelControl: "HotelControl - Hotel Management System"
+        },
+        about: {
+          title: "Comprehensive Technological Solutions in Costa Rica",
+          subtitle: "We are specialists in business management software. We offer ready-to-use software products: mobile applications, desktop applications, and web systems. Our products include software licenses, SaaS subscriptions, and business management solutions. Paddle acts as our authorized reseller, processing all purchases securely through their payment platform, with immediate download after payment and automatic billing. No contracts required for standard products."
         },
         stats: {
           projects: "Completed Projects",
@@ -3768,67 +3906,67 @@
           next: "Next"
         },
         testimonial1: {
-          text: "Their high level of customer service complemented their technical expertise. They were responsive, supportive, and communicative throughout the entire development process of our application.",
+          text: "Their high level of customer service complemented the quality of their software products. They were responsive, supportive, and communicative throughout the entire software implementation and usage process. The license we purchased has been an excellent investment.",
           role: "Project Manager"
         },
         testimonial2: {
-          text: "Excellent work on the development of our mobile application. The YJG Solución TI team demonstrated professionalism and delivered a high-quality product that exceeded our expectations.",
+          text: "Excellent mobile software product we purchased. The YJG Solución TI team demonstrated professionalism and the software we implemented is high quality and exceeded our expectations. The license includes all the features we needed.",
           role: "Technology Director"
         },
         testimonial3: {
-          text: "The website they developed for our business has significantly improved our online presence. The design is modern, functional, and easy to use. Highly recommended.",
+          text: "The web page software we purchased for our business has significantly improved our online presence. The product is modern, functional, and easy to use. The template included with the license was perfect for our needs. Highly recommended.",
           role: "Business Owner"
         },
         testimonial4: {
-          text: "Working with YJG Solución TI was an exceptional experience. Their attention to detail and commitment to quality was reflected in every stage of the project. We will definitely hire them again.",
+          text: "Purchasing YJG Solución TI's software products was an exceptional experience. Their attention to detail and commitment to quality was reflected in every stage of software implementation and usage. We will definitely purchase more licenses in the future.",
           role: "Company CEO"
         },
         projects: {
-          title: "Latest Projects",
-          subtitle: "Discover our most recent projects and the technological solutions we have developed",
-          readMore: "Read more →",
+          title: "Our Software Products",
+          subtitle: "Discover our available software products with licenses and subscriptions. Ready-to-use technological solutions for your business.",
+          readMore: "View Product →",
           optiControl: {
-            date: "📅 December 2025",
+            date: "📅 Available since December 2025",
             title: "OptiControl - Ophthalmology Management System",
-            description: "Comprehensive management system for ophthalmology clinics. Cross-platform desktop and web application with hybrid online/offline functionality for Linux, Windows, and macOS.",
-            tag: "💻 Desktop and Web Application"
+            description: "Comprehensive software product for ophthalmology clinic management. Cross-platform desktop and web software with hybrid online/offline functionality for Linux, Windows, and macOS. Licenses available.",
+            tag: "💻 Desktop and Web Software"
           },
           restoControl: {
-            date: "📅 December 2025",
+            date: "📅 Available since December 2025",
             title: "RestoControl - Restaurant Management System",
-            description: "Comprehensive management system for restaurants with order control, tables, inventory, employees, and reports. Cross-platform web and desktop application.",
-            tag: "🍽️ Management System"
+            description: "Comprehensive software product for restaurant management with order control, tables, inventory, employees, and reports. Cross-platform web and desktop software. Licenses and subscriptions available.",
+            tag: "🍽️ Management Software"
           },
           hotelControl: {
-            date: "📅 December 2025",
+            date: "📅 Available since December 2025",
             title: "HotelControl - Hotel Management System",
-            description: "Comprehensive management system for hotels with reservation control, guests, rooms, check-in/check-out, services, and reports. Cross-platform web and desktop application.",
-            tag: "🏨 Management System"
+            description: "Comprehensive software product for hotel management with reservation control, guests, rooms, check-in/check-out, services, and reports. Cross-platform web and desktop software. Licenses and subscriptions available.",
+            tag: "🏨 Management Software"
           }
         },
         about: {
           title: "Comprehensive Technological Solutions in Costa Rica",
-          subtitle: "We are specialists in the development of mobile applications, desktop applications, and corporate and personal websites. We offer complete development, maintenance, and technical support services to ensure your business has the best digital presence. We work with the latest technologies and methodologies to deliver high-quality solutions that adapt to the specific needs of each client.",
+          subtitle: "We are specialists in business management software. We offer ready-to-use software products: mobile applications, desktop applications, and web systems. Our products include software licenses, SaaS subscriptions, and business management solutions. Paddle acts as our authorized reseller, processing all purchases securely through their payment platform, with immediate download after payment and automatic billing. No contracts required for standard products.",
           services: {
-            title: "Our Main Services",
-            text: "We develop native and hybrid mobile applications for iOS and Android, using React Native and other modern technologies. We create customized desktop applications for Windows, macOS, and Linux. We develop dynamic and interactive web applications with advanced functionalities. Our websites are built with modern technologies and are fully responsive."
+            title: "Our Main Products",
+            text: "We offer <strong>ready-to-use mobile software products</strong> for iOS and Android, developed with React Native and other modern technologies. Licenses and subscriptions available. We offer <strong>cross-platform desktop software products</strong> for Windows, macOS, and Linux with available licenses. We offer <strong>web software products</strong> and SaaS applications with monthly/annual subscriptions. Our <strong>web page software products</strong> include ready-to-use templates, built with modern technologies and fully responsive."
           },
           tech: {
             title: "Technologies and Experience",
-            text: "We work with a wide technological stack including Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript, modern frameworks, PHP, MySQL, Node.js, MongoDB, and multiple programming languages. We use agile methodologies and version control with Git."
+            text: "We work with a wide technological stack including <strong>Laravel, React.js, React Native, Python, HTML5, CSS3, JavaScript</strong>, modern frameworks, <strong>PHP, MySQL, Node.js, MongoDB</strong>, and multiple programming languages. We use agile methodologies and version control with Git. Our software products are developed following industry best practices, ensuring security, scalability, and optimal performance. We keep our products updated with the latest technology versions to offer modern and efficient solutions."
           },
           process: {
             title: "Development Process",
-            text: "We follow a structured process from initial consultation to final delivery. We perform requirements analysis, architecture design, iterative development with continuous testing, and complete documentation. We maintain constant communication with our clients throughout the entire project lifecycle."
+            text: "Our software products are developed following a structured process with <strong>requirements analysis, architecture design, iterative development with continuous testing</strong>, and complete documentation. For our software products, we offer <strong>regular updates, technical support included with the license</strong>, and improvements based on user feedback. Each product includes detailed documentation and implementation guides to ensure successful setup."
           },
           quality: {
             title: "Commitment to Quality",
-            text: "At <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span> we are committed to delivering high-quality technological solutions that drive your business growth. Each project is unique and we treat it with the attention and dedication it deserves, from planning to continuous maintenance."
+            text: "At <span style=\"color: #ec0f0f; font-weight: bold;\">YJG Solución TI</span> we are committed to delivering <strong>high-quality software products</strong> that drive your business growth. Each product is unique and we treat it with the attention and dedication it deserves, from planning to continuous updates. We guarantee that all our software products meet the highest standards of quality, security, and performance. We offer <strong>functionality guarantees, technical support included with the license</strong>, and continuous updates to keep our products up to date with market needs."
           }
         },
         contact: {
           title: "Contact Us",
-          subtitle: "We are ready to help you take your business to the next level",
+          subtitle: "We are ready to help you find the perfect software product for your business. Inquire about available licenses and subscriptions.",
           form: {
             name: "Name",
             email: "E-mail",
@@ -3858,19 +3996,19 @@
         services: {
           desktop: {
             title: "Desktop Applications",
-            description: "Development of custom desktop applications for Windows, macOS, and Linux. Robust and efficient solutions for your business."
+            description: "Cross-platform desktop software for Windows, macOS, and Linux. Ready-to-use software products with available licenses. Robust and efficient solutions for your business."
           },
           webpages: {
             title: "Web Pages",
-            description: "Design and development of corporate, personal, portfolio, and informational websites. Responsive and modern design."
+            description: "Web page creation software and ready-to-use templates. Digital products with licenses for corporate, personal, and portfolio websites. Responsive and modern design."
           },
           webapps: {
             title: "Web Applications",
-            description: "Development of dynamic and interactive web applications with advanced functionalities. Progressive web applications (PWA), management systems, and custom web platforms."
+            description: "Business management software and SaaS web applications. Software products with monthly/annual subscriptions. Management systems, progressive web applications (PWA), and ready-to-use web platforms."
           },
           mobile: {
             title: "Mobile Applications",
-            description: "Development of native and hybrid mobile applications for iOS and Android. We use React Native and modern technologies to create high-quality apps."
+            description: "Mobile application software for iOS and Android. Software products with licenses and subscriptions available. Ready-to-use apps developed with modern technologies."
           }
         },
         clients: {
@@ -3880,24 +4018,24 @@
           title: "Map"
         },
         banner: {
-          item1: "iOS and Android Mobile Application Development",
-          item2: "Windows, macOS and Linux Desktop Applications",
-          item3: "Dynamic and Interactive Web Applications",
-          item4: "Responsive and Modern Web Pages",
-          item5: "Maintenance and Technical Support"
+          item1: "iOS and Android Mobile Application Software",
+          item2: "Windows, macOS and Linux Desktop Software",
+          item3: "Web Application Software and SaaS",
+          item4: "Web Page Software and Templates",
+          item5: "Licenses and Subscriptions Available"
         },
         footer: {
-          description: "Specialists in mobile application development, desktop applications, and web pages. Comprehensive technological solutions in Costa Rica.",
+          description: "Specialists in business management software. Software products with licenses and subscriptions available. Comprehensive technological solutions in Costa Rica.",
           usefulLinks: "Useful Links",
           privacy: "Privacy Policy",
           terms: "Terms and Conditions",
           additionalInfo: "Additional Information",
-          serviceArea: "Service Area:",
+          serviceArea: "Availability:",
           serviceAreaValue: "Costa Rica and Abroad",
-          methodology: "Methodology:",
-          methodologyValue: "Agile Development",
+          methodology: "Product Type:",
+          methodologyValue: "Software with Licenses and Subscriptions",
           warranty: "Warranty:",
-          warrantyValue: "Post-delivery support",
+          warrantyValue: "Technical support included with licenses",
           response: "Response:",
           responseValue: "In less than 24 hours",
           followUs: "Follow Us",

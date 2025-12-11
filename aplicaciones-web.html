@@ -9,9 +9,9 @@
   <link rel="shortcut icon" href="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" type="image/x-icon">
   
   <!-- SEO Meta Tags -->
-  <title>Aplicaciones Web - YJG Solución TI | Desarrollo de Aplicaciones Web Dinámicas</title>
-  <meta name="description" content="Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas.">
-  <meta name="keywords" content="aplicaciones web, desarrollo web, PWA, aplicaciones web progresivas, sistemas gestión web, plataformas web, YJG Solución TI">
+  <title>Software de Aplicaciones Web y SaaS - YJG Solución TI | Productos de Software Web</title>
+  <meta name="description" content="Software de gestión empresarial y aplicaciones web SaaS. Productos de software con suscripciones mensuales/anuales. Sistemas de gestión, aplicaciones web progresivas (PWA) y plataformas web listas para usar.">
+  <meta name="keywords" content="software web, SaaS, productos software web, suscripciones software, sistemas gestión, PWA, plataformas web, software empresarial, YJG Solución TI">
   <meta name="author" content="YJG Solución TI">
   <meta name="robots" content="index, follow">
   
@@ -19,14 +19,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yjgsolucionti.com/aplicaciones-web.html">
   <meta property="og:title" content="Aplicaciones Web - YJG Solución TI">
-  <meta property="og:description" content="Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas.">
+  <meta property="og:description" content="Software de gestión empresarial y aplicaciones web SaaS. Productos de software con suscripciones disponibles.">
   <meta property="og:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yjgsolucionti.com/aplicaciones-web.html">
   <meta property="twitter:title" content="Aplicaciones Web - YJG Solución TI">
-  <meta property="twitter:description" content="Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas.">
+  <meta property="twitter:description" content="Software de gestión empresarial y aplicaciones web SaaS. Productos de software con suscripciones disponibles.">
   <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
   
   <!-- Canonical URL -->
@@ -320,7 +320,7 @@
     .dropdown-menu[aria-labelledby="languageDropdown"] {
       min-width: 150px;
       padding: 0.5rem 0;
-      z-index: 1002 !important;
+      z-index: 1001 !important;
       display: none !important;
     }
     .dropdown-menu[aria-labelledby="languageDropdown"].show {
@@ -369,6 +369,110 @@
       .custom-navbar-menu.active .navbar-actions-mobile {
         display: block !important;
       }
+      /* Estilos para iconos móviles */
+      .navbar-actions-mobile {
+        overflow: visible !important;
+        position: relative !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .navbar-actions-mobile > div {
+        overflow: visible !important;
+        position: relative !important;
+        height: 50px !important;
+        min-height: 50px !important;
+        max-height: 50px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper {
+        position: relative !important;
+        z-index: 1002 !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        width: calc(100vw - 2rem) !important;
+        max-width: calc(100vw - 2rem) !important;
+        margin-top: 0.25rem !important;
+        margin-left: -1rem !important;
+        padding: 0.5rem 0 !important;
+        padding-left: 0 !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+        z-index: 1001 !important;
+        border-radius: 4px !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu .dropdown-item {
+        padding-left: 0.5rem !important;
+        padding-right: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:not(:first-child) {
+        margin-left: -15rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+        gap: 0 !important;
+      }
+      /* Sobrescribir regla general que establece margin-right: 8px */
+      @media (max-width: 991px) {
+        .navbar-actions-mobile .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+          margin-right: 0 !important;
+        }
+      }
+      .navbar-actions-mobile .iconfont-wrapper {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        z-index: 1003 !important;
+        flex-shrink: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+      .navbar-actions-mobile #facebookIconMobile {
+        left: 85% !important;
+        transform: translate(-50%, -50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      .navbar-actions-mobile #githubIconMobile {
+        right: -290px !important;
+        transform: translateY(-50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      /* Asegurar que los iconos sean visibles */
+      #facebookIconMobile,
+      #facebookIconMobile span,
+      #facebookIconMobile .socicon-facebook {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #1877F2 !important;
+        font-size: 1.2rem !important;
+      }
+      #githubIconMobile,
+      #githubIconMobile span,
+      #githubIconMobile .socicon-github {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #000000 !important;
+        font-size: 1.2rem !important;
+      }
     }
     @media (min-width: 992px) {
       /* Ocultar iconos del menú hamburguesa en desktop */
@@ -403,6 +507,7 @@
         padding: 1rem;
         display: none;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        overflow: visible !important;
       }
       .custom-navbar-menu.active {
         display: flex;
@@ -412,6 +517,12 @@
         margin-left: 0 !important; /* Resetear margin-left en móvil */
         display: flex !important;
         flex-direction: column !important;
+        box-sizing: border-box !important;
+      }
+      .custom-navbar-menu li.navbar-actions-mobile {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
       }
       .custom-navbar-menu li:first-child,
       .custom-navbar-menu li:first-of-type {
@@ -688,29 +799,30 @@
           </ul>
         </li>
         <!-- Iconos dentro del menú hamburguesa -->
-        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-          <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <div class="language-selector-wrapper" style="position: relative;">
-              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
+        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; padding-left: 1rem !important; padding-right: 1rem !important; border-top: 1px solid rgba(0,0,0,0.1); position: relative; min-height: 50px; overflow: visible !important; box-sizing: border-box !important;">
+          <div style="display: flex; align-items: center; gap: 0; flex-shrink: 0 !important; white-space: nowrap !important; width: 100%; max-width: 100%; justify-content: space-between; position: relative; min-height: 50px; overflow: visible !important; padding-left: 0; padding-right: 0; box-sizing: border-box !important;">
+            <!-- Selector de idiomas a la izquierda -->
+            <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important; order: 1; padding-left: 0; margin-left: -1rem; margin-top: -1rem; overflow: visible !important; width: auto; min-width: auto;">
+              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; padding-left: 0.1rem !important; display: flex; align-items: center; justify-content: flex-start; gap: 0.3rem; text-decoration: none; position: relative;">
                 <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
-                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px; position: absolute; top: 100%; left: 0; right: auto; margin-top: 0.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); background-color: #fff; z-index: 1001 !important;">
+                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇪🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">Español</span>
                 </a>
-                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇺🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">English</span>
                 </a>
               </div>
             </div>
-            <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
-              <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
-              </a>
-              <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
-              </a>
-            </div>
+            <!-- Facebook centrado -->
+            <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile" style="position: absolute !important; left: 85% !important; top: 50% !important; transform: translate(-50%, -50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
+            <!-- GitHub a la derecha -->
+            <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile" style="position: absolute !important; right: -290px !important; top: 50% !important; transform: translateY(-50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
           </div>
         </li>
       </ul>
@@ -853,6 +965,79 @@
             </div>
         </div>
         
+        <!-- Sección de Precios y Suscripciones -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4" style="color: #2c3e50;"><strong data-translate="services.webapps.pricing.title">Suscripciones y Precios</strong></h2>
+                <p class="text-center mb-5" style="color: #666;" data-translate="services.webapps.pricing.subtitle">Productos de software SaaS con suscripciones disponibles</p>
+                
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100" style="border: 2px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <div class="card-body text-center" style="padding: 2rem;">
+                                <h4 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.webapps.pricing.basic.name">Suscripción Básica</strong></h4>
+                                <div class="mb-3">
+                                    <span class="display-4" style="color: #2c3e50; font-weight: bold;" data-translate="services.webapps.pricing.basic.price">Desde $49</span>
+                                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;" data-translate="services.webapps.pricing.basic.period">mensual</p>
+                                </div>
+                                <ul class="list-unstyled text-left" style="margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.basic.features.0">Acceso completo al software</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.basic.features.1">Soporte técnico por email</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.basic.features.2">Actualizaciones incluidas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.basic.features.3">Hasta 5 usuarios</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.basic.features.4">Documentación completa</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100" style="border: 2px solid #ec0f0f; border-radius: 8px; box-shadow: 0 4px 12px rgba(236, 15, 15, 0.2); position: relative;">
+                            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #ec0f0f; color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">POPULAR</div>
+                            <div class="card-body text-center" style="padding: 2rem;">
+                                <h4 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.webapps.pricing.professional.name">Suscripción Profesional</strong></h4>
+                                <div class="mb-3">
+                                    <span class="display-4" style="color: #2c3e50; font-weight: bold;" data-translate="services.webapps.pricing.professional.price">Desde $99</span>
+                                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;" data-translate="services.webapps.pricing.professional.period">mensual</p>
+                                </div>
+                                <ul class="list-unstyled text-left" style="margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.professional.features.0">Acceso completo al software</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.professional.features.1">Soporte técnico prioritario</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.professional.features.2">Todas las actualizaciones incluidas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.professional.features.3">Hasta 20 usuarios</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.professional.features.4">Personalización opcional disponible</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.professional.features.5">Capacitación incluida</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100" style="border: 2px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <div class="card-body text-center" style="padding: 2rem;">
+                                <h4 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.webapps.pricing.enterprise.name">Suscripción Empresarial</strong></h4>
+                                <div class="mb-3">
+                                    <span class="display-4" style="color: #2c3e50; font-weight: bold;" data-translate="services.webapps.pricing.enterprise.price">Personalizado</span>
+                                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;" data-translate="services.webapps.pricing.enterprise.period">anual</p>
+                                </div>
+                                <ul class="list-unstyled text-left" style="margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.0">Usuarios ilimitados</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.1">Soporte técnico prioritario 24/7</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.2">Actualizaciones y mejoras continuas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.3">Personalización completa</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.4">Capacitación y consultoría</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.5">SLA garantizado</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webapps.pricing.enterprise.features.6">API personalizada</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center mt-4" style="color: #666; font-size: 0.9rem;" data-translate="services.webapps.pricing.note">Los precios pueden variar según el producto específico. Contacta para más información sobre suscripciones y planes disponibles.</p>
+            </div>
+        </div>
+        
         <div class="row mt-4">
             <div class="col-12 text-center">
                 <a href="#" onclick="openContactPanel(); return false;" class="btn btn-primary" style="background-color: #ec0f0f; border-color: #ec0f0f; padding: 12px 30px; font-size: 1.1rem; border-radius: 5px;">
@@ -880,12 +1065,12 @@
             <div class="footer-column" style="flex: 1; min-width: 200px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
                 <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
-                    <strong>Área de Servicio:</strong><br>
+                    <strong>Disponibilidad:</strong><br>
                     Costa Rica y Exterior<br><br>
-                    <strong>Metodología:</strong><br>
-                    Desarrollo Ágil<br><br>
+                    <strong>Tipo de Producto:</strong><br>
+                    Software con Licencias y Suscripciones<br><br>
                     <strong>Garantía:</strong><br>
-                    Soporte post-entrega<br><br>
+                    Soporte técnico incluido con licencias<br><br>
                     <strong>Respuesta:</strong><br>
                     En menos de 24 horas
                 </p>
@@ -932,7 +1117,7 @@
         home: "Inicio",
         about: "Acerca de",
         contact: "Contacto",
-        services: "Servicio",
+        services: "Productos",
         desktop: "Aplicaciones de Escritorio",
         webpages: "Páginas Web",
         webapps: "Aplicaciones Web",
@@ -945,11 +1130,11 @@
       services: {
         webapps: {
           title: "Aplicaciones Web",
-          description: "Desarrollo de aplicaciones web dinámicas e interactivas con funcionalidades avanzadas. Aplicaciones web progresivas (PWA), sistemas de gestión y plataformas web personalizadas.",
-          subtitle1: "Aplicaciones Web Progresivas (PWA)",
-          text1: "Aplicaciones web progresivas que funcionan offline y ofrecen experiencia similar a apps nativas",
-          subtitle2: "Aplicaciones Web Dinámicas",
-          text2: "Desarrollo de aplicaciones web interactivas con funcionalidades avanzadas que responden en tiempo real",
+          description: "Software de gestión empresarial y aplicaciones web SaaS. Productos de software con suscripciones mensuales/anuales. Sistemas de gestión, aplicaciones web progresivas (PWA) y plataformas web listas para usar.",
+          subtitle1: "Software Web y SaaS",
+          text1: "Productos de software web listos para usar con suscripciones disponibles. Aplicaciones web progresivas (PWA) que funcionan offline y ofrecen experiencia similar a apps nativas",
+          subtitle2: "Sistemas de Gestión Empresarial",
+          text2: "Productos de software de gestión empresarial listos para usar. Sistemas interactivos con funcionalidades avanzadas que responden en tiempo real. Suscripciones disponibles",
           mission: {
             title: "Misión",
             text: "Proporcionar soluciones tecnológicas integrales y de alta calidad que impulsen el crecimiento y la transformación digital de nuestros clientes, utilizando las tecnologías más modernas y metodologías ágiles para entregar proyectos exitosos."
@@ -959,16 +1144,16 @@
             text: "Ser la empresa líder en desarrollo de soluciones tecnológicas en Costa Rica, reconocida por la excelencia en el servicio, la innovación constante y el compromiso con el éxito de nuestros clientes."
           },
           feature1: {
-            title: "Aplicaciones Dinámicas",
-            text: "Desarrollo de aplicaciones web interactivas con funcionalidades avanzadas que responden en tiempo real a las acciones del usuario."
+            title: "Productos de Software Web",
+            text: "Productos de software web listos para usar con suscripciones disponibles. Aplicaciones web interactivas con funcionalidades avanzadas que responden en tiempo real."
           },
           feature2: {
             title: "PWA (Progressive Web Apps)",
-            text: "Aplicaciones web progresivas que funcionan offline, se pueden instalar y ofrecen una experiencia similar a las apps nativas."
+            text: "Productos de software PWA listos para usar. Aplicaciones web progresivas que funcionan offline, se pueden instalar y ofrecen una experiencia similar a las apps nativas."
           },
           feature3: {
-            title: "Sistemas de Gestión",
-            text: "Desarrollo de sistemas de gestión empresarial personalizados que automatizan procesos y mejoran la eficiencia operativa."
+            title: "Sistemas de Gestión Empresarial",
+            text: "Productos de software de gestión empresarial listos para usar con suscripciones disponibles. Sistemas que automatizan procesos y mejoran la eficiencia operativa."
           },
           feature4: {
             title: "Bases de Datos",
@@ -985,6 +1170,32 @@
           technologies: {
             title: "Tecnologías que Utilizamos",
             text: "Utilizamos tecnologías modernas como React.js, Laravel, Node.js, Python, PHP, MySQL, MongoDB y otras herramientas de desarrollo para crear aplicaciones web escalables, seguras y de alto rendimiento."
+          },
+          pricing: {
+            title: "Suscripciones y Precios",
+            subtitle: "Productos de software SaaS con suscripciones disponibles",
+            subscriptionType: "Tipo de Suscripción",
+            price: "Precio",
+            features: "Características",
+            basic: {
+              name: "Suscripción Básica",
+              price: "Desde $49",
+              period: "mensual",
+              features: ["Acceso completo al software", "Soporte técnico por email", "Actualizaciones incluidas", "Hasta 5 usuarios", "Documentación completa"]
+            },
+            professional: {
+              name: "Suscripción Profesional",
+              price: "Desde $99",
+              period: "mensual",
+              features: ["Acceso completo al software", "Soporte técnico prioritario", "Todas las actualizaciones incluidas", "Hasta 20 usuarios", "Personalización opcional disponible", "Capacitación incluida"]
+            },
+            enterprise: {
+              name: "Suscripción Empresarial",
+              price: "Personalizado",
+              period: "anual",
+              features: ["Usuarios ilimitados", "Soporte técnico prioritario 24/7", "Actualizaciones y mejoras continuas", "Personalización completa", "Capacitación y consultoría", "SLA garantizado", "API personalizada"]
+            },
+            note: "Los precios pueden variar según el producto específico. Contacta para más información sobre suscripciones y planes disponibles."
           }
         },
         quote: "Solicitar Cotización"
@@ -992,7 +1203,7 @@
       footer: {
         company: {
           title: "YJG Solución TI",
-          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
+          description: "Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles. Soluciones tecnológicas integrales en Costa Rica."
         },
         links: {
           title: "Enlaces Útiles",
@@ -1001,7 +1212,7 @@
         },
         info: {
           title: "Información Adicional",
-          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
+          content: "<strong>Disponibilidad:</strong><br>Costa Rica y Exterior<br><br><strong>Tipo de Producto:</strong><br>Software con Licencias y Suscripciones<br><br><strong>Garantía:</strong><br>Soporte técnico incluido con licencias<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
         },
         follow: {
           title: "Síguenos"
@@ -1014,7 +1225,7 @@
         home: "Home",
         about: "About",
         contact: "Contact",
-        services: "Services",
+        services: "Products",
         desktop: "Desktop Applications",
         webpages: "Web Pages",
         webapps: "Web Applications",
@@ -1027,11 +1238,11 @@
       services: {
         webapps: {
           title: "Web Applications",
-          description: "Development of dynamic and interactive web applications with advanced features. Progressive web applications (PWA), management systems and customized web platforms.",
-          subtitle1: "Progressive Web Applications (PWA)",
-          text1: "Progressive web applications that work offline and offer a native app-like experience",
-          subtitle2: "Dynamic Web Applications",
-          text2: "Development of interactive web applications with advanced features that respond in real time",
+          description: "Business management software and SaaS web applications. Software products with monthly/annual subscriptions. Management systems, progressive web applications (PWA) and ready-to-use web platforms.",
+          subtitle1: "Web Software and SaaS",
+          text1: "Ready-to-use web software products with available subscriptions. Progressive web applications (PWA) that work offline and offer a native app-like experience",
+          subtitle2: "Business Management Systems",
+          text2: "Ready-to-use business management software products. Interactive systems with advanced features that respond in real time. Subscriptions available",
           mission: {
             title: "Mission",
             text: "Provide comprehensive and high-quality technological solutions that drive the growth and digital transformation of our clients, using the most modern technologies and agile methodologies to deliver successful projects."
@@ -1041,16 +1252,16 @@
             text: "To be the leading company in the development of technological solutions in Costa Rica, recognized for excellence in service, constant innovation and commitment to our clients' success."
           },
           feature1: {
-            title: "Dynamic Applications",
-            text: "Development of interactive web applications with advanced features that respond in real time to user actions."
+            title: "Web Software Products",
+            text: "Ready-to-use web software products with available subscriptions. Interactive web applications with advanced features that respond in real time."
           },
           feature2: {
             title: "PWA (Progressive Web Apps)",
-            text: "Progressive web applications that work offline, can be installed and offer an experience similar to native apps."
+            text: "Ready-to-use PWA software products. Progressive web applications that work offline, can be installed and offer an experience similar to native apps."
           },
           feature3: {
-            title: "Management Systems",
-            text: "Development of customized business management systems that automate processes and improve operational efficiency."
+            title: "Business Management Systems",
+            text: "Ready-to-use business management software products with available subscriptions. Systems that automate processes and improve operational efficiency."
           },
           feature4: {
             title: "Databases",
@@ -1067,6 +1278,32 @@
           technologies: {
             title: "Technologies We Use",
             text: "We use modern technologies such as React.js, Laravel, Node.js, Python, PHP, MySQL, MongoDB and other development tools to create scalable, secure and high-performance web applications."
+          },
+          pricing: {
+            title: "Subscriptions and Pricing",
+            subtitle: "SaaS software products with available subscriptions",
+            subscriptionType: "Subscription Type",
+            price: "Price",
+            features: "Features",
+            basic: {
+              name: "Basic Subscription",
+              price: "From $49",
+              period: "monthly",
+              features: ["Full software access", "Email technical support", "Updates included", "Up to 5 users", "Complete documentation"]
+            },
+            professional: {
+              name: "Professional Subscription",
+              price: "From $99",
+              period: "monthly",
+              features: ["Full software access", "Priority technical support", "All updates included", "Up to 20 users", "Optional customization available", "Training included"]
+            },
+            enterprise: {
+              name: "Enterprise Subscription",
+              price: "Custom",
+              period: "annual",
+              features: ["Unlimited users", "Priority 24/7 technical support", "Continuous updates and improvements", "Full customization", "Training and consulting", "Guaranteed SLA", "Custom API"]
+            },
+            note: "Prices may vary depending on the specific product. Contact us for more information about available subscriptions and plans."
           }
         },
         quote: "Request Quote"
@@ -1074,7 +1311,7 @@
       footer: {
         company: {
           title: "YJG Solución TI",
-          description: "Specialists in mobile application development, desktop applications and web pages. Comprehensive technological solutions in Costa Rica."
+          description: "Specialists in business management software. Software products with licenses and subscriptions available. Comprehensive technological solutions in Costa Rica."
         },
         links: {
           title: "Useful Links",
@@ -1083,7 +1320,7 @@
         },
         info: {
           title: "Additional Information",
-          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support<br><br><strong>Response:</strong><br>In less than 24 hours"
+          content: "<strong>Availability:</strong><br>Costa Rica and Abroad<br><br><strong>Product Type:</strong><br>Software with Licenses and Subscriptions<br><br><strong>Warranty:</strong><br>Technical support included with licenses<br><br><strong>Response:</strong><br>In less than 24 hours"
         },
         follow: {
           title: "Follow Us"
@@ -1105,12 +1342,42 @@
   
   // Función para obtener el texto traducido
   function getTranslation(key, lang) {
-    const keys = key.split('.');
-    let value = translations[lang];
-    for (const k of keys) {
-      value = value?.[k];
+    try {
+      const keys = key.split('.');
+      let value = translations[lang];
+      if (!value) {
+        return key;
+      }
+      for (let i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        if (value === null || value === undefined) {
+          return key;
+        }
+        // Si el valor es un array y la clave es un número, acceder por índice
+        if (Array.isArray(value)) {
+          const index = parseInt(k);
+          if (!isNaN(index) && index >= 0 && index < value.length) {
+            value = value[index];
+          } else {
+            return key;
+          }
+        } else if (typeof value === 'object' && value !== null) {
+          value = value[k];
+          if (value === undefined) {
+            return key;
+          }
+        } else {
+          return key;
+        }
+      }
+      // Retornar el valor solo si es un string o número, no un objeto o array
+      if (typeof value === 'string' || typeof value === 'number') {
+        return value;
+      }
+      return key;
+    } catch (e) {
+      return key;
     }
-    return value || key;
   }
   
   // Función para aplicar traducciones
@@ -1120,7 +1387,7 @@
     htmlElements.forEach(element => {
       const key = element.getAttribute('data-translate-html');
       const translation = getTranslation(key, lang);
-      if (translation) {
+      if (translation && translation !== key) {
         element.innerHTML = translation;
       }
     });
@@ -1137,9 +1404,15 @@
         return; // Saltar enlaces del menú que contienen iconos
       }
       const key = element.getAttribute('data-translate');
-      const translation = getTranslation(key, lang);
-      if (translation) {
-        element.textContent = translation;
+      if (key) {
+        const translation = getTranslation(key, lang);
+        // Actualizar siempre si la traducción es diferente de la clave
+        if (translation && translation !== key && typeof translation === 'string') {
+          element.textContent = translation;
+        } else if (translation && translation !== key) {
+          // Si no es string pero hay traducción, intentar convertir
+          element.textContent = String(translation);
+        }
       }
     });
     
@@ -1172,9 +1445,12 @@
   // Función para cambiar el idioma
   function changeLanguage(lang) {
     saveLanguage(lang);
-    applyTranslations(lang);
-    // Disparar evento personalizado para actualizar otras partes de la página
-    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+    // Forzar actualización de todas las traducciones
+    setTimeout(function() {
+      applyTranslations(lang);
+      // Disparar evento personalizado para actualizar otras partes de la página
+      window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+    }, 10);
   }
   
   // Inicializar traducciones al cargar la página

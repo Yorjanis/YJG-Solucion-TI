@@ -433,6 +433,117 @@
       .custom-navbar-menu.active .navbar-actions-mobile {
         display: block !important;
       }
+      /* Estilos para iconos móviles */
+      .navbar-actions-mobile {
+        overflow: visible !important;
+        position: relative !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+      }
+      .navbar-actions-mobile > div {
+        overflow: visible !important;
+        position: relative !important;
+        height: 50px !important;
+        min-height: 50px !important;
+        max-height: 50px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100%;
+      }
+      .navbar-actions-mobile .language-selector-wrapper {
+        position: relative !important;
+        z-index: 1002 !important;
+        margin-left: -1rem;
+        margin-top: -1rem;
+        overflow: visible !important;
+        width: auto;
+        min-width: auto;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        width: calc(100vw - 2rem) !important;
+        max-width: calc(100vw - 2rem) !important;
+        margin-top: 0.25rem !important;
+        margin-left: -1rem !important;
+        padding: 0.5rem 0 !important;
+        padding-left: 0 !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+        z-index: 1001 !important;
+        border-radius: 4px !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu .dropdown-item {
+        padding-left: 0.5rem !important;
+        padding-right: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:not(:first-child) {
+        margin-left: -15rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+        gap: 0 !important;
+      }
+      /* Sobrescribir regla general que establece margin-right: 8px */
+      @media (max-width: 991px) {
+        .navbar-actions-mobile .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+          margin-right: 0 !important;
+        }
+      }
+      .navbar-actions-mobile .iconfont-wrapper {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        z-index: 1003 !important;
+        flex-shrink: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+      .navbar-actions-mobile #facebookIconMobile {
+        left: 85% !important;
+        transform: translate(-50%, -50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      .navbar-actions-mobile #githubIconMobile {
+        right: -290px !important;
+        transform: translateY(-50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      /* Asegurar que los iconos sean visibles */
+      #facebookIconMobile,
+      #facebookIconMobile span,
+      #facebookIconMobile .socicon-facebook {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #1877F2 !important;
+        font-size: 1.2rem !important;
+      }
+      #githubIconMobile,
+      #githubIconMobile span,
+      #githubIconMobile .socicon-github {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #000000 !important;
+        font-size: 1.2rem !important;
+      }
     }
     @media (min-width: 992px) {
       /* Ocultar iconos del menú hamburguesa en desktop */
@@ -733,6 +844,36 @@
         font-size: 30px;
       }
     }
+    
+    /* Efecto hover para enlaces del pie de página */
+    .footer-column a {
+      transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+      text-decoration: none;
+    }
+    .footer-column a:hover {
+      color: #8c0909 !important;
+      text-decoration: underline !important;
+      opacity: 0.8;
+    }
+    
+    /* Efectos hover para iconos del pie de página */
+    .footer-icons a {
+      transition: transform 0.3s ease, opacity 0.3s ease !important;
+      text-decoration: none !important;
+    }
+    .footer-icons a:hover {
+      transform: scale(1.2) !important;
+      opacity: 0.9 !important;
+      text-decoration: none !important;
+    }
+    .footer-icons a:hover .socicon-facebook {
+      color: #0d6efd !important;
+      filter: drop-shadow(0 2px 4px rgba(24, 119, 242, 0.4));
+    }
+    .footer-icons a:hover .socicon-github {
+      color: #ec0f0f !important;
+      filter: drop-shadow(0 2px 4px rgba(236, 15, 15, 0.4));
+    }
   </style>
   
 </head>
@@ -768,29 +909,30 @@
           </ul>
         </li>
         <!-- Iconos dentro del menú hamburguesa -->
-        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-          <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <div class="language-selector-wrapper" style="position: relative;">
-              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
+        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); position: relative; min-height: 50px; padding-left: 1rem !important; padding-right: 1rem !important; box-sizing: border-box !important;">
+          <div style="display: flex; align-items: center; gap: 0; flex-shrink: 0 !important; white-space: nowrap !important; width: 100%; max-width: 100%; justify-content: space-between; position: relative; min-height: 50px; overflow: visible !important; padding-left: 0; padding-right: 0; box-sizing: border-box !important;">
+            <!-- Selector de idiomas a la izquierda -->
+            <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important; order: 1; padding-left: 0; margin-left: -1rem; margin-top: -1rem; overflow: visible !important; width: auto; min-width: auto;">
+              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; padding-left: 0.1rem !important; display: flex; align-items: center; justify-content: flex-start; gap: 0.3rem; text-decoration: none; position: relative;">
                 <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
-                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px; position: absolute; top: 100%; left: 0; right: auto; margin-top: 0.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); background-color: #fff; z-index: 1001 !important;">
+                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇪🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">Español</span>
                 </a>
-                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇺🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">English</span>
                 </a>
               </div>
             </div>
-            <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
-              <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
-              </a>
-              <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
-              </a>
-            </div>
+            <!-- Facebook centrado -->
+            <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile" style="position: absolute !important; left: 85% !important; top: 50% !important; transform: translate(-50%, -50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
+            <!-- GitHub a la derecha -->
+            <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile" style="position: absolute !important; right: -290px !important; top: 50% !important; transform: translateY(-50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
           </div>
         </li>
       </ul>
@@ -850,7 +992,7 @@
                 <ul>
                     <li data-translate="blog.opticontrol.target.item1">Clínicas oftalmológicas privadas</li>
                     <li data-translate="blog.opticontrol.target.item2">Consultorios oftalmológicos</li>
-                    <li data-translate="blog.opticontrol.target.item3">Ópticas con servicios médicos</li>
+                    <li data-translate="blog.opticontrol.target.item3">Ópticas con atención médica</li>
                     <li data-translate="blog.opticontrol.target.item4">Centros de salud especializados en visión</li>
                     <li data-translate="blog.opticontrol.target.item5">Profesionales independientes de la salud visual</li>
                 </ul>
@@ -1136,7 +1278,7 @@
                 
                 <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.getstarted.installation.title">Instalación</strong></h3>
                 <ol>
-                    <li data-translate="blog.opticontrol.getstarted.installation.step1">Descarga la aplicación desde Microsoft Store (Windows), repositorios (Linux) o contáctame.</li>
+                    <li data-translate="blog.opticontrol.getstarted.installation.step1">Compra tu licencia a través de nuestra plataforma de pagos Paddle y descarga la aplicación directamente desde Paddle.</li>
                     <li data-translate="blog.opticontrol.getstarted.installation.step2">Crea tu cuenta y activa tu período de prueba</li>
                     <li data-translate="blog.opticontrol.getstarted.installation.step3">Configura tu clínica y comienza a usar todas las funcionalidades</li>
                     <li data-translate="blog.opticontrol.getstarted.installation.step4">Importa tus datos existentes o comienza desde cero</li>
@@ -1158,8 +1300,9 @@
                 <p style="color: #666; font-style: italic; margin-top: 2rem;" data-translate="blog.opticontrol.conclusion.tagline"><em>OptiControl - Gestión Inteligente para Clínicas Oftalmológicas</em></p>
                 
                 <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
-                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;" data-translate="blog.opticontrol.cta.text">¿Interesado en OptiControl para tu clínica oftalmológica?</p>
-                    <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;" data-translate="blog.opticontrol.cta.button">Contáctanos</a>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;" data-translate="blog.opticontrol.cta.text">¿Listo para comenzar con OptiControl?</p>
+                    <a href="#" onclick="openPaddleCheckout(); return false;" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold;" data-translate="blog.opticontrol.cta.button">Comprar Ahora</a>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;" data-translate="blog.opticontrol.cta.note">Prueba gratuita de 7 días • Sin tarjeta de crédito requerida</p>
                 </div>
                 
                 <div class="blog-share" style="margin-top: 3rem;">
@@ -1195,12 +1338,12 @@
             <div class="footer-column" style="flex: 1; min-width: 200px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
                 <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
-                    <strong>Área de Servicio:</strong><br>
+                    <strong>Disponibilidad:</strong><br>
                     Costa Rica y Exterior<br><br>
-                    <strong>Metodología:</strong><br>
-                    Desarrollo Ágil<br><br>
+                    <strong>Tipo de Producto:</strong><br>
+                    Software con Licencias y Suscripciones<br><br>
                     <strong>Garantía:</strong><br>
-                    Soporte post-entrega<br><br>
+                    Soporte técnico incluido con licencias<br><br>
                     <strong data-translate="footer.info.response.label">Respuesta:</strong><br>
                     <span data-translate="footer.info.response.value">En menos de 24 horas</span>
                 </p>
@@ -1247,7 +1390,7 @@
         home: "Inicio",
         about: "Acerca de",
         contact: "Contacto",
-        services: "Servicio",
+        services: "Productos",
         desktop: "Aplicaciones de Escritorio",
         webpages: "Páginas Web",
         webapps: "Aplicaciones Web",
@@ -1274,7 +1417,7 @@
             title: "Público Objetivo",
             item1: "Clínicas oftalmológicas privadas",
             item2: "Consultorios oftalmológicos",
-            item3: "Ópticas con servicios médicos",
+            item3: "Ópticas con atención médica",
             item4: "Centros de salud especializados en visión",
             item5: "Profesionales independientes de la salud visual"
           },
@@ -1506,7 +1649,7 @@
             plan2: "Plan Anual: $299.99 USD/año (ahorro del 17%)",
             installation: {
               title: "Instalación",
-              step1: "Descarga la aplicación desde Microsoft Store (Windows), repositorios (Linux) o contáctame.",
+              step1: "Compra tu licencia a través de nuestra plataforma de pagos Paddle y descarga la aplicación directamente desde Paddle.",
               step2: "Crea tu cuenta y activa tu período de prueba",
               step3: "Configura tu clínica y comienza a usar todas las funcionalidades",
               step4: "Importa tus datos existentes o comienza desde cero"
@@ -1525,8 +1668,9 @@
             tagline: "OptiControl - Gestión Inteligente para Clínicas Oftalmológicas"
           },
           cta: {
-            text: "¿Interesado en OptiControl para tu clínica oftalmológica?",
-            button: "Contáctanos"
+            text: "¿Listo para comenzar con OptiControl?",
+            button: "Comprar Ahora",
+            note: "Prueba gratuita de 7 días • Sin tarjeta de crédito requerida"
           }
         },
         share: {
@@ -1547,7 +1691,7 @@
         },
         info: {
           title: "Información Adicional",
-          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas",
+          content: "<strong>Disponibilidad:</strong><br>Costa Rica y Exterior<br><br><strong>Tipo de Producto:</strong><br>Software con Licencias y Suscripciones<br><br><strong>Garantía:</strong><br>Soporte técnico incluido con licencias<br><br><strong>Respuesta:</strong><br>En menos de 24 horas",
           response: {
             label: "Respuesta:",
             value: "En menos de 24 horas"
@@ -1564,7 +1708,7 @@
         home: "Home",
         about: "About",
         contact: "Contact",
-        services: "Services",
+        services: "Products",
         desktop: "Desktop Applications",
         webpages: "Web Pages",
         webapps: "Web Applications",
@@ -1591,7 +1735,7 @@
             title: "Target Audience",
             item1: "Private ophthalmology clinics",
             item2: "Ophthalmology offices",
-            item3: "Optical stores with medical services",
+            item3: "Optical stores with medical care",
             item4: "Health centers specialized in vision",
             item5: "Independent visual health professionals"
           },
@@ -1823,7 +1967,7 @@
             plan2: "Annual Plan: $299.99 USD/year (17% savings)",
             installation: {
               title: "Installation",
-              step1: "Download the application from Microsoft Store (Windows), repositories (Linux) or contact me.",
+              step1: "Purchase your license through our Paddle payment platform and download the application directly from Paddle.",
               step2: "Create your account and activate your trial period",
               step3: "Configure your clinic and start using all features",
               step4: "Import your existing data or start from scratch"
@@ -1842,8 +1986,9 @@
             tagline: "OptiControl - Smart Management for Ophthalmology Clinics"
           },
           cta: {
-            text: "Interested in OptiControl for your ophthalmology clinic?",
-            button: "Contact Us"
+            text: "Ready to get started with OptiControl?",
+            button: "Buy Now",
+            note: "7-day free trial • No credit card required"
           }
         },
         share: {
@@ -1864,7 +2009,7 @@
         },
         info: {
           title: "Additional Information",
-          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support<br><br><strong>Response:</strong><br>In less than 24 hours",
+          content: "<strong>Availability:</strong><br>Costa Rica and Abroad<br><br><strong>Product Type:</strong><br>Software with Licenses and Subscriptions<br><br><strong>Warranty:</strong><br>Technical support included with licenses<br><br><strong>Response:</strong><br>In less than 24 hours",
           response: {
             label: "Response:",
             value: "In less than 24 hours"
@@ -2023,6 +2168,18 @@
   // Función global para abrir el panel de contacto
   window.openContactPanel = function() {
     window.location.href = 'index.html#form5-x';
+  };
+  
+  // Función para abrir el checkout de Paddle
+  function openPaddleCheckout() {
+    // Aquí irá el código de integración con Paddle
+    // Por ahora, redirige a la página de aplicaciones de escritorio donde está el producto
+    window.location.href = 'aplicaciones-escritorio.html';
+  }
+  
+  // Función global para abrir checkout de Paddle
+  window.openPaddleCheckout = function() {
+    openPaddleCheckout();
   };
   
   // Toggle del menú móvil

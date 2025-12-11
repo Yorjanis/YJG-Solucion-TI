@@ -433,6 +433,117 @@
       .custom-navbar-menu.active .navbar-actions-mobile {
         display: block !important;
       }
+      /* Estilos para iconos móviles */
+      .navbar-actions-mobile {
+        overflow: visible !important;
+        position: relative !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+      }
+      .navbar-actions-mobile > div {
+        overflow: visible !important;
+        position: relative !important;
+        height: 50px !important;
+        min-height: 50px !important;
+        max-height: 50px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100%;
+      }
+      .navbar-actions-mobile .language-selector-wrapper {
+        position: relative !important;
+        z-index: 1002 !important;
+        margin-left: -1rem;
+        margin-top: -1rem;
+        overflow: visible !important;
+        width: auto;
+        min-width: auto;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        width: calc(100vw - 2rem) !important;
+        max-width: calc(100vw - 2rem) !important;
+        margin-top: 0.25rem !important;
+        margin-left: -1rem !important;
+        padding: 0.5rem 0 !important;
+        padding-left: 0 !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+        z-index: 1001 !important;
+        border-radius: 4px !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu .dropdown-item {
+        padding-left: 0.5rem !important;
+        padding-right: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:not(:first-child) {
+        margin-left: -15rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+        gap: 0 !important;
+      }
+      /* Sobrescribir regla general que establece margin-right: 8px */
+      @media (max-width: 991px) {
+        .navbar-actions-mobile .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+          margin-right: 0 !important;
+        }
+      }
+      .navbar-actions-mobile .iconfont-wrapper {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        z-index: 1003 !important;
+        flex-shrink: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+      .navbar-actions-mobile #facebookIconMobile {
+        left: 85% !important;
+        transform: translate(-50%, -50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      .navbar-actions-mobile #githubIconMobile {
+        right: -290px !important;
+        transform: translateY(-50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      /* Asegurar que los iconos sean visibles */
+      #facebookIconMobile,
+      #facebookIconMobile span,
+      #facebookIconMobile .socicon-facebook {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #1877F2 !important;
+        font-size: 1.2rem !important;
+      }
+      #githubIconMobile,
+      #githubIconMobile span,
+      #githubIconMobile .socicon-github {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #000000 !important;
+        font-size: 1.2rem !important;
+      }
     }
     @media (min-width: 992px) {
       /* Ocultar iconos del menú hamburguesa en desktop */
@@ -733,6 +844,36 @@
         font-size: 30px;
       }
     }
+    
+    /* Efecto hover para enlaces del pie de página */
+    .footer-column a {
+      transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+      text-decoration: none;
+    }
+    .footer-column a:hover {
+      color: #8c0909 !important;
+      text-decoration: underline !important;
+      opacity: 0.8;
+    }
+    
+    /* Efectos hover para iconos del pie de página */
+    .footer-icons a {
+      transition: transform 0.3s ease, opacity 0.3s ease !important;
+      text-decoration: none !important;
+    }
+    .footer-icons a:hover {
+      transform: scale(1.2) !important;
+      opacity: 0.9 !important;
+      text-decoration: none !important;
+    }
+    .footer-icons a:hover .socicon-facebook {
+      color: #0d6efd !important;
+      filter: drop-shadow(0 2px 4px rgba(24, 119, 242, 0.4));
+    }
+    .footer-icons a:hover .socicon-github {
+      color: #ec0f0f !important;
+      filter: drop-shadow(0 2px 4px rgba(236, 15, 15, 0.4));
+    }
   </style>
   
 </head>
@@ -768,29 +909,30 @@
           </ul>
         </li>
         <!-- Iconos dentro del menú hamburguesa -->
-        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-          <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <div class="language-selector-wrapper" style="position: relative;">
-              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
+        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); position: relative; min-height: 50px; padding-left: 1rem !important; padding-right: 1rem !important; box-sizing: border-box !important;">
+          <div style="display: flex; align-items: center; gap: 0; flex-shrink: 0 !important; white-space: nowrap !important; width: 100%; max-width: 100%; justify-content: space-between; position: relative; min-height: 50px; overflow: visible !important; padding-left: 0; padding-right: 0; box-sizing: border-box !important;">
+            <!-- Selector de idiomas a la izquierda -->
+            <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important; order: 1; padding-left: 0; margin-left: -1rem; margin-top: -1rem; overflow: visible !important; width: auto; min-width: auto;">
+              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; padding-left: 0.1rem !important; display: flex; align-items: center; justify-content: flex-start; gap: 0.3rem; text-decoration: none; position: relative;">
                 <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
-                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px; position: absolute; top: 100%; left: 0; right: auto; margin-top: 0.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); background-color: #fff; z-index: 1001 !important;">
+                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇪🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">Español</span>
                 </a>
-                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇺🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">English</span>
                 </a>
               </div>
             </div>
-            <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
-              <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
-              </a>
-              <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
-              </a>
-            </div>
+            <!-- Facebook centrado -->
+            <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile" style="position: absolute !important; left: 85% !important; top: 50% !important; transform: translate(-50%, -50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
+            <!-- GitHub a la derecha -->
+            <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile" style="position: absolute !important; right: -290px !important; top: 50% !important; transform: translateY(-50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
           </div>
         </li>
       </ul>
@@ -1053,13 +1195,23 @@
                 
                 <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.restocontrol.getstarted.title">🚀 ¿Cómo Empezar?</h2>
                 
-                <p data-translate="blog.restocontrol.getstarted.intro">RestoControl está diseñado para ser fácil de implementar y usar. El sistema incluye:</p>
+                <p data-translate="blog.restocontrol.getstarted.intro">RestoControl es un producto de software listo para usar, diseñado para ser fácil de implementar. El sistema incluye:</p>
                 
                 <ul>
-                    <li data-translate="blog.restocontrol.getstarted.item1"><strong>Configuración inicial:</strong> Asistente de configuración paso a paso</li>
-                    <li data-translate="blog.restocontrol.getstarted.item2"><strong>Capacitación:</strong> Manuales y tutoriales completos</li>
-                    <li data-translate="blog.restocontrol.getstarted.item3"><strong>Soporte:</strong> Asistencia técnica durante la implementación</li>
+                    <li data-translate="blog.restocontrol.getstarted.item1"><strong>Configuración inicial:</strong> Asistente de configuración paso a paso integrado</li>
+                    <li data-translate="blog.restocontrol.getstarted.item2"><strong>Documentación:</strong> Manuales y tutoriales completos incluidos</li>
+                    <li data-translate="blog.restocontrol.getstarted.item3"><strong>Soporte técnico:</strong> Disponible según el tipo de licencia adquirida</li>
                 </ul>
+                
+                <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.restocontrol.getstarted.installation.title">Instalación</strong></h3>
+                <ol>
+                    <li data-translate="blog.restocontrol.getstarted.installation.step1">Compra tu licencia a través de nuestra plataforma de pagos Paddle y descarga la aplicación directamente desde Paddle.</li>
+                    <li data-translate="blog.restocontrol.getstarted.installation.step2">Crea tu cuenta y activa tu período de prueba</li>
+                    <li data-translate="blog.restocontrol.getstarted.installation.step3">Configura tu restaurante y comienza a usar todas las funcionalidades</li>
+                    <li data-translate="blog.restocontrol.getstarted.installation.step4">Importa tus datos existentes o comienza desde cero</li>
+                </ol>
+                
+                <p data-translate="blog.restocontrol.getstarted.note" style="margin-top: 1rem; color: #666; font-style: italic;"><em>Nota: RestoControl está actualmente en desarrollo. Si estás interesado en este producto, contáctanos para más información sobre disponibilidad y precios.</em></p>
                 
                 <h2 style="color: #ec0f0f; margin-top: 2rem; font-size: 1.5rem;" data-translate="blog.restocontrol.support.title">📞 Soporte y Contacto</h2>
                 <ul>
@@ -1072,12 +1224,13 @@
                 
                 <p data-translate="blog.restocontrol.conclusion.text1">RestoControl es más que un software de gestión: es una <strong>solución integral</strong> que transforma la forma en que los restaurantes operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, RestoControl está diseñado para ayudarte a gestionar tu restaurante de manera más eficiente y rentable.</p>
                 
-                <p data-translate="blog.restocontrol.conclusion.text2"><strong>¿Listo para transformar tu restaurante?</strong> Contacta con nosotros y descubre cómo RestoControl puede mejorar tu operación.</p>
+                <p data-translate="blog.restocontrol.conclusion.text2"><strong>¿Interesado en RestoControl para tu restaurante?</strong> Contáctanos para obtener más información sobre este producto de software y su disponibilidad.</p>
                 
                 <p style="color: #666; font-style: italic; margin-top: 2rem;" data-translate="blog.restocontrol.conclusion.tagline"><em>RestoControl - Gestión Inteligente para Restaurantes</em></p>
                 
                 <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
                     <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;" data-translate="blog.restocontrol.cta.text">¿Interesado en RestoControl para tu restaurante?</p>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;" data-translate="blog.restocontrol.cta.note">Producto en desarrollo • Contáctanos para más información</p>
                     <a href="index.html#form5-x" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;" data-translate="blog.restocontrol.cta.button">Contáctanos</a>
                 </div>
                 
@@ -1114,12 +1267,12 @@
             <div class="footer-column" style="flex: 1; min-width: 200px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
                 <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
-                    <strong>Área de Servicio:</strong><br>
+                    <strong>Disponibilidad:</strong><br>
                     Costa Rica y Exterior<br><br>
-                    <strong>Metodología:</strong><br>
-                    Desarrollo Ágil<br><br>
+                    <strong>Tipo de Producto:</strong><br>
+                    Software con Licencias y Suscripciones<br><br>
                     <strong>Garantía:</strong><br>
-                    Soporte post-entrega<br><br>
+                    Soporte técnico incluido con licencias<br><br>
                     <strong data-translate="footer.info.response.label">Respuesta:</strong><br>
                     <span data-translate="footer.info.response.value">En menos de 24 horas</span>
                 </p>
@@ -1166,7 +1319,7 @@
         home: "Inicio",
         about: "Acerca de",
         contact: "Contacto",
-        services: "Servicio",
+        services: "Productos",
         desktop: "Aplicaciones de Escritorio",
         webpages: "Páginas Web",
         webapps: "Aplicaciones Web",
@@ -1374,10 +1527,18 @@
           },
           getstarted: {
             title: "🚀 ¿Cómo Empezar?",
-            intro: "RestoControl está diseñado para ser fácil de implementar y usar. El sistema incluye:",
-            item1: "Configuración inicial: Asistente de configuración paso a paso",
-            item2: "Capacitación: Manuales y tutoriales completos",
-            item3: "Soporte: Asistencia técnica durante la implementación"
+            intro: "RestoControl es un producto de software listo para usar, diseñado para ser fácil de implementar. El sistema incluye:",
+            item1: "Configuración inicial: Asistente de configuración paso a paso integrado",
+            item2: "Documentación: Manuales y tutoriales completos incluidos",
+            item3: "Soporte técnico: Disponible según el tipo de licencia adquirida",
+            installation: {
+              title: "Instalación",
+              step1: "Compra tu licencia a través de nuestra plataforma de pagos Paddle y descarga la aplicación directamente desde Paddle.",
+              step2: "Crea tu cuenta y activa tu período de prueba",
+              step3: "Configura tu restaurante y comienza a usar todas las funcionalidades",
+              step4: "Importa tus datos existentes o comienza desde cero"
+            },
+            note: "Nota: RestoControl está actualmente en desarrollo. Si estás interesado en este producto, contáctanos para más información sobre disponibilidad y precios."
           },
           support: {
             title: "📞 Soporte y Contacto",
@@ -1388,11 +1549,12 @@
           conclusion: {
             title: "🎉 Conclusión",
             text1: "RestoControl es más que un software de gestión: es una solución integral que transforma la forma en que los restaurantes operan. Con su combinación única de potencia, flexibilidad y facilidad de uso, RestoControl está diseñado para ayudarte a gestionar tu restaurante de manera más eficiente y rentable.",
-            text2: "¿Listo para transformar tu restaurante? Contacta con nosotros y descubre cómo RestoControl puede mejorar tu operación.",
+            text2: "¿Interesado en RestoControl para tu restaurante? Contáctanos para obtener más información sobre este producto de software y su disponibilidad.",
             tagline: "RestoControl - Gestión Inteligente para Restaurantes"
           },
           cta: {
             text: "¿Interesado en RestoControl para tu restaurante?",
+            note: "Producto en desarrollo • Contáctanos para más información",
             button: "Contáctanos"
           }
         },
@@ -1414,7 +1576,7 @@
         },
         info: {
           title: "Información Adicional",
-          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas",
+          content: "<strong>Disponibilidad:</strong><br>Costa Rica y Exterior<br><br><strong>Tipo de Producto:</strong><br>Software con Licencias y Suscripciones<br><br><strong>Garantía:</strong><br>Soporte técnico incluido con licencias<br><br><strong>Respuesta:</strong><br>En menos de 24 horas",
           response: {
             label: "Respuesta:",
             value: "En menos de 24 horas"
@@ -1431,7 +1593,7 @@
         home: "Home",
         about: "About",
         contact: "Contact",
-        services: "Services",
+        services: "Products",
         desktop: "Desktop Applications",
         webpages: "Web Pages",
         webapps: "Web Applications",
@@ -1639,10 +1801,18 @@
           },
           getstarted: {
             title: "🚀 How to Get Started?",
-            intro: "RestoControl is designed to be easy to implement and use. The system includes:",
-            item1: "Initial configuration: Step-by-step configuration assistant",
-            item2: "Training: Complete manuals and tutorials",
-            item3: "Support: Technical assistance during implementation"
+            intro: "RestoControl is a ready-to-use software product, designed to be easy to implement. The system includes:",
+            item1: "Initial configuration: Built-in step-by-step configuration assistant",
+            item2: "Documentation: Complete manuals and tutorials included",
+            item3: "Technical support: Available according to the type of license purchased",
+            installation: {
+              title: "Installation",
+              step1: "Purchase your license through our Paddle payment platform and download the application directly from Paddle.",
+              step2: "Create your account and activate your trial period",
+              step3: "Configure your restaurant and start using all features",
+              step4: "Import your existing data or start from scratch"
+            },
+            note: "Note: RestoControl is currently under development. If you are interested in this product, contact us for more information about availability and pricing."
           },
           support: {
             title: "📞 Support and Contact",
@@ -1653,11 +1823,12 @@
           conclusion: {
             title: "🎉 Conclusion",
             text1: "RestoControl is more than management software: it is a comprehensive solution that transforms how restaurants operate. With its unique combination of power, flexibility and ease of use, RestoControl is designed to help you manage your restaurant more efficiently and profitably.",
-            text2: "Ready to transform your restaurant? Contact us and discover how RestoControl can improve your operation.",
+            text2: "Interested in RestoControl for your restaurant? Contact us to get more information about this software product and its availability.",
             tagline: "RestoControl - Smart Management for Restaurants"
           },
           cta: {
             text: "Interested in RestoControl for your restaurant?",
+            note: "Product under development • Contact us for more information",
             button: "Contact Us"
           }
         },
@@ -1679,7 +1850,7 @@
         },
         info: {
           title: "Additional Information",
-          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support<br><br><strong>Response:</strong><br>In less than 24 hours",
+          content: "<strong>Availability:</strong><br>Costa Rica and Abroad<br><br><strong>Product Type:</strong><br>Software with Licenses and Subscriptions<br><br><strong>Warranty:</strong><br>Technical support included with licenses<br><br><strong>Response:</strong><br>In less than 24 hours",
           response: {
             label: "Response:",
             value: "In less than 24 hours"

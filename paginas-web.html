@@ -9,9 +9,9 @@
   <link rel="shortcut icon" href="assets/images/logo-yjg-solucion-ti-servicios-informaticos.png" type="image/x-icon">
   
   <!-- SEO Meta Tags -->
-  <title>Páginas Web - YJG Solución TI | Diseño y Desarrollo Web</title>
-  <meta name="description" content="Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno. YJG Solución TI - Costa Rica.">
-  <meta name="keywords" content="diseño páginas web, desarrollo web, páginas web corporativas, sitios web responsivos, diseño web Costa Rica, YJG Solución TI">
+  <title>Software de Páginas Web y Plantillas - YJG Solución TI | Productos de Software Web</title>
+  <meta name="description" content="Software de creación de páginas web y plantillas listas para usar. Productos digitales con licencias para páginas web corporativas, personales y portafolios. Diseño responsive y moderno. YJG Solución TI - Costa Rica.">
+  <meta name="keywords" content="software páginas web, plantillas web, productos software web, licencias web, sitios web responsivos, software web Costa Rica, YJG Solución TI">
   <meta name="author" content="YJG Solución TI">
   <meta name="robots" content="index, follow">
   
@@ -19,14 +19,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yjgsolucionti.com/paginas-web.html">
   <meta property="og:title" content="Páginas Web - YJG Solución TI">
-  <meta property="og:description" content="Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos.">
+  <meta property="og:description" content="Software de creación de páginas web y plantillas listas para usar. Productos digitales con licencias disponibles.">
   <meta property="og:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yjgsolucionti.com/paginas-web.html">
   <meta property="twitter:title" content="Páginas Web - YJG Solución TI">
-  <meta property="twitter:description" content="Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos.">
+  <meta property="twitter:description" content="Software de creación de páginas web y plantillas listas para usar. Productos digitales con licencias disponibles.">
   <meta property="twitter:image" content="https://yjgsolucionti.com/assets/images/logo-yjg-solucion-ti-servicios-informaticos.png">
   
   <!-- Canonical URL -->
@@ -320,7 +320,7 @@
     .dropdown-menu[aria-labelledby="languageDropdown"] {
       min-width: 150px;
       padding: 0.5rem 0;
-      z-index: 1002 !important;
+      z-index: 1001 !important;
       display: none !important;
     }
     .dropdown-menu[aria-labelledby="languageDropdown"].show {
@@ -369,6 +369,110 @@
       .custom-navbar-menu.active .navbar-actions-mobile {
         display: block !important;
       }
+      /* Estilos para iconos móviles */
+      .navbar-actions-mobile {
+        overflow: visible !important;
+        position: relative !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .navbar-actions-mobile > div {
+        overflow: visible !important;
+        position: relative !important;
+        height: 50px !important;
+        min-height: 50px !important;
+        max-height: 50px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper {
+        position: relative !important;
+        z-index: 1002 !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        width: calc(100vw - 2rem) !important;
+        max-width: calc(100vw - 2rem) !important;
+        margin-top: 0.25rem !important;
+        margin-left: -1rem !important;
+        padding: 0.5rem 0 !important;
+        padding-left: 0 !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+        z-index: 1001 !important;
+        border-radius: 4px !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu .dropdown-item {
+        padding-left: 0.5rem !important;
+        padding-right: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:not(:first-child) {
+        margin-left: -15rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        display: inline-block !important;
+      }
+      .navbar-actions-mobile .language-selector-wrapper .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+        gap: 0 !important;
+      }
+      /* Sobrescribir regla general que establece margin-right: 8px */
+      @media (max-width: 991px) {
+        .navbar-actions-mobile .dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item span:first-child {
+          margin-right: 0 !important;
+        }
+      }
+      .navbar-actions-mobile .iconfont-wrapper {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        z-index: 1003 !important;
+        flex-shrink: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+      .navbar-actions-mobile #facebookIconMobile {
+        left: 85% !important;
+        transform: translate(-50%, -50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      .navbar-actions-mobile #githubIconMobile {
+        right: -290px !important;
+        transform: translateY(-50%) translateY(-1.3rem) !important;
+        z-index: 1003 !important;
+      }
+      /* Asegurar que los iconos sean visibles */
+      #facebookIconMobile,
+      #facebookIconMobile span,
+      #facebookIconMobile .socicon-facebook {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #1877F2 !important;
+        font-size: 1.2rem !important;
+      }
+      #githubIconMobile,
+      #githubIconMobile span,
+      #githubIconMobile .socicon-github {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #000000 !important;
+        font-size: 1.2rem !important;
+      }
     }
     @media (min-width: 992px) {
       /* Ocultar iconos del menú hamburguesa en desktop */
@@ -403,6 +507,7 @@
         padding: 1rem;
         display: none;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        overflow: visible !important;
       }
       .custom-navbar-menu.active {
         display: flex;
@@ -412,6 +517,12 @@
         margin-left: 0 !important; /* Resetear margin-left en móvil */
         display: flex !important;
         flex-direction: column !important;
+        box-sizing: border-box !important;
+      }
+      .custom-navbar-menu li.navbar-actions-mobile {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
       }
       .custom-navbar-menu li:first-child,
       .custom-navbar-menu li:first-of-type {
@@ -688,29 +799,30 @@
           </ul>
         </li>
         <!-- Iconos dentro del menú hamburguesa -->
-        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-          <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <div class="language-selector-wrapper" style="position: relative;">
-              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem; text-decoration: none;">
+        <li class="navbar-actions-mobile" style="display: none; width: 100%; margin-top: 1rem; padding-top: 1rem; padding-left: 1rem !important; padding-right: 1rem !important; border-top: 1px solid rgba(0,0,0,0.1); position: relative; min-height: 50px; overflow: visible !important; box-sizing: border-box !important;">
+          <div style="display: flex; align-items: center; gap: 0; flex-shrink: 0 !important; white-space: nowrap !important; width: 100%; max-width: 100%; justify-content: space-between; position: relative; min-height: 50px; overflow: visible !important; padding-left: 0; padding-right: 0; box-sizing: border-box !important;">
+            <!-- Selector de idiomas a la izquierda -->
+            <div class="language-selector-wrapper" style="position: relative; flex-shrink: 0 !important; order: 1; padding-left: 0; margin-left: -1rem; margin-top: -1rem; overflow: visible !important; width: auto; min-width: auto;">
+              <a class="nav-link link text-secondary display-4 dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 0.3rem 0.8rem; padding-left: 0.1rem !important; display: flex; align-items: center; justify-content: flex-start; gap: 0.3rem; text-decoration: none; position: relative;">
                 <span id="currentLanguageFlag" style="font-size: 1.3rem;">🇪🇸</span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px;">
-                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇪🇸</span> Español
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown" style="min-width: 120px; position: absolute; top: 100%; left: 0; right: auto; margin-top: 0.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); background-color: #fff; z-index: 1001 !important;">
+                <a class="dropdown-item language-option" href="#" data-lang="es" data-flag="🇪🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇪🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">Español</span>
                 </a>
-                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸">
-                  <span style="font-size: 1.2rem; margin-right: 8px;">🇺🇸</span> English
+                <a class="dropdown-item language-option" href="#" data-lang="en" data-flag="🇺🇸" style="display: flex !important; align-items: center !important; gap: 0 !important; white-space: nowrap !important; padding-left: 0.5rem !important;">
+                  <span style="font-size: 1.2rem; margin-right: 0 !important; margin-left: 0 !important; padding: 0 !important; flex-shrink: 0 !important; display: inline-block !important;">🇺🇸</span><span style="margin-left: -15rem !important; padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; display: inline-block !important;">English</span>
                 </a>
               </div>
             </div>
-            <div class="icons-menu" style="display: flex; align-items: center; gap: 0.5rem;">
-              <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2; font-size: 1.2rem;"></span>
-              </a>
-              <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" style="text-decoration: none;">
-                <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000; font-size: 1.2rem;"></span>
-              </a>
-            </div>
+            <!-- Facebook centrado -->
+            <a class="iconfont-wrapper" href="https://www.facebook.com/YJGSolucionTI/" target="_blank" id="facebookIconMobile" style="position: absolute !important; left: 85% !important; top: 50% !important; transform: translate(-50%, -50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: #1877F2 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
+            <!-- GitHub a la derecha -->
+            <a class="iconfont-wrapper" href="https://github.com/Yorjanis?tab=repositories" target="_blank" id="githubIconMobile" style="position: absolute !important; right: -290px !important; top: 50% !important; transform: translateY(-50%) translateY(-1.3rem) !important; z-index: 1003 !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; white-space: nowrap !important; text-decoration: none !important;">
+              <span class="p-2 mbr-iconfont socicon-github socicon" style="color: #000000 !important; font-size: 1.2rem !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;"></span>
+            </a>
           </div>
         </li>
       </ul>
@@ -844,6 +956,79 @@
             </div>
         </div>
         
+        <!-- Sección de Precios y Licencias -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4" style="color: #2c3e50;"><strong data-translate="services.webpages.pricing.title">Licencias y Precios</strong></h2>
+                <p class="text-center mb-5" style="color: #666;" data-translate="services.webpages.pricing.subtitle">Productos de software y plantillas web con licencias disponibles</p>
+                
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100" style="border: 2px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <div class="card-body text-center" style="padding: 2rem;">
+                                <h4 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.webpages.pricing.basic.name">Licencia Básica</strong></h4>
+                                <div class="mb-3">
+                                    <span class="display-4" style="color: #2c3e50; font-weight: bold;" data-translate="services.webpages.pricing.basic.price">Desde $149</span>
+                                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;" data-translate="services.webpages.pricing.basic.period">pago único</p>
+                                </div>
+                                <ul class="list-unstyled text-left" style="margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.basic.features.0">Licencia de uso perpetuo</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.basic.features.1">Plantilla responsive</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.basic.features.2">Soporte técnico por 3 meses</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.basic.features.3">Actualizaciones menores incluidas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.basic.features.4">Documentación completa</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100" style="border: 2px solid #ec0f0f; border-radius: 8px; box-shadow: 0 4px 12px rgba(236, 15, 15, 0.2); position: relative;">
+                            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #ec0f0f; color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">POPULAR</div>
+                            <div class="card-body text-center" style="padding: 2rem;">
+                                <h4 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.webpages.pricing.professional.name">Licencia Profesional</strong></h4>
+                                <div class="mb-3">
+                                    <span class="display-4" style="color: #2c3e50; font-weight: bold;" data-translate="services.webpages.pricing.professional.price">Desde $299</span>
+                                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;" data-translate="services.webpages.pricing.professional.period">pago único</p>
+                                </div>
+                                <ul class="list-unstyled text-left" style="margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.professional.features.0">Licencia de uso perpetuo</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.professional.features.1">Plantilla responsive premium</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.professional.features.2">Soporte técnico por 6 meses</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.professional.features.3">Todas las actualizaciones incluidas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.professional.features.4">Personalización opcional disponible</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.professional.features.5">Capacitación incluida</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card h-100" style="border: 2px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <div class="card-body text-center" style="padding: 2rem;">
+                                <h4 class="mb-3" style="color: #ec0f0f;"><strong data-translate="services.webpages.pricing.enterprise.name">Licencia Empresarial</strong></h4>
+                                <div class="mb-3">
+                                    <span class="display-4" style="color: #2c3e50; font-weight: bold;" data-translate="services.webpages.pricing.enterprise.price">Personalizado</span>
+                                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;" data-translate="services.webpages.pricing.enterprise.period">anual</p>
+                                </div>
+                                <ul class="list-unstyled text-left" style="margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.0">Licencias múltiples</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.1">Plantillas premium ilimitadas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.2">Soporte técnico prioritario 24/7</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.3">Actualizaciones y mejoras continuas</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.4">Personalización completa</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.5">Capacitación y consultoría</span></li>
+                                    <li style="margin-bottom: 0.75rem;"><span style="color: #ec0f0f;">✓</span> <span data-translate="services.webpages.pricing.enterprise.features.6">SLA garantizado</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center mt-4" style="color: #666; font-size: 0.9rem;" data-translate="services.webpages.pricing.note">Los precios pueden variar según el producto específico. Contacta para más información sobre licencias y plantillas disponibles.</p>
+            </div>
+        </div>
+        
         <div class="row mt-4">
             <div class="col-12 text-center">
                 <a href="#" onclick="openContactPanel(); return false;" class="btn btn-primary" style="background-color: #ec0f0f; border-color: #ec0f0f; padding: 12px 30px; font-size: 1.1rem; border-radius: 5px;">
@@ -871,12 +1056,12 @@
             <div class="footer-column" style="flex: 1; min-width: 200px;">
                 <h3 style="color: #ec0f0f; margin-bottom: 15px; font-size: 1.2rem;" data-translate="footer.info.title">Información Adicional</h3>
                 <p style="line-height: 1.8; font-size: 0.9rem; color: #ecf0f1;" data-translate-html="footer.info.content">
-                    <strong>Área de Servicio:</strong><br>
+                    <strong>Disponibilidad:</strong><br>
                     Costa Rica y Exterior<br><br>
-                    <strong>Metodología:</strong><br>
-                    Desarrollo Ágil<br><br>
+                    <strong>Tipo de Producto:</strong><br>
+                    Software con Licencias y Suscripciones<br><br>
                     <strong>Garantía:</strong><br>
-                    Soporte post-entrega<br><br>
+                    Soporte técnico incluido con licencias<br><br>
                     <strong>Respuesta:</strong><br>
                     En menos de 24 horas
                 </p>
@@ -923,7 +1108,7 @@
         home: "Inicio",
         about: "Acerca de",
         contact: "Contacto",
-        services: "Servicio",
+        services: "Productos",
         desktop: "Aplicaciones de Escritorio",
         webpages: "Páginas Web",
         webapps: "Aplicaciones Web",
@@ -936,38 +1121,64 @@
       services: {
         webpages: {
           title: "Páginas Web",
-          description: "Diseño y desarrollo de páginas web corporativas, personales, portafolios y sitios web informativos. Diseño responsive y moderno.",
-          subtitle1: "Páginas Web Responsive",
-          text1: "Diseño de páginas web que se adaptan perfectamente a computadoras, tablets y dispositivos móviles",
-          subtitle2: "Páginas Web Corporativas",
-          text2: "Desarrollo de sitios web profesionales y corporativos con diseño moderno y funcionalidades avanzadas",
+          description: "Software de creación de páginas web y plantillas listas para usar. Productos digitales con licencias para páginas web corporativas, personales y portafolios. Diseño responsive y moderno.",
+          subtitle1: "Software de Páginas Web Responsive",
+          text1: "Productos de software y plantillas listas para usar que se adaptan perfectamente a computadoras, tablets y dispositivos móviles. Licencias disponibles",
+          subtitle2: "Plantillas y Software Web Corporativo",
+          text2: "Productos de software y plantillas listas para usar para sitios web profesionales y corporativos con diseño moderno y funcionalidades avanzadas. Licencias disponibles",
           feature1: {
-            title: "Diseño Responsive",
-            text: "Páginas web que se adaptan perfectamente a todos los dispositivos: computadoras, tablets y móviles, garantizando una experiencia óptima en cualquier pantalla."
+            title: "Productos Listos para Usar",
+            text: "Productos de software y plantillas listas para usar que se adaptan perfectamente a todos los dispositivos: computadoras, tablets y móviles, garantizando una experiencia óptima en cualquier pantalla."
           },
           feature2: {
             title: "Diseño Moderno",
-            text: "Interfaces atractivas y profesionales que reflejan la identidad de tu marca y capturan la atención de tus visitantes."
+            text: "Productos de software con interfaces atractivas y profesionales que reflejan la identidad de tu marca y capturan la atención de tus visitantes."
           },
           feature3: {
             title: "SEO Optimizado",
-            text: "Páginas web optimizadas para motores de búsqueda, mejorando tu visibilidad en Google y otros buscadores."
+            text: "Productos de software con páginas web optimizadas para motores de búsqueda, mejorando tu visibilidad en Google y otros buscadores."
           },
           feature4: {
             title: "Rápida Carga",
-            text: "Optimización de velocidad y rendimiento para que tu página web cargue rápidamente y ofrezca una experiencia fluida."
+            text: "Productos de software optimizados para velocidad y rendimiento para que tu página web cargue rápidamente y ofrezca una experiencia fluida."
           },
           feature5: {
-            title: "Páginas Corporativas",
-            text: "Desarrollo de sitios web corporativos profesionales que fortalecen la presencia digital de tu empresa."
+            title: "Plantillas Corporativas",
+            text: "Productos de software y plantillas listas para usar para sitios web corporativos profesionales que fortalecen la presencia digital de tu empresa."
           },
           feature6: {
-            title: "Portafolios Personales",
-            text: "Diseño de portafolios personales que destacan tu trabajo y habilidades de manera profesional y atractiva."
+            title: "Plantillas de Portafolios",
+            text: "Productos de software y plantillas listas para usar para portafolios personales que destacan tu trabajo y habilidades de manera profesional y atractiva."
           },
           technologies: {
             title: "Tecnologías que Utilizamos",
-            text: "Utilizamos las últimas tecnologías web como HTML5, CSS3, JavaScript, Bootstrap, y frameworks modernos para crear páginas web de alta calidad, rápidas y completamente responsivas."
+            text: "Nuestros productos de software utilizan las últimas tecnologías web como HTML5, CSS3, JavaScript, Bootstrap, y frameworks modernos para crear páginas web de alta calidad, rápidas y completamente responsivas."
+          },
+          pricing: {
+            title: "Licencias y Precios",
+            subtitle: "Productos de software y plantillas web con licencias disponibles",
+            licenseType: "Tipo de Licencia",
+            price: "Precio",
+            features: "Características",
+            basic: {
+              name: "Licencia Básica",
+              price: "Desde $149",
+              period: "pago único",
+              features: ["Licencia de uso perpetuo", "Plantilla responsive", "Soporte técnico por 3 meses", "Actualizaciones menores incluidas", "Documentación completa"]
+            },
+            professional: {
+              name: "Licencia Profesional",
+              price: "Desde $299",
+              period: "pago único",
+              features: ["Licencia de uso perpetuo", "Plantilla responsive premium", "Soporte técnico por 6 meses", "Todas las actualizaciones incluidas", "Personalización opcional disponible", "Capacitación incluida"]
+            },
+            enterprise: {
+              name: "Licencia Empresarial",
+              price: "Personalizado",
+              period: "anual",
+              features: ["Licencias múltiples", "Plantillas premium ilimitadas", "Soporte técnico prioritario 24/7", "Actualizaciones y mejoras continuas", "Personalización completa", "Capacitación y consultoría", "SLA garantizado"]
+            },
+            note: "Los precios pueden variar según el producto específico. Contacta para más información sobre licencias y plantillas disponibles."
           }
         },
         quote: "Solicitar Cotización"
@@ -975,7 +1186,7 @@
       footer: {
         company: {
           title: "YJG Solución TI",
-          description: "Especialistas en desarrollo de aplicaciones móviles, aplicaciones de escritorio y páginas web. Soluciones tecnológicas integrales en Costa Rica."
+          description: "Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles. Soluciones tecnológicas integrales en Costa Rica."
         },
         links: {
           title: "Enlaces Útiles",
@@ -984,7 +1195,7 @@
         },
         info: {
           title: "Información Adicional",
-          content: "<strong>Área de Servicio:</strong><br>Costa Rica y Exterior<br><br><strong>Metodología:</strong><br>Desarrollo Ágil<br><br><strong>Garantía:</strong><br>Soporte post-entrega<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
+          content: "<strong>Disponibilidad:</strong><br>Costa Rica y Exterior<br><br><strong>Tipo de Producto:</strong><br>Software con Licencias y Suscripciones<br><br><strong>Garantía:</strong><br>Soporte técnico incluido con licencias<br><br><strong>Respuesta:</strong><br>En menos de 24 horas"
         },
         follow: {
           title: "Síguenos"
@@ -997,7 +1208,7 @@
         home: "Home",
         about: "About",
         contact: "Contact",
-        services: "Services",
+        services: "Products",
         desktop: "Desktop Applications",
         webpages: "Web Pages",
         webapps: "Web Applications",
@@ -1010,38 +1221,64 @@
       services: {
         webpages: {
           title: "Web Pages",
-          description: "Design and development of corporate, personal, portfolio and informational websites. Responsive and modern design.",
-          subtitle1: "Responsive Web Pages",
-          text1: "Web page design that perfectly adapts to computers, tablets and mobile devices",
-          subtitle2: "Corporate Web Pages",
-          text2: "Development of professional and corporate websites with modern design and advanced features",
+          description: "Web page creation software and ready-to-use templates. Digital products with licenses for corporate, personal, and portfolio websites. Responsive and modern design.",
+          subtitle1: "Responsive Web Page Software",
+          text1: "Ready-to-use software products and templates that perfectly adapt to computers, tablets and mobile devices. Licenses available",
+          subtitle2: "Corporate Templates and Software",
+          text2: "Ready-to-use software products and templates for professional and corporate websites with modern design and advanced features. Licenses available",
           feature1: {
-            title: "Responsive Design",
-            text: "Web pages that perfectly adapt to all devices: computers, tablets and mobiles, ensuring an optimal experience on any screen."
+            title: "Ready-to-Use Products",
+            text: "Ready-to-use software products and templates that perfectly adapt to all devices: computers, tablets and mobiles, ensuring an optimal experience on any screen."
           },
           feature2: {
             title: "Modern Design",
-            text: "Attractive and professional interfaces that reflect your brand identity and capture your visitors' attention."
+            text: "Software products with attractive and professional interfaces that reflect your brand identity and capture your visitors' attention."
           },
           feature3: {
             title: "SEO Optimized",
-            text: "Web pages optimized for search engines, improving your visibility on Google and other search engines."
+            text: "Software products with web pages optimized for search engines, improving your visibility on Google and other search engines."
           },
           feature4: {
             title: "Fast Loading",
-            text: "Speed and performance optimization so your website loads quickly and offers a smooth experience."
+            text: "Software products optimized for speed and performance so your website loads quickly and offers a smooth experience."
           },
           feature5: {
-            title: "Corporate Pages",
-            text: "Development of professional corporate websites that strengthen your company's digital presence."
+            title: "Corporate Templates",
+            text: "Ready-to-use software products and templates for professional corporate websites that strengthen your company's digital presence."
           },
           feature6: {
-            title: "Personal Portfolios",
-            text: "Design of personal portfolios that highlight your work and skills in a professional and attractive way."
+            title: "Portfolio Templates",
+            text: "Ready-to-use software products and templates for personal portfolios that highlight your work and skills in a professional and attractive way."
           },
           technologies: {
             title: "Technologies We Use",
-            text: "We use the latest web technologies such as HTML5, CSS3, JavaScript, Bootstrap, and modern frameworks to create high-quality, fast and fully responsive web pages."
+            text: "Our software products use the latest web technologies such as HTML5, CSS3, JavaScript, Bootstrap, and modern frameworks to create high-quality, fast and fully responsive web pages."
+          },
+          pricing: {
+            title: "Licenses and Pricing",
+            subtitle: "Web software products and templates with available licenses",
+            licenseType: "License Type",
+            price: "Price",
+            features: "Features",
+            basic: {
+              name: "Basic License",
+              price: "From $149",
+              period: "one-time payment",
+              features: ["Perpetual use license", "Responsive template", "Technical support for 3 months", "Minor updates included", "Complete documentation"]
+            },
+            professional: {
+              name: "Professional License",
+              price: "From $299",
+              period: "one-time payment",
+              features: ["Perpetual use license", "Premium responsive template", "Technical support for 6 months", "All updates included", "Optional customization available", "Training included"]
+            },
+            enterprise: {
+              name: "Enterprise License",
+              price: "Custom",
+              period: "annual",
+              features: ["Multiple licenses", "Unlimited premium templates", "Priority 24/7 technical support", "Continuous updates and improvements", "Full customization", "Training and consulting", "Guaranteed SLA"]
+            },
+            note: "Prices may vary depending on the specific product. Contact us for more information about available licenses and templates."
           }
         },
         quote: "Request Quote"
@@ -1049,7 +1286,7 @@
       footer: {
         company: {
           title: "YJG Solución TI",
-          description: "Specialists in mobile application development, desktop applications and web pages. Comprehensive technological solutions in Costa Rica."
+          description: "Specialists in business management software. Software products with licenses and subscriptions available. Comprehensive technological solutions in Costa Rica."
         },
         links: {
           title: "Useful Links",
@@ -1058,7 +1295,7 @@
         },
         info: {
           title: "Additional Information",
-          content: "<strong>Service Area:</strong><br>Costa Rica and Abroad<br><br><strong>Methodology:</strong><br>Agile Development<br><br><strong>Warranty:</strong><br>Post-delivery Support<br><br><strong>Response:</strong><br>In less than 24 hours"
+          content: "<strong>Availability:</strong><br>Costa Rica and Abroad<br><br><strong>Product Type:</strong><br>Software with Licenses and Subscriptions<br><br><strong>Warranty:</strong><br>Technical support included with licenses<br><br><strong>Response:</strong><br>In less than 24 hours"
         },
         follow: {
           title: "Follow Us"
@@ -1080,12 +1317,42 @@
   
   // Función para obtener el texto traducido
   function getTranslation(key, lang) {
-    const keys = key.split('.');
-    let value = translations[lang];
-    for (const k of keys) {
-      value = value?.[k];
+    try {
+      const keys = key.split('.');
+      let value = translations[lang];
+      if (!value) {
+        return key;
+      }
+      for (let i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        if (value === null || value === undefined) {
+          return key;
+        }
+        // Si el valor es un array y la clave es un número, acceder por índice
+        if (Array.isArray(value)) {
+          const index = parseInt(k);
+          if (!isNaN(index) && index >= 0 && index < value.length) {
+            value = value[index];
+          } else {
+            return key;
+          }
+        } else if (typeof value === 'object' && value !== null) {
+          value = value[k];
+          if (value === undefined) {
+            return key;
+          }
+        } else {
+          return key;
+        }
+      }
+      // Retornar el valor solo si es un string o número, no un objeto o array
+      if (typeof value === 'string' || typeof value === 'number') {
+        return value;
+      }
+      return key;
+    } catch (e) {
+      return key;
     }
-    return value || key;
   }
   
   // Función para aplicar traducciones
@@ -1095,7 +1362,7 @@
     htmlElements.forEach(element => {
       const key = element.getAttribute('data-translate-html');
       const translation = getTranslation(key, lang);
-      if (translation) {
+      if (translation && translation !== key) {
         element.innerHTML = translation;
       }
     });
@@ -1112,9 +1379,15 @@
         return; // Saltar enlaces del menú que contienen iconos
       }
       const key = element.getAttribute('data-translate');
-      const translation = getTranslation(key, lang);
-      if (translation) {
-        element.textContent = translation;
+      if (key) {
+        const translation = getTranslation(key, lang);
+        // Actualizar siempre si la traducción es diferente de la clave
+        if (translation && translation !== key && typeof translation === 'string') {
+          element.textContent = translation;
+        } else if (translation && translation !== key) {
+          // Si no es string pero hay traducción, intentar convertir
+          element.textContent = String(translation);
+        }
       }
     });
     
@@ -1147,9 +1420,12 @@
   // Función para cambiar el idioma
   function changeLanguage(lang) {
     saveLanguage(lang);
-    applyTranslations(lang);
-    // Disparar evento personalizado para actualizar otras partes de la página
-    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+    // Forzar actualización de todas las traducciones
+    setTimeout(function() {
+      applyTranslations(lang);
+      // Disparar evento personalizado para actualizar otras partes de la página
+      window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
+    }, 10);
   }
   
   // Inicializar traducciones al cargar la página
