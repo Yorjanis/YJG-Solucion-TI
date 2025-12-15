@@ -1,0 +1,79 @@
+Asunto: Solicitud de Revisión - Cambios Implementados según Política de Uso Aceptable
+
+Hola Lara,
+
+Espero que te encuentres bien. Me dirijo a ti en referencia a tu correo del [FECHA] donde explicaste las razones del rechazo inicial de mi aplicación para Paddle.
+
+He realizado una revisión exhaustiva de mi sitio web y he implementado todos los cambios necesarios para asegurar el cumplimiento completo con la Política de Uso Aceptable y los Términos y Condiciones de Paddle. A continuación, te detallo los cambios principales realizados:
+
+Cambios Implementados:
+
+1. Eliminación de Servicios Humanos Prohibidos
+   - Capacitación: Eliminé todas las referencias a "Capacitación incluida" y "Capacitación y consultoría" de todas las páginas de productos (aplicaciones móviles, aplicaciones de escritorio, aplicaciones web y páginas web).
+   - Consultoría: Removí completamente todas las menciones a servicios de consultoría en planes y características de productos.
+   - Plataformas Personalizadas: Reemplacé "Personalización completa" y "Personalización opcional" por "Configuración avanzada completa" y "Configuración flexible disponible", enfocándome en características del producto, no en servicios personalizados.
+
+2. Actualización de Referencias a Soporte Técnico
+   - Cambié todas las referencias de "Soporte técnico incluido" por "Documentación completa incluida" o "Documentación y recursos incluidos" en todas las páginas del sitio.
+   - Esto se aplicó en: página principal, páginas de productos, páginas de blog, términos y condiciones, y política de privacidad.
+   - El enfoque ahora está en documentación y recursos que forman parte del producto, no en servicios humanos de soporte.
+
+3. Actualización de Testimonios
+   - Revisé y actualicé todos los testimonios de clientes para eliminar referencias a "servicio al cliente", "proceso de implementación" y "implementación del software".
+   - Los testimonios ahora se enfocan exclusivamente en la calidad de los productos de software, funcionalidades incluidas en las licencias, y facilidad de uso del producto.
+
+4. Actualización de Descripciones Generales
+   - Cambié todas las descripciones del footer de "Especialistas en desarrollo de aplicaciones..." a "Especialistas en software de gestión empresarial. Productos de software con licencias y suscripciones disponibles...".
+   - Esto se aplicó consistentemente en todas las páginas del sitio web.
+
+5. Actualización de Términos y Condiciones
+   - Actualicé los Términos y Condiciones para mencionar explícitamente que Paddle actúa como nuestro reseller autorizado y Merchant of Record.
+   - Se especifica claramente que Paddle maneja el procesamiento de pagos, facturación automática, renovaciones de suscripciones y cumplimiento fiscal.
+   - Se incluyó el enlace a los Términos del Comprador de Paddle.
+
+6. Actualización de Política de Privacidad
+   - Eliminé referencias a "soporte técnico" y las reemplacé por "documentación".
+   - Agregué una sección específica mencionando que compartimos información con Paddle como nuestro reseller autorizado y Merchant of Record para procesar pagos y cumplimiento fiscal.
+
+Enfoque Actual del Sitio:
+
+Mi sitio web ahora se enfoca exclusivamente en:
+✅ Productos de software listos para usar (aplicaciones móviles, aplicaciones de escritorio, sistemas web, plantillas de páginas web)
+✅ Licencias de software y suscripciones SaaS
+✅ Documentación y recursos incluidos con los productos
+✅ Paddle como reseller autorizado y Merchant of Record
+
+He eliminado completamente todas las referencias a:
+❌ Servicios de desarrollo personalizado
+❌ Consultoría
+❌ Capacitación
+❌ Servicios de implementación
+❌ Soporte técnico como servicio humano
+
+Archivos Modificados:
+
+He actualizado un total de 11 archivos en mi sitio web, incluyendo:
+- Página principal (index.html)
+- Páginas de productos (aplicaciones móviles, escritorio, web, páginas web)
+- Páginas de blog
+- Términos y Condiciones
+- Política de Privacidad
+- Footer en todas las páginas
+
+Todos los cambios se aplicaron tanto en español como en inglés para mantener la consistencia.
+
+Solicitud de Revisión:
+
+He revisado cuidadosamente la Política de Uso Aceptable de Paddle y estoy seguro de que mi sitio web ahora cumple con todos los requisitos. El sitio se enfoca exclusivamente en la venta de productos de software digitales con licencias y suscripciones, que es un uso completamente permitido según las políticas de Paddle.
+
+Me gustaría solicitar una nueva revisión de mi aplicación y sitio web. Estoy disponible para proporcionar cualquier información adicional que pueda necesitar o para aclarar cualquier aspecto de los cambios realizados.
+
+Mi dominio es: yjgsolucionti.com
+
+Quedo atento a tu respuesta y agradezco de antemano tu tiempo y consideración.
+
+Saludos cordiales,
+Yorjanis
+YJG Solución TI
+Costa Rica
+
