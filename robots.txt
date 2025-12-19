@@ -7,9 +7,48 @@ Sitemap: https://yjgsolucionti.com/sitemap.xml
 # Bloquear archivos y carpetas que no deben ser indexados
 Disallow: /assets/
 Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
 
-# Permitir acceso a páginas principales
+# Bloquear rutas antiguas que ya no existen
+Disallow: /es/
+Disallow: /en/
+Disallow: /gallery/
+Disallow: /faq/
+Disallow: /portfolio/
+Disallow: /services/
+Disallow: /contact/
+Disallow: /terms-and-conditions/
+Disallow: /positioning-your-self-as-a-pro-consultant/
+Disallow: /build-your-money-machine-take-control/
+Disallow: /about-us/
+Disallow: /solution/
+Disallow: /solution-2/
+Disallow: /solution-3/
+Disallow: /services-2/
+Disallow: /services-3/
+Disallow: /services-4/
+Disallow: /services-5/
+Disallow: /case-studies/
+Disallow: /case-studies-grid/
+Disallow: /blog-carousel/
+Disallow: /blog-carousel-c/
+Disallow: /team/
+Disallow: /android-app-for-shaving-products-drive/
+Disallow: /android-application-products-delivery/
+Disallow: /the-latest-technology-have-suffered-alteration/
+Disallow: /easy-most-powerful-server-platform/
+
+# Permitir todas las páginas HTML principales
+Allow: /*.html$
 Allow: /index.html
 Allow: /politica-privacidad.html
 Allow: /terminos-condiciones.html
+Allow: /aplicaciones-escritorio.html
+Allow: /aplicaciones-web.html
+Allow: /aplicaciones-moviles.html
+Allow: /paginas-web.html
+Allow: /blog-1.html
+Allow: /blog-4.html
+Allow: /blog-5.html
 

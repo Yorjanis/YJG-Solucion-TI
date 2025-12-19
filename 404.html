@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Página no encontrada - YJG Solución TI</title>
+  <link rel="shortcut icon" href="assets/images/mbr-64x64.png" type="image/x-icon">
+  <meta name="robots" content="noindex, follow">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 600px;
+      margin: 2rem;
+    }
+    h1 {
+      font-size: 8rem;
+      color: #ec0f0f;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #ec0f0f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    a:hover {
+      background-color: #c00d0d;
+    }
+    .secondary-link {
+      background-color: #2c3e50;
+    }
+    .secondary-link:hover {
+      background-color: #1a252f;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .container {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+  <script>
+    // Redirecciones para URLs antiguas conocidas
+    const redirects = {
+      '/terms-and-conditions/': '/terminos-condiciones.html',
+      '/terms-and-conditions': '/terminos-condiciones.html',
+      '/contact/': '/index.html#form5-x',
+      '/contact': '/index.html#form5-x',
+      '/about-us/': '/index.html#content1-8',
+      '/about-us': '/index.html#content1-8',
+      // URLs con parámetros
+      '/terms-and-conditions/?lang=sp': '/terminos-condiciones.html',
+      '/terms-and-conditions/?lang=en': '/terminos-condiciones.html',
+      '/contact/?lang=sp': '/index.html#form5-x',
+      '/contact/?lang=en': '/index.html#form5-x',
+      '/?lang=en': '/',
+      '/?lang=sp': '/'
+    };
+    
+    const currentPath = window.location.pathname;
+    const currentSearch = window.location.search;
+    const fullPath = currentPath + currentSearch;
+    
+    // Verificar si hay una redirección específica
+    if (redirects[currentPath] || redirects[fullPath]) {
+      const redirectTo = redirects[currentPath] || redirects[fullPath];
+      window.location.replace(redirectTo);
+      return;
+    }
+    
+    // Redirigir URLs de versiones antiguas del sitio que no existen (WordPress antiguo)
+    const oldPaths = [
+      '/portfolio/',
+      '/services/',
+      '/gallery/',
+      '/faq/',
+      '/positioning-your-self-as-a-pro-consultant/',
+      '/build-your-money-machine-take-control/',
+      '/about-us/',
+      '/solution/',
+      '/solution-2/',
+      '/solution-3/',
+      '/services-2/',
+      '/services-3/',
+      '/services-4/',
+      '/services-5/',
+      '/case-studies/',
+      '/case-studies-grid/',
+      '/blog-carousel/',
+      '/blog-carousel-c/',
+      '/team/',
+      '/android-app-for-shaving-products-drive/',
+      '/android-application-products-delivery/',
+      '/the-latest-technology-have-suffered-alteration/',
+      '/easy-most-powerful-server-platform/',
+      '/en/',
+      '/es/'
+    ];
+    
+    // Si la URL contiene alguno de estos paths antiguos, redirigir a inicio
+    for (const oldPath of oldPaths) {
+      if (currentPath.includes(oldPath)) {
+        window.location.replace('/');
+        return;
+      }
+    }
+    
+    // Redirigir cualquier URL que empiece con /en/ o /es/ a la página principal
+    if (currentPath.match(/^\/(en|es)\//)) {
+      window.location.replace('/');
+      return;
+    }
+    
+    // Redirigir URLs de WordPress antiguo con parámetros comunes (?replytocom=, ?p=, etc.)
+    const wpParams = ['replytocom', 'p=', 'page_id', 'cat=', 'tag=', 'author=', 's='];
+    for (const param of wpParams) {
+      if (currentSearch.includes(param)) {
+        // Si tiene parámetros de WordPress, redirigir a inicio sin parámetros
+        window.location.replace('/');
+        return;
+      }
+    }
+    
+    // Si la URL tiene cualquier parámetro y es una ruta antigua, redirigir a inicio
+    if (currentSearch && (currentPath.includes('/en/') || currentPath.includes('/es/') || 
+        currentPath.includes('/portfolio/') || currentPath.includes('/services/'))) {
+      window.location.replace('/');
+      return;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <h2>Página no encontrada</h2>
+    <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+    <div class="links">
+      <a href="/">Ir a la página principal</a>
+      <a href="/index.html#form5-x" class="secondary-link">Ir al formulario de contacto</a>
+    </div>
+  </div>
+</body>
+</html>
+

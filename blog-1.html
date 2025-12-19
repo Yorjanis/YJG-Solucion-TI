@@ -10,6 +10,7 @@
   
   <meta name="description" content="OptiControl: Sistema Integral de Gestión para Clínicas Oftalmológicas. Aplicación web y de escritorio multiplataforma con funcionalidad híbrida online/offline desarrollada por YJG Solución TI en Costa Rica.">
   <meta name="keywords" content="OptiControl, sistema gestión clínicas oftalmológicas, software oftalmología Costa Rica, aplicación escritorio oftalmología, gestión pacientes oftalmología, aplicación web oftalmología, sistema gestión clínica, software médico Costa Rica, aplicación Linux Windows Mac, YJG Solución TI">
+  <meta name="robots" content="index, follow">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -1070,7 +1071,7 @@
                             <li><strong>Anual:</strong> Suscripción anual con descuento</li>
                         </ul>
                     </li>
-                    <li data-translate="blog.opticontrol.features.feature7.item2"><strong>Integración de pagos:</strong> Paddle (en implementación)</li>
+                    <li data-translate="blog.opticontrol.features.feature7.item2"><strong>Integración de pagos:</strong> Plataforma de pagos segura</li>
                     <li data-translate="blog.opticontrol.features.feature7.item3"><strong>Control de acceso:</strong> Bloqueo automático por licencia expirada</li>
                     <li data-translate="blog.opticontrol.features.feature7.item4"><strong>Webhooks:</strong> Manejo automático de eventos de pago</li>
                     <li data-translate="blog.opticontrol.features.feature7.item5"><strong>Gestión de límites:</strong> Control de funcionalidades por plan</li>
@@ -1278,7 +1279,7 @@
                 
                 <h3 style="color: #333; margin-top: 2rem; font-size: 1.25rem;"><strong data-translate="blog.opticontrol.getstarted.installation.title">Instalación</strong></h3>
                 <ol>
-                    <li data-translate="blog.opticontrol.getstarted.installation.step1">Compra tu licencia a través de nuestra plataforma de pagos Paddle y descarga la aplicación directamente desde Paddle.</li>
+                    <li data-translate="blog.opticontrol.getstarted.installation.step1">Compra tu licencia a través de nuestra plataforma de pagos segura y descarga la aplicación directamente.</li>
                     <li data-translate="blog.opticontrol.getstarted.installation.step2">Crea tu cuenta y activa tu período de prueba</li>
                     <li data-translate="blog.opticontrol.getstarted.installation.step3">Configura tu clínica y comienza a usar todas las funcionalidades</li>
                     <li data-translate="blog.opticontrol.getstarted.installation.step4">Importa tus datos existentes o comienza desde cero</li>
@@ -1301,7 +1302,7 @@
                 
                 <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
                     <p style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;" data-translate="blog.opticontrol.cta.text">¿Listo para comenzar con OptiControl?</p>
-                    <a href="#" onclick="openPaddleCheckout(); return false;" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold;" data-translate="blog.opticontrol.cta.button">Comprar Ahora</a>
+                    <a href="aplicaciones-escritorio.html" style="background-color: #ec0f0f; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold;" data-translate="blog.opticontrol.cta.button">Comprar Ahora</a>
                     <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;" data-translate="blog.opticontrol.cta.note">Prueba gratuita de 7 días • Sin tarjeta de crédito requerida</p>
                 </div>
                 
@@ -1477,7 +1478,7 @@
             feature7: {
               title: "7. Sistema de Licencias y Pagos",
               item1: "Planes flexibles: Trial (7 días de prueba gratuita), Mensual (Suscripción mensual), Anual (Suscripción anual con descuento)",
-              item2: "Integración de pagos: Paddle (en implementación)",
+              item2: "Integración de pagos: Plataforma de pagos segura",
               item3: "Control de acceso: Bloqueo automático por licencia expirada",
               item4: "Webhooks: Manejo automático de eventos de pago",
               item5: "Gestión de límites: Control de funcionalidades por plan"
@@ -1649,7 +1650,7 @@
             plan2: "Plan Anual: $299.99 USD/año (ahorro del 17%)",
             installation: {
               title: "Instalación",
-              step1: "Compra tu licencia a través de nuestra plataforma de pagos Paddle y descarga la aplicación directamente desde Paddle.",
+              step1: "Compra tu licencia a través de nuestra plataforma de pagos segura y descarga la aplicación directamente.",
               step2: "Crea tu cuenta y activa tu período de prueba",
               step3: "Configura tu clínica y comienza a usar todas las funcionalidades",
               step4: "Importa tus datos existentes o comienza desde cero"
@@ -1795,7 +1796,7 @@
             feature7: {
               title: "7. License and Payment System",
               item1: "Flexible plans: Trial (7-day free trial), Monthly (Monthly subscription), Annual (Annual subscription with discount)",
-              item2: "Payment integration: Paddle (in implementation)",
+              item2: "Payment integration: Secure payment platform",
               item3: "Access control: Automatic blocking for expired license",
               item4: "Webhooks: Automatic handling of payment events",
               item5: "Limit management: Control of features by plan"
@@ -1967,7 +1968,7 @@
             plan2: "Annual Plan: $299.99 USD/year (17% savings)",
             installation: {
               title: "Installation",
-              step1: "Purchase your license through our Paddle payment platform and download the application directly from Paddle.",
+              step1: "Purchase your license through our secure payment platform and download the application directly.",
               step2: "Create your account and activate your trial period",
               step3: "Configure your clinic and start using all features",
               step4: "Import your existing data or start from scratch"
@@ -2170,16 +2171,14 @@
     window.location.href = 'index.html#form5-x';
   };
   
-  // Función para abrir el checkout de Paddle
-  function openPaddleCheckout() {
-    // Aquí irá el código de integración con Paddle
-    // Por ahora, redirige a la página de aplicaciones de escritorio donde está el producto
+  // Función para redirigir a la página de compra
+  function openCheckout() {
     window.location.href = 'aplicaciones-escritorio.html';
   }
   
-  // Función global para abrir checkout de Paddle
-  window.openPaddleCheckout = function() {
-    openPaddleCheckout();
+  // Función global para abrir checkout
+  window.openCheckout = function() {
+    openCheckout();
   };
   
   // Toggle del menú móvil
